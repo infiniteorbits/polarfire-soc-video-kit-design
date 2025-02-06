@@ -4,8 +4,8 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity encoder is
-    Port ( address : in STD_LOGIC_VECTOR(9 downto 0); -- Address input for lookup (8-bit in this example)
-           data_out : out STD_LOGIC_VECTOR(7 downto 0)); -- 12-bit data output
+    Port ( data_in : in STD_LOGIC_VECTOR(9 downto 0); -- data input for lookup (10-bit in this example)
+           data_out : out STD_LOGIC_VECTOR(7 downto 0)); -- 8-bit data output
 end encoder;
 
 architecture Behavioral of encoder is
@@ -47,103 +47,31 @@ architecture Behavioral of encoder is
     );
 begin
     -- Process to perform the lookup
-    process(address)
+    process(clk)
     begin
-        if (k = '0') then
-            if (disp = '0') then 
-            data_out <= positive_disparity(to_integer(unsigned(address))); -- Lookup table for k == 0
-            else 
-            data_out <= negative_disparity(to_integer(unsigned(address))); -- Lookup table for k == 0
+        if rising_edge(clk) then
+            if valid = '1' then  -- Only process if valid is high
+                if k = '0' then  -- Regular data encoding
+                    if disp = '0' then
+                        data_out <= positive_disparity(to_integer(unsigned(data_in)));  -- Positive disparity
+                    else
+                        data_out <= negative_disparity(to_integer(unsigned(data_in)));  -- Negative disparity
+                    end if;
+                else  -- Special character encoding
+                    case data_in is
+                        -- Add your special character encoding cases here
+                        -- Example:
+                        -- when "10111111" =>
+                        --     if disp = '0' then
+                        --         data_out <= "0001010111";
+                        --     else
+                        --         data_out <= "1110101000";
+                        --     end if;
+                        when others =>
+                            data_out <= (others => '0');  -- Default case
+                    end case;
+                end if;
             end if;
-        else
-        case address is
-            -- when "10111111" => 
-            --     if disp = "0" then
-            --         data_out <= "0001010111";
-            --     else
-            --         data_out <= "1110101000";
-            --     end if;
-                
-            -- when "11011111" => 
-            --     if disp = "0" then
-            --         data_out <= "0010010111";
-            --     else
-            --         data_out <= "1101101000";
-            --     end if;
-                
-            -- when "11100000" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001011";
-            --     else
-            --         data_out <= "0011110100";
-            --     end if;
-                
-            -- when "11100001" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001010";
-            --     else
-            --         data_out <= "0011111001";
-            --     end if;
-                
-            -- when "11100010" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001101";
-            --     else
-            --         data_out <= "0011110101";
-            --     end if;
-                
-            -- when "11100011" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001001";
-            --     else
-            --         data_out <= "0011110011";
-            --     end if;
-                
-            -- when "11100100" => 
-            --     if disp = "0" then
-            --         data_out <= "0100010111";
-            --     else
-            --         data_out <= "0011110010";
-            --     end if;
-                
-            -- when "11100101" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001011";
-            --     else
-            --         data_out <= "0011111010";
-            --     end if;
-                
-            -- when "11100110" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001010";
-            --     else
-            --         data_out <= "0011110110";
-            --     end if;
-                
-            -- when "11100111" => 
-            --     if disp = "0" then
-            --         data_out <= "1100001101";
-            --     else
-            --         data_out <= "0011111000";
-            --     end if;
-                
-            -- when "11101111" => 
-            --     if disp = "0" then
-            --         data_out <= "0100010111";
-            --     else
-            --         data_out <= "1011101000";
-            --     end if;
-                
-            -- when "11110111" => 
-            --     if disp = "0" then
-            --         data_out <= "1000010111";
-            --     else
-            --         data_out <= "0111101000";
-            --     end if;
-                
-            -- when others =>
-            --     data_out <= (others => '0');
-        end case;        
         end if;
     end process;
 end Behavioral;

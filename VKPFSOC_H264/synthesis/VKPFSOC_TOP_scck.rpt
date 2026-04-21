@@ -1,0 +1,62 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.3 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53561
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+
+# Written on Thu Mar  5 13:47:56 2026
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/designer/VKPFSOC_TOP/synthesis.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                                                  Requested     Requested     Clock                              Clock                Clock
+Level     Clock                                                                  Frequency     Period        Type                               Group                Load 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       REF_CLK_PAD_P                                                          148.5 MHz     6.734         declared                           default_clkgroup     1    
+1 .         CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     125.0 MHz     8.000         generated (from REF_CLK_PAD_P)     default_clkgroup     1669 
+1 .         CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50.0 MHz      20.000        generated (from REF_CLK_PAD_P)     default_clkgroup     50   
+                                                                                                                                                                          
+0 -       osc_rc2mhz                                                             2.1 MHz       469.480       declared                           default_clkgroup     1    
+                                                                                                                                                                          
+0 -       System                                                                 100.0 MHz     10.000        system                             system_clkgroup      0    
+==========================================================================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                                                     Clock     Source                                                                       Clock Pin                                                                 Non-clock Pin     Non-clock Pin                                                                              
+Clock                                                                Load      Pin                                                                          Seq Example                                                               Seq Example       Comb Example                                                                               
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REF_CLK_PAD_P                                                        1         REF_CLK_PAD_P(port)                                                          CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 CLOCKS_AND_RESETS_inst_0.PF_XCVR_REF_CLK_C0_0.PF_XCVR_REF_CLK_C0_0.I_IO.PAD_P(XCVR_REF_CLK)
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     1669      CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)        top_ddr_write_0.jpeg_top_1.u_jls.a_h[13:0].C                              -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)                          
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50        CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)        top_ddr_write_0.jpeg_top_1.u_apb.pready.C                                 -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)                          
+                                                                                                                                                                                                                                                                                                                                                   
+osc_rc2mhz                                                           1         CLOCKS_AND_RESETS_inst_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_2.CLK(OSC_RC2MHZ)     CLOCKS_AND_RESETS_inst_0.PF_CLK_DIV_C0_0.PF_CLK_DIV_C0_0.I_CD.A           -                 -                                                                                          
+                                                                                                                                                                                                                                                                                                                                                   
+System                                                               0         -                                                                            -                                                                         -                 -                                                                                          
+===================================================================================================================================================================================================================================================================================================================================================

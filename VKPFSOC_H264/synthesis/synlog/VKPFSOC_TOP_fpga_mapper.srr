@@ -1,0 +1,621 @@
+# Thu Mar  5 13:47:58 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.3 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53561
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/jpeg_top.v":6:7:6:14|Found compile point of type hard on View view:work.jpeg_top_8s(verilog) 
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/top_ddr_write/top_ddr_write.v":9:7:9:19|Found compile point of type hard on View view:work.top_ddr_write(verilog) 
+
+Synthesis running in Multiprocessing mode
+Maximum number of parallel jobs set to 4
+Multiprocessing started at : Thu Mar  5 13:47:58 2026
+@N: MF107 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/top_ddr_write/top_ddr_write.v":9:7:9:19|Old database up-to-date, remapping Compile point view:work.top_ddr_write(verilog) unnecessary 
+@N: MF107 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/jpeg_top.v":6:7:6:14|Old database up-to-date, remapping Compile point view:work.jpeg_top_8s(verilog) unnecessary 
+Mapping VKPFSOC_TOP as a separate process
+MCP Status: 1 jobs running
+
+@N: MF106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v":9:7:9:17|Mapping Top level view:work.VKPFSOC_TOP(verilog) because 
+		 RTL and/or Constraints changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 581MB peak: 581MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: MO106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|Found ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) with 2 words by 2 bits.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 580MB peak: 581MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 580MB peak: 581MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 580MB peak: 581MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:02s		     7.61ns		  67 /        65
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 580MB peak: 581MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 580MB peak: 581MB)
+
+
+Finished mapping VKPFSOC_TOP
+Multiprocessing finished at : Thu Mar  5 13:48:02 2026
+Multiprocessing took 0h:00m:03s realtime, 0h:00m:03s cputime
+
+Summary of Compile Points :
+*************************** 
+Name              Status        Reason             Start Time                   End Time                     Realtime       CPU Time       Fast Synthesis
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write     Unchanged     -                  Thu Mar  5 13:46:26 2026     Thu Mar  5 13:46:30 2026     0h:00m:04s     0h:00m:04s     No            
+jpeg_top_8s       Unchanged     -                  Thu Mar  5 13:46:26 2026     Thu Mar  5 13:46:30 2026     0h:00m:03s     0h:00m:03s     No            
+VKPFSOC_TOP       Remapped      Design changed     Thu Mar  5 13:47:59 2026     Thu Mar  5 13:48:02 2026     0h:00m:02s     0h:00m:02s     No            
+=========================================================================================================================================================
+Total number of compile points: 3
+===================================
+
+Links to Compile point Reports:
+******************************
+@L: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/VKPFSOC_TOP/VKPFSOC_TOP.srr"
+@L: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/jpeg_top_8s/jpeg_top_8s.srr"
+@L: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/top_ddr_write/top_ddr_write.srr"
+
+==============================
+
+
+Start loading CP mapped netlist (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 651MB peak: 651MB)
+
+
+Finished loading CP mapped netlist (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 651MB peak: 651MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 651MB peak: 651MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 651MB peak: 651MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 651MB peak: 651MB)
+
+Writing Analyst data base /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synwork/VKPFSOC_TOP_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:04s; Memory used current: 651MB peak: 651MB)
+
+Writing Verilog Simulation files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 651MB peak: 651MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 651MB peak: 651MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 651MB peak: 651MB)
+
+@W: MT246 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v":13:15:13:21|Blackbox OSC_RC2MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v":71:12:71:25|Blackbox BANKCTRL_GPIO is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v":63:12:63:25|Blackbox BANKCTRL_HSIO is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v":44:53:44:58|Blackbox INIT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@N: MT615 |Found clock REF_CLK_PAD_P with period 6.73ns 
+@N: MT615 |Found clock osc_rc2mhz with period 469.48ns 
+@N: MT615 |Found clock CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 with period 8.00ns 
+@N: MT615 |Found clock CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 with period 20.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu Mar  5 13:48:04 2026
+#
+
+
+Top view:               VKPFSOC_TOP
+Requested Frequency:    2.1 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/designer/VKPFSOC_TOP/synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 2.726
+
+                                                                     Requested     Estimated     Requested     Estimated               Clock                              Clock           
+Starting Clock                                                       Frequency     Frequency     Period        Period        Slack     Type                               Group           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     125.0 MHz     189.6 MHz     8.000         5.274         2.726     generated (from REF_CLK_PAD_P)     default_clkgroup
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50.0 MHz      235.0 MHz     20.000        4.256         3.197     generated (from REF_CLK_PAD_P)     default_clkgroup
+REF_CLK_PAD_P                                                        148.5 MHz     NA            6.734         NA            NA        declared                           default_clkgroup
+osc_rc2mhz                                                           2.1 MHz       NA            469.480       NA            NA        declared                           default_clkgroup
+System                                                               100.0 MHz     235.3 MHz     10.000        4.249         5.751     system                             system_clkgroup 
+==========================================================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                              |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                          Ending                                                            |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  |  8.000       5.751   |  No paths    -      |  No paths    -      |  No paths    -    
+System                                                            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  |  20.000      18.704  |  No paths    -      |  No paths    -      |  No paths    -    
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  System                                                            |  8.000       5.108   |  No paths    -      |  8.000       5.102  |  No paths    -    
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  |  8.000       2.726   |  No paths    -      |  No paths    -      |  No paths    -    
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  |  4.000       3.197   |  No paths    -      |  No paths    -      |  No paths    -    
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  |  20.000      15.744  |  No paths    -      |  No paths    -      |  No paths    -    
+===========================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                                                                                                                 Starting                                                                                                                      Arrival          
+Instance                                                                                                                                                                                         Reference                                                            Type        Pin           Net                            Time        Slack
+                                                                                                                                                                                                 Clock                                                                                                                                          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[240]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[240]                    0.201       2.726
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[244]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[244]                    0.201       2.756
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[241]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[241]                    0.218       2.770
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[245]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[245]                    0.218       2.802
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[242]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[242]                    0.218       2.835
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[243]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[243]                    0.218       2.867
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[246]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[246]                    0.218       2.867
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[247]                                                                                                                                                     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE         Q             bbuf_2[247]                    0.218       2.899
+top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1\.DDR_AXI4_ARBITER_PF_0.ddr_rw_arbiter_0.v_wr_data_fifo.genblk24\.UI_ram_wrapper_1.L3_syncnonpipe.pf_ram_pf_ram_0_0     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     RAM1K20     A_DOUT[0]     pf_ram_pf_ram_0_0_NEWA[20]     3.023       3.691
+top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1\.DDR_AXI4_ARBITER_PF_0.ddr_rw_arbiter_0.v_wr_data_fifo.genblk24\.UI_ram_wrapper_1.L3_syncnonpipe.pf_ram_pf_ram_0_0     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     RAM1K20     A_DOUT[1]     pf_ram_pf_ram_0_0_NEWA[21]     3.023       3.691
+================================================================================================================================================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                 Starting                                                                                                        Required          
+Instance                                         Reference                                                            Type     Pin     Net                       Time         Slack
+                                                 Clock                                                                                                                             
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[7]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[7]               8.000        2.726
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[6]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[6]               8.000        2.742
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[5]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[5]               8.000        2.758
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[4]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[4]               8.000        2.774
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[3]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_RNIUPRCUJ_S[3]     8.000        2.790
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[2]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[2]               8.000        2.806
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[1]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[1]               8.000        3.024
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[104]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bbuf_3[104]             8.000        3.396
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[205]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bbuf_3[205]             8.000        3.396
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[79]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bbuf_3[79]              8.000        3.437
+===================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      8.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.000
+
+    - Propagation time:                      5.274
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     2.726
+
+    Number of logic level(s):                18
+    Starting point:                          top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[240] / Q
+    Ending point:                            top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[7] / D
+    The start point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                      Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[240]              SLE      Q        Out     0.201     0.201 f     -         
+bbuf_2[240]                                               Net      -        -       0.547     -           3         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2_5            CFG4     D        In      -         0.748 f     -         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2_5            CFG4     Y        Out     0.192     0.939 f     -         
+bbuf15_0_a2_5                                             Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2              CFG2     B        In      -         1.057 f     -         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2              CFG2     Y        Out     0.077     1.135 f     -         
+bbuf15                                                    Net      -        -       1.259     -           249       
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf28                   CFG4     D        In      -         2.394 f     -         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf28                   CFG4     Y        Out     0.232     2.626 r     -         
+bbuf28                                                    Net      -        -       1.258     -           246       
+top_ddr_write_0.jpeg_top_1.u_jls.un54_0_a2[0]             CFG2     A        In      -         3.884 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.un54_0_a2[0]             CFG2     Y        Out     0.051     3.934 r     -         
+un54_0_a2[0]                                              Net      -        -       0.124     -           2         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIC13052[0]      ARI1     C        In      -         4.058 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIC13052[0]      ARI1     Y        Out     0.307     4.365 r     -         
+j_bcnt_RNIC13052_Y[0]                                     Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNISVP3E4[1]      ARI1     A        In      -         4.483 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNISVP3E4[1]      ARI1     FCO      Out     0.285     4.768 r     -         
+j_bcnt_RNISVP3E4_FCO[1]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI0TD7I4[1]      ARI1     FCI      In      -         4.768 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI0TD7I4[1]      ARI1     FCO      Out     0.008     4.776 r     -         
+j_bcnt_RNI0TD7I4_FCO[1]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI5OFI89[2]      ARI1     FCI      In      -         4.776 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI5OFI89[2]      ARI1     FCO      Out     0.008     4.784 r     -         
+j_bcnt_RNI5OFI89_FCO[2]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIAM3MC9[2]      ARI1     FCI      In      -         4.784 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIAM3MC9[2]      ARI1     FCO      Out     0.008     4.792 r     -         
+j_bcnt_RNIAM3MC9_FCO[2]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIUPRCUJ[3]      ARI1     FCI      In      -         4.792 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIUPRCUJ[3]      ARI1     FCO      Out     0.008     4.800 r     -         
+j_bcnt_RNIUPRCUJ_FCO[3]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI87GD3L[3]      ARI1     FCI      In      -         4.800 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI87GD3L[3]      ARI1     FCO      Out     0.008     4.808 r     -         
+j_bcnt_RNI87GD3L_FCO[3]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIRSKRBB1[4]     ARI1     FCI      In      -         4.808 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIRSKRBB1[4]     ARI1     FCO      Out     0.008     4.816 r     -         
+j_bcnt_RNIRSKRBB1_FCO[4]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI6B9SGC1[4]     ARI1     FCI      In      -         4.816 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI6B9SGC1[4]     ARI1     FCO      Out     0.008     4.824 r     -         
+j_bcnt_RNI6B9SGC1_FCO[4]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIO57P6Q2[5]     ARI1     FCI      In      -         4.824 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIO57P6Q2[5]     ARI1     FCO      Out     0.008     4.832 r     -         
+j_bcnt_RNIO57P6Q2_FCO[5]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI4LRPBR2[5]     ARI1     FCI      In      -         4.832 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI4LRPBR2[5]     ARI1     FCO      Out     0.008     4.840 r     -         
+j_bcnt_RNI4LRPBR2_FCO[5]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNILQBKSN1[6]     ARI1     FCI      In      -         4.840 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNILQBKSN1[6]     ARI1     FCO      Out     0.008     4.848 r     -         
+j_bcnt_RNILQBKSN1_FCO[6]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI2B0L1P1[6]     ARI1     FCI      In      -         4.848 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI2B0L1P1[6]     ARI1     FCO      Out     0.008     4.856 r     -         
+j_bcnt_RNI2B0L1P1_FCO[6]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNO[7]            ARI1     FCI      In      -         4.856 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNO[7]            ARI1     S        Out     0.300     5.156 r     -         
+j_bcnt_3[7]                                               Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[7]                SLE      D        In      -         5.274 r     -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 5.274 is 1.732(32.8%) logic and 3.542(67.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                Starting                                                                                           Arrival          
+Instance                                        Reference                                                            Type     Pin     Net          Time        Slack
+                                                Clock                                                                                                               
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_apb.reg_sof[0]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_sof_ps     0.218       3.197
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[0]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[0]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[1]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[1]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[2]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[2]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[3]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[3]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[4]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[4]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[5]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[5]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[6]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[6]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[7]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[7]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[8]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[8]       0.218       3.664
+====================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                              Starting                                                                                              Required          
+Instance                                      Reference                                                            Type     Pin     Net             Time         Slack
+                                              Clock                                                                                                                   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_fsm.state[0]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       state_ns[0]     4.000        3.197
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[0]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[0]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[1]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[1]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[2]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[2]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[3]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[3]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[4]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[4]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[5]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[5]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[6]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[6]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[7]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[7]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[8]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[8]          4.000        3.664
+======================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      4.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.000
+
+    - Propagation time:                      0.803
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 3.197
+
+    Number of logic level(s):                2
+    Starting point:                          top_ddr_write_0.jpeg_top_1.u_apb.reg_sof[0] / Q
+    Ending point:                            top_ddr_write_0.jpeg_top_1.u_fsm.state[0] / D
+    The start point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+    The end   point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+
+Instance / Net                                                       Pin      Pin               Arrival     No. of    
+Name                                                        Type     Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_apb.reg_sof[0]                 SLE      Q        Out     0.218     0.218 r     -         
+i_sof_ps                                                    Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0_m2     CFG4     B        In      -         0.336 r     -         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0_m2     CFG4     Y        Out     0.083     0.419 r     -         
+N_52                                                        Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0        CFG4     C        In      -         0.537 r     -         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0        CFG4     Y        Out     0.148     0.685 r     -         
+state_ns[0]                                                 Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_fsm.state[0]                   SLE      D        In      -         0.803 r     -         
+======================================================================================================================
+Total path delay (propagation time + setup) of 0.803 is 0.449(55.9%) logic and 0.354(44.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                                           Starting                                                               Arrival          
+Instance                                                                                                                   Reference     Type     Pin               Net                           Time        Slack
+                                                                                                                           Clock                                                                                   
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_33_rs     System        SLE      Q                 un1_s_read_en_dly15_33_rs     0.218       5.751
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_46_rs     System        SLE      Q                 un1_s_read_en_dly15_46_rs     0.218       5.759
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_19_rs     System        SLE      Q                 un1_s_read_en_dly15_19_rs     0.218       5.763
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_48_rs     System        SLE      Q                 un1_s_read_en_dly15_48_rs     0.218       5.773
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_25_rs     System        SLE      Q                 un1_s_read_en_dly15_25_rs     0.218       5.777
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_32_rs     System        SLE      Q                 un1_s_read_en_dly15_32_rs     0.218       5.793
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_49_rs     System        SLE      Q                 un1_s_read_en_dly15_49_rs     0.218       5.822
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_61_rs     System        SLE      Q                 un1_s_read_en_dly15_61_rs     0.218       5.839
+CLOCKS_AND_RESETS_inst_0.INIT_MONITOR_0.INIT_MONITOR_0.I_INIT                                                              System        INIT     UIC_INIT_DONE     DEVICE_INIT_DONE              0.000       6.704
+===================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                       Starting                                                                                              Required          
+Instance                                                               Reference     Type     Pin                         Net                                                Time         Slack
+                                                                       Clock                                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[24]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[24]     7.183        5.751
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[26]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[26]     7.191        5.759
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[29]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[29]     7.195        5.763
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[28]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[28]     7.205        5.773
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[30]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[30]     7.209        5.777
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[27]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[27]     7.225        5.793
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[25]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[25]     7.254        5.822
+MSS.I_MSS                                                              System        MSS      FIC_1_AXI4_S_ARADDR[31]     top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR[31]     7.271        5.839
+CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff_0[0]     System        SLE      ALn                         un1_INTERNAL_RST_arst_i                            7.980        6.704
+CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff_1[0]     System        SLE      ALn                         un1_INTERNAL_RST_arst_i                            7.980        6.704
+===============================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      8.000
+    - Setup time:                            0.817
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.183
+
+    - Propagation time:                      1.432
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 5.751
+
+    Number of logic level(s):                1
+    Starting point:                          top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_33_rs / Q
+    Ending point:                            MSS.I_MSS / FIC_1_AXI4_S_ARADDR[24]
+    The start point is clocked by            System [rising] on pin CLK
+    The end   point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin FIC_1_ACLK
+
+Instance / Net                                                                                                                               Pin                         Pin               Arrival     No. of    
+Name                                                                                                                                Type     Name                        Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_33_rs              SLE      Q                           Out     0.218     0.218 r     -         
+un1_s_read_en_dly15_33_rs                                                                                                           Net      -                           -       0.118     -           1         
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_33_rs_RNI7EVHD     CFG3     C                           In      -         0.336 r     -         
+top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1\.DDR_Read_Native_0.DDR_read_controller_0.un1_s_read_en_dly15_33_rs_RNI7EVHD     CFG3     Y                           Out     0.148     0.484 r     -         
+MIRRORED_SLAVE_AXI4_araddr_0[24]                                                                                                    Net      -                           -       0.948     -           1         
+MSS.I_MSS                                                                                                                           MSS      FIC_1_AXI4_S_ARADDR[24]     In      -         1.432 r     -         
+=================================================================================================================================================================================================================
+Total path delay (propagation time + setup) of 2.249 is 1.183(52.6%) logic and 1.066(47.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 651MB peak: 651MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 651MB peak: 651MB)
+
+---------------------------------------
+Resource Usage Report for VKPFSOC_TOP 
+
+Mapping to part: mpfs250tfcg1152-1
+Cell usage:
+AND2            2 uses
+BANKCTRL_GPIO   2 uses
+BANKCTRL_HSIO   1 use
+CLKINT          2 uses
+ICB_CLKDIV      1 use
+INIT            1 use
+INV             2 uses
+MSS             1 use
+OSC_RC2MHZ      1 use
+PLL             1 use
+XCVR_REF_CLK    1 use
+CFG1           34 uses
+CFG2           166 uses
+CFG3           458 uses
+CFG4           582 uses
+
+Carry cells:
+ARI1            260 uses - used for arithmetic functions
+ARI1            10 uses - used for Wide-Mux implementation
+Total ARI1      270 uses
+
+
+Sequential Cells: 
+SLE            1228 uses
+
+DSP Blocks:    0 of 784 (0%)
+
+I/O ports: 123
+I/O primitives: 111
+BIBUF          48 uses
+BIBUF_DIFF     4 uses
+INBUF          10 uses
+INBUF_DIFF     3 uses
+OUTBUF         43 uses
+OUTBUF_DIFF    3 uses
+
+
+Global Clock Buffers: 2
+
+RAM/ROM usage summary
+Total Block RAMs (RAM1K20) : 15 of 812 (1%)
+Total Block RAMs (RAM64x12) : 1 of 2352 (0%)
+
+Total LUTs:    1510
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 12; LUTs = 12;
+RAM1K20  Interface Logic : SLEs = 540; LUTs = 540;
+MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  1228 + 12 + 540 + 0 = 1780;
+Total number of LUTs after P&R:  1510 + 12 + 540 + 0 = 2062;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 563MB peak: 651MB)
+
+Process took 0h:00m:06s realtime, 0h:00m:05s cputime
+# Thu Mar  5 13:48:04 2026
+
+###########################################################]

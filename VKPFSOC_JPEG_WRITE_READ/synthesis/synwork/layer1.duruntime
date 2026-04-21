@@ -1,0 +1,21 @@
+Runtime Summary:
+================
+
+	The following design units have negligible CPU times:
+	=====================================================
+		*Library: work, Entity: read_demux, Architecture: read_demux
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH, Architecture: read_mux
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: request_scheduler, Architecture: request_scheduler
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: write_demux, Architecture: write_demux
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH, Architecture: write_mux
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: work_data_packer_data_packer_16_64_1_g_IP_DWg_OP_DW, Architecture: data_packer
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: ram2PORT_work_video_fifo_video_fifo_0layer1, Architecture: ram2port
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD, Architecture: video_fifo
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time

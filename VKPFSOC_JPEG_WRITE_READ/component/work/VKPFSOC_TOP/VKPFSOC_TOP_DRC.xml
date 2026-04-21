@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>VKPFSOC_TOP</header>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP:read_en_i</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/VKPFSOC_TOP/pins/VKPFSOC_TOP:read_en_i</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP:frame_start_i_read_ddr</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/VKPFSOC_TOP/pins/VKPFSOC_TOP:frame_start_i_read_ddr</crossprobe>
+  </drc>
+</drcreport>

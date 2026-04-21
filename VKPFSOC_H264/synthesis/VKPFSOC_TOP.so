@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>VKPFSOC_TOP</design>
+	<target_verilog>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/VKPFSOC_TOP.vm</target_verilog>
+</SynplifyOutput>

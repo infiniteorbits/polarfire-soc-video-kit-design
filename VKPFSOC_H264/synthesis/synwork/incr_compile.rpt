@@ -1,0 +1,336 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.3 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53561
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys HDL compiler and linker, Version comp202309synp1, Build 540R, Built Apr 29 2025 06:34:33, @6004905
+
+Modified Files: 1
+FID:  path (prevtimestamp, timestamp)
+38       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 72
+MID:  lib.cell.view
+3        work.APBM.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+4        work.APBS.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+9        work.BANKCTRLM.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+10       work.BANKCTRL_GPIO.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+11       work.BANKCTRL_HSIO.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+12       work.BANKEN.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+13       work.CLKBUF_DIFF.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+14       work.CLKBUF_DIFF_ODT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+16       work.CORELNKTMR_V.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+21       work.CRN_COMMON.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+22       work.CRN_INT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+23       work.CRYPTO.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+24       work.CRYPTO_SOC.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+33       work.DEBUG.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+34       work.DLL.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+35       work.DRI.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+36       work.ENFORCE.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+38       work.GLITCHDETECT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+39       work.GPSS_COMMON.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+41       work.HS_IO_CLK.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+42       work.ICB_BANKCLK.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+43       work.ICB_CLKDIV.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+44       work.ICB_CLKDIVDELAY.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+45       work.ICB_CLKINT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+46       work.ICB_CLKSTOP.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+47       work.ICB_CLKSTOP_EN.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+48       work.ICB_INT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+49       work.ICB_MUXING.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+50       work.ICB_NGMUX.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+51       work.INIT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+54       work.IOD.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+55       work.LANECTRL.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+56       work.LANERST.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+57       work.MCHP_BLIC.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+60       work.OSC_RC160MHZ.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+61       work.OSC_RC200MHZ.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+62       work.OSC_RC2MHZ.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+63       work.PCIE.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+64       work.PCIE_COMMON.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+65       work.PFSOC_SCSM.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+72       work.PF_SPI.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+75       work.PLL.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+76       work.QUADRST.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+77       work.QUADRST_PCIE.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+78       work.SCB.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+79       work.SYSCTRL_RESET_STATUS.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+80       work.SYSRESET.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+81       work.SYS_SERVICES.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+82       work.TAMPER.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+83       work.TVS.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+84       work.TX_PLL.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+85       work.UPROM.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+86       work.USPI.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+88       work.VOLTAGEDETECT.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+89       work.VREFBANKDYN.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+90       work.VREFCTRL.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+91       work.XCVR.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+92       work.XCVR_64B6XB.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+93       work.XCVR_8B10B.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+94       work.XCVR_APB_LINK.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+95       work.XCVR_APB_LINK_V.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+96       work.XCVR_APB_LINK_V2.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+97       work.XCVR_DUAL_PCS.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+98       work.XCVR_PIPE.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+99       work.XCVR_PIPE_AXI0.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+100      work.XCVR_PIPE_AXI1.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+101      work.XCVR_PMA.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+102      work.XCVR_REF_CLK.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+103      work.XCVR_REF_CLK_N.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+104      work.XCVR_REF_CLK_P.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+105      work.XCVR_TEST.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+106      work.XCVR_VV.verilog may have changed because the following files changed:
+                        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/syn_comps.v (2026-03-05 13:46:12, 2026-03-05 13:47:46) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 83
+FID:  path (timestamp)
+0        /home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v (2026-03-01 14:18:33)
+1        /home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v (2026-02-23 13:35:20)
+2        /home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v (2026-03-05 11:37:51)
+3        /home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/ram8bit_input.v (2026-03-05 11:39:21)
+4        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v (2026-02-02 15:13:26)
+5        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v (2026-02-02 15:13:26)
+6        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v (2026-02-02 15:13:26)
+7        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_M_M_IF.v (2026-03-05 13:28:21)
+8        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_S_IF.v (2026-03-05 13:28:21)
+9        /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v (2026-03-05 13:28:21)
+10       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF_Native.v (2026-03-05 13:28:21)
+11       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_LSRAM_top.v (2026-03-05 13:28:21)
+12       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_NstagesSync.v (2026-03-05 13:28:21)
+13       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_async.v (2026-03-05 13:28:21)
+14       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v (2026-03-05 13:28:21)
+15       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_grayToBinConv.v (2026-03-05 13:28:21)
+16       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_resetSync.v (2026-03-05 13:28:21)
+17       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync.v (2026-03-05 13:28:21)
+18       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v (2026-03-05 13:28:21)
+19       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v (2026-03-05 13:28:21)
+20       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v (2026-03-05 13:28:21)
+21       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd (2026-03-05 13:28:21)
+22       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd (2026-03-05 13:28:21)
+23       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v (2026-03-05 13:28:21)
+24       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd (2026-03-05 13:28:21)
+25       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v (2026-03-05 13:28:21)
+26       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd (2026-03-05 13:28:21)
+27       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd (2026-03-05 13:28:21)
+28       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_top.v (2026-03-05 13:28:21)
+29       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v (2026-03-05 13:16:27)
+30       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v (2026-03-05 13:16:27)
+31       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v (2026-03-05 13:16:27)
+32       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v (2026-03-05 13:16:27)
+33       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v (2026-03-05 13:16:27)
+34       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v (2026-03-05 13:16:27)
+35       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v (2026-03-05 13:16:27)
+36       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v (2026-03-05 13:16:27)
+37       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v (2026-03-05 13:16:27)
+39       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CLOCKS_AND_RESETS/CLOCKS_AND_RESETS.v (2026-02-02 15:13:38)
+40       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET/CORERESET.v (2026-02-02 15:13:27)
+41       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET/CORERESET_0/core/corereset_pf.v (2026-02-02 15:13:26)
+42       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET_PF_C5/CORERESET_PF_C5.v (2026-02-02 15:13:27)
+43       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v (2026-02-02 15:13:27)
+44       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CoreAPB3_C0/CoreAPB3_C0.v (2026-02-02 15:13:26)
+45       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/DDR_AXI4_ARBITER_PF_C0/DDR_AXI4_ARBITER_PF_C0.v (2026-03-05 13:28:21)
+46       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/DDR_Read_C0/DDR_Read_C0.v (2026-03-05 13:16:27)
+47       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/FIC_CONVERTER/FIC_CONVERTER.v (2026-02-02 15:13:44)
+48       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/H264_DDR_WRITE/H264_DDR_WRITE.v (2026-03-05 13:24:22)
+49       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR.v (2026-02-02 15:13:30)
+50       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v (2026-02-02 15:13:30)
+51       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/MSS_VIDEO_KIT_H264/MSS_BYP_NOBYP_BYP_BYP_BYP_syn_comps.v (2026-02-02 15:13:23)
+52       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.v (2026-02-02 15:13:23)
+53       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CCC_C0/PF_CCC_C0.v (2026-02-02 15:13:32)
+54       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v (2026-02-02 15:13:32)
+55       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0.v (2026-02-02 15:13:34)
+56       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v (2026-02-02 15:13:34)
+57       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_OSC_C0/PF_OSC_C0.v (2026-02-02 15:13:34)
+58       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v (2026-02-02 15:13:34)
+59       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v (2026-02-18 14:18:40)
+60       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v (2026-02-18 14:18:40)
+61       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v (2026-03-05 13:45:21)
+62       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/top_ddr_write/top_ddr_write.v (2026-03-05 13:36:57)
+63       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/data_packer_h264.vhd (2026-03-05 13:24:10)
+64       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/ddr_write_controller_enc.v (2026-03-05 13:24:10)
+65       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/jpeg_top.v (2026-03-05 13:16:17)
+66       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/ram2port.vhd (2026-03-05 13:24:10)
+67       /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/video_fifo.vhd (2026-03-05 13:24:10)
+68       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/generic/acg5.v (2025-04-29 14:08:00)
+69       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd/hyperents.vhd (2025-04-29 14:27:56)
+70       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd/math_real.vhd (2025-04-29 14:38:21)
+71       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd/snps_haps_pkg.vhd (2025-04-29 14:27:56)
+72       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd/umr_capim.vhd (2025-04-29 14:27:57)
+73       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/arith.vhd (2025-04-29 14:27:56)
+74       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/location.map (2025-04-29 14:27:57)
+75       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/numeric.vhd (2025-04-29 14:38:21)
+76       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/std.vhd (2025-04-29 14:27:57)
+77       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/std1164.vhd (2025-04-29 14:27:57)
+78       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/std_textio.vhd (2025-04-29 14:27:57)
+79       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/unsigned.vhd (2025-04-29 14:27:57)
+80       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/hypermods.v (2025-04-29 14:27:56)
+81       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/scemi_objects.v (2025-04-29 14:27:56)
+82       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/scemi_pipes.svh (2025-04-29 14:27:56)
+83       /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/umr_capim.v (2025-04-29 14:08:12)
+
+*******************************************************************
+Unchanged modules: 75
+MID:  lib.cell.view
+0        COREAPB3_LIB.COREAPB3_MUXPTOB3.verilog
+1        COREAPB3_LIB.CoreAPB3.verilog
+2        COREAPB3_LIB.coreapb3_iaddr_reg.verilog
+5        work.AXI4S_ddr_read_initiator_IF.verilog
+6        work.AXI4_M_M_IF.verilog
+7        work.AXI4_S_IF.verilog
+8        work.Arbiter_Initiator_Rd_IF.verilog
+15       work.CLOCKS_AND_RESETS.verilog
+17       work.CORERESET.verilog
+18       work.CORERESET_CORERESET_0_CORERESET_PF.verilog
+19       work.CORERESET_PF_C5.verilog
+20       work.CORERESET_PF_C5_CORERESET_PF_C5_0_CORERESET_PF.verilog
+25       work.CoreAPB3_C0.verilog
+26       work.DDR_AXI4_ARBITER_PF.verilog
+27       work.DDR_AXI4_ARBITER_PF_C0.verilog
+28       work.DDR_AXI4_ARBITER_PF_Native.verilog
+29       work.DDR_Read.verilog
+30       work.DDR_Read_C0.verilog
+31       work.DDR_Read_Native.verilog
+32       work.DDR_read_controller.verilog
+37       work.FIC_CONVERTER.verilog
+40       work.H264_DDR_WRITE.verilog
+52       work.INIT_MONITOR.verilog
+53       work.INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.verilog
+58       work.MSS.verilog
+59       work.MSS_VIDEO_KIT_H264.verilog
+66       work.PF_CCC_C0.verilog
+67       work.PF_CCC_C0_PF_CCC_C0_0_PF_CCC.verilog
+68       work.PF_CLK_DIV_C0.verilog
+69       work.PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.verilog
+70       work.PF_OSC_C0.verilog
+71       work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC.verilog
+73       work.PF_XCVR_REF_CLK_C0.verilog
+74       work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.verilog
+87       work.VKPFSOC_TOP.verilog
+107      work.apb_wrapper.verilog
+108      work.data_packer_h264.data_packer_h264
+109      work.data_packer_h264.vhdl
+110      work.data_unpacker.verilog
+111      work.ddr_rw_arbiter.verilog
+112      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_LSRAM_top.verilog
+113      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_NstagesSync.verilog
+114      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_async.verilog
+115      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft.verilog
+116      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_grayToBinConv.verilog
+117      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_resetSync.verilog
+118      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync.verilog
+119      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr.verilog
+120      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper.verilog
+121      work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo.verilog
+122      work.ddr_write_controller_enc.verilog
+123      work.jls_encoder.verilog
+124      work.jpeg_control_fsm.verilog
+125      work.jpeg_top.verilog
+126      work.ram2port.ram2port
+127      work.ram2port.vhdl
+128      work.ram2port_ddr_read.verilog
+129      work.ram8bit_input.verilog
+130      work.read_demux.read_demux
+131      work.read_demux.vhdl
+132      work.read_mux.read_mux
+133      work.read_mux.vhdl
+134      work.read_top.verilog
+135      work.request_scheduler.request_scheduler
+136      work.request_scheduler.vhdl
+137      work.synchronizer_circuit_ddr_read.verilog
+138      work.top_ddr_write.verilog
+139      work.video_fifo.vhdl
+140      work.video_fifo.video_fifo
+141      work.video_fifo_ddr_read.verilog
+142      work.write_demux.vhdl
+143      work.write_demux.write_demux
+144      work.write_mux.vhdl
+145      work.write_mux.write_mux
+146      work.write_top.verilog

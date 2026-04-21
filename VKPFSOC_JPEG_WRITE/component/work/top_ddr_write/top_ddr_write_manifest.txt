@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+
+Date      :  Tue Mar 17 11:53:28 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE
+Component :  top_ddr_write
+Family    :  PolarFireSoC
+
+
+HDL source files for all Synthesis and Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE/component/work/top_ddr_write/top_ddr_write.v
+

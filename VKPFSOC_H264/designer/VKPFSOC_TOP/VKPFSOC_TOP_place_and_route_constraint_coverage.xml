@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<text>SmartTime Version 2025.1.0.14</text>
+<text>Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+Date: Thu Mar  5 13:53:10 2026 </text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>VKPFSOC_TOP</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>PolarFireSoC</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>MPFS250TS</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>FCG1152</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>-40 - 100 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>0.97 - 1.03 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>-1</cell>
+</row>
+</table>
+<text></text>
+<text></text>
+<section>
+<name>Coverage Summary</name>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>         2816</cell>
+ <cell>            3</cell>
+ <cell>         2819</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>          740</cell>
+ <cell>            8</cell>
+ <cell>          748</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>           64</cell>
+ <cell>           64</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>         3556</cell>
+ <cell>           75</cell>
+ <cell>         3631</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>         2816</cell>
+ <cell>            3</cell>
+ <cell>         2819</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>          740</cell>
+ <cell>            8</cell>
+ <cell>          748</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>           64</cell>
+ <cell>           64</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>         3556</cell>
+ <cell>           75</cell>
+ <cell>         3631</cell>
+</row>
+</table>
+<section>
+<name>Clock domain: </name>
+<text>CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>         2712</cell>
+ <cell>            2</cell>
+ <cell>         2714</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>          738</cell>
+ <cell>            0</cell>
+ <cell>          738</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            1</cell>
+ <cell>            1</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>         3450</cell>
+ <cell>            3</cell>
+ <cell>         3453</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>         2712</cell>
+ <cell>            2</cell>
+ <cell>         2714</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>          738</cell>
+ <cell>            0</cell>
+ <cell>          738</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            1</cell>
+ <cell>            1</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>         3450</cell>
+ <cell>            3</cell>
+ <cell>         3453</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Max input delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>ddr_ctrl_ready_i</item>
+ <item>read_en_i</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>ddr_ctrl_ready_i</item>
+ <item>read_en_i</item>
+</list>
+<text></text>
+<text></text>
+<text> - Max output delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>VSC_8662_RESETN</item>
+</list>
+<text></text>
+<text> - Min output delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>VSC_8662_RESETN</item>
+</list>
+<text></text>
+<text></text>
+<text> - Setup unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1.DDR_AXI4_ARBITER_PF_0/ddr_rw_arbiter_0/video_bus_state[0]:EN</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/s_read_en_dly1:D</item>
+</list>
+<text></text>
+<text> - Hold unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1.DDR_AXI4_ARBITER_PF_0/ddr_rw_arbiter_0/video_bus_state[0]:EN</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/s_read_en_dly1:D</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>          104</cell>
+ <cell>            1</cell>
+ <cell>          105</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            2</cell>
+ <cell>            0</cell>
+ <cell>            2</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>          106</cell>
+ <cell>            1</cell>
+ <cell>          107</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>          104</cell>
+ <cell>            1</cell>
+ <cell>          105</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            2</cell>
+ <cell>            0</cell>
+ <cell>            2</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>          106</cell>
+ <cell>            1</cell>
+ <cell>          107</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Max input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>apb_pin</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>apb_pin</item>
+</list>
+<text></text>
+<text></text>
+<text></text>
+<text> - Setup unconstrained for the following pin:</text>
+<text>   </text>
+<list>
+ <item>top_ddr_write_0/jpeg_top_1/u_apb/sw1_sync[0]:D</item>
+</list>
+<text></text>
+<text> - Hold unconstrained for the following pin:</text>
+<text>   </text>
+<list>
+ <item>top_ddr_write_0/jpeg_top_1/u_apb/sw1_sync[0]:D</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>osc_rc2mhz</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>REF_CLK_PAD_P</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>gated-clocks</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>            8</cell>
+ <cell>            8</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>           63</cell>
+ <cell>           63</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>           71</cell>
+ <cell>           71</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>            8</cell>
+ <cell>            8</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>           63</cell>
+ <cell>           63</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>           71</cell>
+ <cell>           71</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Clock constraint is missing </text>
+<text></text>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_19_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_25_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_32_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_33_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_46_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_48_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_49_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_61_rs:ALn</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_19_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_25_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_32_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_33_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_46_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_48_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_49_rs:ALn</item>
+ <item>top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_61_rs:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Input to Output</name>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<separator/>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+</table>
+</section>
+</section>
+</doc>

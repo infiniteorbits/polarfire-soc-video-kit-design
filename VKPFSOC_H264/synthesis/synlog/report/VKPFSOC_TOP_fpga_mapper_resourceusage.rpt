@@ -1,0 +1,55 @@
+Resource Usage Report for VKPFSOC_TOP 
+
+Mapping to part: mpfs250tfcg1152-1
+Cell usage:
+AND2            2 uses
+BANKCTRL_GPIO   2 uses
+BANKCTRL_HSIO   1 use
+CLKINT          2 uses
+ICB_CLKDIV      1 use
+INIT            1 use
+INV             2 uses
+MSS             1 use
+OSC_RC2MHZ      1 use
+PLL             1 use
+XCVR_REF_CLK    1 use
+CFG1           34 uses
+CFG2           166 uses
+CFG3           458 uses
+CFG4           582 uses
+
+Carry cells:
+ARI1            260 uses - used for arithmetic functions
+ARI1            10 uses - used for Wide-Mux implementation
+Total ARI1      270 uses
+
+
+Sequential Cells: 
+SLE            1228 uses
+
+DSP Blocks:    0 of 784 (0%)
+
+I/O ports: 123
+I/O primitives: 111
+BIBUF          48 uses
+BIBUF_DIFF     4 uses
+INBUF          10 uses
+INBUF_DIFF     3 uses
+OUTBUF         43 uses
+OUTBUF_DIFF    3 uses
+
+
+Global Clock Buffers: 2
+
+Total LUTs:    1510
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 12; LUTs = 12;
+RAM1K20  Interface Logic : SLEs = 540; LUTs = 540;
+MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  1228 + 12 + 540 + 0 = 1780;
+Total number of LUTs after P&R:  1510 + 12 + 540 + 0 = 2062;
+

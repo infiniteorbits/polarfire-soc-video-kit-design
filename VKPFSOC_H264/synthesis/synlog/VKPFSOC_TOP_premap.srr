@@ -1,0 +1,282 @@
+# Thu Mar  5 13:47:56 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.3 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53561
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 516MB peak: 517MB)
+
+Reading constraint file: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/designer/VKPFSOC_TOP/synthesis.fdc
+@L: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/VKPFSOC_TOP_scck.rpt 
+See clock summary report "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/VKPFSOC_TOP_scck.rpt"
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 535MB peak: 536MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 535MB peak: 536MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 537MB peak: 537MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 540MB peak: 540MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v":15:8:15:15|Removing instance gnd_inst (in view: work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC(verilog)) because it does not drive other instances.
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":26:8:26:15|Removing instance vcc_inst (in view: work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK(verilog)) because it does not drive other instances.
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":27:8:27:15|Removing instance gnd_inst (in view: work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK(verilog)) because it does not drive other instances.
+NConnInternalConnection caching is on
+@W: FX1183 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v":58:0:58:5|User-specified initial value set for instance CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_50MHz.CORERESET_PF_C5_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
+@W: FX1183 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET/CORERESET_0/core/corereset_pf.v":58:0:58:5|User-specified initial value set for instance CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.prdata_1[0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.reg_iw[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.reg_near[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.e_runi with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.f_rc[15:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_c[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.a_wl[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_bt[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.e_x[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_b[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_x[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.a_hl[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+
+Start optimization across hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance compressed_size_o_1[31:1] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance compressed_size[31:1] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v":55:2:55:7|Removing sequential instance reg_near[7:0] (in view: work.apb_wrapper(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":56:27:56:34|Tristate driver TVALID_O (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TVALID_O (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":58:29:58:35|Tristate driver TUSER_O_4 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TUSER_O_4 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":58:29:58:35|Tristate driver TUSER_O_3 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TUSER_O_3 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":58:29:58:35|Tristate driver TUSER_O_2 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TUSER_O_2 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":58:29:58:35|Tristate driver TUSER_O_1 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TUSER_O_1 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":54:42:54:48|Tristate driver TSTRB_O_1 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TSTRB_O_1 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":57:23:57:29|Tristate driver TLAST_O (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TLAST_O (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":55:42:55:48|Tristate driver TKEEP_O_1 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TKEEP_O_1 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":53:36:53:42|Tristate driver TDATA_O_8 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TDATA_O_8 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":53:36:53:42|Tristate driver TDATA_O_7 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) on net TDATA_O_7 (in view: work.DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s(verilog)) has its enable tied to GND.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":144:0:144:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.video_fifo_r.s_ren is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":198:0:198:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.video_fifo_r.rempty is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":237:0:237:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.video_fifo_r.raempty is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":258:0:258:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.video_fifo_r.fifo_hempty is reduced to a combinational gate by constant propagation.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":362:0:362:5|Removing sequential instance wafull (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":344:0:344:5|Removing sequential instance wdata_count[8:0] (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":280:0:280:5|Removing sequential instance wptr[8:0] (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v":132:0:132:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.data_unpacker_0.s_ddr_read_en_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v":132:0:132:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.data_unpacker_0.s_ddr_read_en_dly2 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v":147:0:147:5|Sequential instance top_ddr_write_0.DDR_Read_C0_0.DDR_Read_C0_0.genblk1.DDR_Read_Native_0.data_unpacker_0.s_read_fifo is reduced to a combinational gate by constant propagation.
+@N: BN115 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v":140:4:140:15|Removing instance video_fifo_r (in view: work.DDR_Read_Native_1200s_64s_8s_0s_1s_8s_300s_9s(verilog)) because it does not drive other instances.
+@N: BN115 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v":91:4:91:18|Removing instance data_unpacker_0 (in view: work.DDR_Read_Native_1200s_64s_8s_0s_1s_8s_300s_9s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/video_fifo.vhd":420:4:420:5|Removing sequential instance wafull (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/video_fifo.vhd":404:4:404:5|Removing sequential instance wdata_count[11:0] (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/video_fifo.vhd":314:4:314:5|Removing sequential instance raempty (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/video_fifo.vhd":332:4:332:5|Removing sequential instance fifo_hempty (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req1_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req2_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req3_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req4_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req5_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req6_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req7_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req1_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req2_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req3_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req4_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req5_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req6_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req7_dly is reduced to a combinational gate by constant propagation.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance reg_valid_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z4_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance empty_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z4_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":324:3:324:8|Removing sequential instance genblk5\.almostemptyi (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":219:3:219:8|Removing sequential instance rdcnt[9:0] (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":365:4:365:9|Removing sequential instance dvld_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":453:9:453:14|Removing sequential instance genblk7\.afull_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance reg_valid_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z7_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance empty_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z7_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":324:3:324:8|Removing sequential instance genblk5\.almostemptyi (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":219:3:219:8|Removing sequential instance rdcnt[3:0] (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Sequential instance top_ddr_write_0.jpeg_top_1.u_fsm.i_e is reduced to a combinational gate by constant propagation.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance total_pixels[29:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":402:0:402:5|Sequential instance top_ddr_write_0.jpeg_top_1.u_jls.c_e is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Sequential instance top_ddr_write_0.jpeg_top_1.u_jls.e_e is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Sequential instance top_ddr_write_0.jpeg_top_1.u_jls.e_rune is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Sequential instance top_ddr_write_0.jpeg_top_1.u_jls.f_runi is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Sequential instance top_ddr_write_0.jpeg_top_1.u_jls.e_write_C is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Sequential instance top_ddr_write_0.jpeg_top_1.u_jls.e_write_en is reduced to a combinational gate by constant propagation.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":652:0:652:5|Removing sequential instance g_An[12:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Removing sequential instance f_cn[4:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":652:0:652:5|Removing sequential instance g_q[8:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":946:23:946:26|Removing sequential instance e_ii[13:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Removing sequential instance f_q[8:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":753:0:753:5|Removing sequential instance g_db[7:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":445:0:445:5|Removing sequential instance d_ii[13:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":604:0:604:5|Removing sequential instance ef_q[8:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":402:0:402:5|Removing sequential instance c_ii[13:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":753:0:753:5|Removing sequential instance g_dn[3:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":753:0:753:5|Removing sequential instance g_zn[4:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":370:0:370:5|Removing sequential instance b_ii[13:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Removing sequential instance f_limit[4:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffpatr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Removing sequential instance f_k[3:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Removing sequential instance f_An[12:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffpatr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Removing sequential instance e_q[8:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":498:0:498:5|Removing sequential instance e_runi (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":445:0:445:5|Removing sequential instance d_qp1[9:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":667:0:667:5|Removing sequential instance f_ri[4:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":729:0:729:5|Removing sequential instance A_init_addr[8:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":569:0:569:5|Removing sequential instance NBC_init_addr[8:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":624:0:624:5|Removing sequential instance ef_Ao[12:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":732:0:732:5|Removing sequential instance Aram[12:0] (in view: work.jls_encoder(verilog)) of type view:PrimLib.ram1(prim) because it does not drive other instances.
+
+Finished optimization across hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 596MB peak: 596MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 596MB peak: 596MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 596MB peak: 596MB)
+
+@N: FX1185 |Applying syn_allowed_resources blockrams=21 on compile point top_ddr_write 
+@N: FX1184 |Applying syn_allowed_resources blockrams=812 on top level netlist VKPFSOC_TOP 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 597MB peak: 597MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                                                  Requested     Requested     Clock                              Clock                Clock
+Level     Clock                                                                  Frequency     Period        Type                               Group                Load 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       REF_CLK_PAD_P                                                          148.5 MHz     6.734         declared                           default_clkgroup     1    
+1 .         CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     125.0 MHz     8.000         generated (from REF_CLK_PAD_P)     default_clkgroup     1669 
+1 .         CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50.0 MHz      20.000        generated (from REF_CLK_PAD_P)     default_clkgroup     50   
+                                                                                                                                                                          
+0 -       osc_rc2mhz                                                             2.1 MHz       469.480       declared                           default_clkgroup     1    
+                                                                                                                                                                          
+0 -       System                                                                 100.0 MHz     10.000        system                             system_clkgroup      0    
+==========================================================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                                                     Clock     Source                                                                       Clock Pin                                                                 Non-clock Pin     Non-clock Pin                                                                              
+Clock                                                                Load      Pin                                                                          Seq Example                                                               Seq Example       Comb Example                                                                               
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REF_CLK_PAD_P                                                        1         REF_CLK_PAD_P(port)                                                          CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 CLOCKS_AND_RESETS_inst_0.PF_XCVR_REF_CLK_C0_0.PF_XCVR_REF_CLK_C0_0.I_IO.PAD_P(XCVR_REF_CLK)
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     1669      CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)        top_ddr_write_0.jpeg_top_1.u_jls.a_h[13:0].C                              -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)                          
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50        CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)        top_ddr_write_0.jpeg_top_1.u_apb.pready.C                                 -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)                          
+                                                                                                                                                                                                                                                                                                                                                   
+osc_rc2mhz                                                           1         CLOCKS_AND_RESETS_inst_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_2.CLK(OSC_RC2MHZ)     CLOCKS_AND_RESETS_inst_0.PF_CLK_DIV_C0_0.PF_CLK_DIV_C0_0.I_CD.A           -                 -                                                                                          
+                                                                                                                                                                                                                                                                                                                                                   
+System                                                               0         -                                                                            -                                                                         -                 -                                                                                          
+===================================================================================================================================================================================================================================================================================================================================================
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/VKPFSOC_TOP.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 597MB peak: 597MB)
+
+Encoding state machine local_wbus_state[3:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v":356:1:356:6|There are no possible illegal states for state machine local_wbus_state[3:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog)); safe FSM implementation is not required.
+Encoding state machine video_bus_state[4:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   101 -> 01000
+   110 -> 10000
+Encoding state machine s_state[0:5] (in view: work.request_scheduler_0(request_scheduler))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine s_state[0:5] (in view: work.request_scheduler_1(request_scheduler))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine s_state[3:0] (in view: work.DDR_read_controller_0s_0_1_2_3_256s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v":136:0:136:5|There are no possible illegal states for state machine s_state[3:0] (in view: work.DDR_read_controller_0s_0_1_2_3_256s(verilog)); safe FSM implementation is not required.
+Encoding state machine s_state[2:0] (in view: work.ddr_write_controller_enc(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[3:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
+   011 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":96:4:96:9|There are no possible illegal states for state machine state[3:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog)); safe FSM implementation is not required.
+Encoding state machine state_footer[2:0] (in view: work.jls_encoder(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 597MB peak: 597MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 597MB peak: 597MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 509MB peak: 597MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Mar  5 13:47:58 2026
+
+###########################################################]

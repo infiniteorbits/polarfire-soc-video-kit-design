@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>VKPFSOC_TOP</header>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin CLOCKS_AND_RESETS:DEVICE_INIT_DONE</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/VKPFSOC_TOP/pins/CLOCKS_AND_RESETS:DEVICE_INIT_DONE</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin MSS:GPIO_2_M2F_4</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/VKPFSOC_TOP/pins/MSS:GPIO_2_M2F_4</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin MSS:CRYPTO_DLL_LOCK_M2F</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/VKPFSOC_TOP/pins/MSS:CRYPTO_DLL_LOCK_M2F</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin MSS:CRYPTO_BUSY_M2F</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/VKPFSOC_TOP/pins/MSS:CRYPTO_BUSY_M2F</crossprobe>
+  </drc>
+</drcreport>

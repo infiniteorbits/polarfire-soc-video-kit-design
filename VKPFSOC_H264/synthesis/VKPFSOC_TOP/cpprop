@@ -1,0 +1,9 @@
+n work VKPFSOC_TOP verilog;
+av .compile_point_summary_status "Remapped";
+av .compile_point_summary_reason "Design changed";
+av .compile_point_update_model 1;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 2.45107;
+av .compile_point_starttime_stamp "Thu Mar  5 13:47:59 2026";
+av .compile_point_endtime_stamp "Thu Mar  5 13:48:02 2026";
+av .compile_point_realtime_used 2.28222;

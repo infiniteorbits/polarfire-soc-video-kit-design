@@ -1,0 +1,24 @@
+set_io -port_name ddr_ctrl_ready_i  \
+    -pin_name G6            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INPUT
+
+set_io -port_name apb_pin  \
+    -pin_name D6            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INPUT
+    
+set_io -port_name read_en_i  \
+    -pin_name C9            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INPUT
+    
+set_io -port_name frame_start_i_read_ddr  \
+    -pin_name B4            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INPUT
+    

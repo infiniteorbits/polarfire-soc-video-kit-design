@@ -1,0 +1,11 @@
+DESIGN=VKPFSOC_TOP
+DESDIR=/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/designer/VKPFSOC_TOP
+TARGET_DIR=/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/designer/VKPFSOC_TOP
+FAM=PolarFireSoC
+DIE=PA5SOC250TS
+PACKAGE=fcg1152
+PINRPT_BY_NAME=1
+PINRPT_BY_NUMBER=1
+PINRPT_BOARDLAYOUT=1
+BANK_REPORT=1
+IOREG_REPORT=1

@@ -1,0 +1,8 @@
+/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/bin/syn_nfilter  -link  -top  VKPFSOC_TOP  -multisrs  "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synwork/VKPFSOC_TOP_comp.srs"  -osyn  "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synwork/VKPFSOC_TOP_mult.srs"  -log  "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synlog/VKPFSOC_TOP_multi_srs_gen.srr" 
+relcom:../../../../../microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/bin/syn_nfilter -link -top VKPFSOC_TOP -multisrs "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synwork/VKPFSOC_TOP_comp.srs" -osyn "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synwork/VKPFSOC_TOP_mult.srs" -log "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/synlog/VKPFSOC_TOP_multi_srs_gen.srr"
+rc:0 success:1 runtime:0
+file:../synwork/VKPFSOC_TOP_comp.srs|io:i|time:1772714875|size:363379|exec:0|csum:005C2E7E052D6498CBC22234C3B5CF59
+file:../synwork/VKPFSOC_TOP_mult.srs|io:o|time:1772714876|size:14373|exec:0|csum:
+file:../synlog/VKPFSOC_TOP_multi_srs_gen.srr|io:o|time:1772714876|size:1323|exec:0|csum:
+file:../../../../../microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/linux_a_64/syn_nfilter|io:i|time:1745933905|size:18297968|exec:1|csum:06CF4D589DA985322FE761F0EE4260BE
+file:../../../../../microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/bin/syn_nfilter|io:i|time:1745933292|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

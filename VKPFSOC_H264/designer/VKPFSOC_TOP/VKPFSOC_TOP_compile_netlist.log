@@ -1,0 +1,27 @@
+Info: [127205812]:  CMPPF_148: Added 'ADLIB:CLKINT' instance type after 'CLOCKS_AND_RESETS_inst_0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_0/I_CD'.
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0:A'.
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4:A'.
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:CRN_INT' instance type before pin 'CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0:REF_CLK_0'.
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'CLOCKS_AND_RESETS_inst_0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_0/I_CD_1:A'.
+
+===============================================================================.
+
+Info: Global design data:
+      Total globals:                       3
+      Globals that cannot be demoted:      3
+      Globals considered for demotion:     0
+
+
+Info: List of globals that cannot be demoted:
+    CLK    ASYN   DATA   Instance Name
+    ---    ----   ----   -------------
+    1212   0      0      'CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0'
+    49     0      0      'CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4'
+    1      0      0      'CLOCKS_AND_RESETS_inst_0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_0/I_CD_1/U0'
+
+Info: Demotion information:
+Info: [127205381]:  CMPPF_302: Added 0 row global instances.
+Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
+
+===============================================================================.
+

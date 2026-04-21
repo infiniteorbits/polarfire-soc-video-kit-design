@@ -1,0 +1,565 @@
+# Thu Mar  5 13:46:26 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.3 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53561
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/jpeg_top.v":6:7:6:14|Found compile point of type hard on View view:work.jpeg_top_8s(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.jpeg_top_8s(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 567MB peak: 567MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 567MB peak: 567MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 567MB peak: 567MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 567MB peak: 567MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/jpeg_top.v":6:7:6:14|Mapping Compile point view:work.jpeg_top_8s(verilog) because 
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 567MB peak: 567MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: MO106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|Found ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) with 2 words by 2 bits.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 568MB peak: 568MB)
+
+Encoding state machine state[3:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
+   011 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":96:4:96:9|There are no possible illegal states for state machine state[3:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog)); safe FSM implementation is not required.
+@N: MO231 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Found counter in view:work.jpeg_control_fsm_8s_0_1_2_3(verilog) instance pixel_count[31:0] 
+@N: MO231 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Found counter in view:work.jpeg_control_fsm_8s_0_1_2_3(verilog) instance sof_counter[8:0] 
+@N: MO231 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Found counter in view:work.jpeg_control_fsm_8s_0_1_2_3(verilog) instance idle_counter[8:0] 
+@N: MF179 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":89:25:89:42|Found 14 by 14 bit equality operator ('==') un2_res_change (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog))
+@N: MF179 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":89:48:89:66|Found 14 by 14 bit equality operator ('==') un4_res_change (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog))
+Encoding state machine state_footer[2:0] (in view: work.jls_encoder(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO231 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Found counter in view:work.jls_encoder(verilog) instance a_jj[14:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 570MB peak: 570MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 581MB peak: 581MB)
+
+NConnInternalConnection caching is on
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[13] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[12]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[12] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[11] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[9] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[8] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[7] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[6] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[5] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[4] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[3] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[2] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[1] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[10] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[0] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[15] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[16] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[17] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[18] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[19] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[20] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[21] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[22] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[25] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[27] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[26] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[24] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[23] because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[14] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[31] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[30] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[29] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[28] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[27] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[26] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[25] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[24] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[23] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[22] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[21] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[20] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[19] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[18] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[17] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[16] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[15] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[14] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[13] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[12] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[11] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[10] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[9] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.pixel_count[8] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+
+Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 581MB peak: 582MB)
+
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[28] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[29] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[30] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[31] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[32] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[33] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[34] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[35] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[36] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[37] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[38] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[39] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[40] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[41] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[0] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[1] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[2] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[3] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[4] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[5] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[6] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[7] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[8] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[9] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[10] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[11] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[12] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[13] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":332:0:332:5|Removing sequential instance u_jls.a_jj[14] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[43] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[44] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[45] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[46] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[47] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[48] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[49] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[50] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[51] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[52] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[53] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[54] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v":825:0:825:5|Removing sequential instance u_jls.j_bbuf[55] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[0] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[1] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[2] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[3] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[4] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[5] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[6] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[7] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[8] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[9] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[10] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[11] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[12] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_reg[13] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[0] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[1] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[2] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[3] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[4] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[5] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[6] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[7] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[8] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[9] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[10] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[11] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[12] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_reg[13] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.width_prev[13] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_prev[0] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_prev[1] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance u_fsm.height_prev[2] (in view: work.jpeg_top_8s(verilog)) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/jpeg_top_8s/jpeg_top_8s.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+
+Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 598MB peak: 598MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:02s		     2.28ns		 845 /       425
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 598MB peak: 598MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 598MB peak: 598MB)
+
+
+End compile point sub-process log
+
+@N: MT615 |Found clock REF_CLK_PAD_P with period 6.73ns 
+@N: MT615 |Found clock CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 with period 8.00ns 
+@N: MT615 |Found clock CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 with period 20.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu Mar  5 13:46:29 2026
+#
+
+
+Top view:               VKPFSOC_TOP
+Requested Frequency:    2.1 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/designer/VKPFSOC_TOP/synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 2.726
+
+                                                                     Requested     Estimated     Requested     Estimated               Clock                              Clock           
+Starting Clock                                                       Frequency     Frequency     Period        Period        Slack     Type                               Group           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     125.0 MHz     189.6 MHz     8.000         5.274         2.726     generated (from REF_CLK_PAD_P)     default_clkgroup
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50.0 MHz      191.6 MHz     20.000        5.219         3.197     generated (from REF_CLK_PAD_P)     default_clkgroup
+REF_CLK_PAD_P                                                        148.5 MHz     NA            6.734         NA            NA        declared                           default_clkgroup
+osc_rc2mhz                                                           2.1 MHz       NA            469.480       NA            NA        declared                           default_clkgroup
+==========================================================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                              |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                          Ending                                                            |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  |  8.000       2.726   |  No paths    -      |  No paths    -      |  No paths    -    
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0  |  4.000       3.197   |  No paths    -      |  No paths    -      |  No paths    -    
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1  |  20.000      14.781  |  No paths    -      |  No paths    -      |  No paths    -    
+===========================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                 Starting                                                                                              Arrival          
+Instance                                         Reference                                                            Type     Pin     Net             Time        Slack
+                                                 Clock                                                                                                                  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[240]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[240]     0.201       2.726
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[244]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[244]     0.201       2.756
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[241]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[241]     0.218       2.770
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[245]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[245]     0.218       2.802
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[242]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[242]     0.218       2.835
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[243]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[243]     0.218       2.867
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[246]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[246]     0.218       2.867
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[247]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[247]     0.218       2.899
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[233]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[233]     0.201       4.136
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[234]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      Q       bbuf_2[234]     0.218       4.157
+========================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                 Starting                                                                                                        Required          
+Instance                                         Reference                                                            Type     Pin     Net                       Time         Slack
+                                                 Clock                                                                                                                             
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[7]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[7]               8.000        2.726
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[6]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[6]               8.000        2.742
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[5]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[5]               8.000        2.758
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[4]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[4]               8.000        2.774
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[3]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_RNIUPRCUJ_S[3]     8.000        2.790
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[2]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[2]               8.000        2.806
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[1]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bcnt_3[1]               8.000        3.024
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[104]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bbuf_3[104]             8.000        3.396
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[205]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bbuf_3[205]             8.000        3.396
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[79]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       j_bbuf_3[79]              8.000        3.437
+===================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      8.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.000
+
+    - Propagation time:                      5.274
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     2.726
+
+    Number of logic level(s):                18
+    Starting point:                          top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[240] / Q
+    Ending point:                            top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[7] / D
+    The start point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+
+Instance / Net                                                     Pin      Pin               Arrival     No. of    
+Name                                                      Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_jls.j_bbuf[240]              SLE      Q        Out     0.201     0.201 f     -         
+bbuf_2[240]                                               Net      -        -       0.547     -           3         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2_5            CFG4     D        In      -         0.748 f     -         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2_5            CFG4     Y        Out     0.192     0.939 f     -         
+bbuf15_0_a2_5                                             Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2              CFG2     B        In      -         1.057 f     -         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf15_0_a2              CFG2     Y        Out     0.077     1.135 f     -         
+bbuf15                                                    Net      -        -       1.259     -           249       
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf28                   CFG4     D        In      -         2.394 f     -         
+top_ddr_write_0.jpeg_top_1.u_jls.bbuf28                   CFG4     Y        Out     0.232     2.626 r     -         
+bbuf28                                                    Net      -        -       1.258     -           246       
+top_ddr_write_0.jpeg_top_1.u_jls.un54_0_a2[0]             CFG2     A        In      -         3.884 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.un54_0_a2[0]             CFG2     Y        Out     0.051     3.934 r     -         
+un54_0_a2[0]                                              Net      -        -       0.124     -           2         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIC13052[0]      ARI1     C        In      -         4.058 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIC13052[0]      ARI1     Y        Out     0.307     4.365 r     -         
+j_bcnt_RNIC13052_Y[0]                                     Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNISVP3E4[1]      ARI1     A        In      -         4.483 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNISVP3E4[1]      ARI1     FCO      Out     0.285     4.768 r     -         
+j_bcnt_RNISVP3E4_FCO[1]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI0TD7I4[1]      ARI1     FCI      In      -         4.768 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI0TD7I4[1]      ARI1     FCO      Out     0.008     4.776 r     -         
+j_bcnt_RNI0TD7I4_FCO[1]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI5OFI89[2]      ARI1     FCI      In      -         4.776 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI5OFI89[2]      ARI1     FCO      Out     0.008     4.784 r     -         
+j_bcnt_RNI5OFI89_FCO[2]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIAM3MC9[2]      ARI1     FCI      In      -         4.784 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIAM3MC9[2]      ARI1     FCO      Out     0.008     4.792 r     -         
+j_bcnt_RNIAM3MC9_FCO[2]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIUPRCUJ[3]      ARI1     FCI      In      -         4.792 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIUPRCUJ[3]      ARI1     FCO      Out     0.008     4.800 r     -         
+j_bcnt_RNIUPRCUJ_FCO[3]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI87GD3L[3]      ARI1     FCI      In      -         4.800 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI87GD3L[3]      ARI1     FCO      Out     0.008     4.808 r     -         
+j_bcnt_RNI87GD3L_FCO[3]                                   Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIRSKRBB1[4]     ARI1     FCI      In      -         4.808 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIRSKRBB1[4]     ARI1     FCO      Out     0.008     4.816 r     -         
+j_bcnt_RNIRSKRBB1_FCO[4]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI6B9SGC1[4]     ARI1     FCI      In      -         4.816 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI6B9SGC1[4]     ARI1     FCO      Out     0.008     4.824 r     -         
+j_bcnt_RNI6B9SGC1_FCO[4]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIO57P6Q2[5]     ARI1     FCI      In      -         4.824 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNIO57P6Q2[5]     ARI1     FCO      Out     0.008     4.832 r     -         
+j_bcnt_RNIO57P6Q2_FCO[5]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI4LRPBR2[5]     ARI1     FCI      In      -         4.832 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI4LRPBR2[5]     ARI1     FCO      Out     0.008     4.840 r     -         
+j_bcnt_RNI4LRPBR2_FCO[5]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNILQBKSN1[6]     ARI1     FCI      In      -         4.840 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNILQBKSN1[6]     ARI1     FCO      Out     0.008     4.848 r     -         
+j_bcnt_RNILQBKSN1_FCO[6]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI2B0L1P1[6]     ARI1     FCI      In      -         4.848 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNI2B0L1P1[6]     ARI1     FCO      Out     0.008     4.856 r     -         
+j_bcnt_RNI2B0L1P1_FCO[6]                                  Net      -        -       0.000     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNO[7]            ARI1     FCI      In      -         4.856 r     -         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt_RNO[7]            ARI1     S        Out     0.300     5.156 r     -         
+j_bcnt_3[7]                                               Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_jls.j_bcnt[7]                SLE      D        In      -         5.274 r     -         
+====================================================================================================================
+Total path delay (propagation time + setup) of 5.274 is 1.732(32.8%) logic and 3.542(67.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                Starting                                                                                           Arrival          
+Instance                                        Reference                                                            Type     Pin     Net          Time        Slack
+                                                Clock                                                                                                               
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_apb.reg_sof[0]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_sof_ps     0.218       3.197
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[0]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[0]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[1]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[1]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[2]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[2]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[3]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[3]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[4]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[4]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[5]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[5]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[6]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[6]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[7]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[7]       0.218       3.664
+top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[8]      CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      Q       i_h[8]       0.218       3.664
+====================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                              Starting                                                                                              Required          
+Instance                                      Reference                                                            Type     Pin     Net             Time         Slack
+                                              Clock                                                                                                                   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_fsm.state[0]     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       state_ns[0]     4.000        3.197
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[0]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[0]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[1]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[1]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[2]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[2]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[3]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[3]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[4]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[4]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[5]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[5]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[6]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[6]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[7]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[7]          4.000        3.664
+top_ddr_write_0.jpeg_top_1.u_jls.a_h[8]       CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     SLE      D       i_h[8]          4.000        3.664
+======================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      4.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.000
+
+    - Propagation time:                      0.803
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 3.197
+
+    Number of logic level(s):                2
+    Starting point:                          top_ddr_write_0.jpeg_top_1.u_apb.reg_sof[0] / Q
+    Ending point:                            top_ddr_write_0.jpeg_top_1.u_fsm.state[0] / D
+    The start point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+    The end   point is clocked by            CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+
+Instance / Net                                                       Pin      Pin               Arrival     No. of    
+Name                                                        Type     Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------
+top_ddr_write_0.jpeg_top_1.u_apb.reg_sof[0]                 SLE      Q        Out     0.218     0.218 r     -         
+i_sof_ps                                                    Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0_m2     CFG4     B        In      -         0.336 r     -         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0_m2     CFG4     Y        Out     0.083     0.419 r     -         
+N_52                                                        Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0        CFG4     C        In      -         0.537 r     -         
+top_ddr_write_0.jpeg_top_1.u_fsm.state_ns_1_0_.m17_0        CFG4     Y        Out     0.148     0.685 r     -         
+state_ns[0]                                                 Net      -        -       0.118     -           1         
+top_ddr_write_0.jpeg_top_1.u_fsm.state[0]                   SLE      D        In      -         0.803 r     -         
+======================================================================================================================
+Total path delay (propagation time + setup) of 0.803 is 0.449(55.9%) logic and 0.354(44.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/synthesis/jpeg_top_8s/cpprop
+
+Summary of Compile Points :
+*************************** 
+Name            Status     Reason     
+--------------------------------------
+jpeg_top_8s     Mapped     No database
+======================================
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Thu Mar  5 13:46:30 2026
+
+###########################################################]

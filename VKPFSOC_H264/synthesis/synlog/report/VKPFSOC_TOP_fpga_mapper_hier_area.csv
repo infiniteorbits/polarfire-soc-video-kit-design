@@ -1,0 +1,58 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
+. VKPFSOC_TOP, 1228, 1240, 270, 0, 0, 15, 1, 2, 111
+.	. CLOCKS_AND_RESETS, 32, 1, 0, 0, 0, 0, 0, 2, 0
+.	.	. CORERESET, 16, 1, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. CORERESET_CORERESET_0_CORERESET_PF, 16, 1, 0, 0, 0, 0, 0, 0, 0
+.	.	. CORERESET_PF_C5, 16, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. CORERESET_PF_C5_CORERESET_PF_C5_0_CORERESET_PF, 16, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. INIT_MONITOR, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. PF_CCC_C0, 0, 0, 0, 0, 0, 0, 0, 2, 0
+.	.	.	. PF_CCC_C0_PF_CCC_C0_0_PF_CCC, 0, 0, 0, 0, 0, 0, 0, 2, 0
+.	.	. PF_CLK_DIV_C0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. PF_OSC_C0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. PF_OSC_C0_PF_OSC_C0_0_PF_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. PF_XCVR_REF_CLK_C0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	. FIC_CONVERTER, 0, 4, 0, 0, 0, 0, 0, 0, 0
+.	.	. CoreAPB3_C0, 0, 4, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. CoreAPB3_Z1_layer0, 0, 4, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. COREAPB3_MUXPTOB3, 0, 2, 0, 0, 0, 0, 0, 0, 0
+.	. MSS_VIDEO_KIT_H264, 0, 0, 0, 0, 0, 0, 0, 0, 88
+.	. top_ddr_write, 1196, 1235, 270, 0, 0, 15, 1, 0, 0
+.	.	. DDR_AXI4_ARBITER_PF_C0, 475, 397, 68, 0, 0, 2, 1, 0, 0
+.	.	.	. DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s, 475, 397, 68, 0, 0, 2, 1, 0, 0
+.	.	.	.	. DDR_AXI4_ARBITER_PF_Native_4s_32s_64s_1s_1s_2s, 475, 397, 68, 0, 0, 2, 1, 0, 0
+.	.	.	.	.	. ddr_rw_arbiter_Z8_layer0, 387, 325, 58, 0, 0, 2, 1, 0, 0
+.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo_Z2_layer0, 306, 241, 50, 0, 0, 2, 0, 0, 0
+.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z4_layer0, 131, 95, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0, 42, 16, 50, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s, 66, 64, 0, 0, 0, 2, 0, 0, 0
+.	.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_LSRAM_top_64s_64s_9_9_512s, 66, 64, 0, 0, 0, 2, 0, 0, 0
+.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo_Z5_layer0, 49, 68, 0, 0, 0, 0, 1, 0, 0
+.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z7_layer0, 19, 23, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0, 19, 35, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s, 0, 0, 0, 0, 0, 0, 1, 0, 0
+.	.	.	.	.	.	.	.	. ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_LSRAM_top_8s_8s_3_3_8s, 0, 0, 0, 0, 0, 0, 1, 0, 0
+.	.	.	.	.	. read_top_32s, 24, 36, 5, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. read_demux, 0, 2, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. request_scheduler_1, 24, 34, 5, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. write_top_32s_64s, 64, 36, 5, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. request_scheduler_1_0, 23, 34, 5, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH, 41, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	.	. write_demux, 0, 2, 0, 0, 0, 0, 0, 0, 0
+.	.	. DDR_Read_C0, 38, 42, 9, 0, 0, 0, 0, 0, 0
+.	.	.	. DDR_Read_1200s_64s_8s_0s_0s_32s_0s_1s_8s, 38, 42, 9, 0, 0, 0, 0, 0, 0
+.	.	.	.	. DDR_Read_Native_1200s_64s_8s_0s_1s_8s_300s_9s, 38, 42, 9, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. DDR_read_controller_0s_0_1_2_3_256s, 38, 42, 9, 0, 0, 0, 0, 0, 0
+.	.	. H264_DDR_WRITE, 262, 113, 122, 0, 0, 13, 0, 0, 0
+.	.	.	. ddr_write_controller_enc, 75, 42, 56, 0, 0, 0, 0, 0, 0
+.	.	.	. work_data_packer_h264_data_packer_h264_16_64_1_g_IP_DWg_OP_DW, 70, 9, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD, 117, 62, 66, 0, 0, 13, 0, 0, 0
+.	.	.	.	. ram2PORT_work_video_fifo_video_fifo_0layer1, 0, 0, 0, 0, 0, 13, 0, 0, 0
+.	.	. jpeg_top_8s, 421, 683, 71, 0, 0, 0, 0, 0, 0
+.	.	.	. apb_wrapper, 32, 8, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. jls_encoder, 332, 652, 43, 0, 0, 0, 0, 0, 0
+.	.	.	. jpeg_control_fsm_8s_0_1_2_3, 57, 23, 28, 0, 0, 0, 0, 0, 0

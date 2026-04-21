@@ -1,0 +1,75 @@
+set_device -family {PolarFireSoC} -die {MPFS250TS} -speed {-1} -range {IND}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET/CORERESET_0/core/corereset_pf.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET/CORERESET.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CORERESET_PF_C5/CORERESET_PF_C5.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/INIT_MONITOR/INIT_MONITOR.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CCC_C0/PF_CCC_C0.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_OSC_C0/PF_OSC_C0.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CLOCKS_AND_RESETS/CLOCKS_AND_RESETS.v}
+read_verilog -mode system_verilog -lib COREAPB3_LIB {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v}
+read_verilog -mode system_verilog -lib COREAPB3_LIB {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v}
+read_verilog -mode system_verilog -lib COREAPB3_LIB {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/CoreAPB3_C0/CoreAPB3_C0.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/FIC_CONVERTER/FIC_CONVERTER.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_M_M_IF.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_S_IF.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_NstagesSync.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_grayToBinConv.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_async.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_resetSync.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_LSRAM_top.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_top.v}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF_Native.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/DDR_AXI4_ARBITER_PF_C0/DDR_AXI4_ARBITER_PF_C0.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/DDR_Read_C0/DDR_Read_C0.v}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/data_packer_h264.vhd}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/ddr_write_controller_enc.v}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/ram2port.vhd}
+read_vhdl -mode vhdl_2008 {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/video_fifo.vhd}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/H264_DDR_WRITE/H264_DDR_WRITE.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/apb_wrapper.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jpeg_control_fsm.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/jls_encoder.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/hdl/jpeg_top.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/icicle-kit-reference-design/script_support/hdl/ram8bit_input.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/top_ddr_write/top_ddr_write.v}
+read_verilog -mode system_verilog {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v}
+set_top_level {VKPFSOC_TOP}
+read_sdc -component {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.sdc}
+read_sdc -component {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.sdc}
+read_sdc -component {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc}
+derive_constraints
+write_sdc {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/VKPFSOC_TOP_derived_constraints.sdc}
+write_ndc {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/VKPFSOC_TOP_derived_constraints.ndc}
+write_pdc {/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/fp/VKPFSOC_TOP_derived_constraints.pdc}

@@ -1,0 +1,384 @@
+`timescale 1ns/1ps
+
+module tb_top_system;
+
+  //====================================================
+  // PARAMETERS
+  //====================================================
+  parameter SYSCLK_PERIOD = 10;
+
+  //====================================================
+  // CLOCK / RESET
+  //====================================================
+  reg SYSCLK;
+  reg NSYSRESET;
+
+  initial begin
+    SYSCLK = 0;
+    NSYSRESET = 0;
+    #(SYSCLK_PERIOD*20);
+    NSYSRESET = 1;
+  end
+
+  always #(SYSCLK_PERIOD/2) SYSCLK = ~SYSCLK;
+
+  //====================================================
+  // APB
+  //====================================================
+  reg         psel;
+  reg         pwrite;
+  reg [31:0]  paddr;
+  reg [31:0]  pwdata;
+  wire [31:0] prdata;
+  wire pready;
+
+  //====================================================
+  // DDR READ CONTROL
+  //====================================================
+  reg read_en_i;
+  reg frame_start_i_read_ddr;
+
+  //====================================================
+  // DDR WRITE CONTROL
+  //====================================================
+  reg ddr_ctrl_ready_i;
+
+  //====================================================
+  // AXI4 WIRES
+  //====================================================
+  wire arready, awready, wready;
+  wire rvalid, rlast, bvalid;
+  wire [63:0] rdata;
+  wire [3:0]  rid, bid;
+  wire [1:0]  rresp, bresp;
+wire [31:0] araddr;
+wire        arvalid;
+wire [3:0]  arid;
+wire [7:0]  arlen;
+
+wire [31:0] awaddr;
+wire        awvalid;
+wire [3:0]  awid;
+wire [7:0]  awlen;
+
+wire [63:0] wdata;
+wire        wvalid;
+wire        wlast;
+
+wire bready;
+wire rready;
+  //====================================================
+  // DUT
+  //====================================================
+  top_ddr_write_read dut (
+    .pclk(SYSCLK),
+    .presetn(NSYSRESET),
+    .sys_clk_i(SYSCLK),
+    .reset_i(NSYSRESET),
+
+    // APB
+    .APBslave_psel(psel),
+    .APBslave_pwrite(pwrite),
+    .APBslave_paddr(paddr),
+    .APBslave_pwdata(pwdata),
+    .APBslave_prdata(prdata),
+    .APBslave_pready(pready),
+
+    // READ CONTROL
+    .read_en_i(read_en_i),
+    .frame_start_i_read_ddr(frame_start_i_read_ddr),
+
+    // WRITE CONTROL
+    .ddr_ctrl_ready_i(ddr_ctrl_ready_i),
+
+    // AXI READ
+    .MIRRORED_SLAVE_AXI4_arready_0(arready),
+    .MIRRORED_SLAVE_AXI4_rvalid_0(rvalid),
+    .MIRRORED_SLAVE_AXI4_rdata_0(rdata),
+    .MIRRORED_SLAVE_AXI4_rlast_0(rlast),
+    .MIRRORED_SLAVE_AXI4_rid_0(rid),
+    .MIRRORED_SLAVE_AXI4_rresp_0(rresp),
+
+    // AXI WRITE
+    .MIRRORED_SLAVE_AXI4_awready_0(awready),
+    .MIRRORED_SLAVE_AXI4_wready_0(wready),
+    .MIRRORED_SLAVE_AXI4_bvalid_0(bvalid),
+    .MIRRORED_SLAVE_AXI4_bid_0(bid),
+    .MIRRORED_SLAVE_AXI4_bresp_0(bresp),
+
+    // AXI MASTER OUTPUTS
+    .MIRRORED_SLAVE_AXI4_araddr_0(araddr),
+    .MIRRORED_SLAVE_AXI4_arvalid_0(arvalid),
+    .MIRRORED_SLAVE_AXI4_arid_0(arid),
+    .MIRRORED_SLAVE_AXI4_arlen_0(arlen),
+
+    .MIRRORED_SLAVE_AXI4_awaddr_0(awaddr),
+    .MIRRORED_SLAVE_AXI4_awvalid_0(awvalid),
+    .MIRRORED_SLAVE_AXI4_awid_0(awid),
+    .MIRRORED_SLAVE_AXI4_awlen_0(awlen),
+
+    .MIRRORED_SLAVE_AXI4_wdata_0(wdata),
+    .MIRRORED_SLAVE_AXI4_wvalid_0(wvalid),
+    .MIRRORED_SLAVE_AXI4_wlast_0(wlast),
+
+    .MIRRORED_SLAVE_AXI4_bready_0(bready),
+    .MIRRORED_SLAVE_AXI4_rready_0(rready)
+  );
+
+  //====================================================
+  // AXI4 RAM (LE PLUS IMPORTANT)
+  //====================================================
+  axi4_ram #(
+    .AXI_ADDR_WIDTH(32),
+    .AXI_DATA_WIDTH(64)
+  ) axi_mem (
+    .sys_clk_i(SYSCLK),
+    .resetn_i(NSYSRESET),
+
+    .awready(awready),
+    .wready(wready),
+    .bid(bid),
+    .bresp(bresp),
+    .bvalid(bvalid),
+
+    .arready(arready),
+    .rid(rid),
+    .rdata(rdata),
+    .rresp(rresp),
+    .rlast(rlast),
+    .rvalid(rvalid),
+
+    .awid(awid),
+    .awaddr(awaddr),
+    .awlen(awlen),
+    .awvalid(awvalid),
+
+    .wdata(wdata),
+    .wlast(wlast),
+    .wvalid(wvalid),
+
+    .bready(bready),
+
+    .arid(arid),
+    .araddr(araddr),
+    .arlen(arlen),
+    .arvalid(arvalid),
+
+    .rready(rready)
+  );
+
+  //====================================================
+  // APB TASK
+  //====================================================
+  task apb_write(input [31:0] addr, input [31:0] data);
+  begin
+    @(posedge SYSCLK);
+    psel   <= 1;
+    pwrite <= 1;
+    paddr  <= addr;
+    pwdata <= data;
+    while (!pready) @(posedge SYSCLK);
+    @(posedge SYSCLK);
+    psel   <= 0;
+    pwrite <= 0;
+    $display("[APB WRITE] addr=0x%08h data=0x%08h", addr, data);
+  end
+  endtask
+
+  //====================================================
+  // READ TASK
+  //====================================================
+  task tsk_read;
+  begin
+    frame_start_i_read_ddr = 1;
+     repeat(10)@(posedge SYSCLK);
+    frame_start_i_read_ddr = 0;
+
+    repeat(1) begin
+      read_en_i = 1;
+      #(100);
+      read_en_i = 0;
+     
+    end
+  end
+  endtask
+
+  //====================================================
+  // DDR READY
+  //====================================================
+  initial begin
+    ddr_ctrl_ready_i = 0;
+    wait(NSYSRESET);
+    #50;
+    ddr_ctrl_ready_i = 1;
+  end
+
+  ///
+   always @(posedge SYSCLK) begin
+  if (awvalid) $display("WRITE ADDR %h", awaddr);
+  if (wvalid)  $display("WRITE DATA %h", wdata);
+  if (arvalid) $display("READ ADDR %h", araddr);
+  if (rvalid)  $display("READ DATA %h", rdata);
+end
+  //====================================================
+  // TEST SEQUENCE
+  //====================================================
+  initial begin
+    psel = 0;
+    pwrite = 0;
+    read_en_i = 0;
+    frame_start_i_read_ddr = 0;
+
+    wait(NSYSRESET);
+
+    // CONFIG APB
+    apb_write(32'h04, 8); // width
+    apb_write(32'h08, 4); // high
+     apb_write(32'h0C, 0); // near
+
+    apb_write(32'h00, 1); // start
+    #10
+    apb_write(32'h00, 0); // start
+    // Lancer read
+    tsk_read();
+   
+    #2000;
+    $stop;
+  end
+
+endmodule
+
+//------------------------------------------------------------
+// AXI4 RAM module avec pattern de simulation
+//------------------------------------------------------------
+module axi4_ram
+#(
+    parameter AXI_ADDR_WIDTH = 32,
+    parameter AXI_DATA_WIDTH = 64,
+    parameter AXI_ID_WIDTH   = 4,
+    parameter MEM_DEPTH      = 1024
+)
+(
+    input                     sys_clk_i,
+    input                     resetn_i,
+
+    // Write address channel
+    input  [AXI_ADDR_WIDTH-1:0] awaddr,
+    input  [AXI_ID_WIDTH-1:0]   awid,
+    input  [7:0]                awlen,
+    input                        awvalid,
+    output                       awready,
+
+    // Write data channel
+    input  [AXI_DATA_WIDTH-1:0] wdata,
+    input                        wvalid,
+    input                        wlast,
+    output                       wready,
+
+    // Write response channel
+    input                        bready,
+    output reg [AXI_ID_WIDTH-1:0] bid,
+    output reg [1:0]              bresp,
+    output reg                     bvalid,
+
+    // Read address channel
+    input  [AXI_ADDR_WIDTH-1:0] araddr,
+    input  [AXI_ID_WIDTH-1:0]    arid,
+    input  [7:0]                 arlen,
+    input                        arvalid,
+    output                       arready,
+
+    // Read data channel
+    input                        rready,
+    output reg [AXI_ID_WIDTH-1:0] rid,
+    output reg [AXI_DATA_WIDTH-1:0] rdata,
+    output reg                     rvalid,
+    output reg                     rlast,
+    output [1:0]                   rresp
+);
+
+    //====================================================
+    // MEMOIRE
+    //====================================================
+    reg [AXI_DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];
+    reg [AXI_ADDR_WIDTH-1:0] waddr, raddr;
+    reg ren;
+
+    assign awready = 1'b1;
+    assign wready  = 1'b1;
+    assign arready = 1'b1;
+    assign rresp   = 2'b00;
+
+    //====================================================
+    // INITIALISATION MEMOIRE (simulation)
+    //====================================================
+    integer i;
+    initial begin
+        for (i=0; i<MEM_DEPTH; i=i+1)
+            mem[i] = i; // pattern simple
+    end
+
+    //====================================================
+    // WRITE ADDRESS & DATA
+    //====================================================
+    always @(posedge sys_clk_i or negedge resetn_i) begin
+        if(!resetn_i) waddr <= 0;
+        else if(awvalid) waddr <= awaddr;
+        else if(wvalid) waddr <= waddr + 1;
+    end
+
+    always @(posedge sys_clk_i) begin
+        if(wvalid) mem[waddr] <= wdata;
+    end
+
+    // WRITE RESPONSE
+    initial begin
+        bvalid = 0;
+        forever @(posedge wlast) begin
+            @(posedge sys_clk_i);
+            bvalid = 1;
+            bid    = awid;
+            bresp  = 2'b00;
+            @(posedge sys_clk_i);
+            wait(bready);
+            bvalid = 0;
+        end
+    end
+
+    //====================================================
+    // READ HANDLING
+    //====================================================
+    always @(posedge sys_clk_i or negedge resetn_i) begin
+        if(!resetn_i) begin
+            raddr  <= 0;
+            rvalid <= 0;
+            rlast  <= 0;
+            rid    <= 0;
+            ren    <= 0;
+        end else begin
+            // nouvelle transaction
+            if(arvalid && !ren) begin
+                ren   <= 1;
+                raddr <= araddr;
+                rid   <= arid;
+                rvalid <= 1;
+                rlast <= (arlen==0) ? 1 : 0;
+            end 
+            // lecture en cours
+            else if(ren && rready) begin
+                rdata <= mem[raddr];
+                if(raddr == araddr + arlen)
+                    rlast <= 1;
+                else
+                    raddr <= raddr + 1;
+
+                if(rlast && rready) begin
+                    rvalid <= 0;
+                    rlast  <= 0;
+                    ren    <= 0;
+                end
+            end
+        end
+    end
+
+endmodule

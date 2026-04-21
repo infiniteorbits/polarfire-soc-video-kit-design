@@ -1,0 +1,199 @@
+--=================================================================================================
+-- Libraries
+--=================================================================================================
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.math_real."ceil";
+use IEEE.math_real."log2";
+--=================================================================================================
+-- data_packer entity declaration
+--=================================================================================================
+entity data_packer is
+  generic(
+-- Generic list
+    g_IP_DW          : integer := 16; -- input data width should be powers of 2
+    g_OP_DW          : integer := 64   -- output data width 
+    );
+  port(
+-- Port list
+    -- System reset
+    reset_i       : in std_logic;
+
+    -- System clock
+    sys_clk_i     : in std_logic;
+
+    -- enable
+    data_valid_i  : in std_logic;
+
+    --Frame end input
+    frame_end_i   : in std_logic;
+
+    -- Data Input
+    data_i        : in std_logic_vector(g_IP_DW-1 downto 0);
+
+    -- Data Enable
+    data_valid_o  : out std_logic;
+    -- Frame end output
+    frame_end_o : out std_logic;
+
+    -- Data output
+    data_o        : out std_logic_vector(g_OP_DW-1 downto 0)
+
+    );
+end data_packer;
+
+--=================================================================================================
+-- data_packer architecture body
+--=================================================================================================
+
+architecture data_packer of data_packer is
+
+--=================================================================================================
+-- Component declarations
+--=================================================================================================
+--NA--
+--=================================================================================================
+-- Synthesis Attributes
+--=================================================================================================
+--NA--
+--=================================================================================================
+-- Signal declarations
+--=================================================================================================
+  CONSTANT C_MC             : INTEGER := g_OP_DW / g_IP_DW;--max count
+  CONSTANT C_CW             : INTEGER := integer(ceil(log2(real(C_MC))));--counter width
+  CONSTANT C_MAX_WLEN       : INTEGER := 32;--max burst length/ number of data valids
+  TYPE DATA_ARRAY IS ARRAY (0 to C_MC-1) OF STD_LOGIC_VECTOR(g_IP_DW-1 DOWNTO 0);
+  signal s_data_arr	        : DATA_ARRAY;
+  signal s_counter          : std_logic_vector(C_CW-1 downto 0); -- input data count
+  signal s_data_pack        : std_logic_vector(g_OP_DW-1 downto 0);  
+  signal s_frame_end_sr     : std_logic_vector(15 downto 0);  
+  signal s_frame_end_re     : std_logic;
+  signal s_frame_end_re_dly : std_logic;
+  signal s_buf_wr_done_dly1 : std_logic;
+  signal s_buf_wr_done_dly2 : std_logic;  
+  signal s_data_valid_out   : std_logic;
+  signal s_ones             : std_logic_vector(C_CW-1 downto 0);
+  signal frame_end_sync1 : std_logic;
+  signal frame_end_sync2 : std_logic;
+  signal frame_end_s      : std_logic;
+  signal frame_end_s_d    : std_logic;
+  signal frame_end_pulse : std_logic;
+
+
+begin
+
+--=================================================================================================
+-- Top level output port assignments
+--=================================================================================================
+  data_o           <= s_data_pack;
+  data_valid_o     <= s_data_valid_out;
+  frame_end_o <= frame_end_pulse;
+
+--=================================================================================================
+-- Generate blocks
+--=================================================================================================
+--------------------------------------------------------------------------
+-- Name       : GENERATE_DATA_PACK
+-- Description: data packing
+--------------------------------------------------------------------------  
+GENERATE_DATA_PACK: FOR I IN 0 TO C_MC-1 GENERATE
+  s_data_pack(g_IP_DW*(I+1)-1 DOWNTO g_IP_DW*I) <= s_data_arr(I);
+  DATA_PACK_PROC:
+    PROCESS(SYS_CLK_I,RESET_I)
+    BEGIN
+       IF (RESET_I = '0') THEN
+          s_data_arr(I)          <= (OTHERS=>'0'); 
+       ELSIF rising_edge(SYS_CLK_I) THEN
+          IF(data_valid_i = '1' AND s_counter = 0) THEN
+             IF (I > 0) THEN
+               s_data_arr(I)     <= (OTHERS=>'0');
+             ELSE
+               s_data_arr(I)     <= data_i;
+             END IF;  
+          ELSIF(data_valid_i = '1' AND s_counter = I) THEN
+             s_data_arr(I)       <= data_i; 
+          END IF;
+       END IF;
+    END PROCESS;
+END GENERATE GENERATE_DATA_PACK;
+--=================================================================================================
+-- Asynchronous blocks
+--=================================================================================================
+  --s_frame_end_re <= s_frame_end_sr(14) and not(s_frame_end_sr(15));
+  s_ones         <= (others => '1');
+--=================================================================================================
+-- Synchronous blocks
+--=================================================================================================
+    process(SYS_CLK_I, RESET_I)
+    begin
+      if RESET_I = '0' then
+        frame_end_sync1 <= '0';
+        frame_end_sync2 <= '0';
+      elsif rising_edge(SYS_CLK_I) then
+        frame_end_sync1 <= frame_end_i;
+        frame_end_sync2 <= frame_end_sync1;
+      end if;
+    end process;
+    
+frame_end_s <= frame_end_sync2;
+
+--------------------------------------------------------------------------
+-- Name       : DELAY
+-- Description: Process delays input signals
+--------------------------------------------------------------------------
+process(SYS_CLK_I, RESET_I)
+begin
+  if RESET_I = '0' then
+    frame_end_s_d <= '0';
+  elsif rising_edge(SYS_CLK_I) then
+    frame_end_s_d <= frame_end_s;
+  end if;
+end process;
+
+frame_end_pulse <= frame_end_s and not frame_end_s_d;
+
+  
+--------------------------------------------------------------------------
+-- Name       : DATA_COUNTER
+-- Description: Counter to count data
+--------------------------------------------------------------------------
+  DATA_COUNTER :
+  process(SYS_CLK_I, RESET_I)
+  begin
+    if RESET_I = '0' then
+      s_counter <= (others => '0');
+    elsif rising_edge(SYS_CLK_I) then
+        if frame_end_pulse = '1' then
+          s_counter <= (others => '0');
+        elsif data_valid_i = '1' then
+          s_counter <= s_counter + 1;
+        end if;
+
+    end if;
+  end process;
+
+--------------------------------------------------------------------------
+-- Name       : DATA_VALID
+-- Description: Process to generate data valid output
+--------------------------------------------------------------------------
+  DATA_VALID :
+  process(SYS_CLK_I, RESET_I)
+  begin
+    if RESET_I = '0' then
+      s_data_valid_out <= '0';
+    elsif rising_edge(SYS_CLK_I) then
+        if ((data_valid_i = '1' AND s_counter = s_ones) OR
+            (frame_end_pulse = '1' AND s_counter /= 0)) then
+          s_data_valid_out <= '1';
+        else
+          s_data_valid_out <= '0';
+        end if;
+    end if;
+  end process;  
+--=================================================================================================
+-- Component Instantiations
+--=================================================================================================
+--NA--
+end data_packer;

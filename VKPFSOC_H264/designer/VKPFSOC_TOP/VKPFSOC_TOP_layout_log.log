@@ -1,0 +1,123 @@
+INFO: Reading User SDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/VKPFSOC_TOP_derived_constraints.sdc.
+INFO: Reading User SDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/user.sdc.
+INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
+
+No errors or warnings found.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : ON
+Power-driven             : OFF
+I/O Register Combining   : OFF
+Global Pins Demotion     : ON
+Driver Replication       : ON
+High-effort              : OFF
+Repair min-delay         : OFF
+Incremental              : OFF
+Inter-clock optimization : ON
+
+INFO: Reading User PDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/io/VIDEO_KIT_MAC.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/io/VIDEO_KIT_MMUART0.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/io/VIDEO_KIT_MMUART1.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/io/user.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/io/test_ddr.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (Copie)/VKPFSOC_H264/constraint/fp/user.pdc. 0 error(s) and 0 warning(s)
+
+ Running Timing based Global Demotion.
+        Demoted 0 global pins.
+
+ Timing based Global Demotion completed successfully.
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 29 fixed I/O macros, 4 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 2 seconds
+
+Placer V5.0 - 2025.1.0
+Design: VKPFSOC_TOP                     Started: Thu Mar  5 13:53:19 2026
+
+Initializing Normal-Effort Timing-Driven Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+==== Registers Duplicated ====
+1  - top_ddr_write_0/H264_DDR_WRITE_0/ddr_write_controller_enc_0/s_read_fifo duplicated 1 time. NumSink = 1
+     top_ddr_write_0/H264_DDR_WRITE_0/ddr_write_controller_enc_0/s_read_fifo__DUP173408 . NumSink = 1
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 0 seconds
+Placement                : 5 seconds
+Improvement              : 10 seconds
+Physical Optimization    : 1 seconds
+
+Placer completed successfully.
+
+Design: VKPFSOC_TOP
+Finished: Thu Mar  5 13:54:02 2026
+Total CPU Time:     00:00:42            Total Elapsed Time: 00:00:43
+Total Memory Usage: 1656.0 Mbytes
+                        o - o - o - o - o - o
+
+
+Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_57:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_57_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_59:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_59_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_45:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_45_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_38:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_38_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_55:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_55_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_37:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_37_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_47:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_47_Z
+Clock pins: 1
+    Driver: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_50:Y
+       Net: top_ddr_write_0/DDR_Read_C0_0/DDR_Read_C0_0/genblk1.DDR_Read_Native_0/DDR_read_controller_0/un1_s_read_en_dly15_50_Z
+Clock pins: 1
+
+Router
+Design: VKPFSOC_TOP                     Started: Thu Mar  5 13:54:08 2026
+
+
+Router completed successfully.
+
+Design: VKPFSOC_TOP
+Finished: Thu Mar  5 13:54:31 2026
+Total CPU Time:     00:00:35            Total Elapsed Time: 00:00:23
+Total Memory Usage: 4951.5 Mbytes
+                        o - o - o - o - o - o
+
+Resource Usage
++---------------------------+------+--------+------------+
+| Type                      | Used | Total  | Percentage |
++---------------------------+------+--------+------------+
+| 4LUT                      | 2064 | 254196 | 0.81       |
+| DFF                       | 1781 | 254196 | 0.70       |
+| Logic Element             | 2369 | 254196 | 0.93       |
+| I/Os using I/O Registers  | 0    | 372    | 0.00       |
+| I/O Register Flip-Flops   | 0    | 1116   | 0.00       |
+| -- Input  I/O Flip-Flops  | 0    | 372    | 0.00       |
+| -- Output I/O Flip-Flops  | 0    | 372    | 0.00       |
+| -- Enable I/O Flip-Flops  | 0    | 372    | 0.00       |
++---------------------------+------+--------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  19   | 82.61%     |
+| Placed |  4    | 17.39%     |
++--------+-------+------------+
+
+Completed writing pin report files.

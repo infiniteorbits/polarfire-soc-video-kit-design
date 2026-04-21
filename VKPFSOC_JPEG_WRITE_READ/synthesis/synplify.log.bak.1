@@ -1,0 +1,95 @@
+
+                               Synplify Pro (R) 
+
+                Version V-2023.09M-5 for linux64 - Apr 29, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/linux_a_64/mbin/synbatch
+Install:     /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+Hostname:    IO-ALG-LT003
+Date:        Wed Apr  1 11:03:16 2026
+Version:     V-2023.09M-5
+
+Arguments:   -product synplify_base -licensetype synplifypro_actel -batch -log synplify.log VKPFSOC_TOP_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+Running in Vendor Mode
+
+
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/backup/VKPFSOC_TOP.srr
+log file: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr"
+Running: synthesis in foreground
+
+Running VKPFSOC_TOP_syn|synthesis
+
+Running Flow: compile (Compile) on VKPFSOC_TOP_syn|synthesis
+# Wed Apr  1 11:03:17 2026
+
+Running Flow: compile_flow (Compile Process) on VKPFSOC_TOP_syn|synthesis
+# Wed Apr  1 11:03:17 2026
+
+Running: compiler (Compile Input) on VKPFSOC_TOP_syn|synthesis
+# Wed Apr  1 11:03:17 2026
+Process ID: 600689
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srs
+
+compiler completed
+# Wed Apr  1 11:03:25 2026
+
+Return Code: 0
+Run Time:00h:00m:07s
+
+Running: multi_srs_gen (Multi-srs Generator) on VKPFSOC_TOP_syn|synthesis
+# Wed Apr  1 11:03:25 2026
+Process ID: 600863
+
+multi_srs_gen completed
+# Wed Apr  1 11:03:25 2026
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_mult.srs to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srs
+Complete: Compile Process on VKPFSOC_TOP_syn|synthesis
+
+Running: premap (Premap) on VKPFSOC_TOP_syn|synthesis
+# Wed Apr  1 11:03:25 2026
+Process ID: 600879
+unable to open source file to append: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/synlog/VKPFSOC_TOP_premap.srr
+Unable to append unit log file to main log: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr <= /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/synlog/VKPFSOC_TOP_premap.srr
+Job failed on: VKPFSOC_TOP_syn|synthesis
+
+Job: "premap" terminated with error status: 2
+Log file not found: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/synthesis/synlog/VKPFSOC_TOP_premap.srr"
+# Wed Apr  1 11:03:26 2026
+
+Return Code: 2
+Run Time:00h:00m:01s
+Complete: Compile on VKPFSOC_TOP_syn|synthesis
+Complete: Logic Synthesis on VKPFSOC_TOP_syn|synthesis
+Error: At line 2 while processing "VKPFSOC_TOP_syn.tcl"
+2
+TCL script complete: "VKPFSOC_TOP_syn.tcl"
+TCL script had errors: "VKPFSOC_TOP_syn.tcl"
+exit status=9
+exit status=9
+License checkin: synplifypro_actel

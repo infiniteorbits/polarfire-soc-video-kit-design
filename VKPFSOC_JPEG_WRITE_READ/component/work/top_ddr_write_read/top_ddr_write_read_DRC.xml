@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>top_ddr_write_read</header>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin DDR_Read_C0_0:frame_start_i</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top_ddr_write_read/pins/DDR_Read_C0_0:frame_start_i</crossprobe>
+  </drc>
+</drcreport>

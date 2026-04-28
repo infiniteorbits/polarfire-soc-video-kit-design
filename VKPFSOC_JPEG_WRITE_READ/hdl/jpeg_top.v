@@ -19,11 +19,9 @@ module jpeg_top #(
     input wire          clk_sys,
     input wire          resetn,
     input  wire         apb_pin,
-    output wire [15:0]  horz_resl_o,
-    output wire [7:0]  ddr_base_addr_o,
     // -------- RAM interface --------
     input  wire [7:0]   ram_read_data,
-    //output wire [ADDR_WIDTH-1:0] ram_read_addr,
+  //  output wire [ADDR_WIDTH-1:0] ram_read_addr,
     input   wire                  ram_data_valid,
 
 
@@ -35,12 +33,13 @@ module jpeg_top #(
     output wire         sof_flag,
     output wire         eof_flag,
     //output wire [31:0]  compressed_size_o,
-    output wire         encoder_active_o,
-    // -------ddr read ip core----------
-   // input  wire [15:0]          horz_resl_i,       // input configurable
-   // input  wire [15:0]          line_gap_i,        // input configurable
-    //output reg                  DDR_READ_frame_start_i,
-    output reg                  read_en_i
+    //--------read ip core ------
+    input wire      read_ackn_i,
+    input wire       read_done_i,
+    output wire [15:0]    horz_resl_o,
+    output wire [7:0]  ddr_base_addr_o,
+    output wire         read_en_i,
+    output wire         encoder_active_o
 );
 
     // ===============================
@@ -74,13 +73,13 @@ module jpeg_top #(
         .pready    (pready),
         .pslverr   (pslverr),
         .apb_pin    (apb_pin),
-        .horz_resl_o(horz_resl_o),
-        .ddr_base_addr_o(ddr_base_addr_o),
+
         .i_sof_ps  (i_sof_ps),
         .i_w       (i_w),
         .i_h       (i_h),
         .near_val      (near),
-        
+         .horz_resl_o      ( horz_resl_o ),
+       .ddr_base_addr_o  ( ddr_base_addr_o ),
         .o_last    (o_last_flag)
     );
 
@@ -113,17 +112,14 @@ module jpeg_top #(
         .eof_flag          (eof_flag),
 
         .ram_read_data     (ram_read_data),
-        //.ram_read_addr     (ram_read_addr),
+       // .ram_read_addr     (ram_read_addr),
         .ram_data_valid     (ram_data_valid),
-
-        //.compressed_size_o (compressed_size_o),
+       // .compressed_size_o (compressed_size_o),
+       .read_en_i           (read_en_i),
         .o_last_flag       (o_last_flag),
-        .encoder_active_o   (encoder_active_o),
-        
-        //.horz_resl_i(horz_resl_i),       // input configurable
-       // .line_gap_i(line_gap_i),        // input configurable
-        //.DDR_READ_frame_start_i(DDR_READ_frame_start_i),
-        .read_en_i   (read_en_i)
+        .read_ackn_i    (read_ackn_i),
+        .read_done_i    (read_done_i),
+        .encoder_active_o   (encoder_active_o)
     );
 
     // ===============================

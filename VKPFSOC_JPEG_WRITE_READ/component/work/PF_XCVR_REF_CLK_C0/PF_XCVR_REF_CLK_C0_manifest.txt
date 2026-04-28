@@ -1,12 +1,12 @@
 Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
 
-Date      :  Sun Mar 15 10:38:52 2026
-Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ
+Date      :  Tue Apr 28 11:32:58 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE) (Copie)/VKPFSOC_JPEG_WRITE_READ
 Component :  PF_XCVR_REF_CLK_C0
 Family    :  PolarFireSoC
 
 
 HDL source files for all Synthesis and Simulation tools:
-    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v
-    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE) (Copie)/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE) (Copie)/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v
 

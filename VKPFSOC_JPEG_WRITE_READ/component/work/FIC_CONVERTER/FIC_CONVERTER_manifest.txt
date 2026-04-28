@@ -1,11 +1,11 @@
 Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
 
-Date      :  Sun Mar 15 10:38:59 2026
-Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ
+Date      :  Tue Apr 28 11:33:04 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE) (Copie)/VKPFSOC_JPEG_WRITE_READ
 Component :  FIC_CONVERTER
 Family    :  PolarFireSoC
 
 
 HDL source files for all Synthesis and Simulation tools:
-    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE)/VKPFSOC_JPEG_WRITE_READ/component/work/FIC_CONVERTER/FIC_CONVERTER.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design(READ_WRITE) (Copie)/VKPFSOC_JPEG_WRITE_READ/component/work/FIC_CONVERTER/FIC_CONVERTER.v
 

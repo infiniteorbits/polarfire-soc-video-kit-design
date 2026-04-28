@@ -154,6 +154,7 @@ source ${src_path}/components/JPEG_WRITE_READ/DDR_AXI4_ARBITER_PF_C0.tcl
 source ${src_path}/components/JPEG_WRITE_READ/DDR_Read_C0.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/DDR_WRITE_JPEG.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/jpeg_top.tcl 
+#source ${src_path}/components/JPEG_WRITE_READ/ram8bit_input.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/top_ddr_write_read.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/VKPFSOC_TOP.tcl 
 build_design_hierarchy

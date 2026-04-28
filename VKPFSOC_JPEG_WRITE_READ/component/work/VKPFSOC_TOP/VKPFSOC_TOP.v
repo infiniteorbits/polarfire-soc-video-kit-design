@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Apr 20 14:11:42 2026
+// Created by SmartDesign Tue Apr 28 11:33:30 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -26,9 +26,7 @@ module VKPFSOC_TOP(
     apb_pin,
     ddr_ctrl_ready_i,
     frame_start_i,
-    frame_start_i_read_ddr,
     line_gap_i,
-    read_en_i,
     // Outputs
     CA,
     CAM1_RST,
@@ -114,9 +112,7 @@ input         USB_NXT;
 input         apb_pin;
 input         ddr_ctrl_ready_i;
 input         frame_start_i;
-input         frame_start_i_read_ddr;
 input  [15:0] line_gap_i;
-input         read_en_i;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -217,7 +213,6 @@ wire          FIC_CONVERTER_0_APBmslave_PSLVERR;
 wire   [31:0] FIC_CONVERTER_0_APBmslave_PWDATA;
 wire          FIC_CONVERTER_0_APBmslave_PWRITE;
 wire          frame_start_i;
-wire          frame_start_i_read_ddr;
 wire          LED2_net_0;
 wire          LED3_net_0;
 wire   [15:0] line_gap_i;
@@ -240,7 +235,6 @@ wire          MSS_I2C_0_SCL_OE_M2F;
 wire          MSS_I2C_0_SDA_OE_M2F;
 wire          MSS_MSS_RESET_N_M2F;
 wire          ODT_net_0;
-wire          read_en_i;
 wire          REF_CLK_PAD_N;
 wire          REF_CLK_PAD_P;
 wire          REFCLK;
@@ -551,15 +545,34 @@ FIC_CONVERTER FIC_CONVERTER_0(
 MSS_VIDEO_KIT_H264 MSS(
         // Inputs
         .FIC_1_ACLK                  ( CLOCKS_AND_RESETS_CLK_125MHz ),
+        .FIC_1_AXI4_S_AWID           ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWID ),
+        .FIC_1_AXI4_S_AWADDR         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWADDR_0 ),
+        .FIC_1_AXI4_S_AWLEN          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWLEN ),
+        .FIC_1_AXI4_S_AWSIZE         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWSIZE ),
+        .FIC_1_AXI4_S_AWBURST        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWBURST ),
         .FIC_1_AXI4_S_AWLOCK         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWLOCK_0 ),
+        .FIC_1_AXI4_S_AWCACHE        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWCACHE ),
+        .FIC_1_AXI4_S_AWQOS          ( FIC_1_AXI4_S_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_AWPROT         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWPROT ),
         .FIC_1_AXI4_S_AWVALID        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWVALID ),
+        .FIC_1_AXI4_S_WDATA          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WDATA ),
+        .FIC_1_AXI4_S_WSTRB          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WSTRB ),
         .FIC_1_AXI4_S_WLAST          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WLAST ),
         .FIC_1_AXI4_S_WVALID         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WVALID ),
         .FIC_1_AXI4_S_BREADY         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BREADY ),
+        .FIC_1_AXI4_S_ARID           ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARID ),
+        .FIC_1_AXI4_S_ARADDR         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARADDR_0 ),
+        .FIC_1_AXI4_S_ARLEN          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARLEN ),
+        .FIC_1_AXI4_S_ARSIZE         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARSIZE ),
+        .FIC_1_AXI4_S_ARBURST        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARBURST ),
+        .FIC_1_AXI4_S_ARQOS          ( FIC_1_AXI4_S_ARQOS_const_net_0 ), // tied to 4'h0 from definition
         .FIC_1_AXI4_S_ARLOCK         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARLOCK_0 ),
+        .FIC_1_AXI4_S_ARCACHE        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARCACHE ),
+        .FIC_1_AXI4_S_ARPROT         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARPROT ),
         .FIC_1_AXI4_S_ARVALID        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARVALID ),
         .FIC_1_AXI4_S_RREADY         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RREADY ),
         .FIC_3_PCLK                  ( CLOCKS_AND_RESETS_CLK_50MHz ),
+        .FIC_3_APB_M_PRDATA          ( MSS_FIC_3_APB_INITIATOR_PRDATA ),
         .FIC_3_APB_M_PREADY          ( MSS_FIC_3_APB_INITIATOR_PREADY ),
         .FIC_3_APB_M_PSLVERR         ( MSS_FIC_3_APB_INITIATOR_PSLVERR ),
         .MMUART_0_RXD_F2M            ( MMUART_0_RXD_F2M ),
@@ -568,6 +581,7 @@ MSS_VIDEO_KIT_H264 MSS(
         .I2C_0_SDA_F2M               ( BIBUF_2_Y ),
         .I2C_0_BCLK_F2M              ( CLOCKS_AND_RESETS_I2C_BCLK ),
         .GPIO_2_F2M_25               ( VCC_net ),
+        .MSS_INT_F2M                 ( MSS_INT_F2M_net_0 ),
         .MSS_RESET_N_F2M             ( CLOCKS_AND_RESETS_FABRIC_POR_N ),
         .USB_CLK                     ( USB_CLK ),
         .USB_DIR                     ( USB_DIR ),
@@ -580,38 +594,26 @@ MSS_VIDEO_KIT_H264 MSS(
         .SGMII_RX0_N                 ( SGMII_RX0_N ),
         .REFCLK                      ( REFCLK ),
         .REFCLK_N                    ( REFCLK_N ),
-        .FIC_1_AXI4_S_AWID           ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWID ),
-        .FIC_1_AXI4_S_AWADDR         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWADDR_0 ),
-        .FIC_1_AXI4_S_AWLEN          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWLEN ),
-        .FIC_1_AXI4_S_AWSIZE         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWSIZE ),
-        .FIC_1_AXI4_S_AWBURST        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWBURST ),
-        .FIC_1_AXI4_S_AWCACHE        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWCACHE ),
-        .FIC_1_AXI4_S_AWQOS          ( FIC_1_AXI4_S_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_AWPROT         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWPROT ),
-        .FIC_1_AXI4_S_WDATA          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WDATA ),
-        .FIC_1_AXI4_S_WSTRB          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WSTRB ),
-        .FIC_1_AXI4_S_ARID           ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARID ),
-        .FIC_1_AXI4_S_ARADDR         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARADDR_0 ),
-        .FIC_1_AXI4_S_ARLEN          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARLEN ),
-        .FIC_1_AXI4_S_ARSIZE         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARSIZE ),
-        .FIC_1_AXI4_S_ARBURST        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARBURST ),
-        .FIC_1_AXI4_S_ARQOS          ( FIC_1_AXI4_S_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_ARCACHE        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARCACHE ),
-        .FIC_1_AXI4_S_ARPROT         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARPROT ),
-        .FIC_3_APB_M_PRDATA          ( MSS_FIC_3_APB_INITIATOR_PRDATA ),
-        .MSS_INT_F2M                 ( MSS_INT_F2M_net_0 ),
         // Outputs
         .FIC_1_DLL_LOCK_M2F          ( MSS_FIC_1_DLL_LOCK_M2F ),
         .FIC_3_DLL_LOCK_M2F          (  ),
         .FIC_1_AXI4_S_AWREADY        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWREADY ),
         .FIC_1_AXI4_S_WREADY         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WREADY ),
+        .FIC_1_AXI4_S_BID            ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BID ),
+        .FIC_1_AXI4_S_BRESP          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BRESP ),
         .FIC_1_AXI4_S_BVALID         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BVALID ),
         .FIC_1_AXI4_S_ARREADY        ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARREADY ),
+        .FIC_1_AXI4_S_RID            ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RID ),
+        .FIC_1_AXI4_S_RDATA          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RDATA ),
+        .FIC_1_AXI4_S_RRESP          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RRESP ),
         .FIC_1_AXI4_S_RLAST          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RLAST ),
         .FIC_1_AXI4_S_RVALID         ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RVALID ),
         .FIC_3_APB_M_PSEL            ( MSS_FIC_3_APB_INITIATOR_PSELx ),
+        .FIC_3_APB_M_PADDR           ( MSS_FIC_3_APB_INITIATOR_PADDR ),
         .FIC_3_APB_M_PWRITE          ( MSS_FIC_3_APB_INITIATOR_PWRITE ),
         .FIC_3_APB_M_PENABLE         ( MSS_FIC_3_APB_INITIATOR_PENABLE ),
+        .FIC_3_APB_M_PSTRB           (  ),
+        .FIC_3_APB_M_PWDATA          ( MSS_FIC_3_APB_INITIATOR_PWDATA ),
         .MMUART_0_TXD_M2F            ( MMUART_0_TXD_M2F_net_0 ),
         .MMUART_0_TXD_OE_M2F         (  ),
         .MMUART_1_TXD_M2F            ( MMUART_1_TXD_M2F_net_0 ),
@@ -626,6 +628,7 @@ MSS_VIDEO_KIT_H264 MSS(
         .GPIO_2_M2F_3                (  ),
         .GPIO_2_M2F_2                (  ),
         .GPIO_2_M2F_1                (  ),
+        .MSS_INT_M2F                 (  ),
         .PLL_CPU_LOCK_M2F            (  ),
         .PLL_DDR_LOCK_M2F            (  ),
         .PLL_SGMII_LOCK_M2F          (  ),
@@ -649,22 +652,13 @@ MSS_VIDEO_KIT_H264 MSS(
         .SGMII_TX1_N                 ( SGMII_TX1_N_net_0 ),
         .SGMII_TX0_P                 ( SGMII_TX0_P_net_0 ),
         .SGMII_TX0_N                 ( SGMII_TX0_N_net_0 ),
+        .DM                          ( DM_net_0 ),
         .RESET_N                     ( RESET_N_net_0 ),
         .ODT                         ( ODT_net_0 ),
         .CKE                         ( CKE_net_0 ),
         .CS                          ( CS_net_0 ),
         .CK                          ( CK_net_0 ),
         .CK_N                        ( CK_N_net_0 ),
-        .FIC_1_AXI4_S_BID            ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BID ),
-        .FIC_1_AXI4_S_BRESP          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BRESP ),
-        .FIC_1_AXI4_S_RID            ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RID ),
-        .FIC_1_AXI4_S_RDATA          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RDATA ),
-        .FIC_1_AXI4_S_RRESP          ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RRESP ),
-        .FIC_3_APB_M_PADDR           ( MSS_FIC_3_APB_INITIATOR_PADDR ),
-        .FIC_3_APB_M_PSTRB           (  ),
-        .FIC_3_APB_M_PWDATA          ( MSS_FIC_3_APB_INITIATOR_PWDATA ),
-        .MSS_INT_M2F                 (  ),
-        .DM                          ( DM_net_0 ),
         .CA                          ( CA_net_0 ),
         // Inouts
         .MAC_0_MDIO                  ( MAC_0_MDIO ),
@@ -689,6 +683,8 @@ MSS_VIDEO_KIT_H264 MSS(
 //--------top_ddr_write_read
 top_ddr_write_read top_ddr_write_read_0(
         // Inputs
+        .APBslave_psel                 ( FIC_CONVERTER_0_APBmslave_PSELx ),
+        .APBslave_pwrite               ( FIC_CONVERTER_0_APBmslave_PWRITE ),
         .MIRRORED_SLAVE_AXI4_arready_0 ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARREADY ),
         .MIRRORED_SLAVE_AXI4_awready_0 ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWREADY ),
         .MIRRORED_SLAVE_AXI4_bvalid_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BVALID ),
@@ -697,22 +693,22 @@ top_ddr_write_read top_ddr_write_read_0(
         .MIRRORED_SLAVE_AXI4_wready_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WREADY ),
         .apb_pin                       ( apb_pin ),
         .ddr_ctrl_ready_i              ( ddr_ctrl_ready_i ),
+        .frame_start_i                 ( frame_start_i ),
         .pclk                          ( CLOCKS_AND_RESETS_CLK_50MHz ),
         .presetn                       ( CLOCKS_AND_RESETS_RESETN_50MHz ),
         .reset_i                       ( VSC_8662_RESETN_net_0 ),
         .sys_clk_i                     ( CLOCKS_AND_RESETS_CLK_125MHz ),
-        .APBslave_pwrite               ( FIC_CONVERTER_0_APBmslave_PWRITE ),
-        .APBslave_psel                 ( FIC_CONVERTER_0_APBmslave_PSELx ),
-        .frame_start_i                 ( frame_start_i ),
+        .APBslave_paddr                ( FIC_CONVERTER_0_APBmslave_PADDR ),
+        .APBslave_pwdata               ( FIC_CONVERTER_0_APBmslave_PWDATA ),
         .MIRRORED_SLAVE_AXI4_bid_0     ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BID ),
         .MIRRORED_SLAVE_AXI4_bresp_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BRESP ),
         .MIRRORED_SLAVE_AXI4_rdata_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RDATA ),
         .MIRRORED_SLAVE_AXI4_rid_0     ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RID ),
         .MIRRORED_SLAVE_AXI4_rresp_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_RRESP ),
         .line_gap_i                    ( line_gap_i ),
-        .APBslave_paddr                ( FIC_CONVERTER_0_APBmslave_PADDR ),
-        .APBslave_pwdata               ( FIC_CONVERTER_0_APBmslave_PWDATA ),
         // Outputs
+        .APBslave_pready               ( FIC_CONVERTER_0_APBmslave_PREADY ),
+        .APBslave_pslverr              ( FIC_CONVERTER_0_APBmslave_PSLVERR ),
         .MIRRORED_SLAVE_AXI4_arvalid_0 ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARVALID ),
         .MIRRORED_SLAVE_AXI4_awvalid_0 ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWVALID ),
         .MIRRORED_SLAVE_AXI4_bready_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_BREADY ),
@@ -720,8 +716,7 @@ top_ddr_write_read top_ddr_write_read_0(
         .MIRRORED_SLAVE_AXI4_wlast_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WLAST ),
         .MIRRORED_SLAVE_AXI4_wvalid_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WVALID ),
         .frm_interrupt_o               ( top_ddr_write_read_0_frm_interrupt_o ),
-        .APBslave_pready               ( FIC_CONVERTER_0_APBmslave_PREADY ),
-        .APBslave_pslverr              ( FIC_CONVERTER_0_APBmslave_PSLVERR ),
+        .APBslave_prdata               ( FIC_CONVERTER_0_APBmslave_PRDATA ),
         .MIRRORED_SLAVE_AXI4_araddr_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARADDR ),
         .MIRRORED_SLAVE_AXI4_arburst_0 ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARBURST ),
         .MIRRORED_SLAVE_AXI4_arcache_0 ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_ARCACHE ),
@@ -739,8 +734,7 @@ top_ddr_write_read top_ddr_write_read_0(
         .MIRRORED_SLAVE_AXI4_awprot_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWPROT ),
         .MIRRORED_SLAVE_AXI4_awsize_0  ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_AWSIZE ),
         .MIRRORED_SLAVE_AXI4_wdata_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WDATA ),
-        .MIRRORED_SLAVE_AXI4_wstrb_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WSTRB ),
-        .APBslave_prdata               ( FIC_CONVERTER_0_APBmslave_PRDATA ) 
+        .MIRRORED_SLAVE_AXI4_wstrb_0   ( top_ddr_write_read_0_MIRRORED_SLAVE_AXI4_WSTRB ) 
         );
 
 

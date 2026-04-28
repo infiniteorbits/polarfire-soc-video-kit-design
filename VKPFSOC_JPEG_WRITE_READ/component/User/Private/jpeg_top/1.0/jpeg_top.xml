@@ -87,18 +87,6 @@
         <spirit:direction>in</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>horz_resl_o</spirit:name>
-        <spirit:direction>out</spirit:direction>
-        <spirit:left>15</spirit:left>
-        <spirit:right>0</spirit:right>
-      </spirit:signal>
-      <spirit:signal>
-        <spirit:name>ddr_base_addr_o</spirit:name>
-        <spirit:direction>out</spirit:direction>
-        <spirit:left>7</spirit:left>
-        <spirit:right>0</spirit:right>
-      </spirit:signal>
-      <spirit:signal>
         <spirit:name>ram_read_data</spirit:name>
         <spirit:direction>in</spirit:direction>
         <spirit:left>7</spirit:left>
@@ -127,11 +115,31 @@
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>encoder_active_o</spirit:name>
+        <spirit:name>read_ackn_i</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>read_done_i</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>horz_resl_o</spirit:name>
         <spirit:direction>out</spirit:direction>
+        <spirit:left>15</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>ddr_base_addr_o</spirit:name>
+        <spirit:direction>out</spirit:direction>
+        <spirit:left>7</spirit:left>
+        <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
         <spirit:name>read_en_i</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>encoder_active_o</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
     </spirit:signals>

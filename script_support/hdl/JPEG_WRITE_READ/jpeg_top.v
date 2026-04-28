@@ -21,7 +21,7 @@ module jpeg_top #(
     input  wire         apb_pin,
     // -------- RAM interface --------
     input  wire [7:0]   ram_read_data,
-    output wire [ADDR_WIDTH-1:0] ram_read_addr,
+  //  output wire [ADDR_WIDTH-1:0] ram_read_addr,
     input   wire                  ram_data_valid,
 
 
@@ -33,7 +33,10 @@ module jpeg_top #(
     output wire         sof_flag,
     output wire         eof_flag,
     //output wire [31:0]  compressed_size_o,
-    output wire     horz_resl_o,
+    //--------read ip core ------
+    input wire      read_ackn_i,
+    input wire       read_done_i,
+    output wire [15:0]    horz_resl_o,
     output wire [7:0]  ddr_base_addr_o,
     output wire         read_en_i,
     output wire         encoder_active_o
@@ -114,6 +117,8 @@ module jpeg_top #(
        // .compressed_size_o (compressed_size_o),
        .read_en_i           (read_en_i),
         .o_last_flag       (o_last_flag),
+        .read_ackn_i    (read_ackn_i),
+        .read_done_i    (read_done_i),
         .encoder_active_o   (encoder_active_o)
     );
 

@@ -8,7 +8,8 @@
 //       read_counter = pixels demands au DDR_Read
 //       pixel_count  = pixels envoys au JLS encoder
 module jpeg_control_fsm #(
-    parameter ADDR_WIDTH = 3
+    parameter ADDR_WIDTH = 3,
+    parameter LINE_STORAGE_MODE = 1'b0
 )(
     input  wire         clk,
     input  wire         rstn,
@@ -37,6 +38,9 @@ module jpeg_control_fsm #(
     input wire           read_ackn_i,
     input wire           read_done_i,
     output reg          read_en_i,       // pulse vers DDR_Read.read_en_i
+    output reg          frame_start_i,   // pulse vers DDR_Read.frame_start_i
+    input wire [15:0]    horz_resl_o,
+    output wire [15:0]    line_gap_o,
     input  wire [7:0]   ram_read_data,
     input  wire         ram_data_valid,
     output reg          o_last_flag,
@@ -71,253 +75,140 @@ module jpeg_control_fsm #(
     reg       ram_valid_d;
     reg read_en_i_d; 
     reg read_phase; 
-    /*reg [31:0] pixel_count_read;
- assign read_en_i = (state == FEED_PIXELS) && encoder_active && (pixel_count_read < total_pixels);
-*/
-reg [31:0] total_beats;
+   
+    reg [31:0] total_beats;
     //============================
-    // TOTAL PIXELS (combinatoire)
+    // TOTAL PIXELS
     //============================
     wire [47:0] total_pixels_comb;
     assign total_pixels_comb = ({34'd0, i_w} + 1) * ({34'd0, i_h} + 1);
-reg [3:0] read_en_cnt;   // largeur  adapter
+   //============================
+    // line_gap
+    //============================
+  // LINE_STORAGE_MODE:
+    // 0 = compact storage, no padding between lines (lignes stockes bout  bout, sans trou)
+    // 1 = padded storage, round each line up to a 64-bit word boundary (lignes arrondies au multiple de 8 octets, pratique pour le bus DDR 64 bits)
+    assign line_gap_o = (LINE_STORAGE_MODE == 1'b0)
+                      ? horz_resl_o
+                      : ((horz_resl_o + 16'd7) & 16'hFFF8);
+   
+   //============================
+    // frame_start_i / read_en_i
+    //============================
+  reg [13:0] read_line_count;
+  reg [13:0] read_pixel_timer;
+  reg [7:0]  read_gap_timer;
+  reg [1:0]  read_state;
+  reg [2:0]  frame_start_cnt;
+  reg        frame_start_done;
 
-reg read_req_pending;
-reg read_wait_ack;
-reg read_wait_done;
-always @(posedge clk or negedge rstn) begin
-    if (!rstn) begin
-        read_en_i        <= 0;
-        read_req_pending <= 0;
-    end else begin
+  localparam RD_IDLE = 2'd0;
+  localparam RD_LINE = 2'd1;
+  localparam RD_GAP  = 2'd2;
 
-        read_en_i <= 0; // IMPORTANT : pulse unique
+  wire [13:0] width_pixels;
+  wire [13:0] height_lines;
 
-        if (state == FEED_PIXELS &&
-            !read_req_pending &&
-            !pixels_done) begin
+  assign width_pixels = width_reg + 14'd1;
+  assign height_lines = height_reg + 14'd1;
 
-            read_en_i <= 1'b1;
-            read_req_pending <= 1'b1;
-        end
+  always @(posedge clk or negedge rstn) begin
+      if (!rstn) begin
+          read_en_i        <= 1'b0;
+          read_line_count  <= 14'd0;
+          read_pixel_timer <= 14'd0;
+          read_gap_timer   <= 8'd0;
+          read_state       <= RD_IDLE;
+          frame_start_i    <= 1'b0;
+          frame_start_cnt  <= 3'd0;
+          frame_start_done <= 1'b0;
+      end else begin
+        if (state == IDLE) begin
+              read_en_i        <= 1'b0;
+              frame_start_i    <= 1'b0;
+              read_line_count  <= 14'd0;
+              read_pixel_timer <= 14'd0;
+              read_gap_timer   <= 8'd0;
+              read_state       <= RD_IDLE;
+              frame_start_cnt  <= 3'd0;
+              frame_start_done <= 1'b0;
+          end else if (state != FEED_PIXELS || !encoder_active || pixels_done) begin
+              read_en_i        <= 1'b0;
+              frame_start_i    <= 1'b0;
+              read_pixel_timer <= 14'd0;
+              read_gap_timer   <= 8'd0;
+              read_state       <= RD_IDLE;
+          end else begin
 
-        // ACK libre le pipeline
-        if (read_ackn_i) begin
-            // optionnel: debug state
-        end
+          case (read_state)
 
-        // DONE libre nouvelle requte
-        if (read_done_i) begin
-            read_req_pending <= 0;
-        end
-    end
-end
-/*reg read_req_pending;
-always @(posedge clk or negedge rstn) begin
-    if (!rstn) begin
-        read_en_i        <= 0;
-        read_req_pending <= 0;
-    end else begin
+              RD_IDLE: begin
+                  read_en_i        <= 1'b0;
+                  read_pixel_timer <= 14'd0;
+                  read_gap_timer   <= 8'd0;
 
-        case (state)
+                      if (!frame_start_done) begin
+                          frame_start_i <= 1'b1;
+                          if (frame_start_cnt >= 3'd4) begin
+                              frame_start_i    <= 1'b0;
+                              frame_start_cnt  <= 3'd0;
+                              frame_start_done <= 1'b1;
+                          end else begin
+                              frame_start_cnt <= frame_start_cnt + 1'b1;
+                          end
+                      end
+                      else
+                      if (read_line_count < height_lines) begin
+                          read_en_i        <= 1'b1;
+                          read_pixel_timer <= 14'd0;
+                          read_state       <= RD_LINE;
+                      end
+              
+              end
 
-        FEED_PIXELS: begin
+              RD_LINE: begin
+                  read_en_i <= 1'b1;
 
-            // 1) si besoin de donnes
-            if (!pixels_done && !read_req_pending) begin
-                read_en_i        <= 1'b1;   // START REQUEST
-                read_req_pending <= 1'b1;
+                  if (read_pixel_timer >= width_pixels - 1'b1) begin
+                      read_en_i       <= 1'b0;
+                      read_line_count <= read_line_count + 1'b1;
+                      read_gap_timer  <= 8'd0;
+                      read_state      <= RD_GAP;
+                  end else begin
+                      read_pixel_timer <= read_pixel_timer + 1'b1;
+                  end
+              end
+
+              RD_GAP: begin
+                  read_en_i <= 1'b0;
+
+                  // Equivalent du TB: #(PIXEL_CLK*(280/4))
+                  // A ajuster selon ton besoin.
+                  if (read_gap_timer >= 8'd69) begin
+                      read_gap_timer <= 8'd0;
+                      read_state     <= RD_IDLE;
+                  end else begin
+                      read_gap_timer <= read_gap_timer + 1'b1;
+                  end
+              end
+
+              default: begin
+                  read_en_i  <= 1'b0;
+                  read_state <= RD_IDLE;
+              end
+          endcase
             end
-
-            // 2) une fois ACK reu  stop request
-            if (read_ackn_i) begin
-                read_en_i <= 1'b0;
-            end
-
-            // 3) reset request quand transaction finie
-            if (read_done_i) begin
-                read_req_pending <= 1'b0;
-            end
-        end
-
-        default: begin
-            read_en_i        <= 0;
-            read_req_pending <= 0;
-        end
-
-        endcase
-    end
-end*/
-/*    
-   // reg read_toggle;
- always @(posedge clk or negedge rstn) begin
-     if (!rstn) begin 
-        read_en_i <= 0;
-        read_counter <= 0; 
-   //     read_toggle <= 0; 
-    end else begin
-        if (state == FEED_PIXELS && encoder_active && !pixels_done) begin 
-            // Gnrer un pulse 1 cycle sur 2
-             //read_toggle <= ~read_toggle;
-            // if (read_toggle && (read_counter < total_pixels)) begin 
-            //if (!ram_valid_d && (read_counter < total_pixels)) begin 
-                read_en_i <= 1'b1; 
-                read_counter <= read_counter + 1; 
-            end else begin 
-                read_en_i <= 1'b0; 
-            end 
-        end else begin
-             read_en_i <= 0; 
-             read_counter <= 0;
-           //  read_toggle <= 0; 
-        end 
-    end 
-end
-    */
-/*always @(posedge clk or negedge rstn) begin
-    if (!rstn)
-        total_beats <= 0;
-    else if (state == SOF_PULSE && sof_counter == 0) begin
-        // ceil(total_pixels / 8)
-        total_beats <= (total_pixels_comb + 7) >> 3;
-    end
-end
-always @(posedge clk or negedge rstn) begin
-    if (!rstn) begin
-        read_en_i    <= 0;
-        read_counter <= 0;
-    end else begin
-        read_en_i <= 0; // pulse 1 cycle
-
-        if (state == FEED_PIXELS && encoder_active && !pixels_done) begin
-
-            // envoyer une requte SEULEMENT si :
-            // - pas fini
-            // - ET (optionnel) buffer libre
-            //if (read_counter < total_beats) begin
-            //if (!ram_valid_d && (read_counter < total_pixels)) begin
-            if (read_counter < total_pixels) begin
-                read_en_i <= 1'b1;
-                read_counter <= read_counter + 1;
-            end else begin
-            read_en_i <= 0;
-        end
-
-        end else begin
-            read_counter <= 0;
-        end
-    end
-end*/
-/*
-reg toggle;
-
-always @(posedge clk or negedge rstn) begin
-    if (!rstn) begin
-        read_en_i    <= 0;
-        read_counter <= 0;
-        toggle       <= 0;
-    end else begin
-
-        if (state == FEED_PIXELS && encoder_active && !pixels_done) begin
-
-            if (read_counter < total_beats) begin
-                toggle <= ~toggle;       //  toggle  chaque cycle
-                read_en_i <= toggle;     //  sortie toggle
-
-                //  compter seulement sur front montant
-                if (toggle == 0) begin   // (car il va devenir 1)
-                    read_counter <= read_counter + 1;
-                end
-
-            end else begin
-                read_en_i <= 0;
-            end
-
-        end else begin
-            read_en_i    <= 0;
-            read_counter <= 0;
-            toggle       <= 0;
-        end
-    end
-end*/
-/*
- always @(posedge clk or negedge rstn) begin
-    if (!rstn) begin
-        read_en_i   <= 0;
-        read_counter <= 0;
-        read_en_i_d <= 0;
-        read_phase   <= 0;
-    end else begin
-        read_en_i <= 0; //  IMPORTANT : pulse 1 cycle
-        if (state == FEED_PIXELS && encoder_active && !pixels_done) begin
-
-            //  DEMANDE UNIQUEMENT SI BUFFER VIDE
-           // if (!ram_valid_d && (read_counter < total_pixels)) begin
-            if (read_counter < total_beats) begin
-                //read_en_i   <= 1'b1;
-                //read_en_i <= ~read_en_i_d; // front pour data_unpacker
-                //read_en_i_d <= read_en_i; 
-                //read_counter <= read_counter + 1;
-               if (!read_phase) begin
-                    read_en_i  <= 1'b1;   //  front montant
-                    read_phase <= 1'b1;
-                    read_counter <= read_counter + 1;
-                end else begin
-                    read_phase <= 1'b0;   //  retour  0 obligatoire
-                end
-            //end else begin
-            //    read_en_i <= 1'b0;
-            end
-
-        end else begin
-            //read_en_i   <= 0;
-            read_counter <= 0;
-             read_phase   <= 0;
-        end
-    end
-end*/
-
+          
+      end
+  end
 
     //============================
     // PIPELINE RAM (2 registres)
     //============================
-
-
     always @(posedge clk) begin
         ram_data_d  <= ram_read_data;
         ram_valid_d <= ram_data_valid;
     end
-   
-
-   
-    //============================
-    // PIXEL HOLD
-    // FIX [3] : suppression de la condition sur `reading`
-    // Le pixel est accept ds qu'il est valide et que le buffer est libre
-    //============================
-
-
-    /*always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
-            pixel_hold       <= 8'h00;
-            pixel_valid_hold <= 1'b0;
-        end else begin
-            if (state == FEED_PIXELS) begin
-                // Stocker si buffer libre et donne valide
-               // if (ram_valid_d && !pixel_valid_hold) begin
-               if (ram_valid_d && !pixel_valid_hold) begin
-                    pixel_hold       <= ram_data_d;
-                    pixel_valid_hold <= 1'b1;
-                end
-                // Consommer quand le FSM envoie au JLS
-                else if (pixel_valid_hold && encoder_active) begin
-                    pixel_valid_hold <= 1'b0;
-                end
-            end else begin
-                pixel_valid_hold <= 1'b0;
-            end
-        end
-    end*/
     //============================
     // REGISTRE D'TAT FSM
     //============================
@@ -325,7 +216,6 @@ end*/
         if (!rstn) state <= IDLE;
         else       state <= next_state;
     end
-
     //============================
     // LOGIQUE NEXT STATE
     //============================
@@ -423,9 +313,6 @@ end*/
             //  FEED_PIXELS (FIX FINAL)
             //--------------------------------------------------
             if (state == FEED_PIXELS && encoder_active && !pixels_done) begin
-
-                //if (pixel_valid_hold) begin
-                //    i_x <= pixel_hold;
                 if(ram_valid_d)begin
                     i_x <= ram_data_d;
                     i_e <= 1'b1;

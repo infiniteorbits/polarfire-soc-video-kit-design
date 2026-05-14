@@ -1,0 +1,228 @@
+# Sun May  3 09:04:25 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.4 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53559
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 516MB peak: 517MB)
+
+Reading constraint file: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc
+@L: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP_scck.rpt 
+See clock summary report "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP_scck.rpt"
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF474 |No compile point is identified in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 536MB peak: 536MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 536MB peak: 536MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 538MB peak: 538MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 540MB peak: 540MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v":15:8:15:15|Removing instance gnd_inst (in view: work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC(verilog)) because it does not drive other instances.
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":26:8:26:15|Removing instance vcc_inst (in view: work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK(verilog)) because it does not drive other instances.
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":27:8:27:15|Removing instance gnd_inst (in view: work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK(verilog)) because it does not drive other instances.
+NConnInternalConnection caching is on
+@W: FX1183 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v":58:0:58:5|User-specified initial value set for instance CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_50MHz.CORERESET_PF_C5_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
+@W: FX1183 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET_0/core/corereset_pf.v":58:0:58:5|User-specified initial value set for instance CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":64:2:64:7|Found instance top_ddr_write_read_0.jpeg_top_1.u_apb.prdata_1[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":64:2:64:7|Found instance top_ddr_write_read_0.jpeg_top_1.u_apb.reg_ddr_base_addr[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":64:2:64:7|Found instance top_ddr_write_read_0.jpeg_top_1.u_apb.reg_iw[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":64:2:64:7|Found instance top_ddr_write_read_0.jpeg_top_1.u_apb.reg_ih[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":64:2:64:7|Found instance top_ddr_write_read_0.jpeg_top_1.u_apb.reg_near[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":498:0:498:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.e_runi with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":667:0:667:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.f_rc[15:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.c_c[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":332:0:332:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.a_wl[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.c_bt[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":498:0:498:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.e_x[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.c_b[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.c_x[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":332:0:332:5|Found instance top_ddr_write_read_0.jpeg_top_1.u_jls.a_hl[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":59:26:59:36|Tristate driver A_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) on net A_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":57:26:57:37|Tristate driver A_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) on net A_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":60:26:60:36|Tristate driver B_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) on net B_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":58:26:58:37|Tristate driver B_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) on net B_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_64s_64s_9_9_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v":151:37:151:45|Tristate driver DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo_Z2_layer0(verilog)) on net DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo_Z2_layer0(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v":150:37:150:46|Tristate driver SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo_Z2_layer0(verilog)) on net SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo_Z2_layer0(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":59:26:59:36|Tristate driver A_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) on net A_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":57:26:57:37|Tristate driver A_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) on net A_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":60:26:60:36|Tristate driver B_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) on net B_DB_DETECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":58:26:58:37|Tristate driver B_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) on net B_SB_CORRECT (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper_8s_8s_3_3_1s_1s_2s(verilog)) has its enable tied to GND.
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":365:4:365:9|Removing sequential instance dvld_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":362:0:362:5|Removing sequential instance wafull (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":344:0:344:5|Removing sequential instance wdata_count[8:0] (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":237:0:237:5|Removing sequential instance raempty (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":258:0:258:5|Removing sequential instance fifo_hempty (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":219:0:219:5|Removing sequential instance rdata_count[8:0] (in view: work.video_fifo_ddr_read_9s_64s_511s_10s_256s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":420:4:420:5|Removing sequential instance wafull (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":404:4:404:5|Removing sequential instance wdata_count[11:0] (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":314:4:314:5|Removing sequential instance raempty (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":332:4:332:5|Removing sequential instance fifo_hempty (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":64:2:64:7|Removing sequential instance reg_near[7:0] (in view: work.apb_wrapper(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":219:3:219:8|Removing sequential instance rdcnt[9:0] (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":219:3:219:8|Removing sequential instance rdcnt[3:0] (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":324:3:324:8|Removing sequential instance genblk5\.almostemptyi (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":324:3:324:8|Removing sequential instance genblk5\.almostemptyi (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff_arst on CLKINT  I_2 
+@N: FX1184 |Applying syn_allowed_resources blockrams=812,dsps=784 on top level netlist VKPFSOC_TOP 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 594MB peak: 594MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                                                                  Requested     Requested     Clock        Clock               Clock
+Level     Clock                                                                                  Frequency     Period        Type         Group               Load 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                                                 100.0 MHz     10.000        system       system_clkgroup     0    
+                                                                                                                                                                   
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                        100.0 MHz     10.000        inferred     (multiple)          2492 
+                                                                                                                                                                   
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                        100.0 MHz     10.000        inferred     (multiple)          65   
+                                                                                                                                                                   
+0 -       PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock                         100.0 MHz     10.000        inferred     (multiple)          1    
+                                                                                                                                                                   
+0 -       PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock     100.0 MHz     10.000        inferred     (multiple)          1    
+===================================================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                                                                       Clock     Source                                                                                         Clock Pin                                                                 Non-clock Pin     Non-clock Pin                                                    
+Clock                                                                                  Load      Pin                                                                                            Seq Example                                                               Seq Example       Comb Example                                                     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                                 0         -                                                                                              -                                                                         -                 -                                                                
+                                                                                                                                                                                                                                                                                                                                                             
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                        2492      CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)                          top_ddr_write_read_0.jpeg_top_1.u_jls.c_d[7:0].C                          -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)
+                                                                                                                                                                                                                                                                                                                                                             
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                        65        CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)                          top_ddr_write_read_0.jpeg_top_1.u_apb.pready.C                            -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)
+                                                                                                                                                                                                                                                                                                                                                             
+PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock                         1         CLOCKS_AND_RESETS_inst_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_2.CLK(OSC_RC2MHZ)                       CLOCKS_AND_RESETS_inst_0.PF_CLK_DIV_C0_0.PF_CLK_DIV_C0_0.I_CD.A           -                 -                                                                
+                                                                                                                                                                                                                                                                                                                                                             
+PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock     1         CLOCKS_AND_RESETS_inst_0.PF_XCVR_REF_CLK_C0_0.PF_XCVR_REF_CLK_C0_0.I_IO.Y[0](XCVR_REF_CLK)     CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 -                                                                
+=============================================================================================================================================================================================================================================================================================================================================================
+
+@W: MT530 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET_0/core/corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 2492 sequential elements including CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff_15[0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock which controls 65 sequential elements including CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_50MHz.CORERESET_PF_C5_0.dff_15[0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v":14:38:14:41|Found inferred clock PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock which controls 1 sequential elements including CLOCKS_AND_RESETS_inst_0.PF_CLK_DIV_C0_0.PF_CLK_DIV_C0_0.I_CD. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v":39:27:39:36|Found inferred clock PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock which controls 1 sequential elements including CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 594MB peak: 594MB)
+
+Encoding state machine local_wbus_state[3:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v":356:1:356:6|There are no possible illegal states for state machine local_wbus_state[3:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog)); safe FSM implementation is not required.
+Encoding state machine video_bus_state[4:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   101 -> 01000
+   110 -> 10000
+Encoding state machine s_state[0:5] (in view: work.request_scheduler_0(request_scheduler))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine s_state[0:5] (in view: work.request_scheduler_1(request_scheduler))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine s_state[3:0] (in view: work.DDR_read_controller_0s_0_1_2_3_256s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v":136:0:136:5|There are no possible illegal states for state machine s_state[3:0] (in view: work.DDR_read_controller_0s_0_1_2_3_256s(verilog)); safe FSM implementation is not required.
+Encoding state machine s_state[2:0] (in view: work.ddr_write_controller_enc(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[3:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
+   011 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jpeg_control_fsm.v":324:4:324:9|There are no possible illegal states for state machine state[3:0] (in view: work.jpeg_control_fsm_8s_0_1_2_3(verilog)); safe FSM implementation is not required.
+Encoding state machine state_footer[2:0] (in view: work.jls_encoder(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 594MB peak: 594MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 595MB peak: 595MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 507MB peak: 595MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May  3 09:04:27 2026
+
+###########################################################]

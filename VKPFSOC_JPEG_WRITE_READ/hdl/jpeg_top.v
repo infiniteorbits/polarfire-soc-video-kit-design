@@ -4,7 +4,8 @@
 
 //`timescale <time_units> / <precision>
 module jpeg_top #(
-    parameter ADDR_WIDTH = 8//24 3 8
+    parameter ADDR_WIDTH = 8,//24 3 8
+    parameter LINE_STORAGE_MODE = 1'b0
 )(
     // -------- APB interface --------
     input  wire         pclk,
@@ -37,8 +38,10 @@ module jpeg_top #(
     input wire      read_ackn_i,
     input wire       read_done_i,
     output wire [15:0]    horz_resl_o,
+    output wire [15:0]    line_gap_o,
     output wire [7:0]  ddr_base_addr_o,
     output wire         read_en_i,
+    output wire         frame_start_i,
     output wire         encoder_active_o
 );
 
@@ -58,6 +61,13 @@ module jpeg_top #(
     wire [15:0] o_data;
     wire        o_e;
     wire        o_last;
+
+    // LINE_STORAGE_MODE:
+    // 0 = compact storage, no padding between lines
+    // 1 = padded storage, round each line up to a 64-bit word boundary
+    assign line_gap_o = (LINE_STORAGE_MODE == 1'b0)
+                      ? horz_resl_o
+                      : ((horz_resl_o + 16'd7) & 16'hFFF8);
 
     // ===============================
     // APB Wrapper
@@ -116,6 +126,7 @@ module jpeg_top #(
         .ram_data_valid     (ram_data_valid),
        // .compressed_size_o (compressed_size_o),
        .read_en_i           (read_en_i),
+        .frame_start_i       (frame_start_i),
         .o_last_flag       (o_last_flag),
         .read_ackn_i    (read_ackn_i),
         .read_done_i    (read_done_i),

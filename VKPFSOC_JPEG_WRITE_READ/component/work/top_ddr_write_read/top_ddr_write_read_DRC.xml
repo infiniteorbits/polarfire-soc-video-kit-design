@@ -3,10 +3,10 @@
 <drcreport>
   <header>top_ddr_write_read</header>
   <drc>
-    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin DDR_Read_C0_0:frame_start_i</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/top_ddr_write_read/pins/DDR_Read_C0_0:frame_start_i</crossprobe>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin jpeg_top_1:line_gap_o[15:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/top_ddr_write_read/pins/jpeg_top_1:line_gap_o</crossprobe>
   </drc>
 </drcreport>

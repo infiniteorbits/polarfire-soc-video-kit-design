@@ -1,0 +1,66 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.4 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53559
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+
+# Written on Sun May  3 09:04:25 2026
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                                                                  Requested     Requested     Clock        Clock               Clock
+Level     Clock                                                                                  Frequency     Period        Type         Group               Load 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                                                 100.0 MHz     10.000        system       system_clkgroup     0    
+                                                                                                                                                                   
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                        100.0 MHz     10.000        inferred     (multiple)          2492 
+                                                                                                                                                                   
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                        100.0 MHz     10.000        inferred     (multiple)          65   
+                                                                                                                                                                   
+0 -       PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock                         100.0 MHz     10.000        inferred     (multiple)          1    
+                                                                                                                                                                   
+0 -       PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock     100.0 MHz     10.000        inferred     (multiple)          1    
+===================================================================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                                                                       Clock     Source                                                                                         Clock Pin                                                                 Non-clock Pin     Non-clock Pin                                                    
+Clock                                                                                  Load      Pin                                                                                            Seq Example                                                               Seq Example       Comb Example                                                     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                                 0         -                                                                                              -                                                                         -                 -                                                                
+                                                                                                                                                                                                                                                                                                                                                             
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                        2492      CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)                          top_ddr_write_read_0.jpeg_top_1.u_jls.c_d[7:0].C                          -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)
+                                                                                                                                                                                                                                                                                                                                                             
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                        65        CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)                          top_ddr_write_read_0.jpeg_top_1.u_apb.pready.C                            -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)
+                                                                                                                                                                                                                                                                                                                                                             
+PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock                         1         CLOCKS_AND_RESETS_inst_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_2.CLK(OSC_RC2MHZ)                       CLOCKS_AND_RESETS_inst_0.PF_CLK_DIV_C0_0.PF_CLK_DIV_C0_0.I_CD.A           -                 -                                                                
+                                                                                                                                                                                                                                                                                                                                                             
+PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock     1         CLOCKS_AND_RESETS_inst_0.PF_XCVR_REF_CLK_C0_0.PF_XCVR_REF_CLK_C0_0.I_IO.Y[0](XCVR_REF_CLK)     CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 -                                                                
+=============================================================================================================================================================================================================================================================================================================================================================

@@ -10,7 +10,9 @@ add wave -noupdate /tb_top_system/prdata
 add wave -noupdate /tb_top_system/pready
 add wave -noupdate /tb_top_system/apb_pin
 add wave -noupdate /tb_top_system/dut/jpeg_top_1/u_fsm/read_en_i
-add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/read_done_i
+add wave -noupdate /tb_top_system/dut/jpeg_top_1/u_fsm/frame_start_i
+add wave -noupdate /tb_top_system/dut/jpeg_top_1/line_gap_o
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/read_en_i
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/frame_end_i
 add wave -noupdate /tb_top_system/ddr_ctrl_ready_i
 add wave -noupdate /tb_top_system/arready
@@ -42,6 +44,58 @@ add wave -noupdate /tb_top_system/axi_read_beats
 add wave -noupdate /tb_top_system/axi_write_beats
 add wave -noupdate /tb_top_system/axi_error
 add wave -noupdate /tb_top_system/status_reg
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/araddr
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arburst
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arcache
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arlen
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arlock
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arprot
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arready
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arsize
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/arvalid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awaddr
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awburst
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awcache
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awlen
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awlock
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awprot
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awready
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awsize
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/awvalid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/bid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/bready
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/bresp
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/bvalid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/ddr_ctrl_ready
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/r0_ack_o
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/r0_burst_size_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/r0_data_valid_o
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/r0_done_o
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/r0_req_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/r0_rstart_addr_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rdata
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rdata_o
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/reset_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rlast
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rready
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rresp
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/rvalid
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/sys_clk_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_ack_o
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_burst_size_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_data_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_data_valid_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_done_o
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_req_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/w0_wstart_addr_i
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/wdata
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/wlast
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/wready
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/wstrb
+add wave -noupdate /tb_top_system/dut/DDR_AXI4_ARBITER_PF_C0_0/DDR_AXI4_ARBITER_PF_C0_0/genblk1/DDR_AXI4_ARBITER_PF_0/wvalid
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/data_unpacker_0/beats_to_read_o
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/data_unpacker_0/data_i
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/data_unpacker_0/data_o
@@ -70,6 +124,27 @@ add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Re
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/wen_i
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/wfull_o
 add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/wresetn_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/rclock_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/rd_addr_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/rd_data_o
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/wclock_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/we_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/wr_addr_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/video_fifo_r/ram2port_dr_inst/wr_data_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/burst_hcount_o
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/burst_len_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/c_LINE_GAP
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/frame_end_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/frame_start_addr_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/h_pan_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/read_ackn_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/read_done_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/read_en_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/read_req_o
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/read_start_addr_o
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/reset_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/sys_clk_i
+add wave -noupdate /tb_top_system/dut/DDR_Read_C0_0/DDR_Read_C0_0/genblk1/DDR_Read_Native_0/DDR_read_controller_0/v_pan_i
 add wave -noupdate /tb_top_system/dut/jpeg_top_1/u_fsm/clk
 add wave -noupdate /tb_top_system/dut/jpeg_top_1/u_fsm/encoder_active_o
 add wave -noupdate /tb_top_system/dut/jpeg_top_1/u_fsm/eof_flag
@@ -143,9 +218,9 @@ add wave -noupdate /tb_top_system/dut/DDR_WRITE_JPEG_0/video_fifo_0/wen_i
 add wave -noupdate /tb_top_system/dut/DDR_WRITE_JPEG_0/video_fifo_0/wfull_o
 add wave -noupdate /tb_top_system/dut/DDR_WRITE_JPEG_0/video_fifo_0/wresetn_i
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {4445000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {7436043 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 532
+configure wave -namecolwidth 648
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -159,4 +234,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {4242121 ps} {5500867 ps}
+WaveRestoreZoom {3153068 ps} {10141689 ps}

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Apr 28 11:33:18 2026
+// Created by SmartDesign Tue May 12 12:16:55 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -25,8 +25,6 @@ module top_ddr_write_read(
     MIRRORED_SLAVE_AXI4_wready_0,
     apb_pin,
     ddr_ctrl_ready_i,
-    frame_start_i,
-    line_gap_i,
     pclk,
     presetn,
     reset_i,
@@ -82,8 +80,6 @@ input         MIRRORED_SLAVE_AXI4_rvalid_0;
 input         MIRRORED_SLAVE_AXI4_wready_0;
 input         apb_pin;
 input         ddr_ctrl_ready_i;
-input         frame_start_i;
-input  [15:0] line_gap_i;
 input         pclk;
 input         presetn;
 input         reset_i;
@@ -147,16 +143,16 @@ wire          DDR_WRITE_JPEG_0_rdata_rdy_o;
 wire   [7:0]  DDR_WRITE_JPEG_0_write_length_o;
 wire          DDR_WRITE_JPEG_0_write_req_o;
 wire   [31:0] DDR_WRITE_JPEG_0_write_start_addr_o;
-wire          frame_start_i;
 wire          frm_interrupt_o_net_0;
 wire   [7:0]  jpeg_top_1_ddr_base_addr_o;
 wire          jpeg_top_1_encoder_active_o;
 wire          jpeg_top_1_eof_flag;
+wire          jpeg_top_1_frame_start_i;
 wire   [15:0] jpeg_top_1_horz_resl_o;
+wire   [15:0] jpeg_top_1_line_gap_o;
 wire   [15:0] jpeg_top_1_o_data_pck;
 wire          jpeg_top_1_o_e_pck;
 wire          jpeg_top_1_read_en_i;
-wire   [15:0] line_gap_i;
 wire   [31:0] MIRRORED_SLAVE_AXI4_ARADDR;
 wire   [1:0]  MIRRORED_SLAVE_AXI4_ARBURST;
 wire   [3:0]  MIRRORED_SLAVE_AXI4_ARCACHE;
@@ -196,8 +192,6 @@ wire          pclk;
 wire          presetn;
 wire          reset_i;
 wire          sys_clk_i;
-wire          APBslave_PREADY_net_1;
-wire          APBslave_PSLVERR_net_1;
 wire          MIRRORED_SLAVE_AXI4_ARVALID_net_0;
 wire          MIRRORED_SLAVE_AXI4_AWVALID_net_0;
 wire          MIRRORED_SLAVE_AXI4_BREADY_net_0;
@@ -205,7 +199,6 @@ wire          MIRRORED_SLAVE_AXI4_RREADY_net_0;
 wire          MIRRORED_SLAVE_AXI4_WLAST_net_0;
 wire          MIRRORED_SLAVE_AXI4_WVALID_net_0;
 wire          frm_interrupt_o_net_1;
-wire   [31:0] APBslave_PRDATA_net_1;
 wire   [31:0] MIRRORED_SLAVE_AXI4_ARADDR_net_0;
 wire   [1:0]  MIRRORED_SLAVE_AXI4_ARBURST_net_0;
 wire   [3:0]  MIRRORED_SLAVE_AXI4_ARCACHE_net_0;
@@ -224,25 +217,26 @@ wire   [2:0]  MIRRORED_SLAVE_AXI4_AWPROT_net_0;
 wire   [2:0]  MIRRORED_SLAVE_AXI4_AWSIZE_net_0;
 wire   [63:0] MIRRORED_SLAVE_AXI4_WDATA_net_0;
 wire   [7:0]  MIRRORED_SLAVE_AXI4_WSTRB_net_0;
+wire   [31:0] APBslave_PRDATA_net_1;
+wire          APBslave_PREADY_net_1;
+wire          APBslave_PSLVERR_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire   [11:0] h_offset_i_const_net_0;
 wire   [11:0] v_offset_i_const_net_0;
 wire   [9:0]  frame_ddr_addr_i_const_net_0;
+wire   [2:0]  addr_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
 assign h_offset_i_const_net_0       = 12'h000;
 assign v_offset_i_const_net_0       = 12'h000;
 assign frame_ddr_addr_i_const_net_0 = 10'h000;
+assign addr_const_net_0             = 3'h0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign APBslave_PREADY_net_1              = APBslave_PREADY_net_0;
-assign APBslave_pready                    = APBslave_PREADY_net_1;
-assign APBslave_PSLVERR_net_1             = APBslave_PSLVERR_net_0;
-assign APBslave_pslverr                   = APBslave_PSLVERR_net_1;
 assign MIRRORED_SLAVE_AXI4_ARVALID_net_0  = MIRRORED_SLAVE_AXI4_ARVALID;
 assign MIRRORED_SLAVE_AXI4_arvalid_0      = MIRRORED_SLAVE_AXI4_ARVALID_net_0;
 assign MIRRORED_SLAVE_AXI4_AWVALID_net_0  = MIRRORED_SLAVE_AXI4_AWVALID;
@@ -257,8 +251,6 @@ assign MIRRORED_SLAVE_AXI4_WVALID_net_0   = MIRRORED_SLAVE_AXI4_WVALID;
 assign MIRRORED_SLAVE_AXI4_wvalid_0       = MIRRORED_SLAVE_AXI4_WVALID_net_0;
 assign frm_interrupt_o_net_1              = frm_interrupt_o_net_0;
 assign frm_interrupt_o                    = frm_interrupt_o_net_1;
-assign APBslave_PRDATA_net_1              = APBslave_PRDATA_net_0;
-assign APBslave_prdata[31:0]              = APBslave_PRDATA_net_1;
 assign MIRRORED_SLAVE_AXI4_ARADDR_net_0   = MIRRORED_SLAVE_AXI4_ARADDR;
 assign MIRRORED_SLAVE_AXI4_araddr_0[31:0] = MIRRORED_SLAVE_AXI4_ARADDR_net_0;
 assign MIRRORED_SLAVE_AXI4_ARBURST_net_0  = MIRRORED_SLAVE_AXI4_ARBURST;
@@ -295,6 +287,12 @@ assign MIRRORED_SLAVE_AXI4_WDATA_net_0    = MIRRORED_SLAVE_AXI4_WDATA;
 assign MIRRORED_SLAVE_AXI4_wdata_0[63:0]  = MIRRORED_SLAVE_AXI4_WDATA_net_0;
 assign MIRRORED_SLAVE_AXI4_WSTRB_net_0    = MIRRORED_SLAVE_AXI4_WSTRB;
 assign MIRRORED_SLAVE_AXI4_wstrb_0[7:0]   = MIRRORED_SLAVE_AXI4_WSTRB_net_0;
+assign APBslave_PRDATA_net_1              = APBslave_PRDATA_net_0;
+assign APBslave_prdata[31:0]              = APBslave_PRDATA_net_1;
+assign APBslave_PREADY_net_1              = APBslave_PREADY_net_0;
+assign APBslave_pready                    = APBslave_PREADY_net_1;
+assign APBslave_PSLVERR_net_1             = APBslave_PSLVERR_net_0;
+assign APBslave_pslverr                   = APBslave_PSLVERR_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -304,32 +302,38 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .reset_i          ( reset_i ),
         .sys_clk_i        ( sys_clk_i ),
         .ddr_ctrl_ready_i ( ddr_ctrl_ready_i ),
-        .r0_burst_size_i  ( DDR_Read_C0_0_burst_size_o ),
         .r0_req_i         ( DDR_Read_C0_0_read_req_o ),
+        .w0_data_valid_i  ( DDR_WRITE_JPEG_0_rdata_rdy_o ),
+        .w0_req_i         ( DDR_WRITE_JPEG_0_write_req_o ),
+        .awready          ( MIRRORED_SLAVE_AXI4_awready_0 ),
+        .wready           ( MIRRORED_SLAVE_AXI4_wready_0 ),
+        .bvalid           ( MIRRORED_SLAVE_AXI4_bvalid_0 ),
+        .arready          ( MIRRORED_SLAVE_AXI4_arready_0 ),
+        .rlast            ( MIRRORED_SLAVE_AXI4_rlast_0 ),
+        .rvalid           ( MIRRORED_SLAVE_AXI4_rvalid_0 ),
+        .r0_burst_size_i  ( DDR_Read_C0_0_burst_size_o ),
         .r0_rstart_addr_i ( DDR_Read_C0_0_read_start_addr_o ),
         .w0_burst_size_i  ( DDR_WRITE_JPEG_0_write_length_o ),
         .w0_data_i        ( DDR_WRITE_JPEG_0_rdata_o ),
-        .w0_data_valid_i  ( DDR_WRITE_JPEG_0_rdata_rdy_o ),
-        .w0_req_i         ( DDR_WRITE_JPEG_0_write_req_o ),
         .w0_wstart_addr_i ( DDR_WRITE_JPEG_0_write_start_addr_o ),
-        .awready          ( MIRRORED_SLAVE_AXI4_awready_0 ),
-        .wready           ( MIRRORED_SLAVE_AXI4_wready_0 ),
         .bid              ( MIRRORED_SLAVE_AXI4_bid_0 ),
         .bresp            ( MIRRORED_SLAVE_AXI4_bresp_0 ),
-        .bvalid           ( MIRRORED_SLAVE_AXI4_bvalid_0 ),
-        .arready          ( MIRRORED_SLAVE_AXI4_arready_0 ),
         .rid              ( MIRRORED_SLAVE_AXI4_rid_0 ),
         .rdata            ( MIRRORED_SLAVE_AXI4_rdata_0 ),
         .rresp            ( MIRRORED_SLAVE_AXI4_rresp_0 ),
-        .rlast            ( MIRRORED_SLAVE_AXI4_rlast_0 ),
-        .rvalid           ( MIRRORED_SLAVE_AXI4_rvalid_0 ),
         // Outputs
         .r0_ack_o         ( DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o ),
         .r0_data_valid_o  ( DDR_AXI4_ARBITER_PF_C0_0_r0_data_valid_o ),
         .r0_done_o        ( DDR_AXI4_ARBITER_PF_C0_0_r0_done_o ),
-        .rdata_o          ( DDR_AXI4_ARBITER_PF_C0_0_rdata_o ),
         .w0_ack_o         ( DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o ),
         .w0_done_o        ( DDR_AXI4_ARBITER_PF_C0_0_w0_done_o ),
+        .awvalid          ( MIRRORED_SLAVE_AXI4_AWVALID ),
+        .wlast            ( MIRRORED_SLAVE_AXI4_WLAST ),
+        .wvalid           ( MIRRORED_SLAVE_AXI4_WVALID ),
+        .bready           ( MIRRORED_SLAVE_AXI4_BREADY ),
+        .arvalid          ( MIRRORED_SLAVE_AXI4_ARVALID ),
+        .rready           ( MIRRORED_SLAVE_AXI4_RREADY ),
+        .rdata_o          ( DDR_AXI4_ARBITER_PF_C0_0_rdata_o ),
         .awid             ( MIRRORED_SLAVE_AXI4_AWID ),
         .awaddr           ( MIRRORED_SLAVE_AXI4_AWADDR ),
         .awlen            ( MIRRORED_SLAVE_AXI4_AWLEN ),
@@ -338,12 +342,8 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .awlock           ( MIRRORED_SLAVE_AXI4_AWLOCK ),
         .awcache          ( MIRRORED_SLAVE_AXI4_AWCACHE ),
         .awprot           ( MIRRORED_SLAVE_AXI4_AWPROT ),
-        .awvalid          ( MIRRORED_SLAVE_AXI4_AWVALID ),
         .wdata            ( MIRRORED_SLAVE_AXI4_WDATA ),
         .wstrb            ( MIRRORED_SLAVE_AXI4_WSTRB ),
-        .wlast            ( MIRRORED_SLAVE_AXI4_WLAST ),
-        .wvalid           ( MIRRORED_SLAVE_AXI4_WVALID ),
-        .bready           ( MIRRORED_SLAVE_AXI4_BREADY ),
         .arid             ( MIRRORED_SLAVE_AXI4_ARID ),
         .araddr           ( MIRRORED_SLAVE_AXI4_ARADDR ),
         .arlen            ( MIRRORED_SLAVE_AXI4_ARLEN ),
@@ -351,9 +351,7 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .arburst          ( MIRRORED_SLAVE_AXI4_ARBURST ),
         .arlock           ( MIRRORED_SLAVE_AXI4_ARLOCK ),
         .arcache          ( MIRRORED_SLAVE_AXI4_ARCACHE ),
-        .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ),
-        .arvalid          ( MIRRORED_SLAVE_AXI4_ARVALID ),
-        .rready           ( MIRRORED_SLAVE_AXI4_RREADY ) 
+        .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ) 
         );
 
 //--------DDR_Read_C0
@@ -362,22 +360,22 @@ DDR_Read_C0 DDR_Read_C0_0(
         .reset_i            ( reset_i ),
         .pixel_clk_i        ( sys_clk_i ),
         .ddr_clk_i          ( sys_clk_i ),
-        .line_gap_i         ( line_gap_i ),
-        .horz_resl_i        ( jpeg_top_1_horz_resl_o ),
-        .frame_start_i      ( frame_start_i ),
-        .frame_start_addr_i ( jpeg_top_1_ddr_base_addr_o ),
-        .h_offset_i         ( h_offset_i_const_net_0 ),
-        .v_offset_i         ( v_offset_i_const_net_0 ),
+        .frame_start_i      ( jpeg_top_1_frame_start_i ),
         .read_en_i          ( jpeg_top_1_read_en_i ),
         .read_ackn_i        ( DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o ),
         .read_done_i        ( DDR_AXI4_ARBITER_PF_C0_0_r0_done_o ),
         .ddr_data_valid_i   ( DDR_AXI4_ARBITER_PF_C0_0_r0_data_valid_o ),
+        .line_gap_i         ( jpeg_top_1_line_gap_o ),
+        .horz_resl_i        ( jpeg_top_1_horz_resl_o ),
+        .frame_start_addr_i ( jpeg_top_1_ddr_base_addr_o ),
+        .h_offset_i         ( h_offset_i_const_net_0 ),
+        .v_offset_i         ( v_offset_i_const_net_0 ),
         .wdata_i            ( DDR_AXI4_ARBITER_PF_C0_0_rdata_o ),
         // Outputs
-        .read_start_addr_o  ( DDR_Read_C0_0_read_start_addr_o ),
         .read_req_o         ( DDR_Read_C0_0_read_req_o ),
-        .burst_size_o       ( DDR_Read_C0_0_burst_size_o ),
         .data_valid_o       ( DDR_Read_C0_0_data_valid_o ),
+        .read_start_addr_o  ( DDR_Read_C0_0_read_start_addr_o ),
+        .burst_size_o       ( DDR_Read_C0_0_burst_size_o ),
         .data_o             ( DDR_Read_C0_0_data_o ) 
         );
 
@@ -405,7 +403,8 @@ DDR_WRITE_JPEG DDR_WRITE_JPEG_0(
 
 //--------jpeg_top
 jpeg_top #( 
-        .ADDR_WIDTH ( 8 ) )
+        .ADDR_WIDTH        ( 8 ),
+        .LINE_STORAGE_MODE ( 0 ) )
 jpeg_top_1(
         // Inputs
         .pclk             ( pclk ),
@@ -430,9 +429,19 @@ jpeg_top_1(
         .sof_flag         (  ),
         .eof_flag         ( jpeg_top_1_eof_flag ),
         .horz_resl_o      ( jpeg_top_1_horz_resl_o ),
+        .line_gap_o       ( jpeg_top_1_line_gap_o ),
         .ddr_base_addr_o  ( jpeg_top_1_ddr_base_addr_o ),
         .read_en_i        ( jpeg_top_1_read_en_i ),
+        .frame_start_i    ( jpeg_top_1_frame_start_i ),
         .encoder_active_o ( jpeg_top_1_encoder_active_o ) 
+        );
+
+//--------ram8bit_input
+ram8bit_input ram8bit_input_0(
+        // Inputs
+        .addr ( addr_const_net_0 ),
+        // Outputs
+        .dout (  ) 
         );
 
 

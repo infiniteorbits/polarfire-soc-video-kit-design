@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Apr 28 11:33:07 2026
+// Created by SmartDesign Sun May 10 08:57:21 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -19,7 +19,7 @@ create_and_configure_core -core_vlnv {Microchip:SolutionCore:DDR_Read:1.2.0} -co
 "g_DDR_AXI_DWIDTH_O:8"  \
 "g_FORMAT:0"  \
 "g_FRAME_GAP:0"  \
-"g_HORIZ_RESOL:5"  \
+"g_HORIZ_RESOL:120"  \
 "g_NO_OF_PIXEL:1"   }
 # Exporting Component Description of DDR_Read_C0 to TCL done
 */
@@ -96,32 +96,32 @@ wire   [31:0] read_start_addr_o_net_0;
 wire          reset_i;
 wire   [11:0] v_offset_i;
 wire   [63:0] wdata_i;
-wire   [31:0] read_start_addr_o_net_1;
 wire          read_req_o_net_1;
-wire   [7:0]  burst_size_o_net_1;
 wire          data_valid_o_net_1;
+wire   [31:0] read_start_addr_o_net_1;
+wire   [7:0]  burst_size_o_net_1;
 wire   [7:0]  data_o_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire   [63:0] RDATA_I_const_net_0;
 wire          GND_net;
+wire   [63:0] RDATA_I_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign RDATA_I_const_net_0 = 64'h0000000000000000;
 assign GND_net             = 1'b0;
+assign RDATA_I_const_net_0 = 64'h0000000000000000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign read_start_addr_o_net_1 = read_start_addr_o_net_0;
-assign read_start_addr_o[31:0] = read_start_addr_o_net_1;
 assign read_req_o_net_1        = read_req_o_net_0;
 assign read_req_o              = read_req_o_net_1;
-assign burst_size_o_net_1      = burst_size_o_net_0;
-assign burst_size_o[7:0]       = burst_size_o_net_1;
 assign data_valid_o_net_1      = data_valid_o_net_0;
 assign data_valid_o            = data_valid_o_net_1;
+assign read_start_addr_o_net_1 = read_start_addr_o_net_0;
+assign read_start_addr_o[31:0] = read_start_addr_o_net_1;
+assign burst_size_o_net_1      = burst_size_o_net_0;
+assign burst_size_o[7:0]       = burst_size_o_net_1;
 assign data_o_net_1            = data_o_net_0;
 assign data_o[7:0]             = data_o_net_1;
 //--------------------------------------------------------------------
@@ -134,42 +134,42 @@ DDR_Read #(
         .g_DDR_AXI_DWIDTH_O ( 8 ),
         .g_FORMAT           ( 0 ),
         .g_FRAME_GAP        ( 0 ),
-        .g_HORIZ_RESOL      ( 5 ),
+        .g_HORIZ_RESOL      ( 120 ),
         .g_NO_OF_PIXEL      ( 1 ) )
 DDR_Read_C0_0(
         // Inputs
         .reset_i            ( reset_i ),
         .pixel_clk_i        ( pixel_clk_i ),
         .ddr_clk_i          ( ddr_clk_i ),
-        .line_gap_i         ( line_gap_i ),
-        .horz_resl_i        ( horz_resl_i ),
         .frame_start_i      ( frame_start_i ),
-        .frame_start_addr_i ( frame_start_addr_i ),
-        .h_offset_i         ( h_offset_i ),
-        .v_offset_i         ( v_offset_i ),
         .read_en_i          ( read_en_i ),
         .read_ackn_i        ( read_ackn_i ),
         .read_done_i        ( read_done_i ),
         .ddr_data_valid_i   ( ddr_data_valid_i ),
-        .wdata_i            ( wdata_i ),
-        .RDATA_I            ( RDATA_I_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .RVALID_I           ( GND_net ), // tied to 1'b0 from definition
         .ARREADY_I          ( GND_net ), // tied to 1'b0 from definition
         .BUSER_I            ( GND_net ), // tied to 1'b0 from definition
+        .line_gap_i         ( line_gap_i ),
+        .horz_resl_i        ( horz_resl_i ),
+        .frame_start_addr_i ( frame_start_addr_i ),
+        .h_offset_i         ( h_offset_i ),
+        .v_offset_i         ( v_offset_i ),
+        .wdata_i            ( wdata_i ),
+        .RDATA_I            ( RDATA_I_const_net_0 ), // tied to 64'h0000000000000000 from definition
         // Outputs
-        .ARADDR_O           (  ),
         .ARVALID_O          (  ),
+        .read_req_o         ( read_req_o_net_0 ),
+        .data_valid_o       ( data_valid_o_net_0 ),
+        .TVALID_O           (  ),
+        .TLAST_O            (  ),
+        .ARADDR_O           (  ),
         .ARSIZE_O           (  ),
         .read_start_addr_o  ( read_start_addr_o_net_0 ),
-        .read_req_o         ( read_req_o_net_0 ),
         .burst_size_o       ( burst_size_o_net_0 ),
-        .data_valid_o       ( data_valid_o_net_0 ),
         .data_o             ( data_o_net_0 ),
         .TDATA_O            (  ),
         .TSTRB_O            (  ),
         .TKEEP_O            (  ),
-        .TVALID_O           (  ),
-        .TLAST_O            (  ),
         .TUSER_O            (  ) 
         );
 

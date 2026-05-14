@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Apr 20 14:38:01 2026
+// Created by SmartDesign Tue May 12 11:21:27 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -25,8 +25,6 @@ module top_ddr_write_read(
     MIRRORED_SLAVE_AXI4_wready_0,
     apb_pin,
     ddr_ctrl_ready_i,
-    frame_start_i,
-    line_gap_i,
     pclk,
     presetn,
     reset_i,
@@ -82,8 +80,6 @@ input         MIRRORED_SLAVE_AXI4_rvalid_0;
 input         MIRRORED_SLAVE_AXI4_wready_0;
 input         apb_pin;
 input         ddr_ctrl_ready_i;
-input         frame_start_i;
-input  [15:0] line_gap_i;
 input         pclk;
 input         presetn;
 input         reset_i;
@@ -147,16 +143,16 @@ wire          DDR_WRITE_JPEG_0_rdata_rdy_o;
 wire   [7:0]  DDR_WRITE_JPEG_0_write_length_o;
 wire          DDR_WRITE_JPEG_0_write_req_o;
 wire   [31:0] DDR_WRITE_JPEG_0_write_start_addr_o;
-wire          frame_start_i;
 wire          frm_interrupt_o_net_0;
 wire   [7:0]  jpeg_top_1_ddr_base_addr_o;
 wire          jpeg_top_1_encoder_active_o;
 wire          jpeg_top_1_eof_flag;
+wire          jpeg_top_1_frame_start_i;
 wire   [15:0] jpeg_top_1_horz_resl_o;
+wire   [15:0] jpeg_top_1_line_gap_o;
 wire   [15:0] jpeg_top_1_o_data_pck;
 wire          jpeg_top_1_o_e_pck;
 wire          jpeg_top_1_read_en_i;
-wire   [15:0] line_gap_i;
 wire   [31:0] MIRRORED_SLAVE_AXI4_ARADDR;
 wire   [1:0]  MIRRORED_SLAVE_AXI4_ARBURST;
 wire   [3:0]  MIRRORED_SLAVE_AXI4_ARCACHE;
@@ -364,12 +360,12 @@ DDR_Read_C0 DDR_Read_C0_0(
         .reset_i            ( reset_i ),
         .pixel_clk_i        ( sys_clk_i ),
         .ddr_clk_i          ( sys_clk_i ),
-        .frame_start_i      ( frame_start_i ),
+        .frame_start_i      ( jpeg_top_1_frame_start_i ),
         .read_en_i          ( jpeg_top_1_read_en_i ),
         .read_ackn_i        ( DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o ),
         .read_done_i        ( DDR_AXI4_ARBITER_PF_C0_0_r0_done_o ),
         .ddr_data_valid_i   ( DDR_AXI4_ARBITER_PF_C0_0_r0_data_valid_o ),
-        .line_gap_i         ( line_gap_i ),
+        .line_gap_i         ( jpeg_top_1_line_gap_o ),
         .horz_resl_i        ( jpeg_top_1_horz_resl_o ),
         .frame_start_addr_i ( jpeg_top_1_ddr_base_addr_o ),
         .h_offset_i         ( h_offset_i_const_net_0 ),
@@ -407,8 +403,9 @@ DDR_WRITE_JPEG DDR_WRITE_JPEG_0(
 
 //--------jpeg_top
 jpeg_top #( 
-        .ADDR_WIDTH ( 8 ) )
-jpeg_top_1(
+        .ADDR_WIDTH ( 8 ),
+        .LINE_STORAGE_MODE (0)
+)jpeg_top_1(
         // Inputs
         .pclk             ( pclk ),
         .presetn          ( presetn ),
@@ -421,18 +418,22 @@ jpeg_top_1(
         .apb_pin          ( apb_pin ),
         .ram_read_data    ( DDR_Read_C0_0_data_o ),
         .ram_data_valid   ( DDR_Read_C0_0_data_valid_o ),
+        .read_ackn_i      ( DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o ),
+        .read_done_i      ( DDR_AXI4_ARBITER_PF_C0_0_r0_done_o ),
         // Outputs
         .prdata           ( APBslave_PRDATA_net_0 ),
         .pready           ( APBslave_PREADY_net_0 ),
         .pslverr          ( APBslave_PSLVERR_net_0 ),
-        .horz_resl_o      ( jpeg_top_1_horz_resl_o ),
-        .ddr_base_addr_o  ( jpeg_top_1_ddr_base_addr_o ),
         .o_data_pck       ( jpeg_top_1_o_data_pck ),
         .o_e_pck          ( jpeg_top_1_o_e_pck ),
         .sof_flag         (  ),
         .eof_flag         ( jpeg_top_1_eof_flag ),
-        .encoder_active_o ( jpeg_top_1_encoder_active_o ),
-        .read_en_i        ( jpeg_top_1_read_en_i ) 
+        .horz_resl_o      ( jpeg_top_1_horz_resl_o ),
+        .line_gap_o       ( jpeg_top_1_line_gap_o ),
+        .ddr_base_addr_o  ( jpeg_top_1_ddr_base_addr_o ),
+        .read_en_i        ( jpeg_top_1_read_en_i ),
+        .frame_start_i    ( jpeg_top_1_frame_start_i ),
+        .encoder_active_o ( jpeg_top_1_encoder_active_o ) 
         );
 
 //--------ram8bit_input

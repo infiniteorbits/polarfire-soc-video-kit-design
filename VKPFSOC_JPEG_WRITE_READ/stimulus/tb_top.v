@@ -10,12 +10,12 @@ module tb_top_system;
   parameter SYSCLK_PERIOD = 10;   // 100 MHz
 
   // Image 5x3 pixels, 8 bits/pixel
-  // i_w=4  horz_resl = i_w+1 = 5  (calcul dans apb_wrapper)
-  // i_h=2  H rel = i_h+1 = 3
-  parameter IMG_W_REG      = 14'd14;          // crire dans 0x04
-  parameter IMG_H_REG      = 14'd0;          // crire dans 0x08
+  // i_w=511  horz_resl = i_w+1 = 512 (calcul dans apb_wrapper)
+  // i_h=511  H rel = i_h+1 = 512
+  parameter IMG_W_REG      = 14'd1023;          // crire dans 0x04
+  parameter IMG_H_REG      = 14'd1023;          // crire dans 0x08
   parameter NEAR_VAL       = 8'd0;           // lossless
-  parameter DDR_BASE_ADDR  = 32'h0000_0000;  // image  l'adresse 0 en DDR
+  parameter DDR_BASE_ADDR  = 32'h8400_0000;  // image  l'adresse 0 en DDR
                                               // crire dans 0x14
     localparam TOTAL_BEATS = 2;  // mem_src[0] + mem_src[1]
   //====================================================
@@ -32,7 +32,7 @@ module tb_top_system;
   reg [31:0] paddr, pwdata;
   wire[31:0] prdata;
   wire       pready;
-  reg        apb_pin, frame_start_i_read_ddr, ddr_ctrl_ready_i;
+  reg        apb_pin, ddr_ctrl_ready_i;
   reg [31:0] araddr, awaddr;
   reg        arvalid, awvalid;
  reg [3:0]  arid, awid;
@@ -43,8 +43,6 @@ reg [7:0]  arlen, awlen;
   wire [1:0]  rresp, bresp;
   wire [63:0] wdata;
   wire        wvalid, wlast, bready, frm_interrupt_o;
-  reg [7:0] line_gap_i;
-  initial line_gap_i = 0;//IMG_H_REG + 1; // 2+1 = 3
     reg rready;
 integer read_count;
 initial read_count = 0;
@@ -69,9 +67,6 @@ initial rready = 1;
     .APBslave_paddr(paddr), .APBslave_pwdata(pwdata),
     .APBslave_prdata(prdata), .APBslave_pready(pready),
     .apb_pin(apb_pin),
-   // .read_en_i(read_en_i),
-   .line_gap_i(line_gap_i),
-   .frame_start_i(frame_start_i_read_ddr),
     .ddr_ctrl_ready_i(ddr_ctrl_ready_i),
     .MIRRORED_SLAVE_AXI4_arready_0(arready),
     .MIRRORED_SLAVE_AXI4_rvalid_0(rvalid),
@@ -103,7 +98,7 @@ initial rready = 1;
   //====================================================
   // AXI4 RAM  image 2x2  l'adresse 0
   //====================================================
-  axi4_ram #(.AXI_ADDR_WIDTH(32), .AXI_DATA_WIDTH(64), .MEM_DEPTH(256))
+  axi4_ram #(.AXI_ADDR_WIDTH(32), .AXI_DATA_WIDTH(64), .MEM_DEPTH(512))
   axi_mem (
     .sys_clk_i(SYSCLK), .resetn_i(NSYSRESET),
     .awready(awready), .wready(wready),
@@ -192,7 +187,7 @@ initial rready = 1;
   initial begin
     psel=0; pwrite=0; paddr=0; pwdata=0;
     apb_pin=0; 
-    frame_start_i_read_ddr=0; ddr_ctrl_ready_i=0;
+    ddr_ctrl_ready_i=0;
 
     wait(NSYSRESET);
     repeat(20) @(posedge SYSCLK);
@@ -211,8 +206,8 @@ initial rready = 1;
     // --------------------------------------------------
     $display("");
     $display("=== CONFIG APB ===");
-    apb_write(32'h04, {18'h0, IMG_W_REG});    // i_w=4  horz_resl=5
-    apb_write(32'h08, {18'h0, IMG_H_REG});    // i_h=2  H=3
+    apb_write(32'h04, {18'h0, IMG_W_REG});    // i_w=119 horz_resl=120
+    apb_write(32'h08, {18'h0, IMG_H_REG});    // i_h=19  H=20
     apb_write(32'h0C, {24'h0, NEAR_VAL});     // near=0
     apb_write(32'h14, DDR_BASE_ADDR);         // adresse DDR source = 0x0
     repeat(5) @(posedge SYSCLK);
@@ -233,7 +228,7 @@ initial rready = 1;
       repeat(5)@(posedge SYSCLK);
     apb_pin = 1'b0;
     $display("[SOF] FSM doit tre en FEED_PIXELS  t=%0t ns", $time);
-    repeat(380) @(posedge SYSCLK);
+    repeat(365) @(posedge SYSCLK);
     
     $display("");
     $display("=== LECTURE DDR 5x3 PIXELS ===");
@@ -244,16 +239,10 @@ initial rready = 1;
     $display("");
     $display("=== START FRAME ===");
 
-    // Pulse frame_start
-    @(posedge SYSCLK);
-    frame_start_i_read_ddr = 1;
-    repeat(5)@(posedge SYSCLK);
-    frame_start_i_read_ddr = 0;
+    // frame_start_i est maintenant genere automatiquement par jpeg_control_fsm.
 
     // Attendre activit AXI
-    wait(arvalid);
-
-    $display("=== MONITOR AXI ===");
+    //wait(arvalid);
 
    $display("=== MONITOR AXI (multi-burst) ===");
 
@@ -272,6 +261,8 @@ initial rready = 1;
                     $display("[AXI R] data=0x%016h last=%b",
                               rdata, rlast);
                 end
+                if(arvalid && arready)
+                    $display("ARADDR = %h", araddr);
             end
         end
 
@@ -281,28 +272,6 @@ initial rready = 1;
         end
     join_any
     disable fork;
-   /*
-    // frame_start pulse
-    @(posedge SYSCLK); 
-    frame_start_i_read_ddr=1;
-    repeat(5) @(posedge SYSCLK);
-     frame_start_i_read_ddr=0;
-
-
-   // Ligne 0 : 2 pixels
-    @(posedge SYSCLK);  read_en_i=1;
-    repeat(50) @(posedge SYSCLK);
-    read_en_i=0;
-    repeat(10) @(posedge SYSCLK);
-    $display("[READ] Ligne 0 termine");
-
-    // Ligne 1 : 2 pixels
-    @(posedge SYSCLK); #1; read_en_i=1;
-    repeat(2) @(posedge SYSCLK);
-    #1; read_en_i=0;
-    repeat(5) @(posedge SYSCLK);
-    $display("[READ] Ligne 1 termine");
-*/
     // --------------------------------------------------
     // ATTENTE FIN : frm_interrupt_o ou poll APB 0x10
     // --------------------------------------------------
@@ -336,17 +305,17 @@ initial rready = 1;
     $display("           ddr_base_addr = 0x%08h", DDR_BASE_ADDR);
     $display("  Beats AXI read  (DDRJPEG) : %0d", axi_read_beats);
     $display("  Beats AXI write (JPEGDDR) : %0d", axi_write_beats);
-    $display("  Octets JPEG produits       : %0d", axi_write_beats*8);
-    $display("  Erreurs AXI                : %0s",
-             axi_error ? "OUI !" : "aucune");
+    $display("  Octets JPEG       : %0d", axi_write_beats*8);
+    $display("  Errors AXI                : %0s",
+             axi_error ? "yes !" : "none");
     if(axi_error)
-      $display("  RSULTAT : *** CHEC  erreur AXI ***");
+      $display("  *** CHEC  error AXI ***");
     else if(axi_write_beats > 0)
-      $display("  RSULTAT : *** SUCCS  flux JPEG produit ***");
+      $display("  *** SUCCS JPEG pipline ***");
     else if(axi_read_beats > 0)
-      $display("  RSULTAT : *** PARTIEL  lecture OK mais criture=0 ***");
+      $display("  *** PARTIEL  lecture OK mais criture=0 ***");
     else
-      $display("  RSULTAT : *** BLOQU  DDR_Read ne dmarre pas ***");
+      $display("  *** BLOQU  DDR_Read ne dmarre pas ***");
     $display("========================================================");
 
     $stop;
@@ -361,7 +330,7 @@ module axi4_ram #(
     parameter AXI_ADDR_WIDTH = 32,
     parameter AXI_DATA_WIDTH = 64,
     parameter AXI_ID_WIDTH   = 4,
-    parameter MEM_DEPTH      = 256
+    parameter MEM_DEPTH      = 2000000//256
 )(
     input                           sys_clk_i,
     input                           resetn_i,
@@ -393,9 +362,10 @@ module axi4_ram #(
     output [1:0]                    rresp
 );
 
-    reg [AXI_DATA_WIDTH-1:0] mem_src [0:MEM_DEPTH-1];
-    reg [AXI_DATA_WIDTH-1:0] mem_dst [0:MEM_DEPTH-1];
-
+reg[AXI_DATA_WIDTH-1:0] mem_src [0:MEM_DEPTH-1];
+reg [AXI_DATA_WIDTH-1:0] mem_dst [0:MEM_DEPTH-1];
+ //  reg[7:0] mem_src [0:MEM_DEPTH-1];
+//  reg [7:0] mem_dst [0:MEM_DEPTH-1];
     assign awready = 1;
     assign wready  = 1;
     assign arready = 1;
@@ -404,7 +374,7 @@ module axi4_ram #(
     // =================================================
     // INIT MEMOIRE SOURCE
     // =================================================
-    initial begin
+    /*initial begin
         integer k;
         for(k=0; k<256; k=k+1) begin
             mem_src[k] = 0;
@@ -415,6 +385,32 @@ module axi4_ram #(
         mem_src[0] = {8'h7c,8'h78,8'h79,8'h7a,8'h80,8'h77,8'h79,8'h86}; 
         mem_src[1] = {8'h79,8'h7a,8'h75,8'h76,8'h76,8'h7a,8'h85,8'h00};
         $display("[INIT] IMAGE 5x3 chargee");
+    end*/
+    initial begin
+        integer k;
+
+        // reset RAM
+        for(k=0; k<2000000; k=k+1) begin
+            mem_src[k] = 0;
+            mem_dst[k] = 0;
+        end
+
+        for(k=0; k<2000000; k=k+1) begin
+            mem_src[k] = {
+               8'(k*8+0),
+                8'(k*8+1),
+                8'(k*8+2),
+                8'(k*8+3),
+                8'(k*8+4),
+                8'(k*8+5),
+                8'(k*8+6),
+                8'(k*8+7)
+            }; 
+            
+        end
+
+        $display("IMAGE 1024x1024 CHARGEE");
+
     end
 
     // =================================================
@@ -472,254 +468,47 @@ module axi4_ram #(
         if(!rbusy && arvalid && arready) begin
             rbusy    <= 1;
             raddr_w  <= araddr >> 3;
-            rlen_reg <= 1; // 2 beats
+            // IMPORTANT :
+            // AXI arlen = burst_length - 1
+            rlen_reg <= arlen + 1;
+
+            //rlen_reg <= 0; 
             rcnt     <= 0;
             rid      <= arid;
             rvalid   <= 1;
+            //rdata    <= mem_dst[araddr >> 3]; 
             rdata    <= mem_src[(araddr >> 3) % MEM_DEPTH];
-            rlast    <= (0 == 1); // false
+            //rdata = mem_src[araddr];
+            rlast    <= (arlen == 0);
+            $display("[AXI READ START] beats=%0d", arlen + 1);
         end
 
         // BURST EN COURS
         else if(rbusy) begin
             if(rvalid && rready) begin
 
-                if(rcnt == rlen_reg) begin
+                if(rlast) begin
                     // FIN BURST
                     rvalid <= 0;
                     rlast  <= 0;
                     rbusy  <= 0;
+                    
+                    $display("[AXI READ DONE]");
                 end else begin
                     rcnt    <= rcnt + 1;
                     raddr_w <= raddr_w + 1;
-                    rdata   <= mem_src[(raddr_w + 1) % MEM_DEPTH];
-
+                    
+                  rdata   <= mem_src[(raddr_w + 1) % MEM_DEPTH];
+                   // rdata <= mem_dst[raddr_w + rcnt];
                     // IMPORTANT
-                    rlast   <= (rcnt + 1 == rlen_reg);
+                    rlast   <= (rcnt + 1 == rlen_reg - 1);
+                     $display("[AXI READ] beat=%0d data=%h",
+                             rcnt + 1,
+                             mem_src[(raddr_w + 1) % MEM_DEPTH]);
                 end
             end
         end
     end
 end
-/*
-   // Dans la RAM AXI, forcer rlen_reg = 1 pour simuler 2 beats
-always @(posedge sys_clk_i or negedge resetn_i) begin
-    if(!resetn_i) begin
-        rvalid   <= 0;
-        rlast    <= 0;
-        rid      <= 0;
-        rdata    <= 0;
-        raddr_w  <= 0;
-        rcnt     <= 0;
-        rlen_reg <= 0;
-        rbusy    <= 0;
-    end else begin
-        if(!rbusy && arvalid && arready) begin
-            rbusy    <= 1;
-            raddr_w  <= araddr >> 3;
-            rlen_reg <= 1; //  FORCER 2 beats pour debug
-            rcnt     <= 0;
-            rid      <= arid;
-            rvalid   <= 1;
-            rdata    <= mem_src[(araddr >> 3) % MEM_DEPTH];
-            rlast    <= (1 == 0);
-        end else if(rbusy && rvalid && rready) begin
-            if(rcnt == rlen_reg) begin
-                rvalid <= 0;
-                rlast  <= 0;
-                rbusy  <= 0;
-            end else begin
-                rcnt    <= rcnt + 1;
-                raddr_w <= raddr_w + 1;
-                rdata   <= mem_src[(raddr_w + 1) % MEM_DEPTH];
-                rlast   <= (rcnt == rlen_reg - 1);
-            end
-        end
-    end
-end*/
-                /*
-            end else if(rbusy && rvalid && rready) begin
-                if(rcnt == rlen_reg) begin
-                    // Burst termin
-                    rvalid <= 0;
-                    rlast  <= 0;
-                    rbusy  <= 0;
-                end else begin
-                    // Beat suivant
-                    rcnt    <= rcnt + 1;
-                    raddr_w <= raddr_w + 1;
-                    rdata   <= mem_src[raddr_w % MEM_DEPTH]; 
-                    rlast   <= (rcnt == rlen_reg - 1);
-                end
-            end*/
-     
     
 endmodule
-/*
-module axi4_ram #(
-    parameter AXI_ADDR_WIDTH = 32,
-    parameter AXI_DATA_WIDTH = 64,
-    parameter AXI_ID_WIDTH   = 4,
-    parameter MEM_DEPTH      = 256
-)(
-    input                           sys_clk_i, resetn_i,
-    // AXI write
-    input  [AXI_ADDR_WIDTH-1:0]     awaddr,
-    input  [AXI_ID_WIDTH-1:0]       awid,
-    input  [7:0]                    awlen,
-    input                           awvalid,
-    output                          awready,
-    input  [AXI_DATA_WIDTH-1:0]     wdata,
-    input                           wvalid, wlast,
-    output                          wready,
-    input                           bready,
-    output reg [AXI_ID_WIDTH-1:0]   bid,
-    output reg [1:0]                bresp,
-    output reg                      bvalid,
-    // AXI read
-    input  [AXI_ADDR_WIDTH-1:0]     araddr,
-    input  [AXI_ID_WIDTH-1:0]       arid,
-    input  [7:0]                    arlen,
-    input                           arvalid,
-    output                          arready,
-    input                           rready,
-    output reg [AXI_ID_WIDTH-1:0]   rid,
-    output reg [AXI_DATA_WIDTH-1:0] rdata,
-    output reg                      rvalid, rlast,
-    output [1:0]                    rresp
-);
-    //====================================================
-    // MEMOIRE SOURCE / DESTINATION
-    //====================================================
-    reg [AXI_DATA_WIDTH-1:0] mem_src [0:MEM_DEPTH-1];
-    reg [AXI_DATA_WIDTH-1:0] mem_dst [0:MEM_DEPTH-1];
-
-    assign awready = 1;
-    assign wready  = 1;
-    assign arready = 1;
-    assign rresp   = 2'b00;  // OK
-
-    //====================================================
-    // INIT MEMOIRE SOURCE (TES DONNES)
-    //====================================================
-    integer k;
-    initial begin
-        // reset mmoire
-        for(k=0; k<MEM_DEPTH; k=k+1) begin
-            mem_src[k] = 64'h0;
-            mem_dst[k] = 64'h0;
-        end
-
-        // ================================
-        // PACKING DES BYTES EN 64 bits
-        // ================================
-
-        // mem_src[0]  8 premiers bytes
-        mem_src[0] = {
-            8'h7c, // [7]
-            8'h78, // [6]
-            8'h79, // [5]
-            8'h7a, // [4]
-            8'h80, // [3]
-            8'h77, // [2]
-            8'h79, // [1]
-            8'h86  // [0]
-        };
-
-        // mem_src[1]  reste des bytes
-        mem_src[1] = {
-            8'h79, // [14]
-            8'h7a, // [13]
-            8'h75, // [12]
-            8'h76, // [11]
-            8'h76, // [10]
-            8'h7a, // [9]
-            8'h85,  // [8]
-            8'h00
-        };
-
-        // debug
-        $display("[RAM INIT] mem_src[0]=0x%016h", mem_src[0]);
-        $display("[RAM INIT] mem_src[1]=0x%016h", mem_src[1]);
-    end
-
-    //====================================================
-    // WRITE AXI  zone destination
-    //====================================================
-    reg [AXI_ADDR_WIDTH-1:0] waddr;
-    always @(posedge sys_clk_i or negedge resetn_i) begin
-        if(!resetn_i) waddr <= 0;
-        else if(awvalid) waddr <= awaddr >> 3;
-        else if(wvalid)  waddr <= waddr + 1;
-    end
-
-    always @(posedge sys_clk_i) begin
-        if(wvalid) begin
-            mem_dst[waddr % MEM_DEPTH] <= wdata;
-        end
-    end
-
-    // bvalid generation
-    initial begin
-        bvalid=0; bid=0; bresp=0;
-        forever @(posedge wlast) begin
-            @(posedge sys_clk_i); bvalid=1; bid=0; bresp=0;
-            @(posedge sys_clk_i); wait(bready); bvalid=0;
-        end
-    end
-
-    //====================================================
-    // READ AXI  zone source
-    //====================================================
-    reg [AXI_ADDR_WIDTH-1:0] raddr_w;
-    reg [7:0] rcnt, rlen_reg;
-    reg rbusy;
-    initial begin rvalid=0; rlast=0; rid=0; rdata=0; raddr_w=0; rcnt=0; rlen_reg=0; rbusy=0; end
-
-always @(posedge sys_clk_i or negedge resetn_i) begin
-    if(!resetn_i) begin
-        rvalid  <= 0;
-        rlast   <= 0;
-        rbusy   <= 0;
-        rcnt    <= 0;
-        raddr_w <= 0;
-    end else begin
-        if(!rbusy && arvalid) begin
-            rbusy   <= 1;
-            raddr_w <= araddr >> 3;
-            rlen_reg<= arlen;
-            rcnt    <= 0;
-            rid     <= arid;
-            rvalid  <= 1;
-            rdata   <= mem_src[(araddr >> 3) % MEM_DEPTH];
-            rlast   <= (arlen == 8'd0);
-        end else if(rbusy && rvalid && rready) begin
-            rcnt <= rcnt + 1;
-            if(rcnt == rlen_reg) begin
-                rvalid <= 0;
-                rlast  <= 0;
-                rbusy  <= 0;
-            end else begin
-                raddr_w <= raddr_w + 1;
-                rdata   <= mem_src[(raddr_w + 1) % MEM_DEPTH]; // <- lecture correcte
-                rlast   <= (rcnt + 1 == rlen_reg);             // <- dernier beat
-            end
-        end
-    end
-end
-
-    //====================================================
-    // CHECK FINAL DESTINATION
-    //====================================================
-    task check_dest;
-        integer i;
-        begin
-            $display("");
-            $display("=== CHECK MEM_DST ===");
-            for(i=0; i<4; i=i+1) begin
-                $display("mem_dst[%0d] = 0x%016h", i, mem_dst[i]);
-            end
-        end
-    endtask
-endmodule
-*/

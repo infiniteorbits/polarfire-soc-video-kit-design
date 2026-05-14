@@ -27,7 +27,7 @@ Runtime Summary:
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: DDR_Read_C0
 			Hardware Generation Phase, Optimization Phase: Negligible CPU time
-		* Library: work, DesignUnit: DDR_Read_Native_1920s_64s_8s_0s_1s_8s_480s_9s
+		* Library: work, DesignUnit: DDR_Read_Native_1960s_64s_8s_0s_1s_8s_490s_9s
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: synchronizer_circuit_ddr_read
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
@@ -39,7 +39,7 @@ Runtime Summary:
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: data_unpacker_64s_8s_1s_8s_8s_1024s_13s_0
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
-		* Library: work, DesignUnit: DDR_Read_1920s_64s_8s_0s_0s_32s_0s_1s_8s
+		* Library: work, DesignUnit: DDR_Read_1960s_64s_8s_0s_0s_32s_0s_1s_8s
 			Hardware Generation Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: DDR_AXI4_ARBITER_PF_C0
 			Hardware Generation Phase, Optimization Phase: Negligible CPU time

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Mar 17 11:53:04 2026
+// Created by SmartDesign Mon Jun 22 13:35:03 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -14,7 +14,7 @@
 # Part Number: MPFS250TS-1FCG1152I
 # Create and Configure the core component INIT_MONITOR
 create_and_configure_core -core_vlnv {Microsemi:SgCore:PFSOC_INIT_MONITOR:1.0.309} -component_name {INIT_MONITOR} -params {\
-"BANK_0_CALIB_STATUS_ENABLED:false"  \
+"BANK_0_CALIB_STATUS_ENABLED:true"  \
 "BANK_0_CALIB_STATUS_SIMULATION_DELAY:1"  \
 "BANK_0_RECALIBRATION_ENABLED:false"  \
 "BANK_0_VDDI_STATUS_ENABLED:false"  \
@@ -24,7 +24,7 @@ create_and_configure_core -core_vlnv {Microsemi:SgCore:PFSOC_INIT_MONITOR:1.0.30
 "BANK_1_RECALIBRATION_ENABLED:false"  \
 "BANK_1_VDDI_STATUS_ENABLED:false"  \
 "BANK_1_VDDI_STATUS_SIMULATION_DELAY:1"  \
-"BANK_7_CALIB_STATUS_ENABLED:true"  \
+"BANK_7_CALIB_STATUS_ENABLED:false"  \
 "BANK_7_CALIB_STATUS_SIMULATION_DELAY:1"  \
 "BANK_7_RECALIBRATION_ENABLED:false"  \
 "BANK_7_VDDI_STATUS_ENABLED:false"  \
@@ -34,36 +34,36 @@ create_and_configure_core -core_vlnv {Microsemi:SgCore:PFSOC_INIT_MONITOR:1.0.30
 "BANK_8_RECALIBRATION_ENABLED:false"  \
 "BANK_8_VDDI_STATUS_ENABLED:false"  \
 "BANK_8_VDDI_STATUS_SIMULATION_DELAY:1"  \
-"BANK_9_CALIB_STATUS_ENABLED:true"  \
+"BANK_9_CALIB_STATUS_ENABLED:false"  \
 "BANK_9_CALIB_STATUS_SIMULATION_DELAY:1"  \
 "BANK_9_RECALIBRATION_ENABLED:false"  \
 "BANK_9_VDDI_STATUS_ENABLED:false"  \
 "BANK_9_VDDI_STATUS_SIMULATION_DELAY:1"  \
-"DEVICE_INIT_DONE_SIMULATION_DELAY:7"  \
+"DEVICE_INIT_DONE_SIMULATION_DELAY:12"  \
 "FABRIC_DELAY_INCR:3"  \
 "FABRIC_POR_N_SIMULATION_DELAY:1"  \
 "LATCH_SC_OUTPUTS:false"  \
 "PCIE_DELAY_INCR:2"  \
 "PCIE_INIT_DONE_SIMULATION_DELAY:4"  \
-"SHOW_BANK_0_CALIB_STATUS_ENABLED:false"  \
+"SHOW_BANK_0_CALIB_STATUS_ENABLED:true"  \
 "SHOW_BANK_0_RECALIBRATION_ENABLED:true"  \
 "SHOW_BANK_0_VDDI_STATUS_ENABLED:true"  \
-"SHOW_BANK_1_CALIB_STATUS_ENABLED:false"  \
+"SHOW_BANK_1_CALIB_STATUS_ENABLED:true"  \
 "SHOW_BANK_1_RECALIBRATION_ENABLED:true"  \
 "SHOW_BANK_1_VDDI_STATUS_ENABLED:true"  \
-"SHOW_BANK_7_CALIB_STATUS_ENABLED:false"  \
-"SHOW_BANK_7_RECALIBRATION_ENABLED:false"  \
-"SHOW_BANK_7_VDDI_STATUS_ENABLED:false"  \
-"SHOW_BANK_8_CALIB_STATUS_ENABLED:false"  \
-"SHOW_BANK_8_RECALIBRATION_ENABLED:0"  \
-"SHOW_BANK_8_VDDI_STATUS_ENABLED:false"  \
-"SHOW_BANK_9_CALIB_STATUS_ENABLED:false"  \
-"SHOW_BANK_9_RECALIBRATION_ENABLED:false"  \
-"SHOW_BANK_9_VDDI_STATUS_ENABLED:false"  \
+"SHOW_BANK_7_CALIB_STATUS_ENABLED:true"  \
+"SHOW_BANK_7_RECALIBRATION_ENABLED:true"  \
+"SHOW_BANK_7_VDDI_STATUS_ENABLED:true"  \
+"SHOW_BANK_8_CALIB_STATUS_ENABLED:true"  \
+"SHOW_BANK_8_RECALIBRATION_ENABLED:true"  \
+"SHOW_BANK_8_VDDI_STATUS_ENABLED:true"  \
+"SHOW_BANK_9_CALIB_STATUS_ENABLED:true"  \
+"SHOW_BANK_9_RECALIBRATION_ENABLED:true"  \
+"SHOW_BANK_9_VDDI_STATUS_ENABLED:true"  \
 "SRAM_DELAY_INCR:3"  \
 "SRAM_INIT_DONE_SIMULATION_DELAY:6"  \
 "URAM_DELAY_INCR:3"  \
-"USRAM_INIT_DONE_SIMULATION_DELAY:5"   }
+"USRAM_INIT_DONE_SIMULATION_DELAY:9"   }
 # Exporting Component Description of INIT_MONITOR to TCL done
 */
 
@@ -71,6 +71,8 @@ create_and_configure_core -core_vlnv {Microsemi:SgCore:PFSOC_INIT_MONITOR:1.0.30
 module INIT_MONITOR(
     // Outputs
     AUTOCALIB_DONE,
+    BANK_0_CALIB_STATUS,
+    BANK_8_CALIB_STATUS,
     DEVICE_INIT_DONE,
     FABRIC_POR_N,
     PCIE_INIT_DONE,
@@ -89,6 +91,8 @@ module INIT_MONITOR(
 // Output
 //--------------------------------------------------------------------
 output AUTOCALIB_DONE;
+output BANK_0_CALIB_STATUS;
+output BANK_8_CALIB_STATUS;
 output DEVICE_INIT_DONE;
 output FABRIC_POR_N;
 output PCIE_INIT_DONE;
@@ -105,6 +109,8 @@ output XCVR_INIT_DONE;
 // Nets
 //--------------------------------------------------------------------
 wire   AUTOCALIB_DONE_net_0;
+wire   BANK_0_CALIB_STATUS_net_0;
+wire   BANK_8_CALIB_STATUS_net_0;
 wire   DEVICE_INIT_DONE_net_0;
 wire   FABRIC_POR_N_net_0;
 wire   PCIE_INIT_DONE_net_0;
@@ -122,6 +128,8 @@ wire   PCIE_INIT_DONE_net_1;
 wire   USRAM_INIT_DONE_net_1;
 wire   SRAM_INIT_DONE_net_1;
 wire   DEVICE_INIT_DONE_net_1;
+wire   BANK_0_CALIB_STATUS_net_1;
+wire   BANK_8_CALIB_STATUS_net_1;
 wire   XCVR_INIT_DONE_net_1;
 wire   USRAM_INIT_FROM_SNVM_DONE_net_1;
 wire   USRAM_INIT_FROM_UPROM_DONE_net_1;
@@ -151,6 +159,10 @@ assign SRAM_INIT_DONE_net_1             = SRAM_INIT_DONE_net_0;
 assign SRAM_INIT_DONE                   = SRAM_INIT_DONE_net_1;
 assign DEVICE_INIT_DONE_net_1           = DEVICE_INIT_DONE_net_0;
 assign DEVICE_INIT_DONE                 = DEVICE_INIT_DONE_net_1;
+assign BANK_0_CALIB_STATUS_net_1        = BANK_0_CALIB_STATUS_net_0;
+assign BANK_0_CALIB_STATUS              = BANK_0_CALIB_STATUS_net_1;
+assign BANK_8_CALIB_STATUS_net_1        = BANK_8_CALIB_STATUS_net_0;
+assign BANK_8_CALIB_STATUS              = BANK_8_CALIB_STATUS_net_1;
 assign XCVR_INIT_DONE_net_1             = XCVR_INIT_DONE_net_0;
 assign XCVR_INIT_DONE                   = XCVR_INIT_DONE_net_1;
 assign USRAM_INIT_FROM_SNVM_DONE_net_1  = USRAM_INIT_FROM_SNVM_DONE_net_0;
@@ -178,6 +190,8 @@ INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR INIT_MONITOR_0(
         .USRAM_INIT_DONE            ( USRAM_INIT_DONE_net_0 ),
         .SRAM_INIT_DONE             ( SRAM_INIT_DONE_net_0 ),
         .DEVICE_INIT_DONE           ( DEVICE_INIT_DONE_net_0 ),
+        .BANK_0_CALIB_STATUS        ( BANK_0_CALIB_STATUS_net_0 ),
+        .BANK_8_CALIB_STATUS        ( BANK_8_CALIB_STATUS_net_0 ),
         .XCVR_INIT_DONE             ( XCVR_INIT_DONE_net_0 ),
         .USRAM_INIT_FROM_SNVM_DONE  ( USRAM_INIT_FROM_SNVM_DONE_net_0 ),
         .USRAM_INIT_FROM_UPROM_DONE ( USRAM_INIT_FROM_UPROM_DONE_net_0 ),

@@ -1,0 +1,31 @@
+# Current time Sun Jun 21 16:29:17 2026
+# ModelSim Microsemi Pro Stack Trace
+# Program = vsim
+# Id = "2024.3"
+# Version = "2024.09"
+# Date = "Sep 11 2024"
+# Platform = "linuxacoem"
+# Signature = 551db6539832a3b358bc916fbd984916
+# 0    0x08ea6444: '<unknown (@0x8ea6444)>'
+# 1    0x086e5a04: '<unknown (@0x86e5a04)>'
+# 2    0x086ecba0: '<unknown (@0x86ecba0)>'
+# 3    0x08c2e65d: '<unknown (@0x8c2e65d)>'
+# 4    0x08c282a7: '<unknown (@0x8c282a7)>'
+# 5    0x09583ddb: '<unknown (@0x9583ddb)>'
+# 6    0x095833ca: '<unknown (@0x95833ca)>'
+# 7    0x09588953: '<unknown (@0x9588953)>'
+# 8    0x09588a6a: '<unknown (@0x9588a6a)>'
+# 9    0x0958a111: '<unknown (@0x958a111)>'
+# 10   0x0958a486: '<unknown (@0x958a486)>'
+# 11   0x08ece7cb: '<unknown (@0x8ece7cb)>'
+# 12   0x09632187: '<unknown (@0x9632187)>'
+# 13   0x0968c45c: '<unknown (@0x968c45c)>'
+# 14   0x0968f2c8: '<unknown (@0x968f2c8)>'
+# 15   0x0964b688: '<unknown (@0x964b688)>'
+# 16   0x0964b995: '<unknown (@0x964b995)>'
+# 17   0x093e3ed5: '<unknown (@0x93e3ed5)>'
+# 18   0x088e08a7: '<unknown (@0x88e08a7)>'
+# 19   0x08760476: '<unknown (@0x8760476)>'
+# End of Stack Trace
+
+

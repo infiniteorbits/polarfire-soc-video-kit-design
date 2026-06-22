@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Mar 17 11:53:06 2026
+// Created by SmartDesign Mon Jun 22 13:35:04 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -50,7 +50,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL0_0_BYPASS:0"  \
 "GL0_0_BYPASS_EN:false"  \
 "GL0_0_DEDICATED_USED:false"  \
-"GL0_0_DIV:8"  \
+"GL0_0_DIV:10"  \
 "GL0_0_DIVSTART:0"  \
 "GL0_0_DYNAMIC_PH:false"  \
 "GL0_0_EXPOSE_EN:false"  \
@@ -81,7 +81,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL1_0_BYPASS:0"  \
 "GL1_0_BYPASS_EN:false"  \
 "GL1_0_DEDICATED_USED:false"  \
-"GL1_0_DIV:20"  \
+"GL1_0_DIV:25"  \
 "GL1_0_DIVSTART:0"  \
 "GL1_0_DYNAMIC_PH:false"  \
 "GL1_0_EXPOSE_EN:false"  \
@@ -119,8 +119,8 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL2_0_FABCLK_GATED_USED:false"  \
 "GL2_0_FABCLK_USED:true"  \
 "GL2_0_FREQ_SEL:false"  \
-"GL2_0_IS_USED:false"  \
-"GL2_0_OUT_FREQ:20"  \
+"GL2_0_IS_USED:true"  \
+"GL2_0_OUT_FREQ:200"  \
 "GL2_0_PHASE_INDEX:0"  \
 "GL2_0_PHASE_SEL:false"  \
 "GL2_0_PLL_PHASE:0"  \
@@ -267,6 +267,7 @@ module PF_CCC_C0(
     // Outputs
     OUT0_FABCLK_0,
     OUT1_FABCLK_0,
+    OUT2_FABCLK_0,
     PLL_LOCK_0
 );
 
@@ -279,16 +280,19 @@ input  REF_CLK_0;
 //--------------------------------------------------------------------
 output OUT0_FABCLK_0;
 output OUT1_FABCLK_0;
+output OUT2_FABCLK_0;
 output PLL_LOCK_0;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
 wire   OUT0_FABCLK_0_net_0;
 wire   OUT1_FABCLK_0_net_0;
+wire   OUT2_FABCLK_0_net_0;
 wire   PLL_LOCK_0_net_0;
 wire   REF_CLK_0;
 wire   OUT0_FABCLK_0_net_1;
 wire   OUT1_FABCLK_0_net_1;
+wire   OUT2_FABCLK_0_net_1;
 wire   PLL_LOCK_0_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -317,6 +321,8 @@ assign OUT0_FABCLK_0_net_1 = OUT0_FABCLK_0_net_0;
 assign OUT0_FABCLK_0       = OUT0_FABCLK_0_net_1;
 assign OUT1_FABCLK_0_net_1 = OUT1_FABCLK_0_net_0;
 assign OUT1_FABCLK_0       = OUT1_FABCLK_0_net_1;
+assign OUT2_FABCLK_0_net_1 = OUT2_FABCLK_0_net_0;
+assign OUT2_FABCLK_0       = OUT2_FABCLK_0_net_1;
 assign PLL_LOCK_0_net_1    = PLL_LOCK_0_net_0;
 assign PLL_LOCK_0          = PLL_LOCK_0_net_1;
 //--------------------------------------------------------------------
@@ -329,6 +335,7 @@ PF_CCC_C0_PF_CCC_C0_0_PF_CCC PF_CCC_C0_0(
         // Outputs
         .OUT0_FABCLK_0 ( OUT0_FABCLK_0_net_0 ),
         .OUT1_FABCLK_0 ( OUT1_FABCLK_0_net_0 ),
+        .OUT2_FABCLK_0 ( OUT2_FABCLK_0_net_0 ),
         .PLL_LOCK_0    ( PLL_LOCK_0_net_0 ) 
         );
 

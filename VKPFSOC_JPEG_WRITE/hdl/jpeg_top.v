@@ -18,7 +18,7 @@ module jpeg_top #(
     output wire         pslverr,
     input wire          clk_sys,
     input wire          resetn,
-    //input  wire         apb_pin,
+    input  wire         apb_pin,
     // -------- RAM interface --------
     input  wire [7:0]   ram_read_data,
     output wire [ADDR_WIDTH-1:0] ram_read_addr,
@@ -64,7 +64,7 @@ module jpeg_top #(
         .prdata    (prdata),
         .pready    (pready),
         .pslverr   (pslverr),
-       // .apb_pin    (apb_pin),
+        .apb_pin    (apb_pin),
 
         .i_sof_ps  (i_sof_ps),
         .i_w       (i_w),

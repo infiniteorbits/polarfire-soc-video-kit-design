@@ -21,21 +21,30 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {SGMII_RX1_P} -port_directi
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_CLK} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_DIR} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_NXT} -port_direction {IN} -port_is_pad {1}
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {apb_pin} -port_direction {IN}
-#sd_create_scalar_port -sd_name ${sd_name} -port_name {ddr_ctrl_ready_i} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {apb_pin} -port_direction {IN}
 
+sd_create_scalar_port -sd_name ${sd_name} -port_name {ACT_N} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {BG} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAM1_RST} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAM_CLK_EN} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {CAS_N} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {CK0_N} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {CK0} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {CKE_0} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CKE} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CK_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CK} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {CS_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CS} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {LED2} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {LED3} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {MAC_0_MDC} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {MMUART_0_TXD_M2F} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {MMUART_1_TXD_M2F} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {ODT_0} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {ODT} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {RAS_N} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {RESET_N_0} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {RESET_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {SDIO_SW_EN_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {SDIO_SW_SEL0} -port_direction {OUT} -port_is_pad {1}
@@ -51,6 +60,8 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {SGMII_TX0_N} -port_directi
 sd_create_scalar_port -sd_name ${sd_name} -port_name {SGMII_TX0_P} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {SGMII_TX1_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {SGMII_TX1_P} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SHIELD0} -port_direction {OUT} -port_is_pad {1}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {SHIELD1} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {TEN} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_STP} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_ULPI_RESET_N} -port_direction {OUT} -port_is_pad {1}
@@ -61,6 +72,7 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {VSC_8662_CMODE6} -port_dir
 sd_create_scalar_port -sd_name ${sd_name} -port_name {VSC_8662_CMODE7} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {VSC_8662_RESETN} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {VSC_8662_SRESET} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {WE_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {cam1inck} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {cam1xmaster} -port_direction {OUT}
 
@@ -82,11 +94,17 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_DATA6} -port_direction
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_DATA7} -port_direction {INOUT} -port_is_pad {1}
 
 # Create top level Bus Ports
+sd_create_bus_port -sd_name ${sd_name} -port_name {A} -port_direction {OUT} -port_range {[13:0]} -port_is_pad {1}
+sd_create_bus_port -sd_name ${sd_name} -port_name {BA} -port_direction {OUT} -port_range {[1:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {CA} -port_direction {OUT} -port_range {[5:0]} -port_is_pad {1}
+sd_create_bus_port -sd_name ${sd_name} -port_name {DM_N} -port_direction {OUT} -port_range {[1:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {DM} -port_direction {OUT} -port_range {[3:0]} -port_is_pad {1}
 
+sd_create_bus_port -sd_name ${sd_name} -port_name {DQS_0} -port_direction {INOUT} -port_range {[1:0]} -port_is_pad {1}
+sd_create_bus_port -sd_name ${sd_name} -port_name {DQS_N_0} -port_direction {INOUT} -port_range {[1:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {DQS_N} -port_direction {INOUT} -port_range {[3:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {DQS} -port_direction {INOUT} -port_range {[3:0]} -port_is_pad {1}
+sd_create_bus_port -sd_name ${sd_name} -port_name {DQ_0} -port_direction {INOUT} -port_range {[15:0]} -port_is_pad {1}
 sd_create_bus_port -sd_name ${sd_name} -port_name {DQ} -port_direction {INOUT} -port_range {[31:0]} -port_is_pad {1}
 
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {TEN} -value {GND}
@@ -126,11 +144,11 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {MSS_VIDEO_KIT_H264
 sd_create_pin_slices -sd_name ${sd_name} -pin_name {MSS:MSS_INT_F2M} -pin_slices {[0:0]}
 sd_create_pin_slices -sd_name ${sd_name} -pin_name {MSS:MSS_INT_F2M} -pin_slices {[63:1]}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {MSS:MSS_INT_F2M[63:1]} -value {GND}
-sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {MSS:GPIO_2_F2M_25} -value {VCC}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {MSS:GPIO_2_F2M_25} -value {GND}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:FIC_3_DLL_LOCK_M2F}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:MMUART_0_TXD_OE_M2F}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:MMUART_1_TXD_OE_M2F}
-#sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:GPIO_2_M2F_4}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:GPIO_2_M2F_4}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:GPIO_2_M2F_3}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:GPIO_2_M2F_2}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:GPIO_2_M2F_1}
@@ -141,6 +159,13 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:CRYPTO_DLL_LOCK_M2F}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:CRYPTO_BUSY_M2F}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:FIC_3_APB_M_PSTRB}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:MSS_INT_M2F}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {MSS:FIC_1_AXI4_TARGET}
+
+
+
+# Add PF_DDR4_C0_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {PF_DDR4_C0} -instance_name {PF_DDR4_C0_0}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_DDR4_C0_0:SYS_CLK}
 
 
 
@@ -150,6 +175,8 @@ sd_instantiate_component -sd_name ${sd_name} -component_name {top_ddr_write} -in
 
 
 # Add scalar net connections
+sd_connect_pins -sd_name ${sd_name} -pin_names {"ACT_N" "PF_DDR4_C0_0:ACT_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"BG" "PF_DDR4_C0_0:BG" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"BIBUF_1:E" "MSS:I2C_0_SCL_OE_M2F" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"BIBUF_1:PAD" "CAM1_SCL" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"BIBUF_1:Y" "MSS:I2C_0_SCL_F2M" }
@@ -158,11 +185,20 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"BIBUF_2:PAD" "CAM1_SDA" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"BIBUF_2:Y" "MSS:I2C_0_SDA_F2M" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CAM1_RST" "MSS:GPIO_2_M2F_8" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CAM_CLK_EN" "MSS:GPIO_2_M2F_9" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CAS_N" "PF_DDR4_C0_0:CAS_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CK" "MSS:CK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CK0" "PF_DDR4_C0_0:CK0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CK0_N" "PF_DDR4_C0_0:CK0_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CKE" "MSS:CKE" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CKE_0" "PF_DDR4_C0_0:CKE" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CK_N" "MSS:CK_N" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:CLK_125MHz" "MSS:FIC_1_ACLK" "top_ddr_write_0:sys_clk_i" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:CLK_125MHz" "MSS:FIC_1_ACLK" "top_ddr_write_0:ddr_clk_i" "top_ddr_write_0:sys_clk_i" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:CLK_50MHz" "MSS:FIC_3_PCLK" "top_ddr_write_0:pclk" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:DDR_200MHZ" "PF_DDR4_C0_0:PLL_REF_CLK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:DDR_AXI4_RESET_N" "top_ddr_write_0:resten_ddr" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:DDR_CTRL_READY" "PF_DDR4_C0_0:CTRLR_READY" "top_ddr_write_0:ddr_ctrl_ready_i" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:DDR_IP_RESET_N" "PF_DDR4_C0_0:SYS_RESET_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:DDR_PLL_LOCK" "PF_DDR4_C0_0:PLL_LOCK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:EXT_RST_N" "MSS:MSS_RESET_N_M2F" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:FABRIC_POR_N" "MSS:MSS_RESET_N_F2M" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:I2C_BCLK" "MSS:I2C_0_BCLK_F2M" }
@@ -172,9 +208,9 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:REF_CLK_PAD_P
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:RESETN_125MHz" "VSC_8662_RESETN" "top_ddr_write_0:reset_i" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLOCKS_AND_RESETS:RESETN_50MHz" "top_ddr_write_0:presetn" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CS" "MSS:CS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CS_N" "PF_DDR4_C0_0:CS_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"LED2" "MSS:GPIO_2_M2F_18" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"LED3" "MSS:GPIO_2_M2F_19" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"top_ddr_write_0:ddr_ctrl_ready_i" "MSS:GPIO_2_M2F_4"}
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MAC_0_MDC" "MSS:MAC_0_MDC" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MAC_0_MDIO" "MSS:MAC_0_MDIO" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MMUART_0_RXD_F2M" "MSS:MMUART_0_RXD_F2M" }
@@ -224,21 +260,31 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:USB_DATA7" "USB_DATA7" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:USB_DIR" "USB_DIR" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:USB_NXT" "USB_NXT" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:USB_STP" "USB_STP" }
-
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"apb_pin" "top_ddr_write_0:apb_pin" }
-#sd_connect_pins -sd_name ${sd_name} -pin_names {"ddr_ctrl_ready_i" "top_ddr_write_0:ddr_ctrl_ready_i" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"ODT_0" "PF_DDR4_C0_0:ODT" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:RAS_N" "RAS_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:RESET_N" "RESET_N_0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:SHIELD0" "SHIELD0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:SHIELD1" "SHIELD1" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:WE_N" "WE_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"apb_pin" "top_ddr_write_0:apb_pin" }
 
 # Add bus net connections
+sd_connect_pins -sd_name ${sd_name} -pin_names {"A" "PF_DDR4_C0_0:A" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"BA" "PF_DDR4_C0_0:BA" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CA" "MSS:CA" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"DM" "MSS:DM" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"DM_N" "PF_DDR4_C0_0:DM_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"DQ" "MSS:DQ" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"DQS" "MSS:DQS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"DQS_0" "PF_DDR4_C0_0:DQS" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"DQS_N" "MSS:DQS_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"DQS_N_0" "PF_DDR4_C0_0:DQS_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"DQ_0" "PF_DDR4_C0_0:DQ" }
 
 # Add bus interface net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_CONVERTER_0:APBmslave" "top_ddr_write_0:APBslave" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"FIC_CONVERTER_0:FIC3_APB3_master" "MSS:FIC_3_APB_INITIATOR" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:FIC_1_AXI4_TARGET" "top_ddr_write_0:MIRRORED_SLAVE_AXI4" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:AXI4slave0" "top_ddr_write_0:MIRRORED_SLAVE_AXI4" }
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1

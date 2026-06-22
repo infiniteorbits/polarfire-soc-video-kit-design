@@ -4,7 +4,7 @@
 
 //`timescale <time_units> / <precision>
 module jpeg_top #(
-    parameter ADDR_WIDTH = 8//24 3 8
+    parameter ADDR_WIDTH = 3//24 3 8
 )(
     // -------- APB interface --------
     input  wire         pclk,
@@ -22,15 +22,13 @@ module jpeg_top #(
     // -------- RAM interface --------
     input  wire [7:0]   ram_read_data,
     output wire [ADDR_WIDTH-1:0] ram_read_addr,
-    input   wire                  ram_data_valid,
-
 
     // -------- Output compressed data --------
     output wire [15:0]  o_data_pck,
     output wire         o_e_pck,
 
     // -------- Status --------
-    output wire         sof_flag,
+    //output wire         sof_flag,
     output wire         eof_flag,
     //output wire [31:0]  compressed_size_o,
     output wire         encoder_active_o
@@ -101,12 +99,11 @@ module jpeg_top #(
         .o_data_pck        (o_data_pck),
         .o_e_pck           (o_e_pck),
 
-        .sof_flag          (sof_flag),
+        //.sof_flag          (sof_flag),
         .eof_flag          (eof_flag),
 
         .ram_read_data     (ram_read_data),
         .ram_read_addr     (ram_read_addr),
-        .ram_data_valid     (ram_data_valid),
 
         .compressed_size_o (compressed_size_o),
         .o_last_flag       (o_last_flag),

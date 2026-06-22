@@ -8,6 +8,6 @@ create_and_configure_core -core_vlnv {Microchip:SolutionCore:DDR_Read:1.2.0} -co
 "g_DDR_AXI_DWIDTH_O:8"  \
 "g_FORMAT:0"  \
 "g_FRAME_GAP:0"  \
-"g_HORIZ_RESOL:5"  \
+"g_HORIZ_RESOL:120"  \
 "g_NO_OF_PIXEL:1"   }
 # Exporting Component Description of DDR_Read_C0 to TCL done

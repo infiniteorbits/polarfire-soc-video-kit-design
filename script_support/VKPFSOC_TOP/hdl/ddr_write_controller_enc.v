@@ -69,7 +69,7 @@ module ddr_write_controller_enc #(parameter g_DDR_AXI_AWIDTH = 32) (
   localparam  IDLE = 2'b00,
               WRITE_REQUESTING = 2'b01,
               WRITING = 2'b10;
-  localparam DDR_BASE_OFFSET = 32'h8200_0000;
+  localparam DDR_BASE_OFFSET = 32'h8800_0000;
 
   reg  [1:0]   s_state;
   reg          s_eof_wrclk;

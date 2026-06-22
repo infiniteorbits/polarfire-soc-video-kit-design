@@ -23,7 +23,6 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_DIR} -port_direction {
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_NXT} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {apb_pin} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {ddr_ctrl_ready_i} -port_direction {IN}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {read_en_i} -port_direction {IN}
 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAM1_RST} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAM_CLK_EN} -port_direction {OUT}
@@ -226,7 +225,6 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:USB_NXT" "USB_NXT" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"MSS:USB_STP" "USB_STP" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"apb_pin" "top_ddr_write_read_0:apb_pin" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"ddr_ctrl_ready_i" "top_ddr_write_read_0:ddr_ctrl_ready_i" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"read_en_i" "top_ddr_write_read_0:read_en_i" }
 
 # Add bus net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CA" "MSS:CA" }

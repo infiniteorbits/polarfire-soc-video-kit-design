@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Mar 17 11:53:28 2026
+// Created by SmartDesign Mon Jun 22 13:35:24 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -23,10 +23,13 @@ module top_ddr_write(
     MIRRORED_SLAVE_AXI4_rresp_0,
     MIRRORED_SLAVE_AXI4_rvalid_0,
     MIRRORED_SLAVE_AXI4_wready_0,
+    apb_pin,
+    ddr_clk_i,
     ddr_ctrl_ready_i,
     pclk,
     presetn,
     reset_i,
+    resten_ddr,
     sys_clk_i,
     // Outputs
     APBslave_prdata,
@@ -77,10 +80,13 @@ input         MIRRORED_SLAVE_AXI4_rlast_0;
 input  [1:0]  MIRRORED_SLAVE_AXI4_rresp_0;
 input         MIRRORED_SLAVE_AXI4_rvalid_0;
 input         MIRRORED_SLAVE_AXI4_wready_0;
+input         apb_pin;
+input         ddr_clk_i;
 input         ddr_ctrl_ready_i;
 input         pclk;
 input         presetn;
 input         reset_i;
+input         resten_ddr;
 input         sys_clk_i;
 //--------------------------------------------------------------------
 // Output
@@ -116,6 +122,7 @@ output        frm_interrupt_o;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          apb_pin;
 wire   [31:0] APBslave_paddr;
 wire   [31:0] APBslave_PRDATA_net_0;
 wire          APBslave_PREADY_net_0;
@@ -125,6 +132,7 @@ wire   [31:0] APBslave_pwdata;
 wire          APBslave_pwrite;
 wire          DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o;
 wire          DDR_AXI4_ARBITER_PF_C0_0_w0_done_o;
+wire          ddr_clk_i;
 wire          ddr_ctrl_ready_i;
 wire   [63:0] DDR_WRITE_JPEG_0_rdata_o;
 wire          DDR_WRITE_JPEG_0_rdata_rdy_o;
@@ -176,6 +184,7 @@ wire          pclk;
 wire          presetn;
 wire   [7:0]  ram8bit_input_0_dout;
 wire          reset_i;
+wire          resten_ddr;
 wire          sys_clk_i;
 wire          APBslave_PREADY_net_1;
 wire          APBslave_PSLVERR_net_1;
@@ -284,7 +293,7 @@ assign MIRRORED_SLAVE_AXI4_wstrb_0[7:0]   = MIRRORED_SLAVE_AXI4_WSTRB_net_0;
 //--------DDR_AXI4_ARBITER_PF_C0
 DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         // Inputs
-        .reset_i          ( reset_i ),
+        .reset_i          ( resten_ddr ),
         .sys_clk_i        ( sys_clk_i ),
         .ddr_ctrl_ready_i ( ddr_ctrl_ready_i ),
         .r0_burst_size_i  ( r0_burst_size_i_const_net_0 ),
@@ -343,11 +352,11 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
 DDR_WRITE_JPEG DDR_WRITE_JPEG_0(
         // Inputs
         .data_valid_i       ( jpeg_top_1_o_e_pck ),
-        .ddr_clk_i          ( sys_clk_i ),
-        .frame_end_i        ( jpeg_top_1_eof_flag ),
-        .sys_clk_i          ( sys_clk_i ),
+        .ddr_clk_i          ( ddr_clk_i ),
         .encoder_en_i       ( jpeg_top_1_encoder_active_o ),
-        .reset_i            ( reset_i ),
+        .frame_end_i        ( jpeg_top_1_eof_flag ),
+        .reset_i            ( resten_ddr ),
+        .sys_clk_i          ( sys_clk_i ),
         .write_ackn_i       ( DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o ),
         .write_done_i       ( DDR_AXI4_ARBITER_PF_C0_0_w0_done_o ),
         .data_i             ( jpeg_top_1_o_data_pck ),
@@ -374,6 +383,7 @@ jpeg_top_1(
         .pwdata           ( APBslave_pwdata ),
         .clk_sys          ( sys_clk_i ),
         .resetn           ( reset_i ),
+        .apb_pin          ( apb_pin ),
         .ram_read_data    ( ram8bit_input_0_dout ),
         // Outputs
         .prdata           ( APBslave_PRDATA_net_0 ),
@@ -387,7 +397,9 @@ jpeg_top_1(
         );
 
 //--------ram8bit_input
-ram8bit_input ram8bit_input_0(
+ram8bit_input #( 
+        .ADDR_WIDTH ( 3 ) )
+ram8bit_input_0(
         // Inputs
         .addr ( jpeg_top_1_ram_read_addr ),
         // Outputs

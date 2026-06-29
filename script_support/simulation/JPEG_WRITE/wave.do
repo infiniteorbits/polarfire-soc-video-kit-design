@@ -21,27 +21,6 @@ add wave -noupdate /DDR_WRITE_tb/DDR_DQ_0
 add wave -noupdate /DDR_WRITE_tb/DDR_DQS_0
 add wave -noupdate /DDR_WRITE_tb/DDR_DQS_N_0
 add wave -noupdate /DDR_WRITE_tb/DDR4_MEM_ALERT_N
-add wave -noupdate /DDR_WRITE_tb/apb_pin
-add wave -noupdate /DDR_WRITE_tb/DDR_A
-add wave -noupdate /DDR_WRITE_tb/DDR_ACT_N
-add wave -noupdate /DDR_WRITE_tb/DDR_BA
-add wave -noupdate /DDR_WRITE_tb/DDR_BG
-add wave -noupdate /DDR_WRITE_tb/DDR_CAS_N
-add wave -noupdate /DDR_WRITE_tb/DDR_RAS_N
-add wave -noupdate /DDR_WRITE_tb/DDR_WE_N
-add wave -noupdate /DDR_WRITE_tb/DDR_CKE_0
-add wave -noupdate /DDR_WRITE_tb/DDR_CS_N
-add wave -noupdate /DDR_WRITE_tb/DDR_CK0
-add wave -noupdate /DDR_WRITE_tb/DDR_CK0_N
-add wave -noupdate /DDR_WRITE_tb/DDR_ODT_0
-add wave -noupdate /DDR_WRITE_tb/DDR_RESET_N_0
-add wave -noupdate /DDR_WRITE_tb/DDR_SHIELD0
-add wave -noupdate /DDR_WRITE_tb/DDR_SHIELD1
-add wave -noupdate /DDR_WRITE_tb/DDR_DM_N
-add wave -noupdate /DDR_WRITE_tb/DDR_DQ_0
-add wave -noupdate /DDR_WRITE_tb/DDR_DQS_0
-add wave -noupdate /DDR_WRITE_tb/DDR_DQS_N_0
-add wave -noupdate /DDR_WRITE_tb/DDR4_MEM_ALERT_N
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/CLK_50MHz
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/REF_CLK_PAD_N
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/REF_CLK_PAD_P
@@ -50,14 +29,34 @@ add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/PF_C
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/OUT0_FABCLK_0
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PLL_LOCK_0
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/REF_CLK_0
-add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND3_0/A
-add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND3_0/B
-add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND3_0/C
-add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND3_0/Y
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/CORERESET_CLK_50MHz/FABRIC_RESET_N
 add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/PF_DDR4_C0_0/CTRLR_READY
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/INIT_MONITOR_0/BANK_1_CALIB_STATUS
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/INIT_MONITOR_0/BANK_0_CALIB_STATUS
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND2_1/A
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND2_1/B
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND2_1/Y
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND2_2/A
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND2_2/B
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/CLOCKS_AND_RESETS_inst_0/AND2_2/Y
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/PF_DDR4_C0_0/PLL_REF_CLK
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/PF_DDR4_C0_0/SYS_RESET_N
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/ddr_ctrl_ready_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/sys_clk_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_ack_o
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_burst_size_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_data_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_data_valid_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_done_o
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_req_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/w0_wstart_addr_i
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/wdata
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/wlast
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/wready
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/wstrb
+add wave -noupdate /DDR_WRITE_tb/DUT/VKPFSOC_TOP_0/top_ddr_write_0/DDR_AXI4_ARBITER_PF_C0_0/wvalid
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {813554 ps} 0}
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 581
 configure wave -valuecolwidth 40
@@ -73,4 +72,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {3088888 ps} {4993275 ps}
+WaveRestoreZoom {0 ps} {49621949 ps}

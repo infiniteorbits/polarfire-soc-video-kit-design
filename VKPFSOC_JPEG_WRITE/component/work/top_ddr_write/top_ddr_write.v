@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:24 2026
+// Created by SmartDesign Mon Jun 29 15:21:29 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -186,8 +186,6 @@ wire   [7:0]  ram8bit_input_0_dout;
 wire          reset_i;
 wire          resten_ddr;
 wire          sys_clk_i;
-wire          APBslave_PREADY_net_1;
-wire          APBslave_PSLVERR_net_1;
 wire          MIRRORED_SLAVE_AXI4_ARVALID_net_0;
 wire          MIRRORED_SLAVE_AXI4_AWVALID_net_0;
 wire          MIRRORED_SLAVE_AXI4_BREADY_net_0;
@@ -195,7 +193,8 @@ wire          MIRRORED_SLAVE_AXI4_RREADY_net_0;
 wire          MIRRORED_SLAVE_AXI4_WLAST_net_0;
 wire          MIRRORED_SLAVE_AXI4_WVALID_net_0;
 wire          frm_interrupt_o_net_1;
-wire   [31:0] APBslave_PRDATA_net_1;
+wire          APBslave_PREADY_net_1;
+wire          APBslave_PSLVERR_net_1;
 wire   [31:0] MIRRORED_SLAVE_AXI4_ARADDR_net_0;
 wire   [1:0]  MIRRORED_SLAVE_AXI4_ARBURST_net_0;
 wire   [3:0]  MIRRORED_SLAVE_AXI4_ARCACHE_net_0;
@@ -214,27 +213,24 @@ wire   [2:0]  MIRRORED_SLAVE_AXI4_AWPROT_net_0;
 wire   [2:0]  MIRRORED_SLAVE_AXI4_AWSIZE_net_0;
 wire   [63:0] MIRRORED_SLAVE_AXI4_WDATA_net_0;
 wire   [7:0]  MIRRORED_SLAVE_AXI4_WSTRB_net_0;
+wire   [31:0] APBslave_PRDATA_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire   [7:0]  r0_burst_size_i_const_net_0;
 wire          GND_net;
+wire   [7:0]  r0_burst_size_i_const_net_0;
 wire   [31:0] r0_rstart_addr_i_const_net_0;
 wire   [9:0]  frame_ddr_addr_i_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign r0_burst_size_i_const_net_0  = 8'h00;
 assign GND_net                      = 1'b0;
+assign r0_burst_size_i_const_net_0  = 8'h00;
 assign r0_rstart_addr_i_const_net_0 = 32'h00000000;
 assign frame_ddr_addr_i_const_net_0 = 10'h000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign APBslave_PREADY_net_1              = APBslave_PREADY_net_0;
-assign APBslave_pready                    = APBslave_PREADY_net_1;
-assign APBslave_PSLVERR_net_1             = APBslave_PSLVERR_net_0;
-assign APBslave_pslverr                   = APBslave_PSLVERR_net_1;
 assign MIRRORED_SLAVE_AXI4_ARVALID_net_0  = MIRRORED_SLAVE_AXI4_ARVALID;
 assign MIRRORED_SLAVE_AXI4_arvalid_0      = MIRRORED_SLAVE_AXI4_ARVALID_net_0;
 assign MIRRORED_SLAVE_AXI4_AWVALID_net_0  = MIRRORED_SLAVE_AXI4_AWVALID;
@@ -249,8 +245,10 @@ assign MIRRORED_SLAVE_AXI4_WVALID_net_0   = MIRRORED_SLAVE_AXI4_WVALID;
 assign MIRRORED_SLAVE_AXI4_wvalid_0       = MIRRORED_SLAVE_AXI4_WVALID_net_0;
 assign frm_interrupt_o_net_1              = frm_interrupt_o_net_0;
 assign frm_interrupt_o                    = frm_interrupt_o_net_1;
-assign APBslave_PRDATA_net_1              = APBslave_PRDATA_net_0;
-assign APBslave_prdata[31:0]              = APBslave_PRDATA_net_1;
+assign APBslave_PREADY_net_1              = APBslave_PREADY_net_0;
+assign APBslave_pready                    = APBslave_PREADY_net_1;
+assign APBslave_PSLVERR_net_1             = APBslave_PSLVERR_net_0;
+assign APBslave_pslverr                   = APBslave_PSLVERR_net_1;
 assign MIRRORED_SLAVE_AXI4_ARADDR_net_0   = MIRRORED_SLAVE_AXI4_ARADDR;
 assign MIRRORED_SLAVE_AXI4_araddr_0[31:0] = MIRRORED_SLAVE_AXI4_ARADDR_net_0;
 assign MIRRORED_SLAVE_AXI4_ARBURST_net_0  = MIRRORED_SLAVE_AXI4_ARBURST;
@@ -287,6 +285,8 @@ assign MIRRORED_SLAVE_AXI4_WDATA_net_0    = MIRRORED_SLAVE_AXI4_WDATA;
 assign MIRRORED_SLAVE_AXI4_wdata_0[63:0]  = MIRRORED_SLAVE_AXI4_WDATA_net_0;
 assign MIRRORED_SLAVE_AXI4_WSTRB_net_0    = MIRRORED_SLAVE_AXI4_WSTRB;
 assign MIRRORED_SLAVE_AXI4_wstrb_0[7:0]   = MIRRORED_SLAVE_AXI4_WSTRB_net_0;
+assign APBslave_PRDATA_net_1              = APBslave_PRDATA_net_0;
+assign APBslave_prdata[31:0]              = APBslave_PRDATA_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -294,34 +294,40 @@ assign MIRRORED_SLAVE_AXI4_wstrb_0[7:0]   = MIRRORED_SLAVE_AXI4_WSTRB_net_0;
 DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         // Inputs
         .reset_i          ( resten_ddr ),
-        .sys_clk_i        ( sys_clk_i ),
+        .sys_clk_i        ( ddr_clk_i ),
         .ddr_ctrl_ready_i ( ddr_ctrl_ready_i ),
-        .r0_burst_size_i  ( r0_burst_size_i_const_net_0 ),
         .r0_req_i         ( GND_net ),
+        .w0_data_valid_i  ( DDR_WRITE_JPEG_0_rdata_rdy_o ),
+        .w0_req_i         ( DDR_WRITE_JPEG_0_write_req_o ),
+        .awready          ( MIRRORED_SLAVE_AXI4_awready_0 ),
+        .wready           ( MIRRORED_SLAVE_AXI4_wready_0 ),
+        .bvalid           ( MIRRORED_SLAVE_AXI4_bvalid_0 ),
+        .arready          ( MIRRORED_SLAVE_AXI4_arready_0 ),
+        .rlast            ( MIRRORED_SLAVE_AXI4_rlast_0 ),
+        .rvalid           ( MIRRORED_SLAVE_AXI4_rvalid_0 ),
+        .r0_burst_size_i  ( r0_burst_size_i_const_net_0 ),
         .r0_rstart_addr_i ( r0_rstart_addr_i_const_net_0 ),
         .w0_burst_size_i  ( DDR_WRITE_JPEG_0_write_length_o ),
         .w0_data_i        ( DDR_WRITE_JPEG_0_rdata_o ),
-        .w0_data_valid_i  ( DDR_WRITE_JPEG_0_rdata_rdy_o ),
-        .w0_req_i         ( DDR_WRITE_JPEG_0_write_req_o ),
         .w0_wstart_addr_i ( DDR_WRITE_JPEG_0_write_start_addr_o ),
-        .awready          ( MIRRORED_SLAVE_AXI4_awready_0 ),
-        .wready           ( MIRRORED_SLAVE_AXI4_wready_0 ),
         .bid              ( MIRRORED_SLAVE_AXI4_bid_0 ),
         .bresp            ( MIRRORED_SLAVE_AXI4_bresp_0 ),
-        .bvalid           ( MIRRORED_SLAVE_AXI4_bvalid_0 ),
-        .arready          ( MIRRORED_SLAVE_AXI4_arready_0 ),
         .rid              ( MIRRORED_SLAVE_AXI4_rid_0 ),
         .rdata            ( MIRRORED_SLAVE_AXI4_rdata_0 ),
         .rresp            ( MIRRORED_SLAVE_AXI4_rresp_0 ),
-        .rlast            ( MIRRORED_SLAVE_AXI4_rlast_0 ),
-        .rvalid           ( MIRRORED_SLAVE_AXI4_rvalid_0 ),
         // Outputs
         .r0_ack_o         (  ),
         .r0_data_valid_o  (  ),
         .r0_done_o        (  ),
-        .rdata_o          (  ),
         .w0_ack_o         ( DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o ),
         .w0_done_o        ( DDR_AXI4_ARBITER_PF_C0_0_w0_done_o ),
+        .awvalid          ( MIRRORED_SLAVE_AXI4_AWVALID ),
+        .wlast            ( MIRRORED_SLAVE_AXI4_WLAST ),
+        .wvalid           ( MIRRORED_SLAVE_AXI4_WVALID ),
+        .bready           ( MIRRORED_SLAVE_AXI4_BREADY ),
+        .arvalid          ( MIRRORED_SLAVE_AXI4_ARVALID ),
+        .rready           ( MIRRORED_SLAVE_AXI4_RREADY ),
+        .rdata_o          (  ),
         .awid             ( MIRRORED_SLAVE_AXI4_AWID ),
         .awaddr           ( MIRRORED_SLAVE_AXI4_AWADDR ),
         .awlen            ( MIRRORED_SLAVE_AXI4_AWLEN ),
@@ -330,12 +336,8 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .awlock           ( MIRRORED_SLAVE_AXI4_AWLOCK ),
         .awcache          ( MIRRORED_SLAVE_AXI4_AWCACHE ),
         .awprot           ( MIRRORED_SLAVE_AXI4_AWPROT ),
-        .awvalid          ( MIRRORED_SLAVE_AXI4_AWVALID ),
         .wdata            ( MIRRORED_SLAVE_AXI4_WDATA ),
         .wstrb            ( MIRRORED_SLAVE_AXI4_WSTRB ),
-        .wlast            ( MIRRORED_SLAVE_AXI4_WLAST ),
-        .wvalid           ( MIRRORED_SLAVE_AXI4_WVALID ),
-        .bready           ( MIRRORED_SLAVE_AXI4_BREADY ),
         .arid             ( MIRRORED_SLAVE_AXI4_ARID ),
         .araddr           ( MIRRORED_SLAVE_AXI4_ARADDR ),
         .arlen            ( MIRRORED_SLAVE_AXI4_ARLEN ),
@@ -343,9 +345,7 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .arburst          ( MIRRORED_SLAVE_AXI4_ARBURST ),
         .arlock           ( MIRRORED_SLAVE_AXI4_ARLOCK ),
         .arcache          ( MIRRORED_SLAVE_AXI4_ARCACHE ),
-        .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ),
-        .arvalid          ( MIRRORED_SLAVE_AXI4_ARVALID ),
-        .rready           ( MIRRORED_SLAVE_AXI4_RREADY ) 
+        .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ) 
         );
 
 //--------DDR_WRITE_JPEG
@@ -353,10 +353,10 @@ DDR_WRITE_JPEG DDR_WRITE_JPEG_0(
         // Inputs
         .data_valid_i       ( jpeg_top_1_o_e_pck ),
         .ddr_clk_i          ( ddr_clk_i ),
-        .encoder_en_i       ( jpeg_top_1_encoder_active_o ),
         .frame_end_i        ( jpeg_top_1_eof_flag ),
-        .reset_i            ( resten_ddr ),
         .sys_clk_i          ( sys_clk_i ),
+        .encoder_en_i       ( jpeg_top_1_encoder_active_o ),
+        .reset_i            ( resten_ddr ),
         .write_ackn_i       ( DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o ),
         .write_done_i       ( DDR_AXI4_ARBITER_PF_C0_0_w0_done_o ),
         .data_i             ( jpeg_top_1_o_data_pck ),
@@ -379,21 +379,21 @@ jpeg_top_1(
         .presetn          ( presetn ),
         .psel             ( APBslave_psel ),
         .pwrite           ( APBslave_pwrite ),
-        .paddr            ( APBslave_paddr ),
-        .pwdata           ( APBslave_pwdata ),
         .clk_sys          ( sys_clk_i ),
         .resetn           ( reset_i ),
         .apb_pin          ( apb_pin ),
+        .paddr            ( APBslave_paddr ),
+        .pwdata           ( APBslave_pwdata ),
         .ram_read_data    ( ram8bit_input_0_dout ),
         // Outputs
-        .prdata           ( APBslave_PRDATA_net_0 ),
         .pready           ( APBslave_PREADY_net_0 ),
         .pslverr          ( APBslave_PSLVERR_net_0 ),
-        .ram_read_addr    ( jpeg_top_1_ram_read_addr ),
-        .o_data_pck       ( jpeg_top_1_o_data_pck ),
         .o_e_pck          ( jpeg_top_1_o_e_pck ),
         .eof_flag         ( jpeg_top_1_eof_flag ),
-        .encoder_active_o ( jpeg_top_1_encoder_active_o ) 
+        .encoder_active_o ( jpeg_top_1_encoder_active_o ),
+        .prdata           ( APBslave_PRDATA_net_0 ),
+        .ram_read_addr    ( jpeg_top_1_ram_read_addr ),
+        .o_data_pck       ( jpeg_top_1_o_data_pck ) 
         );
 
 //--------ram8bit_input

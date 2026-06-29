@@ -28,8 +28,8 @@ vmap COREAPB3_LIB "COREAPB3_LIB"
 
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET/CORERESET_0/core/corereset_pf.v"
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET/CORERESET.v"
-vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.v"
-vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET_PF_C0/CORERESET_PF_C0.v"
+#vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.v"
+#vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET_PF_C0/CORERESET_PF_C0.v"
 
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET_PF_C2/CORERESET_PF_C2_0/core/corereset_pf.v"
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/CORERESET_PF_C2/CORERESET_PF_C2.v"
@@ -163,7 +163,11 @@ vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work pres
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" -sv -work presynth "${PROJECT_DIR}/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v"
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" "+incdir+${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C0" "+incdir+${PROJECT_DIR}/component/work/ddr_write" -sv -work presynth "${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.v"
 vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" "+incdir+${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C0" "+incdir+${PROJECT_DIR}/component/work/ddr_write" -sv -work presynth "${PROJECT_DIR}/component/work/CLK_GEN_C0/CLK_GEN_C0.v"
-vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" "+incdir+${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C0" "+incdir+${PROJECT_DIR}/component/work/ddr_write" -sv -work presynth "${PROJECT_DIR}/component/work/ddr_write/ddr_write.v"
+#vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" "+incdir+${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1" "+incdir+${PROJECT_DIR}/#component/work/CLK_GEN_C0" "+incdir+${PROJECT_DIR}/component/work/ddr_write" -sv -work presynth "${PROJECT_DIR}/component/work/ddr_write/ddr_write.v"
+
+vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" "+incdir+${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C0" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C1" "+incdir+${PROJECT_DIR}/component/work/ddr_write" -sv -work presynth "${PROJECT_DIR}/component/work/CLK_GEN_C1/CLK_GEN_C1.v"
+
+vlog "+incdir+${PROJECT_DIR}/component/work/PF_DDR4_C0/DDRCTRL_0" "+incdir+${PROJECT_DIR}/component/Actel/Simulation/CLK_GEN/1.0.1" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C0" "+incdir+${PROJECT_DIR}/component/work/CLK_GEN_C1" "+incdir+${PROJECT_DIR}/component/work/ddr_write" -sv -work presynth "${PROJECT_DIR}/component/work/ddr_write/ddr_write.v"
 
 vlog  -sv -work presynth "${PROJECT_DIR}/stimulus/arch_package.sv"
 vlog  -sv -work presynth "${PROJECT_DIR}/stimulus/interface.sv"
@@ -175,6 +179,8 @@ vlog "+incdir+${PROJECT_DIR}/stimulus" -sv -work presynth "${PROJECT_DIR}/stimul
 
 vsim -L polarfire -L presynth -L COREAPB3_LIB  -t 1ps -pli /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/lib/modelsimpro/pli/pf_crypto_lin_me_pli.so presynth.DDR_WRITE_tb
 add wave /DDR_WRITE_tb/*
-run 1000ns
+do wave.do
+
+run 100000ns
 log /DDR_WRITE_tb/*
 #exit

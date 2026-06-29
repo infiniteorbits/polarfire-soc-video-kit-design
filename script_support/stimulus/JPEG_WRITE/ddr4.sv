@@ -8,9 +8,12 @@
 
 // Define Libero needed TB Simulation Parameters
 `define MODEL_DEBUG_MEMORY
-`define FIXED_1600
-`define DDR4_8G_X16
+//`define FIXED_1600
+//`define DDR4_8G_X16
 //`define DDR4_2G_X8
+//`define SILENT
+`define FIXED_1600
+`define DDR4_2G_X16
 `define SILENT
 
 `include "arch_defines.v"
@@ -53,10 +56,10 @@ import arch_package::*; // need UTYPE_density enum definition
 
 parameter  CONFIGURED_RANKS   =  1;
 parameter  CONFIGURED_DQ_BITS =  16;//16;
-parameter  UTYPE_density CONFIGURED_DENSITY = _8G;
+parameter  UTYPE_density CONFIGURED_DENSITY = _2G;
 
-DDR4_if #(.CONFIGURED_DQ_BITS(CONFIGURED_DQ_BITS),
-          .CONFIGURED_BANKS(CONFIGURED_RANKS))//16))
+DDR4_if #(.CONFIGURED_DQ_BITS(CONFIGURED_DQ_BITS))//,
+         // .CONFIGURED_BANKS(CONFIGURED_RANKS))//16))
    iDDR4 (
           .DM_n  ( dm    ), 
           .DQ    ( dq    ), 

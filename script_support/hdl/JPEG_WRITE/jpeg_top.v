@@ -64,13 +64,12 @@ module jpeg_top #(
         .prdata    (prdata),
         .pready    (pready),
         .pslverr   (pslverr),
-        .apb_pin    (apb_pin),
 
         .i_sof_ps  (i_sof_ps),
         .i_w       (i_w),
         .i_h       (i_h),
         .near_val      (near),
-        
+        .apb_pin (apb_pin),
         .o_last    (o_last_flag)
     );
 

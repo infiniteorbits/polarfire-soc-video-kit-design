@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:41 2026
+// Created by SmartDesign Mon Jun 29 10:00:03 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -27,17 +27,17 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR4:2.5.120} -comp
 "CAS_LATENCY:12" \
 "CAS_WRITE_LATENCY:11" \
 "CA_PARITY_LATENCY_MODE:0" \
-"CCC_PLL_CLOCK_MULTIPLIER:4" \
+"CCC_PLL_CLOCK_MULTIPLIER:6" \
 "CK_CA_ADDITIVE_OFFSET:4" \
-"CLOCK_DDR:800.0" \
-"CLOCK_PLL_REFERENCE:200.000" \
+"CLOCK_DDR:666.66" \
+"CLOCK_PLL_REFERENCE:111.110" \
 "CLOCK_RATE:4" \
-"CLOCK_USER:200.0" \
+"CLOCK_USER:166.665" \
 "COL_ADDR_WIDTH:10" \
 "DLL_ENABLE:1" \
 "DM_MODE:DM" \
 "DQ_DQS_GROUP_SIZE:8" \
-"ENABLE_ECC:0" \
+"ENABLE_ECC:false" \
 "ENABLE_INIT_INTERFACE:false" \
 "ENABLE_LOOKAHEAD_PRECHARGE_ACTIVATE:false" \
 "ENABLE_PAR_ALERT:false" \
@@ -71,7 +71,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR4:2.5.120} -comp
 "READ_DBI:0" \
 "READ_PREAMBLE:0" \
 "ROW_ADDR_WIDTH:16" \
-"RTT_NOM:RZQ4" \
+"RTT_NOM:RZQ6" \
 "RTT_PARK:0" \
 "RTT_WR:OFF" \
 "SDRAM_NB_RANKS:1" \
@@ -91,7 +91,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR4:2.5.120} -comp
 "TIMING_DS:75" \
 "TIMING_DSH:0.2" \
 "TIMING_DSS:0.2" \
-"TIMING_FAW:35" \
+"TIMING_FAW:20" \
 "TIMING_IH:275" \
 "TIMING_INIT:200" \
 "TIMING_IS:200" \
@@ -99,16 +99,16 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR4:2.5.120} -comp
 "TIMING_MRD:4" \
 "TIMING_QH:0.38" \
 "TIMING_QSH:0.38" \
-"TIMING_RAS:35" \
-"TIMING_RC:50" \
-"TIMING_RCD:15" \
+"TIMING_RAS:34" \
+"TIMING_RC:47.92" \
+"TIMING_RCD:13.92" \
 "TIMING_REFI:7.8" \
 "TIMING_RFC:350" \
-"TIMING_RP:13.5" \
-"TIMING_RRD_L:6" \
-"TIMING_RRD_S:5" \
+"TIMING_RP:13.92" \
+"TIMING_RRD_L:5" \
+"TIMING_RRD_S:4" \
 "TIMING_RTP:7.5" \
-"TIMING_WR:15" \
+"TIMING_WR:20" \
 "TIMING_WTR_L:6" \
 "TIMING_WTR_S:2" \
 "TURNAROUND_RTR_DIFFRANK:2" \
@@ -124,7 +124,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR4:2.5.120} -comp
 "WRITE_PREAMBLE:0" \
 "ZQ_CALIB_PERIOD:200" \
 "ZQ_CALIB_TYPE:0" \
-"ZQ_CALIB_TYPE_TEMP:0" \
+"ZQ_CALIB_TYPE_TEMP:false" \
 "ZQ_CAL_INIT_TIME:1024" \
 "ZQ_CAL_L_TIME:512" \
 "ZQ_CAL_S_TIME:128" }
@@ -2748,7 +2748,7 @@ PF_DDR_CFG_INIT #(
         .DEF_CFG_EMR3                             ( 0 ),
         .DEF_CFG_EN_MASK                          ( 0 ),
         .DEF_CFG_ERROR_GROUP_SEL                  ( 0 ),
-        .DEF_CFG_FAW                              ( 28 ),
+        .DEF_CFG_FAW                              ( 14 ),
         .DEF_CFG_FAW_DLR                          ( 0 ),
         .DEF_CFG_FINE_GRAN_REF_MODE               ( 0 ),
         .DEF_CFG_GEARDOWN_MODE                    ( 0 ),
@@ -2812,9 +2812,9 @@ PF_DDR_CFG_INIT #(
         .DEF_CFG_PRE_TRIG_CYCS                    ( 0 ),
         .DEF_CFG_QOFF                             ( 0 ),
         .DEF_CFG_QUAD_RANK                        ( 0 ),
-        .DEF_CFG_RAS                              ( 28 ),
-        .DEF_CFG_RC                               ( 40 ),
-        .DEF_CFG_RCD                              ( 12 ),
+        .DEF_CFG_RAS                              ( 23 ),
+        .DEF_CFG_RC                               ( 32 ),
+        .DEF_CFG_RCD                              ( 10 ),
         .DEF_CFG_RCD_STAB                         ( 0 ),
         .DEF_CFG_RD_PREAMB_TRN_MODE               ( 0 ),
         .DEF_CFG_RD_PREAMBLE                      ( 0 ),
@@ -2825,10 +2825,10 @@ PF_DDR_CFG_INIT #(
         .DEF_CFG_READ_TO_READ_ODT                 ( 2 ),
         .DEF_CFG_READ_TO_WRITE                    ( 2 ),
         .DEF_CFG_READ_TO_WRITE_ODT                ( 2 ),
-        .DEF_CFG_REF_PER                          ( 6240 ),
+        .DEF_CFG_REF_PER                          ( 5200 ),
         .DEF_CFG_REGDIMM                          ( 0 ),
         .DEF_CFG_RFC                              ( 88 ),
-        .DEF_CFG_RFC1                             ( 280 ),
+        .DEF_CFG_RFC1                             ( 234 ),
         .DEF_CFG_RFC2                             ( 0 ),
         .DEF_CFG_RFC4                             ( 0 ),
         .DEF_CFG_RFC_DLR1                         ( 0 ),
@@ -2840,18 +2840,18 @@ PF_DDR_CFG_INIT #(
         .DEF_CFG_ROWADDR_MAP_1                    ( 0 ),
         .DEF_CFG_ROWADDR_MAP_2                    ( 0 ),
         .DEF_CFG_ROWADDR_MAP_3                    ( 0 ),
-        .DEF_CFG_RP                               ( 11 ),
+        .DEF_CFG_RP                               ( 10 ),
         .DEF_CFG_RRD                              ( 5 ),
         .DEF_CFG_RRD_DLR                          ( 0 ),
-        .DEF_CFG_RRD_L                            ( 6 ),
-        .DEF_CFG_RRD_S                            ( 5 ),
-        .DEF_CFG_RTP                              ( 6 ),
-        .DEF_CFG_RTT                              ( 1 ),
+        .DEF_CFG_RRD_L                            ( 5 ),
+        .DEF_CFG_RRD_S                            ( 4 ),
+        .DEF_CFG_RTP                              ( 5 ),
+        .DEF_CFG_RTT                              ( 3 ),
         .DEF_CFG_RTT_PARK                         ( 0 ),
         .DEF_CFG_RTT_WR                           ( 0 ),
         .DEF_CFG_SR_ABORT                         ( 0 ),
         .DEF_CFG_SRT                              ( 0 ),
-        .DEF_CFG_STARTUP_DELAY                    ( 160000 ),
+        .DEF_CFG_STARTUP_DELAY                    ( 133332 ),
         .DEF_CFG_STARVE_TIMEOUT_P0                ( 0 ),
         .DEF_CFG_STARVE_TIMEOUT_P1                ( 0 ),
         .DEF_CFG_STARVE_TIMEOUT_P2                ( 0 ),
@@ -2872,9 +2872,9 @@ PF_DDR_CFG_INIT #(
         .DEF_CFG_VREFDQ_TRN_RANGE                 ( 0 ),
         .DEF_CFG_VREFDQ_TRN_VALUE                 ( 16 ),
         .DEF_CFG_WL                               ( 0 ),
-        .DEF_CFG_WR                               ( 12 ),
+        .DEF_CFG_WR                               ( 14 ),
         .DEF_CFG_WR_CMD_LAT_CRC_DM                ( 0 ),
-        .DEF_CFG_WR_CRC_DM                        ( 17 ),
+        .DEF_CFG_WR_CRC_DM                        ( 19 ),
         .DEF_CFG_WR_PREAMBLE                      ( 0 ),
         .DEF_CFG_WRITE_CRC                        ( 0 ),
         .DEF_CFG_WRITE_DBI                        ( 0 ),
@@ -2888,12 +2888,12 @@ PF_DDR_CFG_INIT #(
         .DEF_CFG_WTR_S                            ( 2 ),
         .DEF_CFG_WTR_S_CRC_DM                     ( 7 ),
         .DEF_CFG_XP                               ( 0 ),
-        .DEF_CFG_XPR                              ( 288 ),
-        .DEF_CFG_XS                               ( 288 ),
+        .DEF_CFG_XPR                              ( 240 ),
+        .DEF_CFG_XS                               ( 240 ),
         .DEF_CFG_XSDLL                            ( 0 ),
         .DEF_CFG_XSR                              ( 0 ),
         .DEF_CFG_ZQ_CAL_L_DURATION                ( 512 ),
-        .DEF_CFG_ZQ_CAL_PER                       ( 160000 ),
+        .DEF_CFG_ZQ_CAL_PER                       ( 133332 ),
         .DEF_CFG_ZQ_CAL_R_DURATION                ( 0 ),
         .DEF_CFG_ZQ_CAL_S_DURATION                ( 128 ),
         .DEF_CFG_ZQ_CAL_TYPE                      ( 0 ),

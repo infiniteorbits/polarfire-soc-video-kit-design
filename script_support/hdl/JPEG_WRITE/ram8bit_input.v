@@ -52,4 +52,3 @@ module ram8bit_input #(
 endmodule
 
 
-

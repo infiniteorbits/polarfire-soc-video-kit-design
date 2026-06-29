@@ -112,7 +112,7 @@ module jpeg_control_fsm #(
                 if (pixels_done && last_seen)
                     next_state = FINISH;
             FINISH: 
-                if (idle_counter >= 9'd32) next_state = IDLE;
+                if (idle_counter >= 9'd320) next_state = IDLE;
             default: 
                 next_state = IDLE;
         endcase
@@ -307,7 +307,7 @@ module jpeg_control_fsm #(
             if (state == FINISH) begin
                 idle_counter <= idle_counter + 1;
                 //encoder_active <= 1'b0;
-                if (idle_counter >= 9'd32) begin
+                if (idle_counter >= 9'd320) begin
                     encoder_active <= 1'b0; // FIN RELLE DE FRAME
                 end
                 if (last_seen)begin

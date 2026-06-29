@@ -71,8 +71,7 @@ task SetTimingStruct(input UTYPE_TS ts, UTYPE_tCKMode tck_mode = TCK_MIN);
     timing.tCK_min = tt_timesets[ts][itCK_min];
     timing.tCK_max = tt_timesets[ts][itCK_max];
     timing.tCHp_min = 48;
-    timing.tCHp_max = 52;
-    //timing.tCHp_min = 52;
+    timing.tCHp_min = 52;
     // Data timing.
     timing.tDQSQ = tt_timesets[ts][itDQSQ];
     timing.tQHp = 38;
@@ -118,29 +117,14 @@ task SetTimingStruct(input UTYPE_TS ts, UTYPE_tCKMode tck_mode = TCK_MIN);
     timing.tRTPc = ParamInClks(tt_timesets[ts][itRTP], tt_timesets[ts][itCK_min]);
     timing.tRTP_min = tt_timesets[ts][itRTP];
     timing.tRTPc_min = 4;
-    /*timing.tWTR_S = 2500;
+    timing.tWTR_S = 2500;
     timing.tWTRc_S = ParamInClks(tt_timesets[ts][timing.tWTR_S], tt_timesets[ts][itCK_min]);
     timing.tWTR_L = 7500;
     timing.tWTRc_L = ParamInClks(tt_timesets[ts][timing.tWTR_L], tt_timesets[ts][itCK_min]);
     timing.tWTR_S_CRC_DM = 3750;
     timing.tWTRc_S_CRC_DM = ParamInClks(tt_timesets[ts][timing.tWTR_S_CRC_DM], tt_timesets[ts][itCK_min]);
     timing.tWTR_L_CRC_DM = 3750;
-    timing.tWTRc_L_CRC_DM = ParamInClks(tt_timesets[ts][timing.tWTR_L_CRC_DM], tt_timesets[ts][itCK_min]);*/
-    timing.tWTR_S = 2500;
-timing.tWTRc_S = ParamInClks(timing.tWTR_S,
-	                     tt_timesets[ts][itCK_min]);
-
-timing.tWTR_L = 7500;
-timing.tWTRc_L = ParamInClks(timing.tWTR_L,
-	                     tt_timesets[ts][itCK_min]);
-
-timing.tWTR_S_CRC_DM = 3750;
-timing.tWTRc_S_CRC_DM = ParamInClks(timing.tWTR_S_CRC_DM,
-	                            tt_timesets[ts][itCK_min]);
-
-timing.tWTR_L_CRC_DM = 3750;
-timing.tWTRc_L_CRC_DM = ParamInClks(timing.tWTR_L_CRC_DM,
-	                            tt_timesets[ts][itCK_min]);
+    timing.tWTRc_L_CRC_DM = ParamInClks(tt_timesets[ts][timing.tWTR_L_CRC_DM], tt_timesets[ts][itCK_min]);
     timing.tWR = tt_timesets[ts][itWR];
     timing.tWRc = ParamInClks(tt_timesets[ts][itWR], tt_timesets[ts][itCK_min]);
     timing.tWR_CRC_DMc = 5;
@@ -294,7 +278,6 @@ timing.tWTRc_L_CRC_DM = ParamInClks(timing.tWTR_L_CRC_DM,
     timing.tWLOc_max = ParamInClks(timing.tWLO_max, tt_timesets[ts][itCK_min]);
     timing.tWLOE_min = 0;
     timing.tWLOEc_min = 0;
-    timing.tWLOE_max = 7500;
     timing.tWLOEc_max = ParamInClks(timing.tWLOE_max, tt_timesets[ts][itCK_min]);
     timing.tWLO_nominal = (timing.tWLO_min + timing.tWLO_max)/2;
     timing.tWLOE_nominal = (timing.tWLOE_min + timing.tWLOE_max)/2;
@@ -350,8 +333,6 @@ endtask
     
 task LoadTiming();
     $display("Loading timesets for '%m' @%0t", $time);
-    min_tCK = 32'h7fffffff;
-    max_tCK = 0;
     // All timesets initialize to UNLOADED.
     for (int i=0;i<NUM_TS;i++) begin
         tt_timesets[i][TS_LOADED] = 0;
@@ -449,15 +430,11 @@ function bit FindTimesetCeiling(int tck, output UTYPE_TS new_ts);
     bit found;
     
     found = 0;
-    //for (UTYPE_TS ts=ts.first();ts<ts.last();ts=ts.next()) begin
-    for (UTYPE_TS ts=ts.first(); ; ts=ts.next()) begin
+    for (UTYPE_TS ts=ts.first();ts<ts.last();ts=ts.next()) begin
         if ((1 == tt_timesets[ts][TS_LOADED]) && ((tck <= tt_timesets[ts][itCK_max]) && (tck >= tt_timesets[ts][itCK_min]))) begin
             new_ts = ts;
             found = 1;
         end
-            if (ts == ts.last())
-        break;
-
     end
     return found;
 endfunction

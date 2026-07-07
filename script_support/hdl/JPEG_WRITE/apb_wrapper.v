@@ -23,8 +23,9 @@ module apb_wrapper (
   output wire [13:0]  i_h,
   output wire [7:0]   near_val,
   // switch hardware SW1
-  //input  wire         apb_pin,
-  
+  input  wire         apb_pin,
+    output wire [15:0]  horz_resl_o,
+
   // Status FSM
   input  wire         o_last
 );
@@ -40,26 +41,27 @@ module apb_wrapper (
   assign i_w      = reg_iw;
   assign i_h      = reg_ih;
   assign near_val     = reg_near;
-  assign pready = psel;
+  assign horz_resl_o    = {2'b00, reg_iw} + 16'd1; // i_w + 1 = largeur relle
 
   // Sync for SW1
-  /*reg [1:0] sw1_sync;
+  reg [1:0] sw1_sync;
   always @(posedge pclk or negedge presetn) begin
       if (~presetn)
           sw1_sync <= 2'b00;
       else
           sw1_sync <= {sw1_sync[0], apb_pin};
-  end*/
-  
+  end
+  always @(posedge pclk)
+    $display("reg_sof=%b", reg_sof);
   // Main APB Protocol Handler
   always @(posedge pclk) begin
     if (~presetn) begin
       // Reset all registers and control signals
       reg_sof          <= 1'b0;
-      reg_iw           <= 14'b0;
-      reg_ih           <= 14'b0;
-      //reg_iw           <= 14'b00000000000100;
-      //reg_ih           <= 14'b00000000000010;
+      //reg_iw           <= 14'b0;
+      //reg_ih           <= 14'b0;
+      reg_iw           <= 14'b00000000101101;
+      reg_ih           <= 14'b00000000000111;
       reg_near         <= 8'b0;
       prdata           <= 32'b0;
       pready           <= 1'b0;
@@ -69,7 +71,7 @@ module apb_wrapper (
       pready           <= 1'b0;
       
     // reg_sof value from SW1 (for debuging)
-     // reg_sof <= sw1_sync[1];
+    reg_sof <= sw1_sync[1];
     
       if (psel) begin
         // APB transaction is active, safe to use address
@@ -123,3 +125,4 @@ module apb_wrapper (
   assign pslverr = 1'b0;
 
 endmodule
+

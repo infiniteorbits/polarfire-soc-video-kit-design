@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:52:43 2026
+// Created by SmartDesign Wed Jun 24 15:40:12 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -10,25 +10,27 @@ module ddr_write(
     // Inputs
     apb_pin,
     // Outputs
-    A,
-    ACT_N,
-    BA,
-    BG,
-    CAS_N,
-    CK0,
-    CK0_N,
-    CKE_0,
-    CS_N,
-    DM_N,
-    ODT_0,
-    RAS_N,
-    RESET_N_0,
-    SHIELD0,
-    SHIELD1,
+    CTRLR_READY,
+    DDR_A,
+    DDR_ACT_N,
+    DDR_BA,
+    DDR_BG,
+    DDR_CAS_N,
+    DDR_CK0,
+    DDR_CK0_N,
+    DDR_CKE_0,
+    DDR_CS_N,
+    DDR_DM_N,
+    DDR_ODT_0,
+    DDR_RAS_N,
+    DDR_RESET_N_0,
+    DDR_SHIELD0,
+    DDR_SHIELD1,
+    DDR_WE_N,
     // Inouts
-    DQS_0,
-    DQS_N_0,
-    DQ_0
+    DDR_DQS_0,
+    DDR_DQS_N_0,
+    DDR_DQ_0
 );
 
 //--------------------------------------------------------------------
@@ -38,65 +40,72 @@ input         apb_pin;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output [13:0] A;
-output        ACT_N;
-output [1:0]  BA;
-output        BG;
-output        CAS_N;
-output        CK0;
-output        CK0_N;
-output        CKE_0;
-output        CS_N;
-output [1:0]  DM_N;
-output        ODT_0;
-output        RAS_N;
-output        RESET_N_0;
-output        SHIELD0;
-output        SHIELD1;
+output        CTRLR_READY;
+output [13:0] DDR_A;
+output        DDR_ACT_N;
+output [1:0]  DDR_BA;
+output        DDR_BG;
+output        DDR_CAS_N;
+output        DDR_CK0;
+output        DDR_CK0_N;
+output        DDR_CKE_0;
+output        DDR_CS_N;
+output [1:0]  DDR_DM_N;
+output        DDR_ODT_0;
+output        DDR_RAS_N;
+output        DDR_RESET_N_0;
+output        DDR_SHIELD0;
+output        DDR_SHIELD1;
+output        DDR_WE_N;
 //--------------------------------------------------------------------
 // Inout
 //--------------------------------------------------------------------
-inout  [1:0]  DQS_0;
-inout  [1:0]  DQS_N_0;
-inout  [15:0] DQ_0;
+inout  [1:0]  DDR_DQS_0;
+inout  [1:0]  DDR_DQS_N_0;
+inout  [15:0] DDR_DQ_0;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire   [13:0] A_net_0;
-wire          ACT_N_net_0;
 wire          apb_pin;
-wire   [1:0]  BA_net_0;
-wire          BG_net_0;
-wire          CAS_N_net_0;
-wire          CK0_net_0;
-wire          CK0_N_net_0;
-wire          CKE_0_net_0;
 wire          CLK_GEN_C0_0_CLK;
-wire          CS_N_net_0;
-wire   [1:0]  DM_N_net_0;
-wire   [15:0] DQ_0;
-wire   [1:0]  DQS_0;
-wire   [1:0]  DQS_N_0;
-wire          ODT_0_net_0;
-wire          RAS_N_net_0;
-wire          RESET_N_0_net_0;
-wire          SHIELD0_net_0;
-wire          SHIELD1_net_0;
-wire          CS_N_net_1;
-wire          BG_net_1;
-wire          ACT_N_net_1;
-wire          CAS_N_net_1;
-wire          CK0_net_1;
-wire          CK0_N_net_1;
-wire          CKE_0_net_1;
-wire          ODT_0_net_1;
-wire          RAS_N_net_1;
-wire          RESET_N_0_net_1;
-wire          SHIELD0_net_1;
-wire          SHIELD1_net_1;
-wire   [13:0] A_net_1;
-wire   [1:0]  BA_net_1;
-wire   [1:0]  DM_N_net_1;
+wire          CLK_GEN_C1_0_CLK;
+wire          CTRLR_READY_net_0;
+wire   [13:0] DDR_A_net_0;
+wire          DDR_ACT_N_net_0;
+wire   [1:0]  DDR_BA_net_0;
+wire          DDR_BG_net_0;
+wire          DDR_CAS_N_net_0;
+wire          DDR_CK0_net_0;
+wire          DDR_CK0_N_net_0;
+wire          DDR_CKE_0_net_0;
+wire          DDR_CS_N_net_0;
+wire   [1:0]  DDR_DM_N_net_0;
+wire   [15:0] DDR_DQ_0;
+wire   [1:0]  DDR_DQS_0;
+wire   [1:0]  DDR_DQS_N_0;
+wire          DDR_ODT_0_net_0;
+wire          DDR_RAS_N_net_0;
+wire          DDR_RESET_N_0_net_0;
+wire          DDR_SHIELD0_net_0;
+wire          DDR_SHIELD1_net_0;
+wire          DDR_WE_N_net_0;
+wire          DDR_SHIELD1_net_1;
+wire          DDR_SHIELD0_net_1;
+wire          DDR_CK0_N_net_1;
+wire          DDR_CK0_net_1;
+wire          DDR_RESET_N_0_net_1;
+wire          DDR_BG_net_1;
+wire          DDR_ACT_N_net_1;
+wire          DDR_WE_N_net_1;
+wire          DDR_CAS_N_net_1;
+wire          DDR_RAS_N_net_1;
+wire          DDR_ODT_0_net_1;
+wire          DDR_CKE_0_net_1;
+wire          DDR_CS_N_net_1;
+wire          CTRLR_READY_net_1;
+wire   [13:0] DDR_A_net_1;
+wire   [1:0]  DDR_BA_net_1;
+wire   [1:0]  DDR_DM_N_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -104,7 +113,8 @@ wire          GND_net;
 //--------------------------------------------------------------------
 // Inverted Nets
 //--------------------------------------------------------------------
-wire          REF_CLK_PAD_N_IN_POST_INV0_0;
+wire          REFCLK_N_IN_POST_INV0_0;
+wire          REF_CLK_PAD_N_IN_POST_INV1_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
@@ -112,40 +122,45 @@ assign GND_net = 1'b0;
 //--------------------------------------------------------------------
 // Inversions
 //--------------------------------------------------------------------
-assign REF_CLK_PAD_N_IN_POST_INV0_0 = ~ CLK_GEN_C0_0_CLK;
+assign REFCLK_N_IN_POST_INV0_0      = ~ CLK_GEN_C1_0_CLK;
+assign REF_CLK_PAD_N_IN_POST_INV1_0 = ~ CLK_GEN_C0_0_CLK;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign CS_N_net_1      = CS_N_net_0;
-assign CS_N            = CS_N_net_1;
-assign BG_net_1        = BG_net_0;
-assign BG              = BG_net_1;
-assign ACT_N_net_1     = ACT_N_net_0;
-assign ACT_N           = ACT_N_net_1;
-assign CAS_N_net_1     = CAS_N_net_0;
-assign CAS_N           = CAS_N_net_1;
-assign CK0_net_1       = CK0_net_0;
-assign CK0             = CK0_net_1;
-assign CK0_N_net_1     = CK0_N_net_0;
-assign CK0_N           = CK0_N_net_1;
-assign CKE_0_net_1     = CKE_0_net_0;
-assign CKE_0           = CKE_0_net_1;
-assign ODT_0_net_1     = ODT_0_net_0;
-assign ODT_0           = ODT_0_net_1;
-assign RAS_N_net_1     = RAS_N_net_0;
-assign RAS_N           = RAS_N_net_1;
-assign RESET_N_0_net_1 = RESET_N_0_net_0;
-assign RESET_N_0       = RESET_N_0_net_1;
-assign SHIELD0_net_1   = SHIELD0_net_0;
-assign SHIELD0         = SHIELD0_net_1;
-assign SHIELD1_net_1   = SHIELD1_net_0;
-assign SHIELD1         = SHIELD1_net_1;
-assign A_net_1         = A_net_0;
-assign A[13:0]         = A_net_1;
-assign BA_net_1        = BA_net_0;
-assign BA[1:0]         = BA_net_1;
-assign DM_N_net_1      = DM_N_net_0;
-assign DM_N[1:0]       = DM_N_net_1;
+assign DDR_SHIELD1_net_1   = DDR_SHIELD1_net_0;
+assign DDR_SHIELD1         = DDR_SHIELD1_net_1;
+assign DDR_SHIELD0_net_1   = DDR_SHIELD0_net_0;
+assign DDR_SHIELD0         = DDR_SHIELD0_net_1;
+assign DDR_CK0_N_net_1     = DDR_CK0_N_net_0;
+assign DDR_CK0_N           = DDR_CK0_N_net_1;
+assign DDR_CK0_net_1       = DDR_CK0_net_0;
+assign DDR_CK0             = DDR_CK0_net_1;
+assign DDR_RESET_N_0_net_1 = DDR_RESET_N_0_net_0;
+assign DDR_RESET_N_0       = DDR_RESET_N_0_net_1;
+assign DDR_BG_net_1        = DDR_BG_net_0;
+assign DDR_BG              = DDR_BG_net_1;
+assign DDR_ACT_N_net_1     = DDR_ACT_N_net_0;
+assign DDR_ACT_N           = DDR_ACT_N_net_1;
+assign DDR_WE_N_net_1      = DDR_WE_N_net_0;
+assign DDR_WE_N            = DDR_WE_N_net_1;
+assign DDR_CAS_N_net_1     = DDR_CAS_N_net_0;
+assign DDR_CAS_N           = DDR_CAS_N_net_1;
+assign DDR_RAS_N_net_1     = DDR_RAS_N_net_0;
+assign DDR_RAS_N           = DDR_RAS_N_net_1;
+assign DDR_ODT_0_net_1     = DDR_ODT_0_net_0;
+assign DDR_ODT_0           = DDR_ODT_0_net_1;
+assign DDR_CKE_0_net_1     = DDR_CKE_0_net_0;
+assign DDR_CKE_0           = DDR_CKE_0_net_1;
+assign DDR_CS_N_net_1      = DDR_CS_N_net_0;
+assign DDR_CS_N            = DDR_CS_N_net_1;
+assign CTRLR_READY_net_1   = CTRLR_READY_net_0;
+assign CTRLR_READY         = CTRLR_READY_net_1;
+assign DDR_A_net_1         = DDR_A_net_0;
+assign DDR_A[13:0]         = DDR_A_net_1;
+assign DDR_BA_net_1        = DDR_BA_net_0;
+assign DDR_BA[1:0]         = DDR_BA_net_1;
+assign DDR_DM_N_net_1      = DDR_DM_N_net_0;
+assign DDR_DM_N[1:0]       = DDR_DM_N_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -155,14 +170,20 @@ CLK_GEN_C0 CLK_GEN_C0_0(
         .CLK ( CLK_GEN_C0_0_CLK ) 
         );
 
+//--------CLK_GEN_C1
+CLK_GEN_C1 CLK_GEN_C1_0(
+        // Outputs
+        .CLK ( CLK_GEN_C1_0_CLK ) 
+        );
+
 //--------VKPFSOC_TOP
 VKPFSOC_TOP VKPFSOC_TOP_0(
         // Inputs
         .MMUART_0_RXD_F2M            ( GND_net ),
         .MMUART_1_RXD_F2M            ( GND_net ),
-        .REFCLK_N                    ( GND_net ),
-        .REFCLK                      ( GND_net ),
-        .REF_CLK_PAD_N               ( REF_CLK_PAD_N_IN_POST_INV0_0 ),
+        .REFCLK_N                    ( REFCLK_N_IN_POST_INV0_0 ),
+        .REFCLK                      ( CLK_GEN_C1_0_CLK ),
+        .REF_CLK_PAD_N               ( REF_CLK_PAD_N_IN_POST_INV1_0 ),
         .REF_CLK_PAD_P               ( CLK_GEN_C0_0_CLK ),
         .SD_CD_EMMC_STRB             ( GND_net ),
         .SD_WP_EMMC_RSTN             ( GND_net ),
@@ -175,28 +196,18 @@ VKPFSOC_TOP VKPFSOC_TOP_0(
         .USB_NXT                     ( GND_net ),
         .apb_pin                     ( apb_pin ),
         // Outputs
-        .ACT_N                       ( ACT_N_net_0 ),
-        .BG                          ( BG_net_0 ),
         .CAM1_RST                    (  ),
         .CAM_CLK_EN                  (  ),
-        .CAS_N                       ( CAS_N_net_0 ),
-        .CK0_N                       ( CK0_N_net_0 ),
-        .CK0                         ( CK0_net_0 ),
-        .CKE_0                       ( CKE_0_net_0 ),
         .CKE                         (  ),
         .CK_N                        (  ),
         .CK                          (  ),
-        .CS_N                        ( CS_N_net_0 ),
         .CS                          (  ),
         .LED2                        (  ),
         .LED3                        (  ),
         .MAC_0_MDC                   (  ),
         .MMUART_0_TXD_M2F            (  ),
         .MMUART_1_TXD_M2F            (  ),
-        .ODT_0                       ( ODT_0_net_0 ),
         .ODT                         (  ),
-        .RAS_N                       ( RAS_N_net_0 ),
-        .RESET_N_0                   ( RESET_N_0_net_0 ),
         .RESET_N                     (  ),
         .SDIO_SW_EN_N                (  ),
         .SDIO_SW_SEL0                (  ),
@@ -212,8 +223,6 @@ VKPFSOC_TOP VKPFSOC_TOP_0(
         .SGMII_TX0_P                 (  ),
         .SGMII_TX1_N                 (  ),
         .SGMII_TX1_P                 (  ),
-        .SHIELD0                     ( SHIELD0_net_0 ),
-        .SHIELD1                     ( SHIELD1_net_0 ),
         .TEN                         (  ),
         .USB_STP                     (  ),
         .USB_ULPI_RESET_N            (  ),
@@ -224,14 +233,27 @@ VKPFSOC_TOP VKPFSOC_TOP_0(
         .VSC_8662_CMODE7             (  ),
         .VSC_8662_RESETN             (  ),
         .VSC_8662_SRESET             (  ),
-        .WE_N                        (  ),
         .cam1inck                    (  ),
         .cam1xmaster                 (  ),
-        .A                           ( A_net_0 ),
-        .BA                          ( BA_net_0 ),
+        .CKE_0                       ( DDR_CKE_0_net_0 ),
+        .CS_N                        ( DDR_CS_N_net_0 ),
+        .ODT_0                       ( DDR_ODT_0_net_0 ),
+        .RAS_N                       ( DDR_RAS_N_net_0 ),
+        .CAS_N                       ( DDR_CAS_N_net_0 ),
+        .WE_N                        ( DDR_WE_N_net_0 ),
+        .ACT_N                       ( DDR_ACT_N_net_0 ),
+        .BG                          ( DDR_BG_net_0 ),
+        .RESET_N_0                   ( DDR_RESET_N_0_net_0 ),
+        .CK0                         ( DDR_CK0_net_0 ),
+        .CK0_N                       ( DDR_CK0_N_net_0 ),
+        .SHIELD0                     ( DDR_SHIELD0_net_0 ),
+        .SHIELD1                     ( DDR_SHIELD1_net_0 ),
+        .CTRLR_READY                 ( CTRLR_READY_net_0 ),
         .CA                          (  ),
-        .DM_N                        ( DM_N_net_0 ),
         .DM                          (  ),
+        .BA                          ( DDR_BA_net_0 ),
+        .A                           ( DDR_A_net_0 ),
+        .DM_N                        ( DDR_DM_N_net_0 ),
         // Inouts
         .CAM1_SCL                    (  ),
         .CAM1_SDA                    (  ),
@@ -249,12 +271,12 @@ VKPFSOC_TOP VKPFSOC_TOP_0(
         .USB_DATA5                   (  ),
         .USB_DATA6                   (  ),
         .USB_DATA7                   (  ),
-        .DQS_0                       ( DQS_0 ),
-        .DQS_N_0                     ( DQS_N_0 ),
         .DQS_N                       (  ),
         .DQS                         (  ),
-        .DQ_0                        ( DQ_0 ),
-        .DQ                          (  ) 
+        .DQ                          (  ),
+        .DQ_0                        ( DDR_DQ_0 ),
+        .DQS_0                       ( DDR_DQS_0 ),
+        .DQS_N_0                     ( DDR_DQS_N_0 ) 
         );
 
 

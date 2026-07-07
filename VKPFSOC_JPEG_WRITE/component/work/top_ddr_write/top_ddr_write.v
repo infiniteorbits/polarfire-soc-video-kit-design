@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 29 15:21:29 2026
+// Created by SmartDesign Mon Jul  6 15:19:53 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -130,10 +130,19 @@ wire          APBslave_psel;
 wire          APBslave_PSLVERR_net_0;
 wire   [31:0] APBslave_pwdata;
 wire          APBslave_pwrite;
+wire          DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o;
+wire          DDR_AXI4_ARBITER_PF_C0_0_r0_data_valid_o;
+wire          DDR_AXI4_ARBITER_PF_C0_0_r0_done_o;
+wire   [63:0] DDR_AXI4_ARBITER_PF_C0_0_rdata_o;
 wire          DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o;
 wire          DDR_AXI4_ARBITER_PF_C0_0_w0_done_o;
 wire          ddr_clk_i;
 wire          ddr_ctrl_ready_i;
+wire   [7:0]  DDR_Read_C0_0_burst_size_o;
+wire   [7:0]  DDR_Read_C0_0_data_o;
+wire          DDR_Read_C0_0_data_valid_o;
+wire          DDR_Read_C0_0_read_req_o;
+wire   [31:0] DDR_Read_C0_0_read_start_addr_o;
 wire   [63:0] DDR_WRITE_JPEG_0_rdata_o;
 wire          DDR_WRITE_JPEG_0_rdata_rdy_o;
 wire   [7:0]  DDR_WRITE_JPEG_0_write_length_o;
@@ -142,9 +151,13 @@ wire   [31:0] DDR_WRITE_JPEG_0_write_start_addr_o;
 wire          frm_interrupt_o_net_0;
 wire          jpeg_top_1_encoder_active_o;
 wire          jpeg_top_1_eof_flag;
+wire          jpeg_top_1_frame_start_i;
+wire   [15:0] jpeg_top_1_horz_resl_o;
+wire   [15:0] jpeg_top_1_line_gap_o;
 wire   [15:0] jpeg_top_1_o_data_pck;
 wire          jpeg_top_1_o_e_pck;
-wire   [2:0]  jpeg_top_1_ram_read_addr;
+wire   [5:0]  jpeg_top_1_ram_read_addr;
+wire          jpeg_top_1_read_en_i;
 wire   [31:0] MIRRORED_SLAVE_AXI4_ARADDR;
 wire   [1:0]  MIRRORED_SLAVE_AXI4_ARBURST;
 wire   [3:0]  MIRRORED_SLAVE_AXI4_ARCACHE;
@@ -217,17 +230,17 @@ wire   [31:0] APBslave_PRDATA_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire          GND_net;
-wire   [7:0]  r0_burst_size_i_const_net_0;
-wire   [31:0] r0_rstart_addr_i_const_net_0;
+wire   [7:0]  frame_start_addr_i_const_net_0;
+wire   [11:0] h_offset_i_const_net_0;
+wire   [11:0] v_offset_i_const_net_0;
 wire   [9:0]  frame_ddr_addr_i_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign GND_net                      = 1'b0;
-assign r0_burst_size_i_const_net_0  = 8'h00;
-assign r0_rstart_addr_i_const_net_0 = 32'h00000000;
-assign frame_ddr_addr_i_const_net_0 = 10'h000;
+assign frame_start_addr_i_const_net_0 = 8'h00;
+assign h_offset_i_const_net_0         = 12'h000;
+assign v_offset_i_const_net_0         = 12'h000;
+assign frame_ddr_addr_i_const_net_0   = 10'h000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -296,7 +309,7 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .reset_i          ( resten_ddr ),
         .sys_clk_i        ( ddr_clk_i ),
         .ddr_ctrl_ready_i ( ddr_ctrl_ready_i ),
-        .r0_req_i         ( GND_net ),
+        .r0_req_i         ( DDR_Read_C0_0_read_req_o ),
         .w0_data_valid_i  ( DDR_WRITE_JPEG_0_rdata_rdy_o ),
         .w0_req_i         ( DDR_WRITE_JPEG_0_write_req_o ),
         .awready          ( MIRRORED_SLAVE_AXI4_awready_0 ),
@@ -305,8 +318,8 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .arready          ( MIRRORED_SLAVE_AXI4_arready_0 ),
         .rlast            ( MIRRORED_SLAVE_AXI4_rlast_0 ),
         .rvalid           ( MIRRORED_SLAVE_AXI4_rvalid_0 ),
-        .r0_burst_size_i  ( r0_burst_size_i_const_net_0 ),
-        .r0_rstart_addr_i ( r0_rstart_addr_i_const_net_0 ),
+        .r0_burst_size_i  ( DDR_Read_C0_0_burst_size_o ),
+        .r0_rstart_addr_i ( DDR_Read_C0_0_read_start_addr_o ),
         .w0_burst_size_i  ( DDR_WRITE_JPEG_0_write_length_o ),
         .w0_data_i        ( DDR_WRITE_JPEG_0_rdata_o ),
         .w0_wstart_addr_i ( DDR_WRITE_JPEG_0_write_start_addr_o ),
@@ -316,9 +329,9 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .rdata            ( MIRRORED_SLAVE_AXI4_rdata_0 ),
         .rresp            ( MIRRORED_SLAVE_AXI4_rresp_0 ),
         // Outputs
-        .r0_ack_o         (  ),
-        .r0_data_valid_o  (  ),
-        .r0_done_o        (  ),
+        .r0_ack_o         ( DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o ),
+        .r0_data_valid_o  ( DDR_AXI4_ARBITER_PF_C0_0_r0_data_valid_o ),
+        .r0_done_o        ( DDR_AXI4_ARBITER_PF_C0_0_r0_done_o ),
         .w0_ack_o         ( DDR_AXI4_ARBITER_PF_C0_0_w0_ack_o ),
         .w0_done_o        ( DDR_AXI4_ARBITER_PF_C0_0_w0_done_o ),
         .awvalid          ( MIRRORED_SLAVE_AXI4_AWVALID ),
@@ -327,7 +340,7 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .bready           ( MIRRORED_SLAVE_AXI4_BREADY ),
         .arvalid          ( MIRRORED_SLAVE_AXI4_ARVALID ),
         .rready           ( MIRRORED_SLAVE_AXI4_RREADY ),
-        .rdata_o          (  ),
+        .rdata_o          ( DDR_AXI4_ARBITER_PF_C0_0_rdata_o ),
         .awid             ( MIRRORED_SLAVE_AXI4_AWID ),
         .awaddr           ( MIRRORED_SLAVE_AXI4_AWADDR ),
         .awlen            ( MIRRORED_SLAVE_AXI4_AWLEN ),
@@ -346,6 +359,31 @@ DDR_AXI4_ARBITER_PF_C0 DDR_AXI4_ARBITER_PF_C0_0(
         .arlock           ( MIRRORED_SLAVE_AXI4_ARLOCK ),
         .arcache          ( MIRRORED_SLAVE_AXI4_ARCACHE ),
         .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ) 
+        );
+
+//--------DDR_Read_C0
+DDR_Read_C0 DDR_Read_C0_0(
+        // Inputs
+        .reset_i            ( resten_ddr ),
+        .pixel_clk_i        ( sys_clk_i ),
+        .ddr_clk_i          ( ddr_clk_i ),
+        .frame_start_i      ( jpeg_top_1_frame_start_i ),
+        .read_en_i          ( jpeg_top_1_read_en_i ),
+        .read_ackn_i        ( DDR_AXI4_ARBITER_PF_C0_0_r0_ack_o ),
+        .read_done_i        ( DDR_AXI4_ARBITER_PF_C0_0_r0_done_o ),
+        .ddr_data_valid_i   ( DDR_AXI4_ARBITER_PF_C0_0_r0_data_valid_o ),
+        .line_gap_i         ( jpeg_top_1_line_gap_o ),
+        .horz_resl_i        ( jpeg_top_1_horz_resl_o ),
+        .frame_start_addr_i ( frame_start_addr_i_const_net_0 ),
+        .h_offset_i         ( h_offset_i_const_net_0 ),
+        .v_offset_i         ( v_offset_i_const_net_0 ),
+        .wdata_i            ( DDR_AXI4_ARBITER_PF_C0_0_rdata_o ),
+        // Outputs
+        .read_req_o         ( DDR_Read_C0_0_read_req_o ),
+        .data_valid_o       ( DDR_Read_C0_0_data_valid_o ),
+        .read_start_addr_o  ( DDR_Read_C0_0_read_start_addr_o ),
+        .burst_size_o       ( DDR_Read_C0_0_burst_size_o ),
+        .data_o             ( DDR_Read_C0_0_data_o ) 
         );
 
 //--------DDR_WRITE_JPEG
@@ -372,7 +410,7 @@ DDR_WRITE_JPEG DDR_WRITE_JPEG_0(
 
 //--------jpeg_top
 jpeg_top #( 
-        .ADDR_WIDTH ( 3 ) )
+        .ADDR_WIDTH ( 6 ) )
 jpeg_top_1(
         // Inputs
         .pclk             ( pclk ),
@@ -382,6 +420,7 @@ jpeg_top_1(
         .clk_sys          ( sys_clk_i ),
         .resetn           ( reset_i ),
         .apb_pin          ( apb_pin ),
+        .w0_done          ( DDR_AXI4_ARBITER_PF_C0_0_w0_done_o ),
         .paddr            ( APBslave_paddr ),
         .pwdata           ( APBslave_pwdata ),
         .ram_read_data    ( ram8bit_input_0_dout ),
@@ -390,20 +429,33 @@ jpeg_top_1(
         .pslverr          ( APBslave_PSLVERR_net_0 ),
         .o_e_pck          ( jpeg_top_1_o_e_pck ),
         .eof_flag         ( jpeg_top_1_eof_flag ),
+        .frame_start_i    ( jpeg_top_1_frame_start_i ),
+        .read_en_i        ( jpeg_top_1_read_en_i ),
         .encoder_active_o ( jpeg_top_1_encoder_active_o ),
         .prdata           ( APBslave_PRDATA_net_0 ),
         .ram_read_addr    ( jpeg_top_1_ram_read_addr ),
-        .o_data_pck       ( jpeg_top_1_o_data_pck ) 
+        .o_data_pck       ( jpeg_top_1_o_data_pck ),
+        .horz_resl_o      ( jpeg_top_1_horz_resl_o ),
+        .line_gap_o       ( jpeg_top_1_line_gap_o ) 
         );
 
 //--------ram8bit_input
 ram8bit_input #( 
-        .ADDR_WIDTH ( 3 ) )
+        .ADDR_WIDTH ( 6 ) )
 ram8bit_input_0(
         // Inputs
         .addr ( jpeg_top_1_ram_read_addr ),
         // Outputs
         .dout ( ram8bit_input_0_dout ) 
+        );
+
+//--------simple_fifo
+simple_fifo simple_fifo_0(
+        // Inputs
+        .clk          ( sys_clk_i ),
+        .rst          ( reset_i ),
+        .data_valid_i ( DDR_Read_C0_0_data_valid_o ),
+        .data_i       ( DDR_Read_C0_0_data_o ) 
         );
 
 

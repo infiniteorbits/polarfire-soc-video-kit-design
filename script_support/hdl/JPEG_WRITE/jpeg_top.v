@@ -1,10 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//
-/////////////////////////////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 //`timescale <time_units> / <precision>
 module jpeg_top #(
-    parameter ADDR_WIDTH = 3//24 3 8
+    parameter ADDR_WIDTH = 6//3//24 3 8
 )(
     // -------- APB interface --------
     input  wire         pclk,
@@ -31,6 +30,11 @@ module jpeg_top #(
     //output wire         sof_flag,
     output wire         eof_flag,
     //output wire [31:0]  compressed_size_o,
+    output wire [15:0]  horz_resl_o,
+    output wire [15:0]    line_gap_o,
+    input wire w0_done,
+    output wire         frame_start_i,
+    output wire read_en_i,
     output wire         encoder_active_o
 );
 
@@ -50,6 +54,8 @@ module jpeg_top #(
     wire [15:0] o_data;
     wire        o_e;
     wire        o_last;
+    wire        o_last_flag;
+    wire [31:0] compressed_size_o;
 
     // ===============================
     // APB Wrapper
@@ -64,7 +70,7 @@ module jpeg_top #(
         .prdata    (prdata),
         .pready    (pready),
         .pslverr   (pslverr),
-
+        .horz_resl_o (horz_resl_o),
         .i_sof_ps  (i_sof_ps),
         .i_w       (i_w),
         .i_h       (i_h),
@@ -100,12 +106,15 @@ module jpeg_top #(
 
         //.sof_flag          (sof_flag),
         .eof_flag          (eof_flag),
-
+        .horz_resl_o      ( horz_resl_o ),
+       .line_gap_o          (line_gap_o),
         .ram_read_data     (ram_read_data),
         .ram_read_addr     (ram_read_addr),
-
+        .read_en_i          (read_en_i),
         .compressed_size_o (compressed_size_o),
         .o_last_flag       (o_last_flag),
+        .w0_done            (w0_done),
+        .frame_start_i   (frame_start_i),
         .encoder_active_o   (encoder_active_o)
     );
 
@@ -128,3 +137,4 @@ module jpeg_top #(
     );
 
 endmodule
+

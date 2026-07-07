@@ -41,7 +41,7 @@ input  ODT_EN_0;
     
     VCC vcc_inst (.Y(VCC_net));
     GND gnd_inst (.Y(GND_net));
-    IOD #( .DATA_RATE(1600.0), .FORMAL_NAME("DQSW_DQSW270_TRAINING1")
+    IOD #( .DATA_RATE(1333.32), .FORMAL_NAME("DQSW_DQSW270_TRAINING1")
         , .INTERFACE_NAME("DDR4"), .DELAY_LINE_SIMULATION_MODE("ENABLED")
         , .RESERVED_0(1'b0), .RX_CLK_EN(1'b1), .RX_CLK_INV(1'b0), .TX_CLK_EN(1'b1)
         , .TX_CLK_INV(1'b0), .HS_IO_CLK_SEL(3'b000), .QDR_EN(1'b0), .EDGE_DETECT_EN(1'b0)

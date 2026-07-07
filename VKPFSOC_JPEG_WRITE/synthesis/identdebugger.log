@@ -1,0 +1,43 @@
+
+
+
+                             Identify (R) Debugger 
+
+                Version V-2023.09M-5 for linux64 - Apr 29, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Identify/linux_a_64/mbin/identify_debugger
+Install:     /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Identify
+Hostname:    IO-ALG-LT003
+Date:        Mon Apr 27 10:59:49 2026
+Version:     V-2023.09M-5
+
+Arguments:   VKPFSOC_TOP_syn.prj
+ProductType: identify_debugger
+
+License checkout: identdebugger_actel
+License: identdebugger_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+
+
+
+Warning: Project '/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP_syn.prj' has no debug implementation
+Note: The debugger obtained its own license
+Warning: Project '/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP_syn.prj' has no debug implementation

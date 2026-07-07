@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:04 2026
+// Created by SmartDesign Tue Jun 23 13:37:44 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -50,7 +50,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL0_0_BYPASS:0"  \
 "GL0_0_BYPASS_EN:false"  \
 "GL0_0_DEDICATED_USED:false"  \
-"GL0_0_DIV:10"  \
+"GL0_0_DIV:8"  \
 "GL0_0_DIVSTART:0"  \
 "GL0_0_DYNAMIC_PH:false"  \
 "GL0_0_EXPOSE_EN:false"  \
@@ -81,7 +81,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL1_0_BYPASS:0"  \
 "GL1_0_BYPASS_EN:false"  \
 "GL1_0_DEDICATED_USED:false"  \
-"GL1_0_DIV:25"  \
+"GL1_0_DIV:20"  \
 "GL1_0_DIVSTART:0"  \
 "GL1_0_DYNAMIC_PH:false"  \
 "GL1_0_EXPOSE_EN:false"  \
@@ -112,7 +112,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL2_0_BYPASS:0"  \
 "GL2_0_BYPASS_EN:false"  \
 "GL2_0_DEDICATED_USED:false"  \
-"GL2_0_DIV:50"  \
+"GL2_0_DIV:5"  \
 "GL2_0_DIVSTART:0"  \
 "GL2_0_DYNAMIC_PH:false"  \
 "GL2_0_EXPOSE_EN:false"  \
@@ -120,7 +120,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.220} -component_na
 "GL2_0_FABCLK_USED:true"  \
 "GL2_0_FREQ_SEL:false"  \
 "GL2_0_IS_USED:true"  \
-"GL2_0_OUT_FREQ:200"  \
+"GL2_0_OUT_FREQ:111.11"  \
 "GL2_0_PHASE_INDEX:0"  \
 "GL2_0_PHASE_SEL:false"  \
 "GL2_0_PLL_PHASE:0"  \

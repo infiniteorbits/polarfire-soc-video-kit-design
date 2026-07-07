@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>ddr_read_smart_design</header>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:TEN</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:TEN</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_CMODE3</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_CMODE3</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_CMODE4</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_CMODE4</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_CMODE5</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_CMODE5</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_CMODE6</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_CMODE6</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_CMODE7</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_CMODE7</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_RESETN</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_RESETN</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:VSC_8662_SRESET</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:VSC_8662_SRESET</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:cam1inck</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:cam1inck</crossprobe>
+  </drc>
+  <drc>
+    <status>/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Designer/data/drcreport/warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin VKPFSOC_TOP_0:cam1xmaster</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/ddr_read_smart_design/pins/VKPFSOC_TOP_0:cam1xmaster</crossprobe>
+  </drc>
+</drcreport>

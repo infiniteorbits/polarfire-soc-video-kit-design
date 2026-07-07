@@ -1,0 +1,24 @@
+Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+
+Date      :  Mon Jul  6 16:19:40 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE
+Component :  DDR_Read_C0
+Family    :  PolarFireSoC
+
+
+HDL source files for all Synthesis and Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/DDR_Read_C0/DDR_Read_C0.v
+
+Stimulus files for all Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/Stimulus/ddr_read_write_tb.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_Read/1.2.0/Scripts/ddr_write_read_sd_creation.tcl
+

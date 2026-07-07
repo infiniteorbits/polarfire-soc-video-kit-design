@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:54 2026
+// Created by SmartDesign Wed Jul  1 11:48:03 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -41,6 +41,7 @@ module VKPFSOC_TOP(
     CK_N,
     CS,
     CS_N,
+    CTRLR_READY,
     DM,
     DM_N,
     LED2,
@@ -145,6 +146,7 @@ output        CKE_0;
 output        CK_N;
 output        CS;
 output        CS_N;
+output        CTRLR_READY;
 output [3:0]  DM;
 output [1:0]  DM_N;
 output        LED2;
@@ -235,14 +237,15 @@ wire          CKE_net_0;
 wire          CKE_0_net_0;
 wire          CLOCKS_AND_RESETS_CLK_50MHz;
 wire          CLOCKS_AND_RESETS_CLK_125MHz;
-wire          CLOCKS_AND_RESETS_DDR_200MHZ;
-wire          CLOCKS_AND_RESETS_DDR_AXI4_RESET_N;
-wire          CLOCKS_AND_RESETS_DDR_IP_RESET_N;
+wire          CLOCKS_AND_RESETS_DDR_CLK;
 wire          CLOCKS_AND_RESETS_FABRIC_POR_N;
 wire          CLOCKS_AND_RESETS_I2C_BCLK;
-wire          CLOCKS_AND_RESETS_RESETN_50MHz;
+wire          CLOCKS_AND_RESETS_RESET_N_111MHz;
+wire          CLOCKS_AND_RESETS_RESETN_50MHz_0;
+wire          CLOCKS_AND_RESETS_RESTEN_PLL;
 wire          CS_net_0;
 wire          CS_N_net_0;
+wire          CTRLR_READY_net_0;
 wire   [3:0]  DM_net_0;
 wire   [1:0]  DM_N_net_0;
 wire   [31:0] DQ;
@@ -281,8 +284,8 @@ wire          MSS_I2C_0_SDA_OE_M2F;
 wire          MSS_MSS_RESET_N_M2F;
 wire          ODT_net_0;
 wire          ODT_0_net_0;
-wire          PF_DDR4_C0_0_CTRLR_READY;
 wire          PF_DDR4_C0_0_PLL_LOCK;
+wire          PF_DDR4_C0_0_SYS_CLK;
 wire          RAS_N_net_0;
 wire          REF_CLK_PAD_N;
 wire          REF_CLK_PAD_P;
@@ -366,30 +369,20 @@ wire          USB_DIR;
 wire          USB_NXT;
 wire          USB_STP_net_0;
 wire          USB_ULPI_RESET_N_net_0;
-wire          VSC_8662_RESETN_net_0;
+wire          VSC_8662_RESETN_0;
 wire          WE_N_net_0;
-wire          ACT_N_net_1;
-wire          BG_net_1;
 wire          CAM1_RST_net_1;
 wire          CAM_CLK_EN_net_1;
-wire          CAS_N_net_1;
-wire          CK0_N_net_1;
-wire          CK0_net_1;
-wire          CKE_0_net_1;
 wire          CKE_net_1;
 wire          CK_N_net_1;
 wire          CK_net_1;
-wire          CS_N_net_1;
 wire          CS_net_1;
 wire          LED2_net_1;
 wire          LED3_net_1;
 wire          MAC_0_MDC_net_1;
 wire          MMUART_0_TXD_M2F_net_1;
 wire          MMUART_1_TXD_M2F_net_1;
-wire          ODT_0_net_1;
 wire          ODT_net_1;
-wire          RAS_N_net_1;
-wire          RESET_N_0_net_1;
 wire          RESET_N_net_1;
 wire          SDIO_SW_EN_N_net_1;
 wire          SDIO_SW_SEL0_net_1;
@@ -405,17 +398,28 @@ wire          SGMII_TX0_N_net_1;
 wire          SGMII_TX0_P_net_1;
 wire          SGMII_TX1_N_net_1;
 wire          SGMII_TX1_P_net_1;
-wire          SHIELD0_net_1;
-wire          SHIELD1_net_1;
 wire          USB_STP_net_1;
 wire          USB_ULPI_RESET_N_net_1;
-wire          VSC_8662_RESETN_net_1;
+wire          VSC_8662_RESETN_0_net_0;
+wire          CKE_0_net_1;
+wire          CS_N_net_1;
+wire          ODT_0_net_1;
+wire          RAS_N_net_1;
+wire          CAS_N_net_1;
 wire          WE_N_net_1;
-wire   [13:0] A_net_1;
-wire   [1:0]  BA_net_1;
+wire          ACT_N_net_1;
+wire          BG_net_1;
+wire          RESET_N_0_net_1;
+wire          CK0_net_1;
+wire          CK0_N_net_1;
+wire          SHIELD0_net_1;
+wire          SHIELD1_net_1;
+wire          CTRLR_READY_net_1;
 wire   [5:0]  CA_net_1;
-wire   [1:0]  DM_N_net_1;
 wire   [3:0]  DM_net_1;
+wire   [1:0]  BA_net_1;
+wire   [13:0] A_net_1;
+wire   [1:0]  DM_N_net_1;
 wire   [63:0] MSS_INT_F2M_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -480,30 +484,16 @@ assign cam1xmaster                       = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign ACT_N_net_1                       = ACT_N_net_0;
-assign ACT_N                             = ACT_N_net_1;
-assign BG_net_1                          = BG_net_0;
-assign BG                                = BG_net_1;
 assign CAM1_RST_net_1                    = CAM1_RST_net_0;
 assign CAM1_RST                          = CAM1_RST_net_1;
 assign CAM_CLK_EN_net_1                  = CAM_CLK_EN_net_0;
 assign CAM_CLK_EN                        = CAM_CLK_EN_net_1;
-assign CAS_N_net_1                       = CAS_N_net_0;
-assign CAS_N                             = CAS_N_net_1;
-assign CK0_N_net_1                       = CK0_N_net_0;
-assign CK0_N                             = CK0_N_net_1;
-assign CK0_net_1                         = CK0_net_0;
-assign CK0                               = CK0_net_1;
-assign CKE_0_net_1                       = CKE_0_net_0;
-assign CKE_0                             = CKE_0_net_1;
 assign CKE_net_1                         = CKE_net_0;
 assign CKE                               = CKE_net_1;
 assign CK_N_net_1                        = CK_N_net_0;
 assign CK_N                              = CK_N_net_1;
 assign CK_net_1                          = CK_net_0;
 assign CK                                = CK_net_1;
-assign CS_N_net_1                        = CS_N_net_0;
-assign CS_N                              = CS_N_net_1;
 assign CS_net_1                          = CS_net_0;
 assign CS                                = CS_net_1;
 assign LED2_net_1                        = LED2_net_0;
@@ -516,14 +506,8 @@ assign MMUART_0_TXD_M2F_net_1            = MMUART_0_TXD_M2F_net_0;
 assign MMUART_0_TXD_M2F                  = MMUART_0_TXD_M2F_net_1;
 assign MMUART_1_TXD_M2F_net_1            = MMUART_1_TXD_M2F_net_0;
 assign MMUART_1_TXD_M2F                  = MMUART_1_TXD_M2F_net_1;
-assign ODT_0_net_1                       = ODT_0_net_0;
-assign ODT_0                             = ODT_0_net_1;
 assign ODT_net_1                         = ODT_net_0;
 assign ODT                               = ODT_net_1;
-assign RAS_N_net_1                       = RAS_N_net_0;
-assign RAS_N                             = RAS_N_net_1;
-assign RESET_N_0_net_1                   = RESET_N_0_net_0;
-assign RESET_N_0                         = RESET_N_0_net_1;
 assign RESET_N_net_1                     = RESET_N_net_0;
 assign RESET_N                           = RESET_N_net_1;
 assign SDIO_SW_EN_N_net_1                = SDIO_SW_EN_N_net_0;
@@ -554,28 +538,50 @@ assign SGMII_TX1_N_net_1                 = SGMII_TX1_N_net_0;
 assign SGMII_TX1_N                       = SGMII_TX1_N_net_1;
 assign SGMII_TX1_P_net_1                 = SGMII_TX1_P_net_0;
 assign SGMII_TX1_P                       = SGMII_TX1_P_net_1;
-assign SHIELD0_net_1                     = SHIELD0_net_0;
-assign SHIELD0                           = SHIELD0_net_1;
-assign SHIELD1_net_1                     = SHIELD1_net_0;
-assign SHIELD1                           = SHIELD1_net_1;
 assign USB_STP_net_1                     = USB_STP_net_0;
 assign USB_STP                           = USB_STP_net_1;
 assign USB_ULPI_RESET_N_net_1            = USB_ULPI_RESET_N_net_0;
 assign USB_ULPI_RESET_N                  = USB_ULPI_RESET_N_net_1;
-assign VSC_8662_RESETN_net_1             = VSC_8662_RESETN_net_0;
-assign VSC_8662_RESETN                   = VSC_8662_RESETN_net_1;
+assign VSC_8662_RESETN_0_net_0           = VSC_8662_RESETN_0;
+assign VSC_8662_RESETN                   = VSC_8662_RESETN_0_net_0;
+assign CKE_0_net_1                       = CKE_0_net_0;
+assign CKE_0                             = CKE_0_net_1;
+assign CS_N_net_1                        = CS_N_net_0;
+assign CS_N                              = CS_N_net_1;
+assign ODT_0_net_1                       = ODT_0_net_0;
+assign ODT_0                             = ODT_0_net_1;
+assign RAS_N_net_1                       = RAS_N_net_0;
+assign RAS_N                             = RAS_N_net_1;
+assign CAS_N_net_1                       = CAS_N_net_0;
+assign CAS_N                             = CAS_N_net_1;
 assign WE_N_net_1                        = WE_N_net_0;
 assign WE_N                              = WE_N_net_1;
-assign A_net_1                           = A_net_0;
-assign A[13:0]                           = A_net_1;
-assign BA_net_1                          = BA_net_0;
-assign BA[1:0]                           = BA_net_1;
+assign ACT_N_net_1                       = ACT_N_net_0;
+assign ACT_N                             = ACT_N_net_1;
+assign BG_net_1                          = BG_net_0;
+assign BG                                = BG_net_1;
+assign RESET_N_0_net_1                   = RESET_N_0_net_0;
+assign RESET_N_0                         = RESET_N_0_net_1;
+assign CK0_net_1                         = CK0_net_0;
+assign CK0                               = CK0_net_1;
+assign CK0_N_net_1                       = CK0_N_net_0;
+assign CK0_N                             = CK0_N_net_1;
+assign SHIELD0_net_1                     = SHIELD0_net_0;
+assign SHIELD0                           = SHIELD0_net_1;
+assign SHIELD1_net_1                     = SHIELD1_net_0;
+assign SHIELD1                           = SHIELD1_net_1;
+assign CTRLR_READY_net_1                 = CTRLR_READY_net_0;
+assign CTRLR_READY                       = CTRLR_READY_net_1;
 assign CA_net_1                          = CA_net_0;
 assign CA[5:0]                           = CA_net_1;
-assign DM_N_net_1                        = DM_N_net_0;
-assign DM_N[1:0]                         = DM_N_net_1;
 assign DM_net_1                          = DM_net_0;
 assign DM[3:0]                           = DM_net_1;
+assign BA_net_1                          = BA_net_0;
+assign BA[1:0]                           = BA_net_1;
+assign A_net_1                           = A_net_0;
+assign A[13:0]                           = A_net_1;
+assign DM_N_net_1                        = DM_N_net_0;
+assign DM_N[1:0]                         = DM_N_net_1;
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
@@ -608,23 +614,25 @@ BIBUF BIBUF_2(
 //--------CLOCKS_AND_RESETS
 CLOCKS_AND_RESETS CLOCKS_AND_RESETS_inst_0(
         // Inputs
-        .DDR_CTRL_READY   ( PF_DDR4_C0_0_CTRLR_READY ),
-        .DDR_PLL_LOCK     ( PF_DDR4_C0_0_PLL_LOCK ),
         .EXT_RST_N        ( MSS_MSS_RESET_N_M2F ),
         .MSS_PLL_LOCKS    ( MSS_FIC_1_DLL_LOCK_M2F ),
         .REF_CLK_PAD_N    ( REF_CLK_PAD_N ),
         .REF_CLK_PAD_P    ( REF_CLK_PAD_P ),
+        .DDR_PLL_LOCK     ( PF_DDR4_C0_0_PLL_LOCK ),
+        .DDR_CTRL_READY   ( CTRLR_READY_net_0 ),
+        .DDR_SYS_CLK      ( PF_DDR4_C0_0_SYS_CLK ),
         // Outputs
         .CLK_125MHz       ( CLOCKS_AND_RESETS_CLK_125MHz ),
         .CLK_50MHz        ( CLOCKS_AND_RESETS_CLK_50MHz ),
-        .DDR_200MHZ       ( CLOCKS_AND_RESETS_DDR_200MHZ ),
-        .DDR_AXI4_RESET_N ( CLOCKS_AND_RESETS_DDR_AXI4_RESET_N ),
-        .DDR_IP_RESET_N   ( CLOCKS_AND_RESETS_DDR_IP_RESET_N ),
         .DEVICE_INIT_DONE (  ),
         .FABRIC_POR_N     ( CLOCKS_AND_RESETS_FABRIC_POR_N ),
         .I2C_BCLK         ( CLOCKS_AND_RESETS_I2C_BCLK ),
-        .RESETN_125MHz    ( VSC_8662_RESETN_net_0 ),
-        .RESETN_50MHz     ( CLOCKS_AND_RESETS_RESETN_50MHz ) 
+        .RESETN_125MHz    ( VSC_8662_RESETN_0 ),
+        .RESETN_50MHz     ( CLOCKS_AND_RESETS_RESETN_50MHz_0 ),
+        .DDR_AXI4_RESET_N (  ),
+        .DDR_CLK          ( CLOCKS_AND_RESETS_DDR_CLK ),
+        .RESET_N_111MHz   ( CLOCKS_AND_RESETS_RESET_N_111MHz ),
+        .RESTEN_PLL       ( CLOCKS_AND_RESETS_RESTEN_PLL ) 
         );
 
 //--------FIC_CONVERTER
@@ -653,34 +661,15 @@ FIC_CONVERTER FIC_CONVERTER_0(
 MSS_VIDEO_KIT_H264 MSS(
         // Inputs
         .FIC_1_ACLK                  ( CLOCKS_AND_RESETS_CLK_125MHz ),
-        .FIC_1_AXI4_S_AWID           ( FIC_1_AXI4_S_AWID_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_AWADDR         ( FIC_1_AXI4_S_AWADDR_const_net_0 ), // tied to 38'h0000000000 from definition
-        .FIC_1_AXI4_S_AWLEN          ( FIC_1_AXI4_S_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .FIC_1_AXI4_S_AWSIZE         ( FIC_1_AXI4_S_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .FIC_1_AXI4_S_AWBURST        ( FIC_1_AXI4_S_AWBURST_const_net_0 ), // tied to 2'h3 from definition
         .FIC_1_AXI4_S_AWLOCK         ( GND_net ), // tied to 1'b0 from definition
-        .FIC_1_AXI4_S_AWCACHE        ( FIC_1_AXI4_S_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_AWQOS          ( FIC_1_AXI4_S_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_AWPROT         ( FIC_1_AXI4_S_AWPROT_const_net_0 ), // tied to 3'h0 from definition
         .FIC_1_AXI4_S_AWVALID        ( GND_net ), // tied to 1'b0 from definition
-        .FIC_1_AXI4_S_WDATA          ( FIC_1_AXI4_S_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .FIC_1_AXI4_S_WSTRB          ( FIC_1_AXI4_S_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .FIC_1_AXI4_S_WLAST          ( GND_net ), // tied to 1'b0 from definition
         .FIC_1_AXI4_S_WVALID         ( GND_net ), // tied to 1'b0 from definition
         .FIC_1_AXI4_S_BREADY         ( GND_net ), // tied to 1'b0 from definition
-        .FIC_1_AXI4_S_ARID           ( FIC_1_AXI4_S_ARID_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_ARADDR         ( FIC_1_AXI4_S_ARADDR_const_net_0 ), // tied to 38'h0000000000 from definition
-        .FIC_1_AXI4_S_ARLEN          ( FIC_1_AXI4_S_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .FIC_1_AXI4_S_ARSIZE         ( FIC_1_AXI4_S_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .FIC_1_AXI4_S_ARBURST        ( FIC_1_AXI4_S_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .FIC_1_AXI4_S_ARQOS          ( FIC_1_AXI4_S_ARQOS_const_net_0 ), // tied to 4'h0 from definition
         .FIC_1_AXI4_S_ARLOCK         ( GND_net ), // tied to 1'b0 from definition
-        .FIC_1_AXI4_S_ARCACHE        ( FIC_1_AXI4_S_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .FIC_1_AXI4_S_ARPROT         ( FIC_1_AXI4_S_ARPROT_const_net_0 ), // tied to 3'h0 from definition
         .FIC_1_AXI4_S_ARVALID        ( GND_net ), // tied to 1'b0 from definition
         .FIC_1_AXI4_S_RREADY         ( GND_net ), // tied to 1'b0 from definition
         .FIC_3_PCLK                  ( CLOCKS_AND_RESETS_CLK_50MHz ),
-        .FIC_3_APB_M_PRDATA          ( MSS_FIC_3_APB_INITIATOR_PRDATA ),
         .FIC_3_APB_M_PREADY          ( MSS_FIC_3_APB_INITIATOR_PREADY ),
         .FIC_3_APB_M_PSLVERR         ( MSS_FIC_3_APB_INITIATOR_PSLVERR ),
         .MMUART_0_RXD_F2M            ( MMUART_0_RXD_F2M ),
@@ -689,7 +678,6 @@ MSS_VIDEO_KIT_H264 MSS(
         .I2C_0_SDA_F2M               ( BIBUF_2_Y ),
         .I2C_0_BCLK_F2M              ( CLOCKS_AND_RESETS_I2C_BCLK ),
         .GPIO_2_F2M_25               ( GND_net ),
-        .MSS_INT_F2M                 ( MSS_INT_F2M_net_0 ),
         .MSS_RESET_N_F2M             ( CLOCKS_AND_RESETS_FABRIC_POR_N ),
         .USB_CLK                     ( USB_CLK ),
         .USB_DIR                     ( USB_DIR ),
@@ -702,26 +690,38 @@ MSS_VIDEO_KIT_H264 MSS(
         .SGMII_RX0_N                 ( SGMII_RX0_N ),
         .REFCLK                      ( REFCLK ),
         .REFCLK_N                    ( REFCLK_N ),
+        .FIC_1_AXI4_S_AWID           ( FIC_1_AXI4_S_AWID_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_AWADDR         ( FIC_1_AXI4_S_AWADDR_const_net_0 ), // tied to 38'h0000000000 from definition
+        .FIC_1_AXI4_S_AWLEN          ( FIC_1_AXI4_S_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .FIC_1_AXI4_S_AWSIZE         ( FIC_1_AXI4_S_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .FIC_1_AXI4_S_AWBURST        ( FIC_1_AXI4_S_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .FIC_1_AXI4_S_AWCACHE        ( FIC_1_AXI4_S_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_AWQOS          ( FIC_1_AXI4_S_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_AWPROT         ( FIC_1_AXI4_S_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .FIC_1_AXI4_S_WDATA          ( FIC_1_AXI4_S_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .FIC_1_AXI4_S_WSTRB          ( FIC_1_AXI4_S_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .FIC_1_AXI4_S_ARID           ( FIC_1_AXI4_S_ARID_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_ARADDR         ( FIC_1_AXI4_S_ARADDR_const_net_0 ), // tied to 38'h0000000000 from definition
+        .FIC_1_AXI4_S_ARLEN          ( FIC_1_AXI4_S_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .FIC_1_AXI4_S_ARSIZE         ( FIC_1_AXI4_S_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .FIC_1_AXI4_S_ARBURST        ( FIC_1_AXI4_S_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .FIC_1_AXI4_S_ARQOS          ( FIC_1_AXI4_S_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_ARCACHE        ( FIC_1_AXI4_S_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .FIC_1_AXI4_S_ARPROT         ( FIC_1_AXI4_S_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .FIC_3_APB_M_PRDATA          ( MSS_FIC_3_APB_INITIATOR_PRDATA ),
+        .MSS_INT_F2M                 ( MSS_INT_F2M_net_0 ),
         // Outputs
         .FIC_1_DLL_LOCK_M2F          ( MSS_FIC_1_DLL_LOCK_M2F ),
         .FIC_3_DLL_LOCK_M2F          (  ),
         .FIC_1_AXI4_S_AWREADY        (  ),
         .FIC_1_AXI4_S_WREADY         (  ),
-        .FIC_1_AXI4_S_BID            (  ),
-        .FIC_1_AXI4_S_BRESP          (  ),
         .FIC_1_AXI4_S_BVALID         (  ),
         .FIC_1_AXI4_S_ARREADY        (  ),
-        .FIC_1_AXI4_S_RID            (  ),
-        .FIC_1_AXI4_S_RDATA          (  ),
-        .FIC_1_AXI4_S_RRESP          (  ),
         .FIC_1_AXI4_S_RLAST          (  ),
         .FIC_1_AXI4_S_RVALID         (  ),
         .FIC_3_APB_M_PSEL            ( MSS_FIC_3_APB_INITIATOR_PSELx ),
-        .FIC_3_APB_M_PADDR           ( MSS_FIC_3_APB_INITIATOR_PADDR ),
         .FIC_3_APB_M_PWRITE          ( MSS_FIC_3_APB_INITIATOR_PWRITE ),
         .FIC_3_APB_M_PENABLE         ( MSS_FIC_3_APB_INITIATOR_PENABLE ),
-        .FIC_3_APB_M_PSTRB           (  ),
-        .FIC_3_APB_M_PWDATA          ( MSS_FIC_3_APB_INITIATOR_PWDATA ),
         .MMUART_0_TXD_M2F            ( MMUART_0_TXD_M2F_net_0 ),
         .MMUART_0_TXD_OE_M2F         (  ),
         .MMUART_1_TXD_M2F            ( MMUART_1_TXD_M2F_net_0 ),
@@ -736,7 +736,6 @@ MSS_VIDEO_KIT_H264 MSS(
         .GPIO_2_M2F_3                (  ),
         .GPIO_2_M2F_2                (  ),
         .GPIO_2_M2F_1                (  ),
-        .MSS_INT_M2F                 (  ),
         .PLL_CPU_LOCK_M2F            (  ),
         .PLL_DDR_LOCK_M2F            (  ),
         .PLL_SGMII_LOCK_M2F          (  ),
@@ -760,13 +759,22 @@ MSS_VIDEO_KIT_H264 MSS(
         .SGMII_TX1_N                 ( SGMII_TX1_N_net_0 ),
         .SGMII_TX0_P                 ( SGMII_TX0_P_net_0 ),
         .SGMII_TX0_N                 ( SGMII_TX0_N_net_0 ),
-        .DM                          ( DM_net_0 ),
         .RESET_N                     ( RESET_N_net_0 ),
         .ODT                         ( ODT_net_0 ),
         .CKE                         ( CKE_net_0 ),
         .CS                          ( CS_net_0 ),
         .CK                          ( CK_net_0 ),
         .CK_N                        ( CK_N_net_0 ),
+        .FIC_1_AXI4_S_BID            (  ),
+        .FIC_1_AXI4_S_BRESP          (  ),
+        .FIC_1_AXI4_S_RID            (  ),
+        .FIC_1_AXI4_S_RDATA          (  ),
+        .FIC_1_AXI4_S_RRESP          (  ),
+        .FIC_3_APB_M_PADDR           ( MSS_FIC_3_APB_INITIATOR_PADDR ),
+        .FIC_3_APB_M_PSTRB           (  ),
+        .FIC_3_APB_M_PWDATA          ( MSS_FIC_3_APB_INITIATOR_PWDATA ),
+        .MSS_INT_M2F                 (  ),
+        .DM                          ( DM_net_0 ),
         .CA                          ( CA_net_0 ),
         // Inouts
         .MAC_0_MDIO                  ( MAC_0_MDIO ),
@@ -791,8 +799,14 @@ MSS_VIDEO_KIT_H264 MSS(
 //--------PF_DDR4_C0
 PF_DDR4_C0 PF_DDR4_C0_0(
         // Inputs
-        .PLL_REF_CLK  ( CLOCKS_AND_RESETS_DDR_200MHZ ),
-        .SYS_RESET_N  ( CLOCKS_AND_RESETS_DDR_IP_RESET_N ),
+        .PLL_REF_CLK  ( CLOCKS_AND_RESETS_DDR_CLK ),
+        .SYS_RESET_N  ( CLOCKS_AND_RESETS_RESTEN_PLL ),
+        .axi0_awvalid ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWVALID ),
+        .axi0_wlast   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WLAST ),
+        .axi0_wvalid  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WVALID ),
+        .axi0_bready  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BREADY ),
+        .axi0_arvalid ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARVALID ),
+        .axi0_rready  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RREADY ),
         .axi0_awid    ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWID ),
         .axi0_awaddr  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWADDR ),
         .axi0_awlen   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWLEN ),
@@ -801,12 +815,8 @@ PF_DDR4_C0 PF_DDR4_C0_0(
         .axi0_awlock  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWLOCK ),
         .axi0_awcache ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWCACHE ),
         .axi0_awprot  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWPROT ),
-        .axi0_awvalid ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWVALID ),
         .axi0_wdata   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WDATA ),
         .axi0_wstrb   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WSTRB ),
-        .axi0_wlast   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WLAST ),
-        .axi0_wvalid  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WVALID ),
-        .axi0_bready  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BREADY ),
         .axi0_arid    ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARID ),
         .axi0_araddr  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR ),
         .axi0_arlen   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARLEN ),
@@ -815,10 +825,7 @@ PF_DDR4_C0 PF_DDR4_C0_0(
         .axi0_arlock  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARLOCK ),
         .axi0_arcache ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARCACHE ),
         .axi0_arprot  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARPROT ),
-        .axi0_arvalid ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARVALID ),
-        .axi0_rready  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RREADY ),
         // Outputs
-        .DM_N         ( DM_N_net_0 ),
         .CKE          ( CKE_0_net_0 ),
         .CS_N         ( CS_N_net_0 ),
         .ODT          ( ODT_0_net_0 ),
@@ -827,27 +834,28 @@ PF_DDR4_C0 PF_DDR4_C0_0(
         .WE_N         ( WE_N_net_0 ),
         .ACT_N        ( ACT_N_net_0 ),
         .BG           ( BG_net_0 ),
-        .BA           ( BA_net_0 ),
         .RESET_N      ( RESET_N_0_net_0 ),
-        .A            ( A_net_0 ),
         .CK0          ( CK0_net_0 ),
         .CK0_N        ( CK0_N_net_0 ),
         .SHIELD0      ( SHIELD0_net_0 ),
         .SHIELD1      ( SHIELD1_net_0 ),
-        .SYS_CLK      (  ),
+        .SYS_CLK      ( PF_DDR4_C0_0_SYS_CLK ),
         .PLL_LOCK     ( PF_DDR4_C0_0_PLL_LOCK ),
         .axi0_awready ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWREADY ),
         .axi0_wready  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WREADY ),
-        .axi0_bid     ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BID ),
-        .axi0_bresp   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BRESP ),
         .axi0_bvalid  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BVALID ),
         .axi0_arready ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARREADY ),
+        .axi0_rlast   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RLAST ),
+        .axi0_rvalid  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RVALID ),
+        .CTRLR_READY  ( CTRLR_READY_net_0 ),
+        .DM_N         ( DM_N_net_0 ),
+        .BA           ( BA_net_0 ),
+        .A            ( A_net_0 ),
+        .axi0_bid     ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BID ),
+        .axi0_bresp   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BRESP ),
         .axi0_rid     ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RID ),
         .axi0_rdata   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RDATA ),
         .axi0_rresp   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RRESP ),
-        .axi0_rlast   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RLAST ),
-        .axi0_rvalid  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RVALID ),
-        .CTRLR_READY  ( PF_DDR4_C0_0_CTRLR_READY ),
         // Inouts
         .DQ           ( DQ_0 ),
         .DQS          ( DQS_0 ),
@@ -857,32 +865,30 @@ PF_DDR4_C0 PF_DDR4_C0_0(
 //--------top_ddr_write
 top_ddr_write top_ddr_write_0(
         // Inputs
-        .APBslave_psel                 ( FIC_CONVERTER_0_APBmslave_PSELx ),
-        .APBslave_pwrite               ( FIC_CONVERTER_0_APBmslave_PWRITE ),
         .MIRRORED_SLAVE_AXI4_arready_0 ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARREADY ),
         .MIRRORED_SLAVE_AXI4_awready_0 ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWREADY ),
         .MIRRORED_SLAVE_AXI4_bvalid_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BVALID ),
         .MIRRORED_SLAVE_AXI4_rlast_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RLAST ),
         .MIRRORED_SLAVE_AXI4_rvalid_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RVALID ),
         .MIRRORED_SLAVE_AXI4_wready_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WREADY ),
-        .apb_pin                       ( apb_pin ),
-        .ddr_clk_i                     ( CLOCKS_AND_RESETS_CLK_125MHz ),
-        .ddr_ctrl_ready_i              ( PF_DDR4_C0_0_CTRLR_READY ),
+        .ddr_ctrl_ready_i              ( CTRLR_READY_net_0 ),
         .pclk                          ( CLOCKS_AND_RESETS_CLK_50MHz ),
-        .presetn                       ( CLOCKS_AND_RESETS_RESETN_50MHz ),
-        .reset_i                       ( VSC_8662_RESETN_net_0 ),
-        .resten_ddr                    ( CLOCKS_AND_RESETS_DDR_AXI4_RESET_N ),
+        .presetn                       ( CLOCKS_AND_RESETS_RESETN_50MHz_0 ),
+        .reset_i                       ( VSC_8662_RESETN_0 ),
         .sys_clk_i                     ( CLOCKS_AND_RESETS_CLK_125MHz ),
-        .APBslave_paddr                ( FIC_CONVERTER_0_APBmslave_PADDR ),
-        .APBslave_pwdata               ( FIC_CONVERTER_0_APBmslave_PWDATA ),
+        .APBslave_pwrite               ( FIC_CONVERTER_0_APBmslave_PWRITE ),
+        .APBslave_psel                 ( FIC_CONVERTER_0_APBmslave_PSELx ),
+        .apb_pin                       ( apb_pin ),
+        .resten_ddr                    ( CLOCKS_AND_RESETS_RESET_N_111MHz ),
+        .ddr_clk_i                     ( PF_DDR4_C0_0_SYS_CLK ),
         .MIRRORED_SLAVE_AXI4_bid_0     ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BID ),
         .MIRRORED_SLAVE_AXI4_bresp_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BRESP ),
         .MIRRORED_SLAVE_AXI4_rdata_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RDATA ),
         .MIRRORED_SLAVE_AXI4_rid_0     ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RID ),
         .MIRRORED_SLAVE_AXI4_rresp_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_RRESP ),
+        .APBslave_paddr                ( FIC_CONVERTER_0_APBmslave_PADDR ),
+        .APBslave_pwdata               ( FIC_CONVERTER_0_APBmslave_PWDATA ),
         // Outputs
-        .APBslave_pready               ( FIC_CONVERTER_0_APBmslave_PREADY ),
-        .APBslave_pslverr              ( FIC_CONVERTER_0_APBmslave_PSLVERR ),
         .MIRRORED_SLAVE_AXI4_arvalid_0 ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARVALID ),
         .MIRRORED_SLAVE_AXI4_awvalid_0 ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWVALID ),
         .MIRRORED_SLAVE_AXI4_bready_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_BREADY ),
@@ -890,7 +896,8 @@ top_ddr_write top_ddr_write_0(
         .MIRRORED_SLAVE_AXI4_wlast_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WLAST ),
         .MIRRORED_SLAVE_AXI4_wvalid_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WVALID ),
         .frm_interrupt_o               ( top_ddr_write_0_frm_interrupt_o ),
-        .APBslave_prdata               ( FIC_CONVERTER_0_APBmslave_PRDATA ),
+        .APBslave_pready               ( FIC_CONVERTER_0_APBmslave_PREADY ),
+        .APBslave_pslverr              ( FIC_CONVERTER_0_APBmslave_PSLVERR ),
         .MIRRORED_SLAVE_AXI4_araddr_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARADDR ),
         .MIRRORED_SLAVE_AXI4_arburst_0 ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARBURST ),
         .MIRRORED_SLAVE_AXI4_arcache_0 ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_ARCACHE ),
@@ -908,7 +915,8 @@ top_ddr_write top_ddr_write_0(
         .MIRRORED_SLAVE_AXI4_awprot_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWPROT ),
         .MIRRORED_SLAVE_AXI4_awsize_0  ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_AWSIZE ),
         .MIRRORED_SLAVE_AXI4_wdata_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WDATA ),
-        .MIRRORED_SLAVE_AXI4_wstrb_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WSTRB ) 
+        .MIRRORED_SLAVE_AXI4_wstrb_0   ( top_ddr_write_0_MIRRORED_SLAVE_AXI4_WSTRB ),
+        .APBslave_prdata               ( FIC_CONVERTER_0_APBmslave_PRDATA ) 
         );
 
 

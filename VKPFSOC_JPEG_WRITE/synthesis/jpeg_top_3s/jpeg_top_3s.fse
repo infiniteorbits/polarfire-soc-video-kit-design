@@ -1,0 +1,22 @@
+
+fsm_encoding {50964962} sequential
+
+fsm_state_encoding {50964962} IDLE {00}
+
+fsm_state_encoding {50964962} SOF_PULSE {01}
+
+fsm_state_encoding {50964962} FEED_PIXELS {10}
+
+fsm_state_encoding {50964962} FINISH {11}
+
+fsm_registers {50964962} {state[1]}  {state[0]} 
+
+fsm_encoding {4982508251} sequential
+
+fsm_state_encoding {4982508251} 00 {00}
+
+fsm_state_encoding {4982508251} 01 {01}
+
+fsm_state_encoding {4982508251} 10 {10}
+
+fsm_registers {4982508251} {state_footer[1]}  {state_footer[0]} 

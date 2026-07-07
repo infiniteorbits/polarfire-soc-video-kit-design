@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the information about all compile points from mapper to be displayed as part of the summary report.
+*******************************************************************************************-->
+<report_table display_priority="4" name="Compile Points Summary">
+<row>
+<data>Name</data>
+<data>Status</data>
+<data>Reason</data>
+<data>Real Time</data>
+<data>CPU Time</data>
+</row>
+<row>
+<data>
+<value>jpeg_top_3s</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/jpeg_top_3s/jpeg_top_3s.srr</data>
+</report_link>
+</data>
+<data>Unchanged</data>
+<data>-</data>
+<data>0h:00m:13s</data>
+<data>0h:00m:13s</data>
+</row>
+<row>
+<data>
+<value>top_ddr_write</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/top_ddr_write/top_ddr_write.srr</data>
+</report_link>
+</data>
+<data>Unchanged</data>
+<data>-</data>
+<data>0h:00m:03s</data>
+<data>0h:00m:03s</data>
+</row>
+<row>
+<data>
+<value>VKPFSOC_TOP</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP/VKPFSOC_TOP.srr</data>
+</report_link>
+</data>
+<data>Unchanged</data>
+<data>-</data>
+<data>0h:00m:02s</data>
+<data>0h:00m:02s</data>
+</row>
+</report_table>

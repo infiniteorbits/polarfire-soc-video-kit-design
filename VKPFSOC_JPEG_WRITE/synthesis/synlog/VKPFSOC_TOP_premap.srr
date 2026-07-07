@@ -1,0 +1,240 @@
+# Sun Jun  7 15:51:29 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.4 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53556
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 516MB peak: 517MB)
+
+Reading constraint file: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/designer/VKPFSOC_TOP/synthesis.fdc
+@L: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP_scck.rpt 
+See clock summary report "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP_scck.rpt"
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 534MB peak: 534MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 534MB peak: 534MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 536MB peak: 536MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 538MB peak: 538MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v":15:8:15:15|Removing instance gnd_inst (in view: work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC(verilog)) because it does not drive other instances.
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":26:8:26:15|Removing instance vcc_inst (in view: work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK(verilog)) because it does not drive other instances.
+@W: BN114 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":27:8:27:15|Removing instance gnd_inst (in view: work.PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK(verilog)) because it does not drive other instances.
+NConnInternalConnection caching is on
+@W: FX1183 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v":58:0:58:5|User-specified initial value set for instance CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_50MHz.CORERESET_PF_C5_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
+@W: FX1183 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/CORERESET/CORERESET_0/core/corereset_pf.v":58:0:58:5|User-specified initial value set for instance CLOCKS_AND_RESETS_inst_0.CORERESET_CLK_125MHz.CORERESET_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.prdata_1[0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.reg_near[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.reg_iw[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/apb_wrapper.v":55:2:55:7|Found instance top_ddr_write_0.jpeg_top_1.u_apb.reg_ih[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@W: BN132 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance top_ddr_write_0.jpeg_top_1.u_fsm.pixel_ready_to_send because it is equivalent to instance top_ddr_write_0.jpeg_top_1.u_fsm.buffer_full. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":498:0:498:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.e_runi with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":667:0:667:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.f_rc[15:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_c[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":332:0:332:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.a_wl[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_bt[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":498:0:498:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.e_x[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_b[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":402:0:402:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.c_x[7:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: FX1171 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jls_encoder.v":332:0:332:5|Found instance top_ddr_write_0.jpeg_top_1.u_jls.a_hl[13:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 590MB peak: 590MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 590MB peak: 590MB)
+
+
+Start optimization across hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 590MB peak: 590MB)
+
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance compressed_size_o_1[31:1] (in view: work.jpeg_control_fsm_3s_0_1_2_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance compressed_size[31:1] (in view: work.jpeg_control_fsm_3s_0_1_2_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jpeg_control_fsm.v":125:4:125:9|Removing sequential instance sof_flag (in view: work.jpeg_control_fsm_3s_0_1_2_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/apb_wrapper.v":55:2:55:7|Removing sequential instance reg_near[7:0] (in view: work.apb_wrapper(verilog)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/hdl/video_fifo.vhd":420:4:420:5|Removing sequential instance wafull (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/hdl/video_fifo.vhd":404:4:404:5|Removing sequential instance wdata_count[11:0] (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/hdl/video_fifo.vhd":314:4:314:5|Removing sequential instance raempty (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/hdl/video_fifo.vhd":332:4:332:5|Removing sequential instance fifo_hempty (in view: work.work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD(video_fifo)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":214:15:214:24|Tristate driver RVALID_O_7 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_7 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":209:15:209:24|Tristate driver RVALID_O_6 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_6 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":204:15:204:24|Tristate driver RVALID_O_5 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_5 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":199:15:199:24|Tristate driver RVALID_O_4 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_4 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":194:15:194:24|Tristate driver RVALID_O_3 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_3 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":189:15:189:24|Tristate driver RVALID_O_2 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_2 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":184:15:184:24|Tristate driver RVALID_O_1 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_1 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":179:15:179:24|Tristate driver RVALID_O_0 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RVALID_O_0 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":215:15:215:23|Tristate driver RLAST_O_7 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RLAST_O_7 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":210:15:210:23|Tristate driver RLAST_O_6 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) on net RLAST_O_6 (in view: work.DDR_AXI4_ARBITER_PF_4s_32s_64s_1s_1s_2s_0s(verilog)) has its enable tied to GND.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req1_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req2_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req3_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req4_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req5_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req6_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.write_top_0.request_scheduler_0.s_req7_dly is reduced to a combinational gate by constant propagation.
+@N: BN115 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v":283:11:283:22|Removing instance read_demux_1 (in view: work.read_top_32s(verilog)) because it does not drive other instances.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req0_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req1_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req2_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req3_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req4_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req5_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req6_dly is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":144:12:144:13|Sequential instance top_ddr_write_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1.DDR_AXI4_ARBITER_PF_0.read_top_0.request_scheduler_0.s_req7_dly is reduced to a combinational gate by constant propagation.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":171:12:171:13|Removing sequential instance s_write_ctr[2:0] (in view: work.request_scheduler_0(request_scheduler)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v":320:4:320:13|Removing instance read_mux_0 (in view: work.read_top_32s(verilog)) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":253:12:253:13|Removing sequential instance mux_sel_o[2:0] (in view: work.request_scheduler_0(request_scheduler)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance reg_valid_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z4_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance empty_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z4_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":324:3:324:8|Removing sequential instance genblk5\.almostemptyi (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":219:3:219:8|Removing sequential instance rdcnt[9:0] (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":365:4:365:9|Removing sequential instance dvld_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":453:9:453:14|Removing sequential instance genblk7\.afull_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z3_layer0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance reg_valid_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z7_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":250:3:250:8|Removing sequential instance empty_r (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft_Z7_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":324:3:324:8|Removing sequential instance genblk5\.almostemptyi (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":219:3:219:8|Removing sequential instance rdcnt[3:0] (in view: work.ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr_Z6_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+
+Finished optimization across hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 590MB peak: 590MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 590MB peak: 590MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 590MB peak: 590MB)
+
+@N: FX1185 |Applying syn_allowed_resources blockrams=11,dsps=9 on compile point jpeg_top_3s 
+@N: FX1185 |Applying syn_allowed_resources blockrams=21 on compile point top_ddr_write 
+@N: FX1184 |Applying syn_allowed_resources blockrams=812,dsps=775 on top level netlist VKPFSOC_TOP 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 592MB peak: 592MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                                                  Requested     Requested     Clock                              Clock                Clock
+Level     Clock                                                                  Frequency     Period        Type                               Group                Load 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       REF_CLK_PAD_P                                                          148.5 MHz     6.734         declared                           default_clkgroup     1    
+1 .         CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     125.0 MHz     8.000         generated (from REF_CLK_PAD_P)     default_clkgroup     2145 
+1 .         CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50.0 MHz      20.000        generated (from REF_CLK_PAD_P)     default_clkgroup     50   
+                                                                                                                                                                          
+0 -       osc_rc2mhz                                                             2.1 MHz       469.480       declared                           default_clkgroup     1    
+                                                                                                                                                                          
+0 -       System                                                                 100.0 MHz     10.000        system                             system_clkgroup      0    
+==========================================================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                                                     Clock     Source                                                                       Clock Pin                                                                 Non-clock Pin     Non-clock Pin                                                                              
+Clock                                                                Load      Pin                                                                          Seq Example                                                               Seq Example       Comb Example                                                                               
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REF_CLK_PAD_P                                                        1         REF_CLK_PAD_P(port)                                                          CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 CLOCKS_AND_RESETS_inst_0.PF_XCVR_REF_CLK_C0_0.PF_XCVR_REF_CLK_C0_0.I_IO.PAD_P(XCVR_REF_CLK)
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     2145      CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)        top_ddr_write_0.jpeg_top_1.u_jls.a_e.C                                    -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)                          
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     50        CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)        top_ddr_write_0.jpeg_top_1.u_apb.pready.C                                 -                 CLOCKS_AND_RESETS_inst_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)                          
+                                                                                                                                                                                                                                                                                                                                                   
+osc_rc2mhz                                                           1         CLOCKS_AND_RESETS_inst_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_2.CLK(OSC_RC2MHZ)     CLOCKS_AND_RESETS_inst_0.PF_CLK_DIV_C0_0.PF_CLK_DIV_C0_0.I_CD.A           -                 -                                                                                          
+                                                                                                                                                                                                                                                                                                                                                   
+System                                                               0         -                                                                            -                                                                         -                 -                                                                                          
+===================================================================================================================================================================================================================================================================================================================================================
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 592MB peak: 592MB)
+
+Encoding state machine local_wbus_state[3:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v":356:1:356:6|There are no possible illegal states for state machine local_wbus_state[3:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog)); safe FSM implementation is not required.
+Encoding state machine video_bus_state[4:0] (in view: work.ddr_rw_arbiter_Z8_layer0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   101 -> 01000
+   110 -> 10000
+Encoding state machine s_state[0:5] (in view: work.request_scheduler_0(request_scheduler))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine s_state[0:5] (in view: work.request_scheduler_1(request_scheduler))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine s_state[2:0] (in view: work.ddr_write_controller_enc(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[3:0] (in view: work.jpeg_control_fsm_3s_0_1_2_3(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
+   011 -> 11
+@N: MO225 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/script_support/hdl/JPEG_WRITE/jpeg_control_fsm.v":96:4:96:9|There are no possible illegal states for state machine state[3:0] (in view: work.jpeg_control_fsm_3s_0_1_2_3(verilog)); safe FSM implementation is not required.
+Encoding state machine state_footer[2:0] (in view: work.jls_encoder(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 592MB peak: 592MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 592MB peak: 592MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 504MB peak: 592MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Jun  7 15:51:31 2026
+
+###########################################################]

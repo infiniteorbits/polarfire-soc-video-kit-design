@@ -1,0 +1,9 @@
+n work jpeg_top_3s verilog;
+av .compile_point_summary_status "Remapped";
+av .compile_point_summary_reason "Interface of Compile Point changed";
+av .compile_point_update_model 1;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 13.4693;
+av .compile_point_starttime_stamp "Mon Apr 27 09:22:28 2026";
+av .compile_point_endtime_stamp "Mon Apr 27 09:22:42 2026";
+av .compile_point_realtime_used 13.369;

@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+
+Date      :  Wed Jul  1 15:59:56 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE
+Component :  ddr_read_smart_design
+Family    :  PolarFireSoC
+
+
+Stimulus files for all Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/ddr_read_smart_design/ddr_read_smart_design.v
+

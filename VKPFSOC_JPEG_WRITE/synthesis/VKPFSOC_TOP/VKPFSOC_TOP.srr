@@ -1,0 +1,138 @@
+# Mon Apr 27 09:22:29 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.4 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53559
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/hdl/jpeg_top.v":6:7:6:14|Found compile point of type hard on View view:work.jpeg_top_3s(verilog) 
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/top_ddr_write/top_ddr_write.v":9:7:9:19|Found compile point of type hard on View view:work.top_ddr_write(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Top level view:work.VKPFSOC_TOP(verilog) 
+
+Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 577MB peak: 577MB)
+
+
+Start creating ILM for FPGA top_ddr_write (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 582MB peak: 582MB)
+
+
+Finished creating ILM for FPGA top_ddr_write (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 582MB peak: 582MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 582MB peak: 582MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v":9:7:9:17|Mapping Top level view:work.VKPFSOC_TOP(verilog) because 
+		 Interface of Compile Point has changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 582MB peak: 582MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: MO106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|Found ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) with 2 words by 2 bits.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 582MB peak: 582MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 582MB peak: 582MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:02s		     7.61ns		  67 /        65
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 582MB peak: 582MB)
+
+
+End compile point sub-process log
+
+Writing compile point status file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/VKPFSOC_TOP/cpprop
+
+Summary of Compile Points :
+*************************** 
+Name            Status       Reason                            
+---------------------------------------------------------------
+VKPFSOC_TOP     Remapped     Interface of Compile Point changed
+===============================================================
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Mon Apr 27 09:22:31 2026
+
+###########################################################]

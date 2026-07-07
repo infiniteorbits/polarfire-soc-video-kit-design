@@ -2,7 +2,8 @@
 // jpeg_control_fsm.v
 // Version complte corrige avec buffer FEED_PIXELS
 module jpeg_control_fsm #(
-    parameter ADDR_WIDTH = 3 //24
+    parameter ADDR_WIDTH =6,// 3, //24,
+    parameter LINE_STORAGE_MODE = 0
 )(
     input  wire                   clk,
     input  wire                   rstn,
@@ -33,7 +34,11 @@ module jpeg_control_fsm #(
     input  wire [7:0]             ram_read_data,
     output reg [ADDR_WIDTH-1:0]   ram_read_addr,
     //input   wire                  ram_data_valid,
-    
+    output wire [15:0]    line_gap_o,
+    input wire [15:0]    horz_resl_o,
+    input wire w0_done,
+    output reg  read_en_i,
+    output reg          frame_start_i,
     //size of compressed image 
     output  reg [31:0]            compressed_size_o,
     // status back to APB
@@ -78,7 +83,7 @@ module jpeg_control_fsm #(
     // combinational total pixels computed from inputs (avoids X propagation)
     wire [47:0] total_pixels_comb;
     assign total_pixels_comb = ( {34'd0, i_w} + 1 ) * ( {34'd0, i_h} + 1 );
-    
+   
     // encoder enable internal (equivalent encoder_en_o)
     reg encoder_active;
 
@@ -89,8 +94,127 @@ module jpeg_control_fsm #(
     assign res_change = (width_prev != i_w) || (height_prev != i_h);
 
     reg eof_pulse_sent;
-    
-    
+     //============================
+    // line_gap
+    //============================
+  // LINE_STORAGE_MODE:
+    // 0 = compact storage, no padding between lines (lignes stockes bout  bout, sans trou)
+    // 1 = padded storage, round each line up to a 64-bit word boundary (lignes arrondies au multiple de 8 octets, pratique pour le bus DDR 64 bits)
+    assign line_gap_o = (LINE_STORAGE_MODE == 1'b0)
+                      ? horz_resl_o
+                      : ((horz_resl_o + 16'd7) & 16'hFFF8);
+   reg write_done;
+     //============================
+    // frame_start_i / read_en_i
+    //============================
+      reg [13:0] read_line_count;
+      reg [13:0] read_pixel_timer;
+      reg [7:0]  read_gap_timer;
+      reg [1:0]  read_state;
+      reg [2:0]  frame_start_cnt;
+      reg        frame_start_done;
+
+      localparam RD_IDLE = 2'd0;
+      localparam RD_LINE = 2'd1;
+      localparam RD_GAP  = 2'd2;
+      wire [13:0] width_pixels;
+      wire [13:0] height_lines;
+
+      assign width_pixels = width_reg + 14'd1;
+      assign height_lines = height_reg + 14'd1;
+      reg o_last_flag_d;
+      wire o_last_flag_fall;
+
+        assign o_last_flag_fall = o_last_flag_d & ~o_last_flag;
+      always @(posedge clk or negedge rstn) begin
+           /* if (!rstn)
+                write_done <= 1'b0;
+            else if (state == IDLE)
+                write_done <= 1'b0;
+            else if (w0_done)
+                write_done <= 1'b1;
+            */
+            if (!rstn)
+                o_last_flag_d <= 1'b0;
+            else
+                o_last_flag_d <= o_last_flag;
+        end
+        
+      always @(posedge clk or negedge rstn) begin
+      if (!rstn) begin
+          read_en_i        <= 1'b0;
+          read_line_count  <= 14'd0;
+          read_pixel_timer <= 14'd0;
+          read_gap_timer   <= 8'd0;
+          read_state       <= RD_IDLE;
+          frame_start_i    <= 1'b0;
+          frame_start_cnt  <= 3'd0;
+          frame_start_done <= 1'b0;
+          
+      end else begin
+          case (read_state)
+
+              RD_IDLE: begin
+                  read_en_i        <= 1'b0;
+                  frame_start_i <= 1'b0;
+                  read_pixel_timer <= 14'd0;
+                  read_gap_timer   <= 8'd0;
+
+                     // if (!frame_start_done && write_done) begin
+                     if (!frame_start_done && o_last_flag_fall) begin
+                          frame_start_i <= 1'b1;
+                          if (frame_start_cnt >= 3'd6) begin
+                              frame_start_i    <= 1'b0;
+                              frame_start_cnt  <= 3'd0;
+                              frame_start_done <= 1'b1;
+                          end else begin
+                              frame_start_cnt <= frame_start_cnt + 1'b1;
+                          end
+                      end 
+                       else if(frame_start_done) begin
+                          if (read_line_count < height_lines) begin
+                              read_en_i        <= 1'b1;
+                              read_pixel_timer <= 14'd0;
+                              read_state       <= RD_LINE;
+                          end
+                    end
+              end
+
+              RD_LINE: begin
+                  read_en_i <= 1'b1;
+
+                  if (read_pixel_timer >= width_pixels - 1'b1) begin
+                      read_en_i       <= 1'b0;
+                      read_line_count <= read_line_count + 1'b1;
+                      read_gap_timer  <= 8'd0;
+                      read_state      <= RD_GAP;
+                  end else begin
+                      read_pixel_timer <= read_pixel_timer + 1'b1;
+                  end
+              end
+
+              RD_GAP: begin
+                  read_en_i <= 1'b0;
+
+                  // Equivalent du TB: #(PIXEL_CLK*(280/4))
+                  // A ajuster selon ton besoin.
+                  if (read_gap_timer >= 8'd69) begin
+                      read_gap_timer <= 8'd0;
+                      read_state     <= RD_IDLE;
+                  end else begin
+                      read_gap_timer <= read_gap_timer + 1'b1;
+                  end
+              end
+
+              default: begin
+                  read_en_i  <= 1'b0;
+                  read_state <= RD_IDLE;
+              end
+          endcase
+            end
+          
+      end
+  
     // -------------------------------
     // FSM state register
     always @(posedge clk or negedge rstn) begin
@@ -124,7 +248,6 @@ module jpeg_control_fsm #(
     // FEED_PIXELS: buffered RAM read to i_x
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
-
             sof_flag <= 1'b0;
             i_sof        <= 0;
             i_e          <= 0;
@@ -326,3 +449,4 @@ module jpeg_control_fsm #(
     end
 
 endmodule
+

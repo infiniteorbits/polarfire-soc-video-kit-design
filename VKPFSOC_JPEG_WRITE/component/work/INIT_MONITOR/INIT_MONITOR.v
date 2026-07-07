@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:03 2026
+// Created by SmartDesign Wed Jun 24 14:56:04 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -19,7 +19,7 @@ create_and_configure_core -core_vlnv {Microsemi:SgCore:PFSOC_INIT_MONITOR:1.0.30
 "BANK_0_RECALIBRATION_ENABLED:false"  \
 "BANK_0_VDDI_STATUS_ENABLED:false"  \
 "BANK_0_VDDI_STATUS_SIMULATION_DELAY:1"  \
-"BANK_1_CALIB_STATUS_ENABLED:false"  \
+"BANK_1_CALIB_STATUS_ENABLED:true"  \
 "BANK_1_CALIB_STATUS_SIMULATION_DELAY:1"  \
 "BANK_1_RECALIBRATION_ENABLED:false"  \
 "BANK_1_VDDI_STATUS_ENABLED:false"  \
@@ -72,6 +72,7 @@ module INIT_MONITOR(
     // Outputs
     AUTOCALIB_DONE,
     BANK_0_CALIB_STATUS,
+    BANK_1_CALIB_STATUS,
     BANK_8_CALIB_STATUS,
     DEVICE_INIT_DONE,
     FABRIC_POR_N,
@@ -92,6 +93,7 @@ module INIT_MONITOR(
 //--------------------------------------------------------------------
 output AUTOCALIB_DONE;
 output BANK_0_CALIB_STATUS;
+output BANK_1_CALIB_STATUS;
 output BANK_8_CALIB_STATUS;
 output DEVICE_INIT_DONE;
 output FABRIC_POR_N;
@@ -110,6 +112,7 @@ output XCVR_INIT_DONE;
 //--------------------------------------------------------------------
 wire   AUTOCALIB_DONE_net_0;
 wire   BANK_0_CALIB_STATUS_net_0;
+wire   BANK_1_CALIB_STATUS_net_0;
 wire   BANK_8_CALIB_STATUS_net_0;
 wire   DEVICE_INIT_DONE_net_0;
 wire   FABRIC_POR_N_net_0;
@@ -129,6 +132,7 @@ wire   USRAM_INIT_DONE_net_1;
 wire   SRAM_INIT_DONE_net_1;
 wire   DEVICE_INIT_DONE_net_1;
 wire   BANK_0_CALIB_STATUS_net_1;
+wire   BANK_1_CALIB_STATUS_net_1;
 wire   BANK_8_CALIB_STATUS_net_1;
 wire   XCVR_INIT_DONE_net_1;
 wire   USRAM_INIT_FROM_SNVM_DONE_net_1;
@@ -161,6 +165,8 @@ assign DEVICE_INIT_DONE_net_1           = DEVICE_INIT_DONE_net_0;
 assign DEVICE_INIT_DONE                 = DEVICE_INIT_DONE_net_1;
 assign BANK_0_CALIB_STATUS_net_1        = BANK_0_CALIB_STATUS_net_0;
 assign BANK_0_CALIB_STATUS              = BANK_0_CALIB_STATUS_net_1;
+assign BANK_1_CALIB_STATUS_net_1        = BANK_1_CALIB_STATUS_net_0;
+assign BANK_1_CALIB_STATUS              = BANK_1_CALIB_STATUS_net_1;
 assign BANK_8_CALIB_STATUS_net_1        = BANK_8_CALIB_STATUS_net_0;
 assign BANK_8_CALIB_STATUS              = BANK_8_CALIB_STATUS_net_1;
 assign XCVR_INIT_DONE_net_1             = XCVR_INIT_DONE_net_0;
@@ -191,6 +197,7 @@ INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR INIT_MONITOR_0(
         .SRAM_INIT_DONE             ( SRAM_INIT_DONE_net_0 ),
         .DEVICE_INIT_DONE           ( DEVICE_INIT_DONE_net_0 ),
         .BANK_0_CALIB_STATUS        ( BANK_0_CALIB_STATUS_net_0 ),
+        .BANK_1_CALIB_STATUS        ( BANK_1_CALIB_STATUS_net_0 ),
         .BANK_8_CALIB_STATUS        ( BANK_8_CALIB_STATUS_net_0 ),
         .XCVR_INIT_DONE             ( XCVR_INIT_DONE_net_0 ),
         .USRAM_INIT_FROM_SNVM_DONE  ( USRAM_INIT_FROM_SNVM_DONE_net_0 ),

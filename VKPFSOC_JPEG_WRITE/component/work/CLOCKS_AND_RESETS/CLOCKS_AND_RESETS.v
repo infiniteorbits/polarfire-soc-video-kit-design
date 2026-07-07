@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:10 2026
+// Created by SmartDesign Sun Jun 28 09:27:13 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -10,6 +10,7 @@ module CLOCKS_AND_RESETS(
     // Inputs
     DDR_CTRL_READY,
     DDR_PLL_LOCK,
+    DDR_SYS_CLK,
     EXT_RST_N,
     MSS_PLL_LOCKS,
     REF_CLK_PAD_N,
@@ -17,14 +18,15 @@ module CLOCKS_AND_RESETS(
     // Outputs
     CLK_125MHz,
     CLK_50MHz,
-    DDR_200MHZ,
     DDR_AXI4_RESET_N,
-    DDR_IP_RESET_N,
+    DDR_CLK,
     DEVICE_INIT_DONE,
     FABRIC_POR_N,
     I2C_BCLK,
     RESETN_125MHz,
-    RESETN_50MHz
+    RESETN_50MHz,
+    RESET_N_111MHz,
+    RESTEN_PLL
 );
 
 //--------------------------------------------------------------------
@@ -32,6 +34,7 @@ module CLOCKS_AND_RESETS(
 //--------------------------------------------------------------------
 input  DDR_CTRL_READY;
 input  DDR_PLL_LOCK;
+input  DDR_SYS_CLK;
 input  EXT_RST_N;
 input  MSS_PLL_LOCKS;
 input  REF_CLK_PAD_N;
@@ -41,27 +44,27 @@ input  REF_CLK_PAD_P;
 //--------------------------------------------------------------------
 output CLK_125MHz;
 output CLK_50MHz;
-output DDR_200MHZ;
 output DDR_AXI4_RESET_N;
-output DDR_IP_RESET_N;
+output DDR_CLK;
 output DEVICE_INIT_DONE;
 output FABRIC_POR_N;
 output I2C_BCLK;
 output RESETN_125MHz;
 output RESETN_50MHz;
+output RESET_N_111MHz;
+output RESTEN_PLL;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
 wire   AND2_0_Y;
-wire   AND3_0_Y;
-wire   AND3_1_Y;
+wire   AND2_1_Y;
 wire   CLK_50MHz_net_0;
 wire   CLK_125MHz_net_0;
-wire   DDR_200MHZ_net_0;
 wire   DDR_AXI4_RESET_N_net_0;
+wire   DDR_CLK_net_0;
 wire   DDR_CTRL_READY;
-wire   DDR_IP_RESET_N_net_0;
 wire   DDR_PLL_LOCK;
+wire   DDR_SYS_CLK;
 wire   DEVICE_INIT_DONE_net_0;
 wire   EXT_RST_N;
 wire   FABRIC_POR_N_net_0;
@@ -74,18 +77,21 @@ wire   PF_OSC_C0_0_RCOSC_2MHZ_CLK_DIV;
 wire   PF_XCVR_REF_CLK_C0_0_FAB_REF_CLK;
 wire   REF_CLK_PAD_N;
 wire   REF_CLK_PAD_P;
+wire   RESET_N_111MHz_net_0;
 wire   RESETN_50MHz_net_0;
 wire   RESETN_125MHz_net_0;
+wire   RESTEN_PLL_net_0;
 wire   CLK_125MHz_net_1;
 wire   CLK_50MHz_net_1;
-wire   DDR_200MHZ_net_1;
-wire   DDR_AXI4_RESET_N_net_1;
-wire   DDR_IP_RESET_N_net_1;
 wire   DEVICE_INIT_DONE_net_1;
 wire   FABRIC_POR_N_net_1;
 wire   I2C_BCLK_net_1;
 wire   RESETN_125MHz_net_1;
 wire   RESETN_50MHz_net_1;
+wire   DDR_AXI4_RESET_N_net_1;
+wire   DDR_CLK_net_1;
+wire   RESET_N_111MHz_net_1;
+wire   RESTEN_PLL_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -103,12 +109,6 @@ assign CLK_125MHz_net_1       = CLK_125MHz_net_0;
 assign CLK_125MHz             = CLK_125MHz_net_1;
 assign CLK_50MHz_net_1        = CLK_50MHz_net_0;
 assign CLK_50MHz              = CLK_50MHz_net_1;
-assign DDR_200MHZ_net_1       = DDR_200MHZ_net_0;
-assign DDR_200MHZ             = DDR_200MHZ_net_1;
-assign DDR_AXI4_RESET_N_net_1 = DDR_AXI4_RESET_N_net_0;
-assign DDR_AXI4_RESET_N       = DDR_AXI4_RESET_N_net_1;
-assign DDR_IP_RESET_N_net_1   = DDR_IP_RESET_N_net_0;
-assign DDR_IP_RESET_N         = DDR_IP_RESET_N_net_1;
 assign DEVICE_INIT_DONE_net_1 = DEVICE_INIT_DONE_net_0;
 assign DEVICE_INIT_DONE       = DEVICE_INIT_DONE_net_1;
 assign FABRIC_POR_N_net_1     = FABRIC_POR_N_net_0;
@@ -119,6 +119,14 @@ assign RESETN_125MHz_net_1    = RESETN_125MHz_net_0;
 assign RESETN_125MHz          = RESETN_125MHz_net_1;
 assign RESETN_50MHz_net_1     = RESETN_50MHz_net_0;
 assign RESETN_50MHz           = RESETN_50MHz_net_1;
+assign DDR_AXI4_RESET_N_net_1 = DDR_AXI4_RESET_N_net_0;
+assign DDR_AXI4_RESET_N       = DDR_AXI4_RESET_N_net_1;
+assign DDR_CLK_net_1          = DDR_CLK_net_0;
+assign DDR_CLK                = DDR_CLK_net_1;
+assign RESET_N_111MHz_net_1   = RESET_N_111MHz_net_0;
+assign RESET_N_111MHz         = RESET_N_111MHz_net_1;
+assign RESTEN_PLL_net_1       = RESTEN_PLL_net_0;
+assign RESTEN_PLL             = RESTEN_PLL_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -131,14 +139,22 @@ AND2 AND2_0(
         .Y ( AND2_0_Y ) 
         );
 
-//--------AND3
-AND3 AND3_0(
+//--------AND2
+AND2 AND2_1(
         // Inputs
         .A ( INIT_MONITOR_0_BANK_0_CALIB_STATUS ),
         .B ( INIT_MONITOR_0_BANK_8_CALIB_STATUS ),
-        .C ( PF_CCC_C0_0_PLL_LOCK_0 ),
         // Outputs
-        .Y ( AND3_0_Y ) 
+        .Y ( AND2_1_Y ) 
+        );
+
+//--------AND2
+AND2 AND2_2(
+        // Inputs
+        .A ( PF_CCC_C0_0_PLL_LOCK_0 ),
+        .B ( AND2_1_Y ),
+        // Outputs
+        .Y ( RESTEN_PLL_net_0 ) 
         );
 
 //--------AND3
@@ -148,7 +164,7 @@ AND3 AND3_1(
         .B ( DDR_CTRL_READY ),
         .C ( PF_CCC_C0_0_PLL_LOCK_0 ),
         // Outputs
-        .Y ( AND3_1_Y ) 
+        .Y (  ) 
         );
 
 //--------CORERESET_PF_C5
@@ -192,7 +208,7 @@ CORERESET_PF_C1 CORERESET_PF_C1_0(
         .EXT_RST_N          ( EXT_RST_N ),
         .BANK_x_VDDI_STATUS ( VCC_net ),
         .BANK_y_VDDI_STATUS ( VCC_net ),
-        .PLL_LOCK           ( AND3_1_Y ),
+        .PLL_LOCK           ( DDR_PLL_LOCK ),
         .SS_BUSY            ( GND_net ),
         .INIT_DONE          ( DEVICE_INIT_DONE_net_0 ),
         .FF_US_RESTORE      ( GND_net ),
@@ -205,18 +221,18 @@ CORERESET_PF_C1 CORERESET_PF_C1_0(
 //--------CORERESET_PF_C2
 CORERESET_PF_C2 CORERESET_PF_C2_0(
         // Inputs
-        .CLK                ( DDR_200MHZ_net_0 ),
-        .EXT_RST_N          ( VCC_net ),
+        .CLK                ( DDR_SYS_CLK ),
+        .EXT_RST_N          ( EXT_RST_N ),
         .BANK_x_VDDI_STATUS ( VCC_net ),
         .BANK_y_VDDI_STATUS ( VCC_net ),
-        .PLL_LOCK           ( AND3_0_Y ),
+        .PLL_LOCK           ( DDR_PLL_LOCK ),
         .SS_BUSY            ( GND_net ),
         .INIT_DONE          ( DEVICE_INIT_DONE_net_0 ),
         .FF_US_RESTORE      ( GND_net ),
         .FPGA_POR_N         ( FABRIC_POR_N_net_0 ),
         // Outputs
         .PLL_POWERDOWN_B    (  ),
-        .FABRIC_RESET_N     ( DDR_IP_RESET_N_net_0 ) 
+        .FABRIC_RESET_N     ( RESET_N_111MHz_net_0 ) 
         );
 
 //--------INIT_MONITOR
@@ -228,6 +244,7 @@ INIT_MONITOR INIT_MONITOR_0(
         .SRAM_INIT_DONE             (  ),
         .DEVICE_INIT_DONE           ( DEVICE_INIT_DONE_net_0 ),
         .BANK_0_CALIB_STATUS        ( INIT_MONITOR_0_BANK_0_CALIB_STATUS ),
+        .BANK_1_CALIB_STATUS        (  ),
         .BANK_8_CALIB_STATUS        ( INIT_MONITOR_0_BANK_8_CALIB_STATUS ),
         .XCVR_INIT_DONE             (  ),
         .USRAM_INIT_FROM_SNVM_DONE  (  ),
@@ -246,7 +263,7 @@ PF_CCC_C0 PF_CCC_C0_0(
         // Outputs
         .OUT0_FABCLK_0 ( CLK_125MHz_net_0 ),
         .OUT1_FABCLK_0 ( CLK_50MHz_net_0 ),
-        .OUT2_FABCLK_0 ( DDR_200MHZ_net_0 ),
+        .OUT2_FABCLK_0 ( DDR_CLK_net_0 ),
         .PLL_LOCK_0    ( PF_CCC_C0_0_PLL_LOCK_0 ) 
         );
 

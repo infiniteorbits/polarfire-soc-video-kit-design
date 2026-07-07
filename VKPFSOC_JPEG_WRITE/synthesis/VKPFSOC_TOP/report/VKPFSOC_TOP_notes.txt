@@ -1,0 +1,10 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/hdl/jpeg_top.v":6:7:6:14|Found compile point of type hard on View view:work.jpeg_top_3s(verilog) 
+@N: MF104 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/top_ddr_write/top_ddr_write.v":9:7:9:19|Found compile point of type hard on View view:work.top_ddr_write(verilog) 
+@N: MF105 |Performing bottom-up mapping of Top level view:work.VKPFSOC_TOP(verilog) 
+@N: MF106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v":9:7:9:17|Mapping Top level view:work.VKPFSOC_TOP(verilog) because 
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: BZ173 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) mapped in logic.
+@N: MO106 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":267:2:267:5|Found ROM FIC_CONVERTER_0.CoreAPB3_C0_0.CoreAPB3_C0_0.iPSELS_raw_2[1:0] (in view: work.VKPFSOC_TOP(verilog)) with 2 words by 2 bits.

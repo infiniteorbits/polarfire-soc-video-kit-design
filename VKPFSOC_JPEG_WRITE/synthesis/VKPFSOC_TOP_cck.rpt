@@ -1,0 +1,258 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.4 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53556
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+
+# Written on Sun Jun  7 15:51:31 2026
+
+##### DESIGN INFO #######################################################
+
+Top View:                "VKPFSOC_TOP"
+Constraint File(s):      "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/designer/VKPFSOC_TOP/synthesis.fdc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 8 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                                             Ending                                                               |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                               CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     |     8.000            |     No paths         |     No paths         |     No paths                         
+System                                                               CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     |     20.000           |     No paths         |     No paths         |     No paths                         
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     |     8.000            |     No paths         |     No paths         |     No paths                         
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     |     4.000            |     No paths         |     No paths         |     No paths                         
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     |     4.000            |     No paths         |     No paths         |     No paths                         
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1     |     20.000           |     No paths         |     No paths         |     No paths                         
+=====================================================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:CAM1_RST
+p:CAM1_SCL (bidir end point)
+p:CAM1_SCL (bidir start point)
+p:CAM1_SDA (bidir end point)
+p:CAM1_SDA (bidir start point)
+p:CAM_CLK_EN
+p:CA[0]
+p:CA[1]
+p:CA[2]
+p:CA[3]
+p:CA[4]
+p:CA[5]
+p:CK
+p:CKE
+p:CK_N
+p:CS
+p:DM[0]
+p:DM[1]
+p:DM[2]
+p:DM[3]
+p:DQS[0] (bidir end point)
+p:DQS[0] (bidir start point)
+p:DQS[1] (bidir end point)
+p:DQS[1] (bidir start point)
+p:DQS[2] (bidir end point)
+p:DQS[2] (bidir start point)
+p:DQS[3] (bidir end point)
+p:DQS[3] (bidir start point)
+p:DQS_N[0] (bidir end point)
+p:DQS_N[0] (bidir start point)
+p:DQS_N[1] (bidir end point)
+p:DQS_N[1] (bidir start point)
+p:DQS_N[2] (bidir end point)
+p:DQS_N[2] (bidir start point)
+p:DQS_N[3] (bidir end point)
+p:DQS_N[3] (bidir start point)
+p:DQ[0] (bidir end point)
+p:DQ[0] (bidir start point)
+p:DQ[1] (bidir end point)
+p:DQ[1] (bidir start point)
+p:DQ[2] (bidir end point)
+p:DQ[2] (bidir start point)
+p:DQ[3] (bidir end point)
+p:DQ[3] (bidir start point)
+p:DQ[4] (bidir end point)
+p:DQ[4] (bidir start point)
+p:DQ[5] (bidir end point)
+p:DQ[5] (bidir start point)
+p:DQ[6] (bidir end point)
+p:DQ[6] (bidir start point)
+p:DQ[7] (bidir end point)
+p:DQ[7] (bidir start point)
+p:DQ[8] (bidir end point)
+p:DQ[8] (bidir start point)
+p:DQ[9] (bidir end point)
+p:DQ[9] (bidir start point)
+p:DQ[10] (bidir end point)
+p:DQ[10] (bidir start point)
+p:DQ[11] (bidir end point)
+p:DQ[11] (bidir start point)
+p:DQ[12] (bidir end point)
+p:DQ[12] (bidir start point)
+p:DQ[13] (bidir end point)
+p:DQ[13] (bidir start point)
+p:DQ[14] (bidir end point)
+p:DQ[14] (bidir start point)
+p:DQ[15] (bidir end point)
+p:DQ[15] (bidir start point)
+p:DQ[16] (bidir end point)
+p:DQ[16] (bidir start point)
+p:DQ[17] (bidir end point)
+p:DQ[17] (bidir start point)
+p:DQ[18] (bidir end point)
+p:DQ[18] (bidir start point)
+p:DQ[19] (bidir end point)
+p:DQ[19] (bidir start point)
+p:DQ[20] (bidir end point)
+p:DQ[20] (bidir start point)
+p:DQ[21] (bidir end point)
+p:DQ[21] (bidir start point)
+p:DQ[22] (bidir end point)
+p:DQ[22] (bidir start point)
+p:DQ[23] (bidir end point)
+p:DQ[23] (bidir start point)
+p:DQ[24] (bidir end point)
+p:DQ[24] (bidir start point)
+p:DQ[25] (bidir end point)
+p:DQ[25] (bidir start point)
+p:DQ[26] (bidir end point)
+p:DQ[26] (bidir start point)
+p:DQ[27] (bidir end point)
+p:DQ[27] (bidir start point)
+p:DQ[28] (bidir end point)
+p:DQ[28] (bidir start point)
+p:DQ[29] (bidir end point)
+p:DQ[29] (bidir start point)
+p:DQ[30] (bidir end point)
+p:DQ[30] (bidir start point)
+p:DQ[31] (bidir end point)
+p:DQ[31] (bidir start point)
+p:LED2
+p:LED3
+p:MAC_0_MDC
+p:MAC_0_MDIO (bidir end point)
+p:MAC_0_MDIO (bidir start point)
+p:MMUART_0_RXD_F2M
+p:MMUART_0_TXD_M2F
+p:MMUART_1_RXD_F2M
+p:MMUART_1_TXD_M2F
+p:ODT
+p:REFCLK
+p:REFCLK_N
+p:REF_CLK_PAD_N
+p:RESET_N
+p:SDIO_SW_EN_N
+p:SDIO_SW_SEL0
+p:SDIO_SW_SEL1
+p:SD_CD_EMMC_STRB
+p:SD_CLK_EMMC_CLK
+p:SD_CMD_EMMC_CMD (bidir end point)
+p:SD_CMD_EMMC_CMD (bidir start point)
+p:SD_DATA0_EMMC_DATA0 (bidir end point)
+p:SD_DATA0_EMMC_DATA0 (bidir start point)
+p:SD_DATA1_EMMC_DATA1 (bidir end point)
+p:SD_DATA1_EMMC_DATA1 (bidir start point)
+p:SD_DATA2_EMMC_DATA2 (bidir end point)
+p:SD_DATA2_EMMC_DATA2 (bidir start point)
+p:SD_DATA3_EMMC_DATA3 (bidir end point)
+p:SD_DATA3_EMMC_DATA3 (bidir start point)
+p:SD_POW_EMMC_DATA4
+p:SD_VOLT_CMD_DIR_EMMC_DATA7
+p:SD_VOLT_DIR_0_EMMC_UNUSED
+p:SD_VOLT_DIR_1_3_EMMC_UNUSED
+p:SD_VOLT_EN_EMMC_DATA6
+p:SD_VOLT_SEL_EMMC_DATA5
+p:SD_WP_EMMC_RSTN
+p:SGMII_RX0_N
+p:SGMII_RX0_P
+p:SGMII_RX1_N
+p:SGMII_RX1_P
+p:SGMII_TX0_N
+p:SGMII_TX0_P
+p:SGMII_TX1_N
+p:SGMII_TX1_P
+p:TEN
+p:USB_CLK
+p:USB_DATA0 (bidir end point)
+p:USB_DATA0 (bidir start point)
+p:USB_DATA1 (bidir end point)
+p:USB_DATA1 (bidir start point)
+p:USB_DATA2 (bidir end point)
+p:USB_DATA2 (bidir start point)
+p:USB_DATA3 (bidir end point)
+p:USB_DATA3 (bidir start point)
+p:USB_DATA4 (bidir end point)
+p:USB_DATA4 (bidir start point)
+p:USB_DATA5 (bidir end point)
+p:USB_DATA5 (bidir start point)
+p:USB_DATA6 (bidir end point)
+p:USB_DATA6 (bidir start point)
+p:USB_DATA7 (bidir end point)
+p:USB_DATA7 (bidir start point)
+p:USB_DIR
+p:USB_NXT
+p:USB_STP
+p:USB_ULPI_RESET_N
+p:VSC_8662_CMODE3
+p:VSC_8662_CMODE4
+p:VSC_8662_CMODE5
+p:VSC_8662_CMODE6
+p:VSC_8662_CMODE7
+p:VSC_8662_RESETN
+p:VSC_8662_SRESET
+p:apb_pin
+p:cam1inck
+p:cam1xmaster
+p:ddr_ctrl_ready_i
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

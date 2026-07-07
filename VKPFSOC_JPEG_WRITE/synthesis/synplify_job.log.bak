@@ -1,0 +1,90 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "12:40:57    07-Jun-2026",
+	"Working Directory" : "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis",
+	"CDPL Log file" : "-",
+	"Install" : "/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro"
+},
+"synthesis" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "12:40:38",
+   "Runtime" : "19s",
+   "Executable Run Time" : "18s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "12:40:38",
+      "Runtime" : "19s",
+      "Executable Run Time" : "18s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "12:40:38",
+         "Runtime" : "10s",
+         "Executable Run Time" : "09s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "12:40:38",
+            "Runtime" : "08s",
+            "Executable Run Time" : "07s",
+            "compiler" : {
+               "executable" : "bin/c_hdl",
+               "Run Directory" : "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "12:40:38",
+               "Run Time" : "08s",
+               "Exe Run Time" : "07s",
+               "Memory Usage" : "2.812000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin/syn_nfilter",
+               "Run Directory" : "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "12:40:46",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "2.812000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin/m_generic",
+            "Run Directory" : "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "12:40:46",
+            "Run Time" : "02s",
+            "Exe Run Time" : "02s",
+            "Memory Usage" : "2.816000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "12:40:48",
+         "Runtime" : "09s",
+         "Executable Run Time" : "09s",
+         "fpga_mapper" : {
+            "executable" : "bin/m_generic",
+            "Run Directory" : "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "12:40:48",
+            "Run Time" : "09s",
+            "Exe Run Time" : "09s",
+            "Memory Usage" : "2.816000",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

@@ -1,12 +1,13 @@
 Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
 
-Date      :  Mon Jun 22 13:46:34 2026
-Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE
+Date      :  Mon Jun 22 13:46:36 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE
 Component :  CLK_GEN_C0
 Family    :  PolarFireSoC
 
 
 Stimulus files for all Simulation tools:
-    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.v
-    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE/component/work/CLK_GEN_C0/CLK_GEN_C0.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/CLK_GEN_C0/CLK_GEN_C0.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/component/work/CLK_GEN_C0/CLK_GEN_C0.v
 

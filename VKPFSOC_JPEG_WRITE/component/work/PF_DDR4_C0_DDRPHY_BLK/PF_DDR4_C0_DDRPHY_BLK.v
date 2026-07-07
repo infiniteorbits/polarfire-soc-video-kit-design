@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jun 22 13:35:37 2026
+// Created by SmartDesign Mon Jun 29 09:59:56 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -19,7 +19,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_DDR4PHY:2.4.108} -c
 "IOG_WRITE_LEVELING:1" \
 "PIPELINE:true" \
 "SDRAM_BG_ADDR_WIDTH:1" \
-"SDRAM_DATA_RATE:1600.0" \
+"SDRAM_DATA_RATE:1333.32" \
 "SDRAM_DATA_WIDTH:16" \
 "SDRAM_DM_MODE:1" \
 "SDRAM_NB_RANKS:1" \

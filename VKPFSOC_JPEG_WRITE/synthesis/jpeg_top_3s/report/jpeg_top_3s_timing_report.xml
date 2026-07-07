@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design (IMG_COMP_WRITE)/VKPFSOC_JPEG_WRITE/synthesis/jpeg_top_3s/jpeg_top_3s.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0</data>
+<data>125.0 MHz</data>
+<data>53.4 MHz</data>
+<data>-10.734</data>
+</row>
+<row>
+<data>CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1</data>
+<data>50.0 MHz</data>
+<data>49.6 MHz</data>
+<data>-0.031</data>
+</row>
+<row>
+<data>REF_CLK_PAD_P</data>
+<data>148.5 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>osc_rc2mhz</data>
+<data>2.1 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+</report_table>

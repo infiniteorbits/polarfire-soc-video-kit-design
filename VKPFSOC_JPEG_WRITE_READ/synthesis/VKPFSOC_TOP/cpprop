@@ -1,0 +1,9 @@
+n work VKPFSOC_TOP verilog;
+av .compile_point_summary_status "Mapped";
+av .compile_point_summary_reason "No database";
+av .compile_point_update_model 0;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 28.8018;
+av .compile_point_starttime_stamp "Sun Aug  2 14:38:54 2026";
+av .compile_point_endtime_stamp "Sun Aug  2 14:39:28 2026";
+av .compile_point_realtime_used 33.53;

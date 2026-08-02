@@ -1,0 +1,134 @@
+
+fsm_encoding {11244914496} onehot
+
+fsm_state_encoding {11244914496} 000 {00001}
+
+fsm_state_encoding {11244914496} 001 {00010}
+
+fsm_state_encoding {11244914496} 010 {00100}
+
+fsm_state_encoding {11244914496} 101 {01000}
+
+fsm_state_encoding {11244914496} 110 {10000}
+
+fsm_registers {11244914496} {video_bus_state[4]}  {video_bus_state[3]}  {video_bus_state[2]}  {video_bus_state[1]}  {video_bus_state[0]} 
+
+fsm_encoding {969212509212543} sequential
+
+fsm_state_encoding {969212509212543} 00 {00}
+
+fsm_state_encoding {969212509212543} 01 {01}
+
+fsm_state_encoding {969212509212543} 10 {10}
+
+fsm_registers {969212509212543} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214142} sequential
+
+fsm_state_encoding {969214109214142} 00 {00}
+
+fsm_state_encoding {969214109214142} 01 {01}
+
+fsm_state_encoding {969214109214142} 10 {10}
+
+fsm_registers {969214109214142} {rd_addr[1]}  {rd_addr[0]} 
+
+fsm_encoding {969212509212541} sequential
+
+fsm_state_encoding {969212509212541} 00 {00}
+
+fsm_state_encoding {969212509212541} 01 {01}
+
+fsm_state_encoding {969212509212541} 10 {10}
+
+fsm_registers {969212509212541} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214140} original
+
+fsm_state_encoding {969214109214140} 00 {00}
+
+fsm_state_encoding {969214109214140} 01 {01}
+
+fsm_state_encoding {969214109214140} 10 {10}
+
+fsm_registers {969214109214140} {rd_addr[1]}  {rd_addr[0]} 
+
+fsm_encoding {969212509212547} sequential
+
+fsm_state_encoding {969212509212547} 00 {00}
+
+fsm_state_encoding {969212509212547} 01 {01}
+
+fsm_state_encoding {969212509212547} 10 {10}
+
+fsm_registers {969212509212547} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214146} original
+
+fsm_state_encoding {969214109214146} 00 {00}
+
+fsm_state_encoding {969214109214146} 01 {01}
+
+fsm_state_encoding {969214109214146} 10 {10}
+
+fsm_registers {969214109214146} {rd_addr[1]}  {rd_addr[0]} 
+
+fsm_encoding {969212509212539} sequential
+
+fsm_state_encoding {969212509212539} 00 {00}
+
+fsm_state_encoding {969212509212539} 01 {01}
+
+fsm_state_encoding {969212509212539} 10 {10}
+
+fsm_registers {969212509212539} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214138} original
+
+fsm_state_encoding {969214109214138} 00 {00}
+
+fsm_state_encoding {969214109214138} 01 {01}
+
+fsm_state_encoding {969214109214138} 10 {10}
+
+fsm_registers {969214109214138} {rd_addr[1]}  {rd_addr[0]} 
+
+fsm_encoding {969212509212535} sequential
+
+fsm_state_encoding {969212509212535} 00 {00}
+
+fsm_state_encoding {969212509212535} 01 {01}
+
+fsm_state_encoding {969212509212535} 10 {10}
+
+fsm_registers {969212509212535} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214134} original
+
+fsm_state_encoding {969214109214134} 00 {00}
+
+fsm_state_encoding {969214109214134} 01 {01}
+
+fsm_state_encoding {969214109214134} 10 {10}
+
+fsm_registers {969214109214134} {rd_addr[1]}  {rd_addr[0]} 
+
+fsm_encoding {969212509212537} sequential
+
+fsm_state_encoding {969212509212537} 00 {00}
+
+fsm_state_encoding {969212509212537} 01 {01}
+
+fsm_state_encoding {969212509212537} 10 {10}
+
+fsm_registers {969212509212537} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214136} original
+
+fsm_state_encoding {969214109214136} 00 {00}
+
+fsm_state_encoding {969214109214136} 01 {01}
+
+fsm_state_encoding {969214109214136} 10 {10}
+
+fsm_registers {969214109214136} {rd_addr[1]}  {rd_addr[0]} 

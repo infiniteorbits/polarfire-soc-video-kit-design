@@ -1,0 +1,9 @@
+n work C0_fastinit_Z43_layer0 verilog;
+av .compile_point_summary_status "Mapped";
+av .compile_point_summary_reason "No database";
+av .compile_point_update_model 0;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 10.1581;
+av .compile_point_starttime_stamp "Sun Aug  2 14:38:51 2026";
+av .compile_point_endtime_stamp "Sun Aug  2 14:39:05 2026";
+av .compile_point_realtime_used 13.961;

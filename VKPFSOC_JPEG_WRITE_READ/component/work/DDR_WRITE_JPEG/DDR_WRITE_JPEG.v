@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Apr 28 14:59:25 2026
+// Created by SmartDesign Sun Aug  2 14:30:32 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -108,11 +108,8 @@ AND2 AND2_1(
         .Y ( AND2_1_Y ) 
         );
 
-//--------data_packer
-data_packer #( 
-        .g_IP_DW ( 16 ),
-        .g_OP_DW ( 64 ) )
-data_packer_0(
+//--------data_packer_jpeg
+data_packer_jpeg data_packer_0(
         // Inputs
         .reset_i      ( encoder_en_i ),
         .sys_clk_i    ( sys_clk_i ),

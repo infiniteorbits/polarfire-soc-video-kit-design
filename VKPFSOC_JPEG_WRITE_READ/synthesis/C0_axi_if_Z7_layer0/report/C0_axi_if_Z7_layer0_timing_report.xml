@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/C0_axi_if_Z7_layer0/C0_axi_if_Z7_layer0.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0</data>
+<data>125.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1</data>
+<data>50.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0]</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0</data>
+<data>200.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1</data>
+<data>50.0 MHz</data>
+<data>124.6 MHz</data>
+<data>11.972</data>
+</row>
+<row>
+<data>PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2</data>
+<data>200.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3</data>
+<data>200.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>REF_CLK_PAD_P</data>
+<data>148.5 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>osc_rc2mhz</data>
+<data>2.1 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+</report_table>

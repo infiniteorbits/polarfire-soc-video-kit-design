@@ -5,9 +5,18 @@ CLOCK GLOBAL THRESHOLD - 2
 ASYNC GLOBAL THRESHOLD - 800
 GLOBAL THRESHOLD - 5000
 
-NET NAME                         CLOCK LOADS     ASYNC RST LOADS     SYNC RST LOADS     ENABLE LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
---------------------------------------------------------------------------------------------------------------------------------------------------------------
-CLOCKS_AND_RESETS_CLK_125MHz     2139            0                   0                  0                0              2139             YES                  
-CLOCKS_AND_RESETS_CLK_50MHz      65              0                   0                  0                0              65               YES                  
-dff_arst                         0               829                 0                  0                0              829              YES                  
-==============================================================================================================================================================
+NET NAME                                                     CLOCK LOADS     ASYNC RST LOADS     SYNC RST LOADS     ENABLE LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_DDR4_C0_0_SYS_CLK                                         11381           0                   0                  0                0              11381            YES                  
+CLOCKS_AND_RESETS_CLK_125MHz                                 1440            0                   0                  0                0              1440             YES                  
+CLOCKS_AND_RESETS_CLK_50MHz                                  66              0                   0                  0                0              66               YES                  
+PF_DDR4_C0_0.CCC_0_OUT2_HS_IO_CLK_0                          55              0                   0                  0                0              55               YES                  
+PF_DDR4_C0_0.DDRPHY_BLK_0.LANECTRL_ADDR_CMD_0_TX_DQS_270     26              0                   0                  0                0              26               YES                  
+PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL_TX_DQS                 10              0                   0                  0                0              10               YES                  
+PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL_TX_DQS                 10              0                   0                  0                0              10               YES                  
+PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL_RX_DQS_90[0]           9               0                   0                  0                0              9                YES                  
+PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL_RX_DQS_90[0]           9               0                   0                  0                0              9                YES                  
+PF_DDR4_C0_0.CCC_0_OUT3_HS_IO_CLK_0                          2               0                   0                  0                0              2                YES                  
+PF_DDR4_C0_0.DDRCTRL_0.sdram_sys_top.s1_arst                 0               4913                0                  0                0              4913             YES                  
+PF_DDR4_C0_0.reset_n_int_arst                                0               4682                0                  0                0              4682             YES                  
+==========================================================================================================================================================================================

@@ -11,7 +11,7 @@ Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
 OS: Ubuntu 24.04.4 LTS
 Hostname: IO-ALG-LT003
 max virtual memory: unlimited (bytes)
-max user processes: 53559
+max user processes: 53555
 max stack size: 8388608 (bytes)
 
 
@@ -20,11 +20,11 @@ Synopsys Synopsys Netlist Linker, Version comp202309synp1, Build 540R, Built Apr
 
 @N|Running in 64-bit mode
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 215MB peak: 215MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 387MB peak: 387MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
 
 Process completed successfully.
-# Sun May  3 09:04:25 2026
+# Sun Aug  2 14:38:23 2026
 
 ###########################################################]

@@ -69,8 +69,7 @@ module ddr_write_controller_enc #(parameter g_DDR_AXI_AWIDTH = 32) (
   localparam  IDLE = 2'b00,
               WRITE_REQUESTING = 2'b01,
               WRITING = 2'b10;
-  localparam DDR_BASE_OFFSET = 32'h8200_0000;
-
+  localparam DDR_BASE_OFFSET = 32'h8800_0000; //DDR base address offset for writing data
   reg  [1:0]   s_state;
   reg          s_eof_wrclk;
   reg  [9:0]   s_eof_sync_reg;
@@ -88,8 +87,8 @@ module ddr_write_controller_enc #(parameter g_DDR_AXI_AWIDTH = 32) (
   reg          encoder_en_dly1;
   reg [3:0]    s_clr_eof_cnt;
   reg          frm_sz_vld;
-  reg [g_DDR_AXI_AWIDTH-1:0] wr_addr_ptr; // compteur interne
-reg addr_init_done;
+  reg [g_DDR_AXI_AWIDTH-1:0] wr_addr_ptr; // compute the write address pointer based on the frame_ddr_addr_i and line counter
+  reg addr_init_done; 
 
 
 //assign frame_ddr_addr_i = 10'd0; // adresse de dpart = 0
@@ -124,17 +123,17 @@ assign s_set_eof_reg        = s_eof_sync_reg[9] & (~s_eof_sync_reg[8]) ; //neg e
         addr_init_done  <= 1'b0;
     end else begin
 
-        // Initialisation UNE SEULE FOIS par frame
+        // Initialize the write address pointer at the beginning of a frame when the encoder is enabled and there is data in the FIFO
         if (!addr_init_done && s_state == IDLE && encoder_en_i && fifo_count_i > 0) begin
             //wr_addr_ptr    <= frame_ddr_addr_i << 3; // 8 bytes per DDR word
-            wr_addr_ptr    <= DDR_BASE_OFFSET + (frame_ddr_addr_i << 3);
+            wr_addr_ptr    <= DDR_BASE_OFFSET + (frame_ddr_addr_i << 3); 
             addr_init_done <= 1'b1;
         end
         else if (write_done_i && s_state == WRITING) begin
             wr_addr_ptr <= wr_addr_ptr + (s_count_max << 3); 
         end
 
-        // Fin de frame  autoriser prochaine init
+        // Reset the write address pointer when the end of frame is cleared
         if (s_clr_eof_reg) begin
             addr_init_done <= 1'b0;
             //wr_addr_ptr    <= 0; // reset for next frame
@@ -147,7 +146,7 @@ end
 ///-----------------------------------------------------------------------------
 // INTR_GEN: Generate frame done interrupt (auto-clear with timer + FSM ready)
 //-----------------------------------------------------------------------------
-reg [7:0] intr_timer;  // compteur pour auto-clear
+reg [7:0] intr_timer;  // Counter for auto-clear of interrupt
 
 always @ (posedge sys_clk_i or negedge reset_i)
 begin
@@ -155,12 +154,23 @@ begin
         s_frm_intr <= 1'b0;
         intr_timer <= 8'd0;
     end else begin
-        // Si fin de frame dtecte, lever l'interruption et reset du timer
+        // Set the interrupt when the end of frame is detected and the encoder is enabled
         if (s_set_eof_reg && encoder_en_i) begin
             s_frm_intr <= 1'b1;
             intr_timer <= 8'd0;
         end
-        // Si interruption leve, incrmenter le timer
+        // Clear the interrupt either after a certain number of cycles or when the FSM is idle and the FIFO is empty
+        else if (s_frm_intr) begin
+            intr_timer <= intr_timer + 1'b1;
+
+            // Auto-clear after a certain number of cycles (e.g., 10 cycles, adjust as needed)
+            if (intr_timer >= 8'd10)  
+                s_frm_intr <= 1'b0;
+
+            // Or clear if the FSM is IDLE and FIFO is empty
+            if (s_state == IDLE && fifo_count_i == 0)
+                s_frm_intr <= 1'b0;
+        end
         else if (s_frm_intr) begin
             intr_timer <= intr_timer + 1'b1;
 
@@ -196,7 +206,9 @@ end
 
 /*------------------------------------------------------------------------
 -- Name       : Write_FSM_PROC
--- Description: FSM implements Write operations
+-- Description: Controls the DDR write transaction sequence.
+--              The FSM requests data from the FIFO and manages AXI write
+--              request and completion handshaking.
 ------------------------------------------------------------------------*/
   always @ (posedge sys_clk_i or negedge reset_i)
   begin
@@ -216,45 +228,29 @@ end
 				s_write_req <= 1'b0 ;
 				s_read_fifo <= 1'b0 ;
 				s_counter   <= 0 ;		
-                
-                /*s_clr_eof_reg <=  s_eof_reg & (fifo_count_i == 0) & (~s_clr_eof_reg) ;  
 
-				if (s_clr_eof_reg && encoder_en_i) begin
-					s_line_counter   <= 0 ;
-                end
-                else if (encoder_en_i == 0) begin
-                    s_line_counter   <= 0 ;
-				end*/
-                // 1. Gestion simplifie du nettoyage de fin de frame
-                // Si on a reu l'EOF et que la FIFO est vide, on lve le flag de nettoyage
+                // 1. Handle end-of-frame cleanup.
+                // When EOF is received and the FIFO is empty, assert the cleanup flag.
                 s_clr_eof_reg <= s_eof_reg && (fifo_count_i == 0);
 
                 if (s_clr_eof_reg || !encoder_en_i) begin
                     s_line_counter <= 0;
                 end
                 
-				/*if (!s_clr_eof_reg && ((s_eof_reg && (|fifo_count_i)) || (|fifo_count_i[11:4]))) begin
-                    if (fifo_count_i > 256)
-                      s_count_max <= 9'd256 ; //max 256 burst length
-                    else  
-					  s_count_max <= fifo_count_i[8:0] ;
-					s_state       <= WRITE_REQUESTING ;
-					s_last_data_in_frame <= s_eof_reg ;
-				end   */
-                // 2. Condition de dclenchement du Burst
-                // On lance une criture si :
-                // - On n'est pas en train de faire un reset (s_clr_eof_reg == 0)
-                // - ET (C'est la fin de la frame avec des restes dans la FIFO 
-                //      OU la FIFO contient assez de donnes, ex: >= 16 mots pour l'efficacit)
+                // 2. Burst request condition.
+                // Start a write when:
+                // - End-of-frame data remains in the FIFO, or
+                // - The FIFO contains enough data for an efficient burst.
+                
                 if (!s_clr_eof_reg && ((s_eof_reg && |fifo_count_i) || (fifo_count_i >= 12'd16))) begin
                     
-                    // 3. Calcul de la taille du paquet (Burst Length)
+                    // 3. Calculate the burst length.
                     if (fifo_count_i > 256) begin
-                        s_count_max <= 9'd256; // Max AXI4 burst
+                        s_count_max <= 9'd256; // Maximum AXI4 burst length
                     end else begin
                         s_count_max <= fifo_count_i[8:0];
                     end
-                    // 4. Transition vers la requte
+                    // 4. Transition to the write-request state.
                     s_state              <= WRITE_REQUESTING;
                     s_last_data_in_frame <= s_eof_reg; 
                 end

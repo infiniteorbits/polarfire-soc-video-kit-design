@@ -1,33 +1,83 @@
-@P:  Worst Slack : -8.828
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock - Estimated Frequency : 53.1 MHz
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock - Estimated Period : 18.828
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock - Requested Period : 10.000
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock - Slack : -8.828
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock - Estimated Frequency : 225.1 MHz
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock - Estimated Period : 4.443
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock - Requested Period : 10.000
-@P:  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock - Slack : 5.557
-@P:  PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock - Estimated Frequency : NA
-@P:  PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock - Estimated Period : NA
-@P:  PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock - Requested Period : 10.000
-@P:  PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock - Slack : NA
-@P:  PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock - Estimated Frequency : NA
-@P:  PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock - Estimated Period : NA
-@P:  PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock - Requested Period : 10.000
-@P:  PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock - Slack : NA
-@P:  System - Estimated Frequency : 401.5 MHz
+@P:  Worst Slack : -9.944
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 - Estimated Frequency : 55.7 MHz
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 - Requested Frequency : 125.0 MHz
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 - Estimated Period : 17.945
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 - Requested Period : 8.000
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 - Slack : -9.944
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 - Estimated Frequency : 42.7 MHz
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 - Requested Frequency : 50.0 MHz
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 - Estimated Period : 23.436
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 - Requested Period : 20.000
+@P:  CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 - Slack : -0.687
+@P:  COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0] - Estimated Frequency : NA
+@P:  COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0] - Requested Frequency : 100.0 MHz
+@P:  COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0] - Estimated Period : NA
+@P:  COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0] - Requested Period : 10.000
+@P:  COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0] - Slack : NA
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0 - Estimated Frequency : NA
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0 - Requested Frequency : 200.0 MHz
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0 - Estimated Period : NA
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0 - Requested Period : 5.000
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0 - Slack : NA
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 - Estimated Frequency : 47.2 MHz
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 - Requested Frequency : 50.0 MHz
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 - Estimated Period : 21.165
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 - Requested Period : 20.000
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 - Slack : 0.863
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2 - Estimated Frequency : 274.8 MHz
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2 - Requested Frequency : 200.0 MHz
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2 - Estimated Period : 3.639
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2 - Requested Period : 5.000
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2 - Slack : 1.361
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3 - Estimated Frequency : NA
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3 - Requested Frequency : 200.0 MHz
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3 - Estimated Period : NA
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3 - Requested Period : 5.000
+@P:  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3 - Slack : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock - Estimated Frequency : 291.6 MHz
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock - Estimated Period : 3.429
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock - Requested Period : 10.000
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock - Slack : 6.571
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock - Estimated Frequency : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock - Estimated Period : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock - Requested Period : 10.000
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock - Slack : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Estimated Frequency : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Estimated Period : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Requested Period : 10.000
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Slack : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock - Estimated Frequency : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock - Estimated Period : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock - Requested Period : 10.000
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock - Slack : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Estimated Frequency : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Estimated Period : NA
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Requested Period : 10.000
+@P:  PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock - Slack : NA
+@P:  REF_CLK_PAD_P - Estimated Frequency : NA
+@P:  REF_CLK_PAD_P - Requested Frequency : 148.5 MHz
+@P:  REF_CLK_PAD_P - Estimated Period : NA
+@P:  REF_CLK_PAD_P - Requested Period : 6.734
+@P:  REF_CLK_PAD_P - Slack : NA
+@P:  osc_rc2mhz - Estimated Frequency : NA
+@P:  osc_rc2mhz - Requested Frequency : 2.1 MHz
+@P:  osc_rc2mhz - Estimated Period : NA
+@P:  osc_rc2mhz - Requested Period : 469.480
+@P:  osc_rc2mhz - Slack : NA
+@P:  System - Estimated Frequency : 302.8 MHz
 @P:  System - Requested Frequency : 100.0 MHz
-@P:  System - Estimated Period : 2.490
+@P:  System - Estimated Period : 3.302
 @P:  System - Requested Period : 10.000
-@P:  System - Slack : 7.510
+@P:  System - Slack : 6.698
 @P: VKPFSOC_TOP Part : mpfs250tfcg1152-1
-@P: VKPFSOC_TOP Register bits  : 2129 
+@P: VKPFSOC_TOP Register bits  : 12447 
 @P: VKPFSOC_TOP DSP Blocks  : 2
-@P: VKPFSOC_TOP I/O primitives : 127
-@P: VKPFSOC_TOP RAM1K20 :  26
-@P: VKPFSOC_TOP RAM64x12 :  19
-@P:  CPU Time : 0h:00m:19s
+@P: VKPFSOC_TOP I/O primitives : 152
+@P: VKPFSOC_TOP RAM1K20 :  44
+@P: VKPFSOC_TOP RAM64x12 :  50
+@P:  CPU Time : 0h:01m:39s

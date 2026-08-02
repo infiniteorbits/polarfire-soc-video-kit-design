@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the information about all compile points from mapper to be displayed as part of the summary report.
+*******************************************************************************************-->
+<report_table display_priority="4" name="Compile Points Summary">
+<row>
+<data>Name</data>
+<data>Status</data>
+<data>Reason</data>
+<data>Real Time</data>
+<data>CPU Time</data>
+</row>
+<row>
+<data>
+<value>LEVELLING_2s_8_8_8_8_8_8_8_8_8</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/LEVELLING_2s_8_8_8_8_8_8_8_8_8/LEVELLING_2s_8_8_8_8_8_8_8_8_8.srr</data>
+</report_link>
+</data>
+<data>Mapped</data>
+<data>No database</data>
+<data>0h:00m:09s</data>
+<data>0h:00m:05s</data>
+</row>
+<row>
+<data>
+<value>TIP_CTRL_BLK_Z59_layer0</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/TIP_CTRL_BLK_Z59_layer0/TIP_CTRL_BLK_Z59_layer0.srr</data>
+</report_link>
+</data>
+<data>Mapped</data>
+<data>No database</data>
+<data>0h:00m:11s</data>
+<data>0h:00m:04s</data>
+</row>
+<row>
+<data>
+<value>C0_fastinit_Z43_layer0</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/C0_fastinit_Z43_layer0/C0_fastinit_Z43_layer0.srr</data>
+</report_link>
+</data>
+<data>Mapped</data>
+<data>No database</data>
+<data>0h:00m:13s</data>
+<data>0h:00m:10s</data>
+</row>
+<row>
+<data>
+<value>C0_axi_if_Z7_layer0</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/C0_axi_if_Z7_layer0/C0_axi_if_Z7_layer0.srr</data>
+</report_link>
+</data>
+<data>Mapped</data>
+<data>No database</data>
+<data>0h:00m:13s</data>
+<data>0h:00m:09s</data>
+</row>
+<row>
+<data>
+<value>PF_DDR4_C0_DDRCTRL_0_CoreDDRMemCtrlr_Z56_layer0</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/PF_DDR4_C0_DDRCTRL_0_CoreDDRMemCtrlr_Z56_layer0/PF_DDR4_C0_DDRCTRL_0_CoreDDRMemCtrlr_Z56_layer0.srr</data>
+</report_link>
+</data>
+<data>Mapped</data>
+<data>No database</data>
+<data>0h:00m:22s</data>
+<data>0h:00m:16s</data>
+</row>
+<row>
+<data>
+<value>VKPFSOC_TOP</value>
+<report_link name="Report">
+<data>/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP/VKPFSOC_TOP.srr</data>
+</report_link>
+</data>
+<data>Mapped</data>
+<data>No database</data>
+<data>0h:00m:33s</data>
+<data>0h:00m:28s</data>
+</row>
+</report_table>

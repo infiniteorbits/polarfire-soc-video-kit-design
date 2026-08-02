@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon May 11 09:08:00 2026
+// Created by SmartDesign Sun Aug  2 14:30:26 2026
 // Version: 2025.1 2025.1.0.14
 //////////////////////////////////////////////////////////////////////
 
@@ -198,9 +198,9 @@ wire   [31:0] w0_wstart_addr_i;
 wire          r0_ack_o_net_1;
 wire          r0_data_valid_o_net_1;
 wire          r0_done_o_net_1;
+wire   [63:0] rdata_o_net_1;
 wire          w0_ack_o_net_1;
 wire          w0_done_o_net_1;
-wire   [63:0] rdata_o_net_1;
 wire   [3:0]  MIRRORED_SLAVE_AXI4_AWID_net_0;
 wire   [31:0] MIRRORED_SLAVE_AXI4_AWADDR_net_0;
 wire   [7:0]  MIRRORED_SLAVE_AXI4_AWLEN_net_0;
@@ -228,8 +228,8 @@ wire          MIRRORED_SLAVE_AXI4_RREADY_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire          GND_net;
 wire   [7:0]  r1_burst_size_i_const_net_0;
+wire          GND_net;
 wire   [31:0] r1_rstart_addr_i_const_net_0;
 wire   [7:0]  r2_burst_size_i_const_net_0;
 wire   [31:0] r2_rstart_addr_i_const_net_0;
@@ -307,8 +307,8 @@ wire   [7:0]  ARSIZE_I_7_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign GND_net                      = 1'b0;
 assign r1_burst_size_i_const_net_0  = 8'h00;
+assign GND_net                      = 1'b0;
 assign r1_rstart_addr_i_const_net_0 = 32'h00000000;
 assign r2_burst_size_i_const_net_0  = 8'h00;
 assign r2_rstart_addr_i_const_net_0 = 32'h00000000;
@@ -392,12 +392,12 @@ assign r0_data_valid_o_net_1             = r0_data_valid_o_net_0;
 assign r0_data_valid_o                   = r0_data_valid_o_net_1;
 assign r0_done_o_net_1                   = r0_done_o_net_0;
 assign r0_done_o                         = r0_done_o_net_1;
+assign rdata_o_net_1                     = rdata_o_net_0;
+assign rdata_o[63:0]                     = rdata_o_net_1;
 assign w0_ack_o_net_1                    = w0_ack_o_net_0;
 assign w0_ack_o                          = w0_ack_o_net_1;
 assign w0_done_o_net_1                   = w0_done_o_net_0;
 assign w0_done_o                         = w0_done_o_net_1;
-assign rdata_o_net_1                     = rdata_o_net_0;
-assign rdata_o[63:0]                     = rdata_o_net_1;
 assign MIRRORED_SLAVE_AXI4_AWID_net_0    = MIRRORED_SLAVE_AXI4_AWID;
 assign awid[3:0]                         = MIRRORED_SLAVE_AXI4_AWID_net_0;
 assign MIRRORED_SLAVE_AXI4_AWADDR_net_0  = MIRRORED_SLAVE_AXI4_AWADDR;
@@ -465,142 +465,142 @@ DDR_AXI4_ARBITER_PF_C0_0(
         .ddr_ctrl_ready_i ( ddr_ctrl_ready_i ),
         .arready          ( arready ),
         .awready          ( awready ),
-        .bvalid           ( bvalid ),
-        .r0_req_i         ( r0_req_i ),
-        .r1_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .r2_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .r3_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .r4_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .r5_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .r6_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .r7_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .rlast            ( rlast ),
-        .rvalid           ( rvalid ),
-        .w0_data_valid_i  ( w0_data_valid_i ),
-        .w0_req_i         ( w0_req_i ),
-        .w1_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w1_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .w2_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w2_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .w3_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w3_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .w4_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w4_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .w5_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w5_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .w6_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w6_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .w7_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
-        .w7_req_i         ( GND_net ), // tied to 1'b0 from definition
-        .wready           ( wready ),
-        .WVALID_I_0       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_0      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_1       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_1      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_2       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_2      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_3       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_3      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_4       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_4      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_5       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_5      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_6       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_6      ( GND_net ), // tied to 1'b0 from definition
-        .WVALID_I_7       ( GND_net ), // tied to 1'b0 from definition
-        .AWVALID_I_7      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_0      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_1      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_2      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_3      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_4      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_5      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_6      ( GND_net ), // tied to 1'b0 from definition
-        .ARVALID_I_7      ( GND_net ), // tied to 1'b0 from definition
         .bid              ( bid ),
         .bresp            ( bresp ),
+        .bvalid           ( bvalid ),
         .r0_burst_size_i  ( r0_burst_size_i ),
+        .r0_req_i         ( r0_req_i ),
         .r0_rstart_addr_i ( r0_rstart_addr_i ),
         .r1_burst_size_i  ( r1_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r1_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r1_rstart_addr_i ( r1_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .r2_burst_size_i  ( r2_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r2_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r2_rstart_addr_i ( r2_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .r3_burst_size_i  ( r3_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r3_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r3_rstart_addr_i ( r3_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .r4_burst_size_i  ( r4_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r4_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r4_rstart_addr_i ( r4_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .r5_burst_size_i  ( r5_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r5_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r5_rstart_addr_i ( r5_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .r6_burst_size_i  ( r6_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r6_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r6_rstart_addr_i ( r6_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .r7_burst_size_i  ( r7_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
+        .r7_req_i         ( GND_net ), // tied to 1'b0 from definition
         .r7_rstart_addr_i ( r7_rstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .rdata            ( rdata ),
         .rid              ( rid ),
+        .rlast            ( rlast ),
         .rresp            ( rresp ),
+        .rvalid           ( rvalid ),
         .w0_burst_size_i  ( w0_burst_size_i ),
         .w0_data_i        ( w0_data_i ),
+        .w0_data_valid_i  ( w0_data_valid_i ),
+        .w0_req_i         ( w0_req_i ),
         .w0_wstart_addr_i ( w0_wstart_addr_i ),
         .w1_burst_size_i  ( w1_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w1_data_i        ( w1_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w1_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w1_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w1_wstart_addr_i ( w1_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .w2_burst_size_i  ( w2_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w2_data_i        ( w2_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w2_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w2_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w2_wstart_addr_i ( w2_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .w3_burst_size_i  ( w3_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w3_data_i        ( w3_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w3_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w3_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w3_wstart_addr_i ( w3_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .w4_burst_size_i  ( w4_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w4_data_i        ( w4_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w4_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w4_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w4_wstart_addr_i ( w4_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .w5_burst_size_i  ( w5_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w5_data_i        ( w5_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w5_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w5_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w5_wstart_addr_i ( w5_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .w6_burst_size_i  ( w6_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w6_data_i        ( w6_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w6_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w6_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w6_wstart_addr_i ( w6_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
         .w7_burst_size_i  ( w7_burst_size_i_const_net_0 ), // tied to 8'h00 from definition
         .w7_data_i        ( w7_data_i_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .w7_data_valid_i  ( GND_net ), // tied to 1'b0 from definition
+        .w7_req_i         ( GND_net ), // tied to 1'b0 from definition
         .w7_wstart_addr_i ( w7_wstart_addr_i_const_net_0 ), // tied to 32'h00000000 from definition
+        .wready           ( wready ),
         .WDATA_I_0        ( WDATA_I_0_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_0       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_0       ( AWADDR_I_0_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_0      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_0       ( AWSIZE_I_0_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_1        ( WDATA_I_1_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_1       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_1       ( AWADDR_I_1_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_1      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_1       ( AWSIZE_I_1_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_2        ( WDATA_I_2_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_2       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_2       ( AWADDR_I_2_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_2      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_2       ( AWSIZE_I_2_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_3        ( WDATA_I_3_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_3       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_3       ( AWADDR_I_3_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_3      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_3       ( AWSIZE_I_3_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_4        ( WDATA_I_4_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_4       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_4       ( AWADDR_I_4_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_4      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_4       ( AWSIZE_I_4_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_5        ( WDATA_I_5_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_5       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_5       ( AWADDR_I_5_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_5      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_5       ( AWSIZE_I_5_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_6        ( WDATA_I_6_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_6       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_6       ( AWADDR_I_6_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_6      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_6       ( AWSIZE_I_6_const_net_0 ), // tied to 8'h00 from definition
         .WDATA_I_7        ( WDATA_I_7_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .WVALID_I_7       ( GND_net ), // tied to 1'b0 from definition
         .AWADDR_I_7       ( AWADDR_I_7_const_net_0 ), // tied to 32'h00000000 from definition
+        .AWVALID_I_7      ( GND_net ), // tied to 1'b0 from definition
         .AWSIZE_I_7       ( AWSIZE_I_7_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_0       ( ARADDR_I_0_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_0      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_0       ( ARSIZE_I_0_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_1       ( ARADDR_I_1_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_1      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_1       ( ARSIZE_I_1_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_2       ( ARADDR_I_2_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_2      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_2       ( ARSIZE_I_2_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_3       ( ARADDR_I_3_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_3      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_3       ( ARSIZE_I_3_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_4       ( ARADDR_I_4_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_4      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_4       ( ARSIZE_I_4_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_5       ( ARADDR_I_5_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_5      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_5       ( ARSIZE_I_5_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_6       ( ARADDR_I_6_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_6      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_6       ( ARSIZE_I_6_const_net_0 ), // tied to 8'h00 from definition
         .ARADDR_I_7       ( ARADDR_I_7_const_net_0 ), // tied to 32'h00000000 from definition
+        .ARVALID_I_7      ( GND_net ), // tied to 1'b0 from definition
         .ARSIZE_I_7       ( ARSIZE_I_7_const_net_0 ), // tied to 8'h00 from definition
         // Outputs
         .BUSER_O_0        (  ),
@@ -621,37 +621,61 @@ DDR_AXI4_ARBITER_PF_C0_0(
         .AWREADY_O_7      (  ),
         .BUSER_O_r0       (  ),
         .ARREADY_O_0      (  ),
+        .RDATA_O_0        (  ),
         .RVALID_O_0       (  ),
         .RLAST_O_0        (  ),
         .BUSER_O_r1       (  ),
         .ARREADY_O_1      (  ),
+        .RDATA_O_1        (  ),
         .RVALID_O_1       (  ),
         .RLAST_O_1        (  ),
         .BUSER_O_r2       (  ),
         .ARREADY_O_2      (  ),
+        .RDATA_O_2        (  ),
         .RVALID_O_2       (  ),
         .RLAST_O_2        (  ),
         .BUSER_O_r3       (  ),
         .ARREADY_O_3      (  ),
+        .RDATA_O_3        (  ),
         .RVALID_O_3       (  ),
         .RLAST_O_3        (  ),
         .BUSER_O_r4       (  ),
         .ARREADY_O_4      (  ),
+        .RDATA_O_4        (  ),
         .RVALID_O_4       (  ),
         .RLAST_O_4        (  ),
         .BUSER_O_r5       (  ),
         .ARREADY_O_5      (  ),
+        .RDATA_O_5        (  ),
         .RVALID_O_5       (  ),
         .RLAST_O_5        (  ),
         .BUSER_O_r6       (  ),
         .ARREADY_O_6      (  ),
+        .RDATA_O_6        (  ),
         .RVALID_O_6       (  ),
         .RLAST_O_6        (  ),
         .BUSER_O_r7       (  ),
         .ARREADY_O_7      (  ),
+        .RDATA_O_7        (  ),
         .RVALID_O_7       (  ),
         .RLAST_O_7        (  ),
+        .araddr           ( MIRRORED_SLAVE_AXI4_ARADDR ),
+        .arburst          ( MIRRORED_SLAVE_AXI4_ARBURST ),
+        .arcache          ( MIRRORED_SLAVE_AXI4_ARCACHE ),
+        .arid             ( MIRRORED_SLAVE_AXI4_ARID ),
+        .arlen            ( MIRRORED_SLAVE_AXI4_ARLEN ),
+        .arlock           ( MIRRORED_SLAVE_AXI4_ARLOCK ),
+        .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ),
+        .arsize           ( MIRRORED_SLAVE_AXI4_ARSIZE ),
         .arvalid          ( MIRRORED_SLAVE_AXI4_ARVALID ),
+        .awaddr           ( MIRRORED_SLAVE_AXI4_AWADDR ),
+        .awburst          ( MIRRORED_SLAVE_AXI4_AWBURST ),
+        .awcache          ( MIRRORED_SLAVE_AXI4_AWCACHE ),
+        .awid             ( MIRRORED_SLAVE_AXI4_AWID ),
+        .awlen            ( MIRRORED_SLAVE_AXI4_AWLEN ),
+        .awlock           ( MIRRORED_SLAVE_AXI4_AWLOCK ),
+        .awprot           ( MIRRORED_SLAVE_AXI4_AWPROT ),
+        .awsize           ( MIRRORED_SLAVE_AXI4_AWSIZE ),
         .awvalid          ( MIRRORED_SLAVE_AXI4_AWVALID ),
         .bready           ( MIRRORED_SLAVE_AXI4_BREADY ),
         .r0_ack_o         ( r0_ack_o_net_0 ),
@@ -678,6 +702,7 @@ DDR_AXI4_ARBITER_PF_C0_0(
         .r7_ack_o         (  ),
         .r7_data_valid_o  (  ),
         .r7_done_o        (  ),
+        .rdata_o          ( rdata_o_net_0 ),
         .rready           ( MIRRORED_SLAVE_AXI4_RREADY ),
         .w0_ack_o         ( w0_ack_o_net_0 ),
         .w0_done_o        ( w0_done_o_net_0 ),
@@ -695,35 +720,10 @@ DDR_AXI4_ARBITER_PF_C0_0(
         .w6_done_o        (  ),
         .w7_ack_o         (  ),
         .w7_done_o        (  ),
-        .wlast            ( MIRRORED_SLAVE_AXI4_WLAST ),
-        .wvalid           ( MIRRORED_SLAVE_AXI4_WVALID ),
-        .RDATA_O_0        (  ),
-        .RDATA_O_1        (  ),
-        .RDATA_O_2        (  ),
-        .RDATA_O_3        (  ),
-        .RDATA_O_4        (  ),
-        .RDATA_O_5        (  ),
-        .RDATA_O_6        (  ),
-        .RDATA_O_7        (  ),
-        .araddr           ( MIRRORED_SLAVE_AXI4_ARADDR ),
-        .arburst          ( MIRRORED_SLAVE_AXI4_ARBURST ),
-        .arcache          ( MIRRORED_SLAVE_AXI4_ARCACHE ),
-        .arid             ( MIRRORED_SLAVE_AXI4_ARID ),
-        .arlen            ( MIRRORED_SLAVE_AXI4_ARLEN ),
-        .arlock           ( MIRRORED_SLAVE_AXI4_ARLOCK ),
-        .arprot           ( MIRRORED_SLAVE_AXI4_ARPROT ),
-        .arsize           ( MIRRORED_SLAVE_AXI4_ARSIZE ),
-        .awaddr           ( MIRRORED_SLAVE_AXI4_AWADDR ),
-        .awburst          ( MIRRORED_SLAVE_AXI4_AWBURST ),
-        .awcache          ( MIRRORED_SLAVE_AXI4_AWCACHE ),
-        .awid             ( MIRRORED_SLAVE_AXI4_AWID ),
-        .awlen            ( MIRRORED_SLAVE_AXI4_AWLEN ),
-        .awlock           ( MIRRORED_SLAVE_AXI4_AWLOCK ),
-        .awprot           ( MIRRORED_SLAVE_AXI4_AWPROT ),
-        .awsize           ( MIRRORED_SLAVE_AXI4_AWSIZE ),
-        .rdata_o          ( rdata_o_net_0 ),
         .wdata            ( MIRRORED_SLAVE_AXI4_WDATA ),
-        .wstrb            ( MIRRORED_SLAVE_AXI4_WSTRB ) 
+        .wlast            ( MIRRORED_SLAVE_AXI4_WLAST ),
+        .wstrb            ( MIRRORED_SLAVE_AXI4_WSTRB ),
+        .wvalid           ( MIRRORED_SLAVE_AXI4_WVALID ) 
         );
 
 

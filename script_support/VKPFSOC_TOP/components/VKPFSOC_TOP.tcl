@@ -22,7 +22,6 @@ sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_CLK} -port_direction {
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_DIR} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {USB_NXT} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {apb_pin} -port_direction {IN}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {frame_start_i} -port_direction {IN}
 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {ACT_N} -port_direction {OUT} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CAM1_RST} -port_direction {OUT}
@@ -265,7 +264,6 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:SHIELD0" "SHIELD0"
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:SHIELD1" "SHIELD1" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_DDR4_C0_0:WE_N" "WE_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"apb_pin" "top_ddr_write_read_0:apb_pin" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"frame_start_i" "top_ddr_write_read_0:frame_start_i" }
 
 # Add bus net connections
 sd_connect_pins -sd_name ${sd_name} -pin_names {"A" "PF_DDR4_C0_0:A" }

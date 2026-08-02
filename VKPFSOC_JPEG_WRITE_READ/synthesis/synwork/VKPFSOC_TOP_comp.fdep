@@ -1,73 +1,144 @@
-#OPTIONS:"|-mixedhdl|-modhint|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/_verilog_hintfile|-top|VKPFSOC_TOP|-layerid|0|-orig_srs|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/|-I|/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib|-sysv|-devicelib|/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/generic/acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-mixedhdl|-modhint|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/_verilog_hintfile|-top|VKPFSOC_TOP|-layerid|0|-orig_srs|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DDRCTRL_0|-I|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/|-I|/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib|-sysv|-devicelib|/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/generic/acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/linux_a_64/c_ver":1745933903
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/_verilog_hintfile":1777385875
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/_verilog_hintfile":1785677847
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/generic/acg5.v":1745932080
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/hypermods.v":1745933276
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/umr_capim.v":1745932092
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/scemi_objects.v":1745933276
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vlog/scemi_pipes.svh":1745933276
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/syn_comps.v":1777795456
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET_0/core/corereset_pf.v":1777384748
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET.v":1777384748
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v":1777384748
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5.v":1777384748
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v":1777384749
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR.v":1777384749
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v":1777384750
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0.v":1777384750
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v":1777384751
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0.v":1777384751
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v":1777384751
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0.v":1777384751
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":1777384752
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v":1777384752
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CLOCKS_AND_RESETS/CLOCKS_AND_RESETS.v":1777384755
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v":1777384756
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v":1777384756
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":1777384756
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CoreAPB3_C0/CoreAPB3_C0.v":1777384756
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/FIC_CONVERTER/FIC_CONVERTER.v":1777384758
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_BYP_NOBYP_BYP_BYP_BYP_syn_comps.v":1777384745
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.v":1777384745
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_M_M_IF.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_S_IF.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_NstagesSync.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_grayToBinConv.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_async.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_resetSync.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_LSRAM_top.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_top.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF_Native.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_AXI4_ARBITER_PF_C0/DDR_AXI4_ARBITER_PF_C0.v":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_Read_C0/DDR_Read_C0.v":1777387927
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/ddr_write_controller_enc.v":1777384746
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_WRITE_JPEG/DDR_WRITE_JPEG.v":1777384765
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":1777199636
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jpeg_control_fsm.v":1777200926
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":1771850120
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/jpeg_top.v":1777384746
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/ram8bit_input.v":1772707161
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/top_ddr_write_read/top_ddr_write_read.v":1777384772
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v":1777385859
-#CUR:"ram8bit_input_ram_model_398699_initial_block":1777795459
-#OPTIONS:"|-mixedhdl|-top|work.video_fifo|-top|work.data_packer|-top|work.write_mux|-top|work.write_demux|-top|work.request_scheduler|-top|work.read_mux|-top|work.read_demux|-mpparams|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/_mh_params|-layerid|1|-orig_srs|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/syn_comps.v":1785677846
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET_0/core/corereset_pf.v":1785677397
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET.v":1785677397
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v":1785677397
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5.v":1785677397
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4_0/core/corereset_pf.v":1785677401
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4.v":1785677401
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v":1785677398
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR.v":1785677398
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v":1785677400
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0.v":1785677400
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v":1785677400
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0.v":1785677400
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v":1785677400
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0.v":1785677400
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v":1785677401
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v":1785677401
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CLOCKS_AND_RESETS/CLOCKS_AND_RESETS.v":1785677406
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v":1785677406
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v":1785677406
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v":1785677406
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CoreAPB3_C0/CoreAPB3_C0.v":1785677406
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/FIC_CONVERTER/FIC_CONVERTER.v":1785677408
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_BYP_NOBYP_BYP_BYP_BYP_syn_comps.v":1785677395
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.v":1785677395
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/CCC_0/PF_DDR4_C0_CCC_0_PF_CCC.v":1785677425
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_ACT_N/PF_DDR4_C0_DDRPHY_BLK_IOD_ACT_N_PF_IOD.v":1785677416
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_A_11_0/PF_DDR4_C0_DDRPHY_BLK_IOD_A_11_0_PF_IOD.v":1785677416
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_A_12/PF_DDR4_C0_DDRPHY_BLK_IOD_A_12_PF_IOD.v":1785677416
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_A_13/PF_DDR4_C0_DDRPHY_BLK_IOD_A_13_PF_IOD.v":1785677416
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_BA/PF_DDR4_C0_DDRPHY_BLK_IOD_BA_PF_IOD.v":1785677417
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_BCLK_TRAINING/PF_DDR4_C0_DDRPHY_BLK_IOD_BCLK_TRAINING_PF_IOD.v":1785677417
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_BG/PF_DDR4_C0_DDRPHY_BLK_IOD_BG_PF_IOD.v":1785677417
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_CAS_N/PF_DDR4_C0_DDRPHY_BLK_IOD_CAS_N_PF_IOD.v":1785677417
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_CKE/PF_DDR4_C0_DDRPHY_BLK_IOD_CKE_PF_IOD.v":1785677417
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_CS_N/PF_DDR4_C0_DDRPHY_BLK_IOD_CS_N_PF_IOD.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_ODT/PF_DDR4_C0_DDRPHY_BLK_IOD_ODT_PF_IOD.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_RAS_N/PF_DDR4_C0_DDRPHY_BLK_IOD_RAS_N_PF_IOD.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_REF_CLK_TRAINING/PF_DDR4_C0_DDRPHY_BLK_IOD_REF_CLK_TRAINING_PF_IOD.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_RESET_N/PF_DDR4_C0_DDRPHY_BLK_IOD_RESET_N_PF_IOD.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_WE_N/PF_DDR4_C0_DDRPHY_BLK_IOD_WE_N_PF_IOD.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANECTRL_ADDR_CMD_0/PF_LANECTRL_PAUSE_SYNC.v":1785677421
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANECTRL_ADDR_CMD_0/PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL.v":1785677421
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_CTRL/PF_LANECTRL_PAUSE_SYNC.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_CTRL/PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DM/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DM_PF_IOD.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DQSW_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQSW_TRAINING_PF_IOD.v":1785677420
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DQS/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQS_PF_IOD.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DQ/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQ_PF_IOD.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_READ_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_READ_TRAINING_PF_IOD.v":1785677420
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_CTRL/PF_LANECTRL_PAUSE_SYNC.v":1785677420
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_CTRL/PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL.v":1785677420
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DM/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DM_PF_IOD.v":1785677420
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DQSW_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQSW_TRAINING_PF_IOD.v":1785677421
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DQS/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQS_PF_IOD.v":1785677421
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DQ/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQ_PF_IOD.v":1785677420
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_READ_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_READ_TRAINING_PF_IOD.v":1785677421
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/ddr_init_iterator.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/ram_simple_dp.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/FIFO_BLK.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/LANE_CTRL.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/LANE_ALIGNMENT.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/APB_IF.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/DLL_MON.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/flag_generator.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/trn_bclksclk.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/trn_cmdaddr.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/trn_dqsw.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/TRN_CLK.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/ddr4_vref.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/DELAY_CTRL.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/APB_IOG_CTRL_SM.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/IOG_IF.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/dq_align_dqs_optimization.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/gate_training.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/RDLVL_TRAIN.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/RDLVL_SMS.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/RDLVL.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/TRN_COMPLETE.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/VREF_TR.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/WRLVL_BOT.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/WRLVL.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/LEVELLING.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/PHY_SIG_MOD.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/write_callibrator.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/TIP_CTRL_BLK.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/register_bank.v":1785677419
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/CoreDDR_TIP_INT.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/CoreDDR_TIP_SYN.v":1785677418
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/PF_DDR4_C0_DDRPHY_BLK.v":1785677422
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DLL_0/PF_DDR4_C0_DLL_0_PF_CCC.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DDRCTRL_0/CoreDDRMemCtrlr_0.v":1785677425
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DDRCTRL_0/sdram_lb_defines_0.v":1785677425
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/SgCore/PF_DDR_CFG_INIT/1.0.100/cfg_init.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/PF_DDR4_C0.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_M_M_IF.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_S_IF.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_NstagesSync.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_grayToBinConv.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_async.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_resetSync.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_LSRAM_top.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_top.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF_Native.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_AXI4_ARBITER_PF_C0/DDR_AXI4_ARBITER_PF_C0.v":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_Read_C0/DDR_Read_C0.v":1785677428
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer_jpeg.v":1785677395
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/ddr_write_controller_enc.v":1785677395
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_WRITE_JPEG/DDR_WRITE_JPEG.v":1785677432
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v":1785427894
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/script_support/hdl/JPEG_WRITE_READ/jpeg_control_fsm.v":1778583628
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v":1771850120
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/jpeg_top.v":1785677395
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/top_ddr_write_read/top_ddr_write_read.v":1785677439
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v":1785677452
+#OPTIONS:"|-mixedhdl|-top|work.video_fifo|-top|work.write_mux|-top|work.write_demux|-top|work.request_scheduler|-top|work.read_mux|-top|work.read_demux|-mpparams|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/_mh_params|-layerid|1|-orig_srs|/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/linux_a_64/c_vhdl":1745933903
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/location.map":1745933277
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/std.vhd":1745933277
@@ -79,90 +150,159 @@
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/arith.vhd":1745933276
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd2008/unsigned.vhd":1745933277
 #CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd/hyperents.vhd":1745933276
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd":1777384759
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":1777384745
-#CUR:"/home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/lib/vhd/math_real.vhd":1745933901
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd":1777384746
-#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":1777384746
-0			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/syn_comps.v" verilog
-1			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET_0/core/corereset_pf.v" verilog
-2			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET.v" verilog
-3			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v" verilog
-4			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5.v" verilog
-5			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v" verilog
-6			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR.v" verilog
-7			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v" verilog
-8			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0.v" verilog
-9			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v" verilog
-10			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0.v" verilog
-11			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v" verilog
-12			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0.v" verilog
-13			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v" verilog
-14			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v" verilog
-15			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CLOCKS_AND_RESETS/CLOCKS_AND_RESETS.v" verilog
-16			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v" verilog
-17			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v" verilog
-18			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v" verilog
-19			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/CoreAPB3_C0/CoreAPB3_C0.v" verilog
-20			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/FIC_CONVERTER/FIC_CONVERTER.v" verilog
-21			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_BYP_NOBYP_BYP_BYP_BYP_syn_comps.v" verilog
-22			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.v" verilog
-23			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_M_M_IF.v" verilog
-24			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_S_IF.v" verilog
-25			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_NstagesSync.v" verilog
-26			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_grayToBinConv.v" verilog
-27			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_async.v" verilog
-28			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_resetSync.v" verilog
-29			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync.v" verilog
-30			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v" verilog
-31			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v" verilog
-32			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_LSRAM_top.v" verilog
-33			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v" verilog
-34			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v" verilog
-35			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v" verilog
-36			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_top.v" verilog
-37			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v" verilog
-38			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF_Native.v" verilog
-39			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v" verilog
-40			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_AXI4_ARBITER_PF_C0/DDR_AXI4_ARBITER_PF_C0.v" verilog
-41			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v" verilog
-42			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v" verilog
-43			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v" verilog
-44			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v" verilog
-45			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v" verilog
-46			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v" verilog
-47			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v" verilog
-48			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v" verilog
-49			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v" verilog
-50			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_Read_C0/DDR_Read_C0.v" verilog
-51			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/ddr_write_controller_enc.v" verilog
-52			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_WRITE_JPEG/DDR_WRITE_JPEG.v" verilog
-53			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v" verilog
-54			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jpeg_control_fsm.v" verilog
-55			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v" verilog
-56			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/jpeg_top.v" verilog
-57			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/script_support/hdl/JPEG_WRITE_READ/ram8bit_input.v" verilog
-58			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/top_ddr_write_read/top_ddr_write_read.v" verilog
-59			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v" verilog
-60			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd" vhdl
-61			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd" vhdl
-62			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd" vhdl
-63			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd" vhdl
-64			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd" vhdl
-65			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd" vhdl
-66			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd" vhdl
-67			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd" vhdl
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd":1785677426
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd":1785677395
+#CUR:"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":1785677395
+0			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/syn_comps.v" verilog
+1			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET_0/core/corereset_pf.v" verilog
+2			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET/CORERESET.v" verilog
+3			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5_0/core/corereset_pf.v" verilog
+4			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_C5/CORERESET_PF_C5.v" verilog
+5			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4_0/core/corereset_pf.v" verilog
+6			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4.v" verilog
+7			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR_0/INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR.v" verilog
+8			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/INIT_MONITOR/INIT_MONITOR.v" verilog
+9			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v" verilog
+10			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CCC_C0/PF_CCC_C0.v" verilog
+11			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v" verilog
+12			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_CLK_DIV_C0/PF_CLK_DIV_C0.v" verilog
+13			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0_0/PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v" verilog
+14			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_OSC_C0/PF_OSC_C0.v" verilog
+15			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK.v" verilog
+16			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_XCVR_REF_CLK_C0/PF_XCVR_REF_CLK_C0.v" verilog
+17			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CLOCKS_AND_RESETS/CLOCKS_AND_RESETS.v" verilog
+18			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_muxptob3.v" verilog
+19			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3_iaddr_reg.v" verilog
+20			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/CoreAPB3/4.2.100/rtl/vlog/core/coreapb3.v" verilog
+21			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CoreAPB3_C0/CoreAPB3_C0.v" verilog
+22			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/FIC_CONVERTER/FIC_CONVERTER.v" verilog
+23			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_BYP_NOBYP_BYP_BYP_BYP_syn_comps.v" verilog
+24			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/MSS_VIDEO_KIT_H264/MSS_VIDEO_KIT_H264.v" verilog
+25			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/CCC_0/PF_DDR4_C0_CCC_0_PF_CCC.v" verilog
+26			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_ACT_N/PF_DDR4_C0_DDRPHY_BLK_IOD_ACT_N_PF_IOD.v" verilog
+27			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_A_11_0/PF_DDR4_C0_DDRPHY_BLK_IOD_A_11_0_PF_IOD.v" verilog
+28			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_A_12/PF_DDR4_C0_DDRPHY_BLK_IOD_A_12_PF_IOD.v" verilog
+29			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_A_13/PF_DDR4_C0_DDRPHY_BLK_IOD_A_13_PF_IOD.v" verilog
+30			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_BA/PF_DDR4_C0_DDRPHY_BLK_IOD_BA_PF_IOD.v" verilog
+31			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_BCLK_TRAINING/PF_DDR4_C0_DDRPHY_BLK_IOD_BCLK_TRAINING_PF_IOD.v" verilog
+32			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_BG/PF_DDR4_C0_DDRPHY_BLK_IOD_BG_PF_IOD.v" verilog
+33			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_CAS_N/PF_DDR4_C0_DDRPHY_BLK_IOD_CAS_N_PF_IOD.v" verilog
+34			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_CKE/PF_DDR4_C0_DDRPHY_BLK_IOD_CKE_PF_IOD.v" verilog
+35			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_CS_N/PF_DDR4_C0_DDRPHY_BLK_IOD_CS_N_PF_IOD.v" verilog
+36			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_ODT/PF_DDR4_C0_DDRPHY_BLK_IOD_ODT_PF_IOD.v" verilog
+37			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_RAS_N/PF_DDR4_C0_DDRPHY_BLK_IOD_RAS_N_PF_IOD.v" verilog
+38			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_REF_CLK_TRAINING/PF_DDR4_C0_DDRPHY_BLK_IOD_REF_CLK_TRAINING_PF_IOD.v" verilog
+39			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_RESET_N/PF_DDR4_C0_DDRPHY_BLK_IOD_RESET_N_PF_IOD.v" verilog
+40			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/IOD_WE_N/PF_DDR4_C0_DDRPHY_BLK_IOD_WE_N_PF_IOD.v" verilog
+41			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANECTRL_ADDR_CMD_0/PF_LANECTRL_PAUSE_SYNC.v" verilog
+42			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANECTRL_ADDR_CMD_0/PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL.v" verilog
+43			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_CTRL/PF_LANECTRL_PAUSE_SYNC.v" verilog
+44			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_CTRL/PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL.v" verilog
+45			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DM/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DM_PF_IOD.v" verilog
+46			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DQSW_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQSW_TRAINING_PF_IOD.v" verilog
+47			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DQS/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQS_PF_IOD.v" verilog
+48			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_DQ/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQ_PF_IOD.v" verilog
+49			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_0_IOD_READ_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_READ_TRAINING_PF_IOD.v" verilog
+50			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_CTRL/PF_LANECTRL_PAUSE_SYNC.v" verilog
+51			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_CTRL/PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL.v" verilog
+52			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DM/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DM_PF_IOD.v" verilog
+53			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DQSW_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQSW_TRAINING_PF_IOD.v" verilog
+54			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DQS/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQS_PF_IOD.v" verilog
+55			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_DQ/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQ_PF_IOD.v" verilog
+56			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/LANE_1_IOD_READ_TRAINING/PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_READ_TRAINING_PF_IOD.v" verilog
+57			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/ddr_init_iterator.v" verilog
+58			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/ram_simple_dp.v" verilog
+59			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/FIFO_BLK.v" verilog
+60			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/LANE_CTRL.v" verilog
+61			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/LANE_ALIGNMENT.v" verilog
+62			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/APB_IF.v" verilog
+63			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/DLL_MON.v" verilog
+64			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/flag_generator.v" verilog
+65			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/trn_bclksclk.v" verilog
+66			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/trn_cmdaddr.v" verilog
+67			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/trn_dqsw.v" verilog
+68			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/TRN_CLK.v" verilog
+69			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/ddr4_vref.v" verilog
+70			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/DELAY_CTRL.v" verilog
+71			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/APB_IOG_CTRL_SM.v" verilog
+72			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/IOG_IF.v" verilog
+73			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/dq_align_dqs_optimization.v" verilog
+74			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/gate_training.v" verilog
+75			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/RDLVL_TRAIN.v" verilog
+76			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/RDLVL_SMS.v" verilog
+77			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/RDLVL.v" verilog
+78			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/TRN_COMPLETE.v" verilog
+79			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/VREF_TR.v" verilog
+80			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/WRLVL_BOT.v" verilog
+81			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/WRLVL.v" verilog
+82			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/LEVELLING.v" verilog
+83			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/PHY_SIG_MOD.v" verilog
+84			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/write_callibrator.v" verilog
+85			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/TIP_CTRL_BLK.v" verilog
+86			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/register_bank.v" verilog
+87			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/CoreDDR_TIP_INT.v" verilog
+88			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/DirectCore/COREDDR_TIP/2.2.100/rtl/vlog/core/CoreDDR_TIP_SYN.v" verilog
+89			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0_DDRPHY_BLK/PF_DDR4_C0_DDRPHY_BLK.v" verilog
+90			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DLL_0/PF_DDR4_C0_DLL_0_PF_CCC.v" verilog
+91			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DDRCTRL_0/CoreDDRMemCtrlr_0.v" verilog
+92		*	"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/DDRCTRL_0/sdram_lb_defines_0.v" verilog
+93			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Actel/SgCore/PF_DDR_CFG_INIT/1.0.100/cfg_init.v" verilog
+94			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/PF_DDR4_C0/PF_DDR4_C0.v" verilog
+95			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_M_M_IF.v" verilog
+96			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/AXI4_S_IF.v" verilog
+97			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_NstagesSync.v" verilog
+98			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_grayToBinConv.v" verilog
+99			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_async.v" verilog
+100			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_resetSync.v" verilog
+101			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync.v" verilog
+102			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_fwft.v" verilog
+103			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_corefifo_sync_scntr.v" verilog
+104			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_LSRAM_top.v" verilog
+105			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/axi_lbus_ram_wrapper.v" verilog
+106			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/video_axi_fifo.v" verilog
+107			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/ddr_rw_arbiter.v" verilog
+108			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_top.v" verilog
+109			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_top.v" verilog
+110			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF_Native.v" verilog
+111			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/DDR_AXI4_ARBITER_PF.v" verilog
+112			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_AXI4_ARBITER_PF_C0/DDR_AXI4_ARBITER_PF_C0.v" verilog
+113			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/AXI4S_ddr_read_initiator_IF.v" verilog
+114			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/Arbiter_Initiator_Rd_IF.v" verilog
+115			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_read_controller.v" verilog
+116			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/data_unpacker.v" verilog
+117			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/ram2port_ddr_read.v" verilog
+118			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/video_fifo_ddr_read.v" verilog
+119			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/synchronizer_circuit_ddr_read.v" verilog
+120			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read_Native.v" verilog
+121			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Read/1.2.0/RTL/DDR_Read.v" verilog
+122			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_Read_C0/DDR_Read_C0.v" verilog
+123			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer_jpeg.v" verilog
+124			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/ddr_write_controller_enc.v" verilog
+125			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_WRITE_JPEG/DDR_WRITE_JPEG.v" verilog
+126			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v" verilog
+127			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/script_support/hdl/JPEG_WRITE_READ/jpeg_control_fsm.v" verilog
+128			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/script_support/hdl/JPEG_WRITE_READ/jls_encoder.v" verilog
+129			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/jpeg_top.v" verilog
+130			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/top_ddr_write_read/top_ddr_write_read.v" verilog
+131			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/VKPFSOC_TOP/VKPFSOC_TOP.v" verilog
+132			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd" vhdl
+133			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd" vhdl
+134			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd" vhdl
+135			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd" vhdl
+136			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd" vhdl
+137			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd" vhdl
+138			"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd" vhdl
 #Dependency Lists(Uses List)
 0 -1
 1 -1
 2 1
 3 -1
 4 3
-5 0
+5 -1
 6 5
 7 0
 8 7
@@ -172,200 +312,498 @@
 12 11
 13 0
 14 13
-15 14 12 10 8 6 2 4
-16 -1
-17 -1
-18 17 16
-19 18
-20 19
-21 -1
+15 0
+16 15
+17 16 14 12 10 8 6 2 4
+18 -1
+19 -1
+20 19 18
+21 20
 22 21
 23 -1
-24 -1
-25 -1
-26 -1
-27 26 25
-28 -1
-29 -1
-30 -1
-31 -1
-32 -1
-33 32
-34 27 29 28 33 30 31
-35 34
-36 60 62 61
-37 61 64 63
-38 36 37 35
-39 24 23 38
-40 39
+24 23
+25 0
+26 0
+27 0
+28 0
+29 0
+30 0
+31 0
+32 0
+33 0
+34 0
+35 0
+36 0
+37 0
+38 0
+39 0
+40 0
 41 -1
-42 -1
+42 0 41
 43 -1
-44 -1
-45 -1
-46 45
-47 -1
-48 47 46 43 44
-49 41 42 48
-50 49
-51 -1
-52 67 65 51
-53 -1
-54 -1
-55 -1
-56 55 54 53
+44 0 43
+45 0
+46 0
+47 0
+48 0
+49 0
+50 -1
+51 0 50
+52 0
+53 0
+54 0
+55 0
+56 0
 57 -1
-58 57 56 52 50 40
-59 58 22 20 15
+58 -1
+59 58
 60 -1
-61 -1
+61 59 60
 62 -1
 63 -1
 64 -1
 65 -1
 66 -1
-67 66
+67 -1
+68 66 65 64 67
+69 -1
+70 -1
+71 -1
+72 71
+73 -1
+74 -1
+75 73 74
+76 75
+77 76
+78 -1
+79 -1
+80 -1
+81 80
+82 70 78 72 79 81 77
+83 -1
+84 -1
+85 84 69 83 82 63 68 62
+86 -1
+87 57 61 85 86
+88 87
+89 42 56 53 54 55 52 51 49 46 47 48 45 44 40 88 39 38 37 36 35 34 33 32 31 30 26 29 28 27
+90 0
+91 92
+92 -1
+93 -1
+94 93 90 89 92 91 25
+95 -1
+96 -1
+97 -1
+98 -1
+99 98 97
+100 -1
+101 -1
+102 -1
+103 -1
+104 -1
+105 104
+106 99 101 100 105 102 103
+107 106
+108 132 134 133
+109 133 136 135
+110 108 109 107
+111 96 95 110
+112 111
+113 -1
+114 -1
+115 -1
+116 -1
+117 -1
+118 117
+119 -1
+120 119 118 115 116
+121 113 114 120
+122 121
+123 -1
+124 -1
+125 138 124 123
+126 -1
+127 -1
+128 -1
+129 128 127 126
+130 129 125 122 112
+131 130 94 24 22 17
+132 -1
+133 -1
+134 -1
+135 -1
+136 -1
+137 -1
+138 137
 #Dependency Lists(Users Of)
-0 13 11 9 7 5
+0 90 56 55 54 53 52 51 49 48 47 46 45 44 42 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 15 13 11 9 7
 1 2
-2 15
+2 17
 3 4
-4 15
+4 17
 5 6
-6 15
+6 17
 7 8
-8 15
+8 17
 9 10
-10 15
+10 17
 11 12
-12 15
+12 17
 13 14
-14 15
-15 59
-16 18
-17 18
-18 19
+14 17
+15 16
+16 17
+17 131
+18 20
 19 20
-20 59
+20 21
 21 22
-22 59
-23 39
-24 39
-25 27
-26 27
-27 34
-28 34
-29 34
-30 34
-31 34
-32 33
-33 34
-34 35
-35 38
-36 38
-37 38
-38 39
-39 40
-40 58
-41 49
-42 49
-43 48
-44 48
-45 46
-46 48
-47 48
-48 49
-49 50
-50 58
-51 52
-52 58
-53 56
-54 56
-55 56
-56 58
-57 58
+22 131
+23 24
+24 131
+25 94
+26 89
+27 89
+28 89
+29 89
+30 89
+31 89
+32 89
+33 89
+34 89
+35 89
+36 89
+37 89
+38 89
+39 89
+40 89
+41 42
+42 89
+43 44
+44 89
+45 89
+46 89
+47 89
+48 89
+49 89
+50 51
+51 89
+52 89
+53 89
+54 89
+55 89
+56 89
+57 87
 58 59
-59 -1
-60 36
-61 37 36
-62 36
-63 37
-64 37
-65 52
-66 67
-67 52
+59 61
+60 61
+61 87
+62 85
+63 85
+64 68
+65 68
+66 68
+67 68
+68 85
+69 85
+70 82
+71 72
+72 82
+73 75
+74 75
+75 76
+76 77
+77 82
+78 82
+79 82
+80 81
+81 82
+82 85
+83 85
+84 85
+85 87
+86 87
+87 88
+88 89
+89 94
+90 94
+91 94
+92 94 91
+93 94
+94 131
+95 111
+96 111
+97 99
+98 99
+99 106
+100 106
+101 106
+102 106
+103 106
+104 105
+105 106
+106 107
+107 110
+108 110
+109 110
+110 111
+111 112
+112 130
+113 121
+114 121
+115 120
+116 120
+117 118
+118 120
+119 120
+120 121
+121 122
+122 130
+123 125
+124 125
+125 130
+126 129
+127 129
+128 129
+129 130
+130 131
+131 -1
+132 108
+133 109 108
+134 108
+135 109
+136 109
+137 138
+138 125
 #Design Unit to File Association
-module work video_fifo 67
-arch work video_fifo video_fifo 67
-module work ram2port 66
-arch work ram2port ram2port 66
-module work data_packer 65
-arch work data_packer data_packer 65
-module work read_mux 64
-arch work read_mux read_mux 64
-module work read_demux 63
-arch work read_demux read_demux 63
-module work write_demux 62
-arch work write_demux write_demux 62
-module work request_scheduler 61
-arch work request_scheduler request_scheduler 61
-module work write_mux 60
-arch work write_mux write_mux 60
-module COREAPB3_LIB CoreAPB3 18
-module COREAPB3_LIB coreapb3_iaddr_reg 17
-module COREAPB3_LIB COREAPB3_MUXPTOB3 16
-module work VKPFSOC_TOP 59
-module work top_ddr_write_read 58
-module work ram8bit_input 57
-module work jpeg_top 56
-module work jls_encoder 55
-module work jpeg_control_fsm 54
-module work apb_wrapper 53
-module work DDR_WRITE_JPEG 52
-module work ddr_write_controller_enc 51
-module work DDR_Read_C0 50
-module work DDR_Read 49
-module work DDR_Read_Native 48
-module work synchronizer_circuit_ddr_read 47
-module work video_fifo_ddr_read 46
-module work ram2port_ddr_read 45
-module work data_unpacker 44
-module work DDR_read_controller 43
-module work Arbiter_Initiator_Rd_IF 42
-module work AXI4S_ddr_read_initiator_IF 41
-module work DDR_AXI4_ARBITER_PF_C0 40
-module work DDR_AXI4_ARBITER_PF 39
-module work DDR_AXI4_ARBITER_PF_Native 38
-module work read_top 37
-module work write_top 36
-module work ddr_rw_arbiter 35
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo 34
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper 33
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_LSRAM_top 32
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr 31
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft 30
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync 29
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_resetSync 28
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_async 27
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_grayToBinConv 26
-module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_NstagesSync 25
-module work AXI4_S_IF 24
-module work AXI4_M_M_IF 23
-module work MSS_VIDEO_KIT_H264 22
-module work MSS 21
-module work FIC_CONVERTER 20
-module work CoreAPB3_C0 19
-module work CLOCKS_AND_RESETS 15
-module work PF_XCVR_REF_CLK_C0 14
-module work PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK 13
-module work PF_OSC_C0 12
-module work PF_OSC_C0_PF_OSC_C0_0_PF_OSC 11
-module work PF_CLK_DIV_C0 10
-module work PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV 9
-module work PF_CCC_C0 8
-module work PF_CCC_C0_PF_CCC_C0_0_PF_CCC 7
-module work INIT_MONITOR 6
-module work INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR 5
+module work video_fifo 138
+arch work video_fifo video_fifo 138
+module work ram2port 137
+arch work ram2port ram2port 137
+module work read_mux 136
+arch work read_mux read_mux 136
+module work read_demux 135
+arch work read_demux read_demux 135
+module work write_demux 134
+arch work write_demux write_demux 134
+module work request_scheduler 133
+arch work request_scheduler request_scheduler 133
+module work write_mux 132
+arch work write_mux write_mux 132
+module COREAPB3_LIB CoreAPB3 20
+module COREAPB3_LIB coreapb3_iaddr_reg 19
+module COREAPB3_LIB COREAPB3_MUXPTOB3 18
+module work VKPFSOC_TOP 131
+module work top_ddr_write_read 130
+module work jpeg_top 129
+module work jls_encoder 128
+module work jpeg_control_fsm 127
+module work apb_wrapper 126
+module work DDR_WRITE_JPEG 125
+module work ddr_write_controller_enc 124
+module work data_packer_jpeg 123
+module work DDR_Read_C0 122
+module work DDR_Read 121
+module work DDR_Read_Native 120
+module work synchronizer_circuit_ddr_read 119
+module work video_fifo_ddr_read 118
+module work ram2port_ddr_read 117
+module work data_unpacker 116
+module work DDR_read_controller 115
+module work Arbiter_Initiator_Rd_IF 114
+module work AXI4S_ddr_read_initiator_IF 113
+module work DDR_AXI4_ARBITER_PF_C0 112
+module work DDR_AXI4_ARBITER_PF 111
+module work DDR_AXI4_ARBITER_PF_Native 110
+module work read_top 109
+module work write_top 108
+module work ddr_rw_arbiter 107
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_video_axi_fifo 106
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_ram_wrapper 105
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_LSRAM_top 104
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync_scntr 103
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_fwft 102
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_sync 101
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_resetSync 100
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_async 99
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_grayToBinConv 98
+module work ddr_rw_arbiter_C0_ddr_rw_arbiter_C0_0_corefifo_NstagesSync 97
+module work AXI4_S_IF 96
+module work AXI4_M_M_IF 95
+module work PF_DDR4_C0 94
+module work PF_DDR_CFG_INIT 93
+module work C0_write_dbi 91
+module work C0_util_sync_toggle_pos 91
+module work C0_util_pulse_extender 91
+module work C0_util_lat2_to_lat0_with_bypass 91
+module work C0_util_lat1_to_lat0_with_bypass 91
+module work C0_util_lat2_to_lat0 91
+module work C0_util_lat1_to_lat0 91
+module work C0_util_gray_sync_bin 91
+module work C0_util_sync_flops 91
+module work C0_util_fifo_core 91
+module work C0_sdram_lb 91
+module work C0_sdram_addr_ctrl_parity 91
+module work C0_rmw 91
+module work C0_rd_wrap 91
+module work C0_rd_wr_ptr 91
+module work C0_phy_top 91
+module work C0_pending_rw 91
+module work C0_wtr_tracking 91
+module work C0_rw_tracking 91
+module work C0_multiburst_qr 91
+module work C0_multiburst 91
+module work C0_util_fifo_reg 91
+module work C0_mpfe_req_tracking 91
+module work C0_mpfe_starve_timer 91
+module work C0_mpfe_arbiter 91
+module work C0_mpfe 91
+module work C0_merge_read_valid 91
+module work C0_mem_test_analyzer 91
+module work C0_mem_test_lfsr 91
+module work C0_mem_test 91
+module work C0_lb_fifo 91
+module work C0_init_read_capture 91
+module work C0_init_pda_mrs_interface 91
+module work C0_init_cal_interface 91
+module work C0_util_gray_to_bin 91
+module work C0_util_bin_to_gray 91
+module work C0_gray_sync_bus 91
+module work C0_freq_ratio_data 91
+module work C0_freq_ratio_cac 91
+module work C0_force_wrdata_en 91
+module work C0_util_param_latency 91
+module work C0_sr_clk_mgr 91
+module work C0_wrcmd_data_delay 91
+module work C0_preamble_phase_shift 91
+module work C0_odt_gen 91
+module work C0_qm 91
+module work C0_openrank 91
+module work C0_openbank 91
+module work C0_sbref_generator 91
+module work C0_read_cal_timer 91
+module work C0_util_sync_bus 91
+module work C0_fastsdram 91
+module work C0_fastinit 91
+module work C0_ecc_127_120 91
+module work C0_nwl_rolling_timer 91
+module work C0_dlr_tracking 91
+module work C0_prog_pipe_delay 91
+module work C0_dfi_timing_gen 91
+module work C0_dfi_rddata_align 91
+module work C0_dfi_phyupd_ack_gen 91
+module work C0_dfi_phase_shift_static 91
+module work C0_dfi_phase_shift_dynamic 91
+module work C0_util_sync_one_shot 91
+module work C0_util_sync_reset 91
+module work C0_ddr4_nwl_phy_init 91
+module work C0_ddr4_byte_bit_map 91
+module work C0_read_dbi 91
+module work C0_write_crc_dbi 91
+module work C0_dbi 91
+module work C0_util_ram 91
+module work C0_data_capture 91
+module work C0_util_sync 91
+module work C0_controller_busy 91
+module work C0_reorder_buffer_block_ram 91
+module work C0_read_reorder 91
+module work C0_simple_buffer 91
+module work C0_util_fifo 91
+module work C0_sw_ecc 91
+module work C0_util_handshake_sync 91
+module work C0_wrap_calc 91
+module work C0_axi_if 91
+module work C0_pipeline_timer 91
+module work C0_automatic_sr_pd 91
+module work C0_addr_tran 91
+module work C0_sdram_sys_top 91
+module work PF_DDR4_C0_DDRCTRL_0_CoreDDRMemCtrlr 91
+module work PF_DDR4_C0_DLL_0_PF_CCC 90
+module work PF_DDR4_C0_DDRPHY_BLK 89
+module work COREDDR_TIP 88
+module work COREDDR_TIP_INT 87
+module work register_bank 86
+module work TIP_CTRL_BLK 85
+module work write_callibrator 84
+module work PHY_SIG_MOD 83
+module work LEVELLING 82
+module work WRLVL 81
+module work WRLVL_BOT 80
+module work VREF_TR 79
+module work TRN_COMPLETE 78
+module work RDLVL 77
+module work RDLVL_SMS 76
+module work RDLVL_TRAIN 75
+module work gate_training 74
+module work dq_align_dqs_optimization 73
+module work IOG_IF 72
+module work APB_IOG_CTRL_SM 71
+module work DELAY_CTRL 70
+module work ddr4_vref 69
+module work TRN_CLK 68
+module work trn_dqsw 67
+module work trn_cmd_addr 66
+module work trn_bclksclk 65
+module work flag_generator 64
+module work data_transition_detector 64
+module work noisy_data_detector 64
+module work DLL_MON 63
+module work APB_IF 62
+module work LANE_ALIGNMENT 61
+module work LANE_CTRL 60
+module work FIFO_BLK 59
+module work ram_simple_dp 58
+module work ddr_init_iterator 57
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_READ_TRAINING_PF_IOD 56
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQ_PF_IOD 55
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQS_PF_IOD 54
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DQSW_TRAINING_PF_IOD 53
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_IOD_DM_PF_IOD 52
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL 51
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL_PAUSE_SYNC 50
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_READ_TRAINING_PF_IOD 49
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQ_PF_IOD 48
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQS_PF_IOD 47
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DQSW_TRAINING_PF_IOD 46
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_IOD_DM_PF_IOD 45
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL 44
+module work PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL_PAUSE_SYNC 43
+module work PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL 42
+module work PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL_PAUSE_SYNC 41
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_WE_N_PF_IOD 40
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_RESET_N_PF_IOD 39
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_REF_CLK_TRAINING_PF_IOD 38
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_RAS_N_PF_IOD 37
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_ODT_PF_IOD 36
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_CS_N_PF_IOD 35
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_CKE_PF_IOD 34
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_CAS_N_PF_IOD 33
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_BG_PF_IOD 32
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_BCLK_TRAINING_PF_IOD 31
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_BA_PF_IOD 30
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_A_13_PF_IOD 29
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_A_12_PF_IOD 28
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_A_11_0_PF_IOD 27
+module work PF_DDR4_C0_DDRPHY_BLK_IOD_ACT_N_PF_IOD 26
+module work PF_DDR4_C0_CCC_0_PF_CCC 25
+module work MSS_VIDEO_KIT_H264 24
+module work MSS 23
+module work FIC_CONVERTER 22
+module work CoreAPB3_C0 21
+module work CLOCKS_AND_RESETS 17
+module work PF_XCVR_REF_CLK_C0 16
+module work PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK 15
+module work PF_OSC_C0 14
+module work PF_OSC_C0_PF_OSC_C0_0_PF_OSC 13
+module work PF_CLK_DIV_C0 12
+module work PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV 11
+module work PF_CCC_C0 10
+module work PF_CCC_C0_PF_CCC_C0_0_PF_CCC 9
+module work INIT_MONITOR 8
+module work INIT_MONITOR_INIT_MONITOR_0_PFSOC_INIT_MONITOR 7
+module work CORERESET_PF_DDR4 6
+module work CORERESET_PF_DDR4_CORERESET_PF_DDR4_0_CORERESET_PF 5
 module work CORERESET_PF_C5 4
 module work CORERESET_PF_C5_CORERESET_PF_C5_0_CORERESET_PF 3
 module work CORERESET 2

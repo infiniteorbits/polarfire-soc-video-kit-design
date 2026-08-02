@@ -22,7 +22,7 @@
 Starting:    /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/linux_a_64/mbin/synbatch
 Install:     /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
 Hostname:    IO-ALG-LT003
-Date:        Sun May  3 09:04:16 2026
+Date:        Sun Aug  2 14:37:27 2026
 Version:     V-2023.09M-5
 
 Arguments:   -product synplify_base -licensetype synplifypro_actel -batch -log synplify.log VKPFSOC_TOP_syn.tcl
@@ -36,67 +36,68 @@ License Option: actel_oem
 Running in Vendor Mode
 
 
-log file: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr"
+log file: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr"
 Running: synthesis in foreground
 
 Running VKPFSOC_TOP_syn|synthesis
 
 Running Flow: compile (Compile) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:17 2026
+# Sun Aug  2 14:37:27 2026
 
 Running Flow: compile_flow (Compile Process) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:17 2026
+# Sun Aug  2 14:37:27 2026
 
 Running: compiler (Compile Input) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:17 2026
-Process ID: 398635
-Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srs
+# Sun Aug  2 14:37:27 2026
+Process ID: 89203
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_comp.srs to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srs
 
 compiler completed
-# Sun May  3 09:04:25 2026
+# Sun Aug  2 14:38:21 2026
 
 Return Code: 0
-Run Time:00h:00m:07s
+Run Time:00h:00m:53s
 
 Running: multi_srs_gen (Multi-srs Generator) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:25 2026
-Process ID: 398766
+# Sun Aug  2 14:38:21 2026
+Process ID: 89562
 
 multi_srs_gen completed
-# Sun May  3 09:04:25 2026
+# Sun Aug  2 14:38:23 2026
 
 Return Code: 0
-Run Time:00h:00m:00s
-Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_mult.srs to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srs
+Run Time:00h:00m:02s
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_mult.srs to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srs
 Complete: Compile Process on VKPFSOC_TOP_syn|synthesis
 
 Running: premap (Premap) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:25 2026
-Process ID: 398782
+# Sun Aug  2 14:38:23 2026
+Process ID: 89624
 
 premap completed with warnings
-# Sun May  3 09:04:27 2026
+# Sun Aug  2 14:38:38 2026
 
 Return Code: 1
-Run Time:00h:00m:02s
+Run Time:00h:00m:15s
 Complete: Compile on VKPFSOC_TOP_syn|synthesis
 
 Running Flow: map (Map) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:27 2026
+# Sun Aug  2 14:38:39 2026
 License granted for 4 parallel jobs
 
 Running: fpga_mapper (Map & Optimize) on VKPFSOC_TOP_syn|synthesis
-# Sun May  3 09:04:27 2026
-Process ID: 398799
-Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_m.srm to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srm
+# Sun Aug  2 14:38:39 2026
+Process ID: 90133
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/VKPFSOC_TOP_m.srm to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srm
 
 fpga_mapper completed with warnings
-# Sun May  3 09:04:47 2026
+# Sun Aug  2 14:39:45 2026
 
 Return Code: 1
-Run Time:00h:00m:20s
+Run Time:00h:01m:06s
 Complete: Map on VKPFSOC_TOP_syn|synthesis
 Complete: Logic Synthesis on VKPFSOC_TOP_syn|synthesis
+Copied /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr to /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/backup/VKPFSOC_TOP.srr
 TCL script complete: "VKPFSOC_TOP_syn.tcl"
 exit status=0
 exit status=0

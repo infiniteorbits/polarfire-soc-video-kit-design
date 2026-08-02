@@ -1,15 +1,25 @@
-# Written by Synplify Pro version map202309act, Build 395R. Synopsys Run ID: sid1777795467 
+# Written by Synplify Pro version map202309act, Build 395R. Synopsys Run ID: sid1785677919 
 # Top Level Design Parameters 
 
 # Clocks 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock} [get_pins {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock} [get_pins {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock} [get_pins {CLOCKS_AND_RESETS_inst_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_2/CLK}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock} [get_pins {CLOCKS_AND_RESETS_inst_0/PF_XCVR_REF_CLK_C0_0/PF_XCVR_REF_CLK_C0_0/I_IO/Y[0]}] 
+create_clock -period 6.734 -waveform {0.000 3.367} -name {REF_CLK_PAD_P} [get_ports {REF_CLK_PAD_P}] 
+create_clock -period 469.480 -waveform {0.000 234.740} -name {osc_rc2mhz} [get_pins {CLOCKS_AND_RESETS_inst_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_2/CLK}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock} [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_CTRL/I_LANECTRL/TX_DQS}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock} [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_CTRL/I_LANECTRL/TX_DQS_270}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock} [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_CTRL/I_LANECTRL/TX_DQS}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock} [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_CTRL/I_LANECTRL/TX_DQS_270}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock} [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANECTRL_ADDR_CMD_0/I_LANECTRL/TX_DQS_270}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0]} [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_TRAINING_0/COREDDR_TIP_INT_U/VCO_PHSEL_ROTATE[0]/Q}] 
 
 # Virtual Clocks 
 
 # Generated Clocks 
+create_generated_clock -name {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0} -multiply_by {841751} -divide_by {1000000} -source [get_pins {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/REF_CLK_0}]  [get_pins {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0}] 
+create_generated_clock -name {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1} -multiply_by {841751} -divide_by {2500000} -source [get_pins {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/REF_CLK_0}]  [get_pins {CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1}] 
+create_generated_clock -name {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0} -multiply_by {4} -source [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/REF_CLK_0}]  [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0}] 
+create_generated_clock -name {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1} -divide_by {1} -source [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/REF_CLK_0}]  [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1}] 
+create_generated_clock -name {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2} -multiply_by {4} -source [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/REF_CLK_0}]  [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2}] 
+create_generated_clock -name {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3} -multiply_by {4} -source [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/REF_CLK_0}]  [get_pins {PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3}] 
 
 # Paths Between Clocks 
 
@@ -18,6 +28,17 @@ create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_XCVR_REF_CLK_C0_PF
 # Point-to-point Delay Constraints 
 
 # False Path Constraints 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/OB_A_12/Y}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/OB_DIFF_CK0/Y}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQS/I_BIBUF_DIFF_DQS_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQS/I_BIBUF_DIFF_DQS_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_7/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_6/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_5/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_4/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_3/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_2/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_1/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_BIBUF_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQS/I_BIBUF_DIFF_DQS_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_7/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_6/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_5/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_4/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_3/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_2/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_1/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_BIBUF_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQS/I_BIBUF_DIFF_DQS_0/Y}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DM/I_TRIBUFF_FEEDBACK_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DM/I_TRIBUFF_FEEDBACK_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DM/I_TRIBUFF_FEEDBACK_0/Y PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DM/I_TRIBUFF_FEEDBACK_0/Y}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQS/I_BIBUF_DIFF_DQS_0/YN PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQS/I_BIBUF_DIFF_DQS_0/YN PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQS/I_BIBUF_DIFF_DQS_0/YN PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQS/I_BIBUF_DIFF_DQS_0/YN}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_5/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_3/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_1/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_4/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_7/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_10/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_6/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_2/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_9/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_8/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_11/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_13/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_ACT_N/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BA/I_IOD_1/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BA/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BG/I_IOD_1/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BG/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_CAS_N/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_CKE/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_CS_N/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_ODT/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_RAS_N/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_RESET_N/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_WE_N/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DM/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DM/I_IOD_0/TX}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_5/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_3/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_1/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_4/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_7/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_10/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_6/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_2/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_9/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_8/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_11_0/I_IOD_11/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_A_13/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_ACT_N/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BA/I_IOD_1/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BA/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BG/I_IOD_1/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_BG/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_CAS_N/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_CKE/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_CS_N/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_ODT/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_RAS_N/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_RESET_N/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_WE_N/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DM/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DM/I_IOD_0/OE}] 
+set_false_path -to [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_CTRL/I_LANECTRL/DDR_READ}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_6/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_3/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_7/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_4/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_5/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_2/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_1/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQS/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_0/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_6/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_3/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_7/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_4/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_5/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_2/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_1/TX PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQS/I_IOD_0/TX}] 
+set_false_path -through [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_6/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_3/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_7/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_4/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_5/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_2/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQ/I_IOD_1/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_0_IOD_DQS/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_0/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_6/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_3/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_7/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_4/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_5/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_2/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQ/I_IOD_1/OE PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_IOD_DQS/I_IOD_0/OE}] 
+set_false_path -to [get_pins {PF_DDR4_C0_0/DDRPHY_BLK_0/LANE_1_CTRL/I_LANECTRL/DDR_READ}] 
 
 # Output Load Constraints 
 
@@ -36,19 +57,12 @@ create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_XCVR_REF_CLK_C0_PF
 # set_case Attributes 
 
 # Clock Delay Constraints 
-set Inferred_clkgroup_0 [list PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock]
-set Inferred_clkgroup_1 [list PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock]
-set Inferred_clkgroup_2 [list PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock]
-set Inferred_clkgroup_3 [list PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock]
-set_clock_groups -asynchronous -group $Inferred_clkgroup_0
-set_clock_groups -asynchronous -group $Inferred_clkgroup_1
-set_clock_groups -asynchronous -group $Inferred_clkgroup_2
-set_clock_groups -asynchronous -group $Inferred_clkgroup_3
-
-set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock}]
-set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock}]
-set_clock_groups -asynchronous -group [get_clocks {PF_OSC_C0_PF_OSC_C0_0_PF_OSC|RCOSC_2MHZ_CLK_DIV_inferred_clock}]
-set_clock_groups -asynchronous -group [get_clocks {PF_XCVR_REF_CLK_C0_PF_XCVR_REF_CLK_C0_0_PF_XCVR_REF_CLK|FAB_REF_CLK_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0]}]
 
 # syn_mode Attributes 
 
@@ -59,6 +73,43 @@ set_clock_groups -asynchronous -group [get_clocks {PF_XCVR_REF_CLK_C0_PF_XCVR_RE
 # Input Transition Constraints 
 
 # Unused constraints (intentionally commented out) 
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.ARST_N }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_*_CTRL.I_LANECTRL.HS_IO_CLK_PAUSE }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANECTRL_ADDR_CMD_0.I_LANECTRL*.HS_IO_CLK_PAUSE }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.RX_SYNC_RST* }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.DELAY_LINE_MOVE }]
+# set_false_path -through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.DELAY_LINE_OUT_OF_RANGE }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.RESET }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_DIRECTION }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_MOVE }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_LOAD PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_SEL }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.SWITCH }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.READ_CLK_SEL[2] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[0] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[1] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[2] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[3] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[4] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[5] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[6] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[7] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.RESET }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_DIRECTION }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_MOVE }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_LOAD PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_SEL }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.SWITCH }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.READ_CLK_SEL[2] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[0] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[1] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[2] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[3] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[4] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[5] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[6] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[7] }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.CCC_0.pll_inst_0.PHASE_OUT0_SEL }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.CCC_0.pll_inst_0.PHASE_OUT2_SEL }]
+# set_false_path -to [get_pins { PF_DDR4_C0_0.CCC_0.pll_inst_0.PHASE_OUT3_SEL }]
 
 
 # Non-forward-annotatable constraints (intentionally commented out) 

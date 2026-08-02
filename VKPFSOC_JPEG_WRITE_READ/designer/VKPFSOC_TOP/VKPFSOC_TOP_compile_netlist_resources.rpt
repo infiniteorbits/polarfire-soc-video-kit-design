@@ -1,0 +1,214 @@
+Compile Report
+Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+Date: Sun Aug  2 14:40:23 2026
+
+Device Selection
++------------------------+--------------+
+| Family                 | PolarFireSoC |
+| Device                 | MPFS250TS    |
+| Package                | FCG1152      |
+| Speed Grade            | -1           |
+| Core Voltage           | 1.0V         |
+| Part Range             | IND          |
+| Default I/O technology | LVCMOS 1.8V  |
++------------------------+--------------+
+
+Source Files
++---------+----------------------------------------------------------------------------------------------------------------------------------------+
+| Topcell | VKPFSOC_TOP                                                                                                                            |
+| Format  | Verilog                                                                                                                                |
+| Source  | /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.vm |
++---------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+----+
+| Limit the number of high fanout nets to display to | 10 |
++----------------------------------------------------+----+
+
+Resource Usage
++-----------------------------+-------+--------+------------+
+| Type                        | Used  | Total  | Percentage |
++-----------------------------+-------+--------+------------+
+| 4LUT                        | 19664 | 254196 | 7.74       |
+| DFF                         | 14096 | 254196 | 5.55       |
+| User I/O                    | 73    | 372    | 19.62      |
+| -- Single-ended I/O         | 67    | 372    | 18.01      |
+| -- Differential I/O Pairs   | 3     | 186    | 1.61       |
+| -- I/Os using I/O Registers | 0     | 372    | 0.00       |
+| I/O Register Flip-Flops     | 0     | 1116   | 0.00       |
+| -- Input  I/O Flip-Flops    | 0     | 372    | 0.00       |
+| -- Output I/O Flip-Flops    | 0     | 372    | 0.00       |
+| -- Enable I/O Flip-Flops    | 0     | 372    | 0.00       |
+| uSRAM                       | 50    | 2352   | 2.13       |
+| LSRAM                       | 44    | 812    | 5.42       |
+| Math                        | 2     | 784    | 0.26       |
+| H-Chip Global               | 7     | 48     | 14.58      |
+| PLL                         | 2     | 8      | 25.00      |
+| DLL                         | 1     | 8      | 12.50      |
+| BANKCTRL                    | 2     | 6      | 33.33      |
+| CRN_INT                     | 2     | 24     | 8.33       |
+| INIT                        | 1     | 1      | 100.00     |
+| OSC_RC2MHZ                  | 1     | 1      | 100.00     |
+| Transceiver Lanes           | 0     | 16     | 0.00       |
+| Transceiver PCIe            | 0     | 2      | 0.00       |
+| XCVR_REF_CLK                | 1     | 11     | 9.09       |
+| ICB_CLKDIV                  | 1     | 24     | 4.17       |
+| ICB_CLKINT                  | 4     | 72     | 5.56       |
+| MSS                         | 1     | 1      | 100.00     |
+| MSS I/O                     | 98    | 136    | 72.06      |
++-----------------------------+-------+--------+------------+
+
+Detailed Logic Resource Usage
++-----------------------+-------+-------+
+| Type                  | 4LUT  | DFF   |
++-----------------------+-------+-------+
+| Fabric Logic          | 17408 | 11840 |
+| uSRAM Interface Logic | 600   | 600   |
+| LSRAM Interface Logic | 1584  | 1584  |
+| Math Interface Logic  | 72    | 72    |
+| Total Used            | 19664 | 14096 |
++-----------------------+-------+-------+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 5      | 1    |
+| 6      | 6    |
+| 7      | 27   |
+| 8      | 74   |
+| 9      | 101  |
+| 10     | 31   |
+| 11     | 18   |
+| 12     | 6    |
+| 13     | 14   |
+| 14     | 9    |
+| 15     | 23   |
+| 16     | 5    |
+| 17     | 9    |
+| 18     | 3    |
+| 19     | 2    |
+| 20     | 3    |
+| 21     | 3    |
+| 23     | 1    |
+| 26     | 1    |
+| 29     | 1    |
+| 30     | 1    |
+| 31     | 1    |
+| 32     | 2    |
+| 33     | 1    |
+| Total  | 343  |
++--------+------+
+
+Detailed 4LUT Groups Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 276  |
+| 5      | 6    |
+| 22     | 3    |
+| Total  | 285  |
++--------+------+
+
+Detailed Math Chains Resource Usage
++--------+------+
+| Length | Used |
+| 1      | 2    |
+| Total  | 2    |
++--------+------+
+
+I/O Function
++--------------------------------------+--------------+-------------+-----------------+
+| Type                                 | w/o register | w/ register | w/ DDR register |
++--------------------------------------+--------------+-------------+-----------------+
+| Input I/O                            | 3            | 0           | 0               |
+| Output I/O                           | 46           | 0           | 0               |
+| Bidirectional I/O                    | 18           | 0           | 0               |
+| Differential Input I/O Pairs         | 0            | 0           | 0               |
+| Differential Output I/O Pairs        | 1            | 0           | 0               |
+| Differential Bidirectional I/O Pairs | 2            | 0           | 0               |
++--------------------------------------+--------------+-------------+-----------------+
+
+Nets assigned to chip global resources
++--------+---------+--------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                   |
++--------+---------+--------------------------------------------------------------------------------------------------------+
+| 10759  | INT_NET | Net   : PF_DDR4_C0_0_SYS_CLK                                                                           |
+|        |         | Driver: PF_DDR4_C0_0/CCC_0/clkint_4/U0_RGB1                                                            |
+|        |         | Source: NETLIST                                                                                        |
+| 4682   | INT_NET | Net   : PF_DDR4_C0_0/reset_n_int_arst                                                                  |
+|        |         | Driver: PF_DDR4_C0_0/DDRPHY_BLK_0/IOD_TRAINING_0/COREDDR_TIP_INT_U/reset_n_int_rep_RNI9T6V1[0]/U0_RGB1 |
+|        |         | Source: NETLIST                                                                                        |
+| 4306   | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_net_1013                                                      |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_2/MSC_i_3/I_2/U0_RGB1                                       |
+|        |         | Source: NETLIST                                                                                        |
+| 1440   | INT_NET | Net   : CLOCKS_AND_RESETS_CLK_125MHz                                                                   |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                              |
+|        |         | Source: NETLIST                                                                                        |
+| 66     | INT_NET | Net   : CLOCKS_AND_RESETS_CLK_50MHz                                                                    |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4/U0_RGB1                              |
+|        |         | Source: NETLIST                                                                                        |
+| 1      | INT_NET | Net   : PF_DDR4_C0_0/DDRPHY_BLK_0/CLKINT_CMD_Y                                                         |
+|        |         | Driver: PF_DDR4_C0_0/DDRPHY_BLK_0/CLKINT_CMD/U0_RGB1                                                   |
+|        |         | Source: NETLIST                                                                                        |
+| 1      | INT_NET | Net   : CLOCKS_AND_RESETS_inst_0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_0/I_CD_NET                              |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/PF_CLK_DIV_C0_0/PF_CLK_DIV_C0_0/I_CD_1/U0_RGB1                        |
+|        |         | Source: NETLIST                                                                                        |
++--------+---------+--------------------------------------------------------------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+-------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                        |
++--------+---------+-------------------------------------------------------------------------------------------------------------+
+| 729    | INT_NET | Net   : dff_arst_1                                                                                          |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/CORERESET_PF_DDR4_0/CORERESET_PF_DDR4_0/dff_15_rep[0]                      |
+| 487    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/j_e15                                                         |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/bcnt_s_7_RNI3KIPF                                             |
+| 360    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/dfi_wrdata_phase_r1[0]                               |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/gen_fr4.DFI_WRDATA_ALIGN_eq_0.dfi_wrdata_phase_r1[0] |
+| 288    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_22/MSC_i_23/MSC_i_24/rd_addr_Z[1]               |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_22/MSC_i_23/MSC_i_24/rd_addr[1]                 |
+| 288    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/dfi_wrdata_phase_r1[1]                               |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/gen_fr4.DFI_WRDATA_ALIGN_eq_0.dfi_wrdata_phase_r1[1] |
+| 276    | INT_NET | Net   : CLOCKS_AND_RESETS_inst_0_CORERESET_CLK_125MHz_CORERESET_0_dff                                       |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/CORERESET_CLK_125MHz/CORERESET_0/dff_15[0]                                 |
+| 256    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_106/MSC_i_107/MSC_i_108/rd_addr_Z[1]            |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_106/MSC_i_107/MSC_i_108/rd_addr[1]              |
+| 255    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/h_eof_Z                                                       |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/h_eof                                                         |
+| 247    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/bbuf15                                                        |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/bbuf15_0_a2                                                   |
+| 237    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/N_429_i                                                       |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/j_bbuf4_i_a2                                                  |
++--------+---------+-------------------------------------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+-------------------------------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                                                        |
++--------+---------+-------------------------------------------------------------------------------------------------------------+
+| 729    | INT_NET | Net   : dff_arst_1                                                                                          |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/CORERESET_PF_DDR4_0/CORERESET_PF_DDR4_0/dff_15_rep[0]                      |
+| 487    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/j_e15                                                         |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/bcnt_s_7_RNI3KIPF                                             |
+| 360    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/dfi_wrdata_phase_r1[0]                               |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/gen_fr4.DFI_WRDATA_ALIGN_eq_0.dfi_wrdata_phase_r1[0] |
+| 288    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_22/MSC_i_23/MSC_i_24/rd_addr_Z[1]               |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_22/MSC_i_23/MSC_i_24/rd_addr[1]                 |
+| 288    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/dfi_wrdata_phase_r1[1]                               |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_172/gen_fr4.DFI_WRDATA_ALIGN_eq_0.dfi_wrdata_phase_r1[1] |
+| 276    | INT_NET | Net   : CLOCKS_AND_RESETS_inst_0_CORERESET_CLK_125MHz_CORERESET_0_dff                                       |
+|        |         | Driver: CLOCKS_AND_RESETS_inst_0/CORERESET_CLK_125MHz/CORERESET_0/dff_15[0]                                 |
+| 256    | INT_NET | Net   : PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_106/MSC_i_107/MSC_i_108/rd_addr_Z[1]            |
+|        |         | Driver: PF_DDR4_C0_0/MSC_i_0/MSC_i_1/MSC_i_8/MSC_i_10/MSC_i_106/MSC_i_107/MSC_i_108/rd_addr[1]              |
+| 255    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/h_eof_Z                                                       |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/h_eof                                                         |
+| 247    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/bbuf15                                                        |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/bbuf15_0_a2                                                   |
+| 237    | INT_NET | Net   : top_ddr_write_read_0/jpeg_top_1/u_jls/N_429_i                                                       |
+|        |         | Driver: top_ddr_write_read_0/jpeg_top_1/u_jls/j_bbuf4_i_a2                                                  |
++--------+---------+-------------------------------------------------------------------------------------------------------------+
+

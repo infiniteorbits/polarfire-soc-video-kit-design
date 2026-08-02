@@ -1,13 +1,16 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-//
+// Module      : jpeg_top
+// Description : Top-level integration module for the JPEG compression pipeline.
+//               Connects the APB control interface, JPEG control FSM, JLS encoder,
+//               and RAM/read-path interfaces.
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 //`timescale <time_units> / <precision>
 module jpeg_top #(
-    parameter ADDR_WIDTH = 8,//24 3 8
+        parameter ADDR_WIDTH = 8, // JPEG address width
     parameter LINE_STORAGE_MODE = 1'b0
 )(
-    // -------- APB interface --------
+    // -------- APB control interface --------
     input  wire         pclk,
     input  wire         presetn,
     input  wire         psel,
@@ -20,21 +23,21 @@ module jpeg_top #(
     input wire          clk_sys,
     input wire          resetn,
     input  wire         apb_pin,
-    // -------- RAM interface --------
+    // -------- Input RAM interface --------
     input  wire [7:0]   ram_read_data,
   //  output wire [ADDR_WIDTH-1:0] ram_read_addr,
     input   wire                  ram_data_valid,
 
 
-    // -------- Output compressed data --------
+    // -------- Compressed data output interface --------
     output wire [15:0]  o_data_pck,
     output wire         o_e_pck,
 
-    // -------- Status --------
+    // -------- Status and control outputs --------
     output wire         sof_flag,
     output wire         eof_flag,
     //output wire [31:0]  compressed_size_o,
-    //--------read ip core ------
+    // -------- DDR read IP interface --------
     input wire      read_ackn_i,
     input wire       read_done_i,
     output wire [15:0]    horz_resl_o,
@@ -46,27 +49,27 @@ module jpeg_top #(
 );
 
     // ===============================
-    // Internal wires
-    // ===============================
-    // APB  FSM
+// Internal signal declarations
+// ===============================
+    // APB control signals
     wire        i_sof_ps;
     wire [13:0] i_w;
     wire [13:0] i_h;
     wire [7:0]  near;
-    // FSM  JPEG
+    // JPEG control FSM input signals
     wire        i_sof;
     wire        i_e;
     wire [7:0]  i_x;
-    // JPEG  FSM
+    // JPEG data and status signals
     wire [15:0] o_data;
     wire        o_e;
     wire        o_last;
 
-  
+
 
     // ===============================
-    // APB Wrapper
-    // ===============================
+// APB control wrapper
+// ===============================
     apb_wrapper u_apb (
         .pclk      (pclk),
         .presetn   (presetn),
@@ -89,8 +92,8 @@ module jpeg_top #(
     );
 
     // ===============================
-    // JPEG Control FSM
-    // ===============================
+// JPEG control FSM
+// ===============================
     jpeg_control_fsm #(
         .ADDR_WIDTH(ADDR_WIDTH)
     ) u_fsm (
@@ -131,8 +134,8 @@ module jpeg_top #(
     );
 
     // ===============================
-    // JLS Encoder
-    // ===============================
+// JLS encoder
+// ===============================
     jls_encoder u_jls (
         .clk     (clk_sys),
         .rstn    (resetn),

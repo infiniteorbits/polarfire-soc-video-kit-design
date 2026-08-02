@@ -136,7 +136,6 @@ build_design_hierarchy
 
 #Sourcing the Tcl files in which HDL+ core definitions are created for HDL modules
 source ${src_path}/components/JPEG_WRITE_READ/video_fifo.tcl
-source ${src_path}/components/JPEG_WRITE_READ/data_packer.tcl
 build_design_hierarchy
 
 #Sourcing the Tcl files for creating individual ${src_path}/components under the top level
@@ -147,14 +146,15 @@ source ${src_path}/components/JPEG_WRITE_READ/PF_CCC_C0.tcl
 source ${src_path}/components/JPEG_WRITE_READ/PF_CLK_DIV_C0.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/PF_OSC_C0.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/PF_XCVR_REF_CLK_C0.tcl 
+source ${src_path}/components/JPEG_WRITE_READ/CORERESET_PF_DDR4.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/CLOCKS_AND_RESETS.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/CoreAPB3_C0.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/FIC_CONVERTER.tcl 
+source ${src_path}/components/JPEG_WRITE_READ/PF_DDR4_C0.tcl
 source ${src_path}/components/JPEG_WRITE_READ/DDR_AXI4_ARBITER_PF_C0.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/DDR_Read_C0.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/DDR_WRITE_JPEG.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/jpeg_top.tcl 
-#source ${src_path}/components/JPEG_WRITE_READ/ram8bit_input.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/top_ddr_write_read.tcl 
 source ${src_path}/components/JPEG_WRITE_READ/VKPFSOC_TOP.tcl 
 build_design_hierarchy

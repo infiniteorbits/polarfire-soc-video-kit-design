@@ -5,11 +5,8 @@ source hdl_source.tcl
 build_design_hierarchy
 
 #Sourcing the Tcl files in which HDL+ core definitions are created for HDL modules
-source components/data_packer.tcl 
-source components/ddr_write_controller_enc.tcl 
 source components/video_fifo.tcl 
 source components/jpeg_top.tcl 
-source components/ram_input.tcl 
 build_design_hierarchy
 
 #Sourcing the Tcl files for creating individual components under the top level
@@ -28,7 +25,6 @@ source components/PF_DDR4_C0.tcl
 source components/DDR_AXI4_ARBITER_PF_C0.tcl 
 source components/DDR_Read_C0.tcl 
 source components/DDR_WRITE_JPEG.tcl 
-source components/DDR_Write_C0.tcl 
 source components/top_ddr_write_read.tcl 
 source components/VKPFSOC_TOP.tcl 
 build_design_hierarchy

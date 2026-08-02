@@ -2,63 +2,52 @@
 @N: Setting default value for generic g_video_fifo_awidth to 12;
 @N: Setting default value for generic g_input_video_data_bit_width to 64;
 @N: Setting default value for generic g_half_empty_threshold to 1280;
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":55:7:55:16|Synthesizing work.video_fifo.video_fifo.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":151:9:151:9|Signal i is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":152:9:152:9|Signal j is undriven. Either assign the signal a value or remove the signal declaration.
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd":54:7:54:14|Synthesizing work.ram2port.ram2port.
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":55:7:55:16|Synthesizing work.video_fifo.video_fifo.
+@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":151:9:151:9|Signal i is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":152:9:152:9|Signal j is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd":54:7:54:14|Synthesizing work.ram2port.ram2port.
 Post processing for work.ram2port.ram2port
 Running optimization stage 1 on ram2PORT .......
-@N: CL134 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd":71:7:71:10|Found RAM io1l, depth=4096, width=64
-Finished optimization stage 1 on ram2PORT (CPU Time 0h:00m:00s, Memory Used current: 188MB peak: 188MB)
+@N: CL134 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/ram2port.vhd":71:7:71:10|Found RAM io1l, depth=4096, width=64
+Finished optimization stage 1 on ram2PORT (CPU Time 0h:00m:00s, Memory Used current: 187MB peak: 188MB)
 Post processing for work.video_fifo.video_fifo
 Running optimization stage 1 on work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD .......
-@W: CL265 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":404:4:404:5|Removing unused bit 12 of wdata_count_2(12 downto 0). Either assign all bits or reduce the width of the signal.
-@W: CL265 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":300:4:300:5|Removing unused bit 12 of rdata_count_2(12 downto 0). Either assign all bits or reduce the width of the signal.
-@W: CL260 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":251:4:251:5|Pruning register bit 12 of rptr(12 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":351:4:351:5|Pruning register bit 12 of wptr(12 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD (CPU Time 0h:00m:00s, Memory Used current: 189MB peak: 189MB)
-@N: Setting default value for generic g_ip_dw to 16;
-@N: Setting default value for generic g_op_dw to 64;
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":13:7:13:17|Synthesizing work.data_packer.data_packer.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":71:9:71:22|Signal s_frame_end_sr is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":72:9:72:22|Signal s_frame_end_re is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":73:9:73:26|Signal s_frame_end_re_dly is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":74:9:74:26|Signal s_buf_wr_done_dly1 is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/hdl/data_packer.vhd":75:9:75:26|Signal s_buf_wr_done_dly2 is undriven. Either assign the signal a value or remove the signal declaration.
-Post processing for work.data_packer.data_packer
-Running optimization stage 1 on work_data_packer_data_packer_16_64_1_g_IP_DWg_OP_DW .......
-Finished optimization stage 1 on work_data_packer_data_packer_16_64_1_g_IP_DWg_OP_DW (CPU Time 0h:00m:00s, Memory Used current: 190MB peak: 190MB)
+@W: CL265 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":404:4:404:5|Removing unused bit 12 of wdata_count_2(12 downto 0). Either assign all bits or reduce the width of the signal.
+@W: CL265 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":300:4:300:5|Removing unused bit 12 of rdata_count_2(12 downto 0). Either assign all bits or reduce the width of the signal.
+@W: CL260 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":251:4:251:5|Pruning register bit 12 of rptr(12 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/hdl/video_fifo.vhd":351:4:351:5|Pruning register bit 12 of wptr(12 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD (CPU Time 0h:00m:00s, Memory Used current: 188MB peak: 188MB)
 @N: Setting default value for generic g_data_width to 64;
 @N: Setting default value for generic g_addr_width to 32;
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd":26:7:26:15|Synthesizing work.write_mux.write_mux.
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_mux.vhd":26:7:26:15|Synthesizing work.write_mux.write_mux.
 Post processing for work.write_mux.write_mux
 Running optimization stage 1 on work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH .......
-Finished optimization stage 1 on work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd":26:7:26:17|Synthesizing work.write_demux.write_demux.
+Finished optimization stage 1 on work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/write_demux.vhd":26:7:26:17|Synthesizing work.write_demux.write_demux.
 Post processing for work.write_demux.write_demux
 Running optimization stage 1 on write_demux .......
-Finished optimization stage 1 on write_demux (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":26:7:26:23|Synthesizing work.request_scheduler.request_scheduler.
-@N: CD231 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":75:25:75:26|Using onehot encoding for type scheduler_states. For example, enumeration idle is mapped to "100000".
-@N: CD604 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":337:20:337:33|OTHERS clause is not synthesized.
+Finished optimization stage 1 on write_demux (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":26:7:26:23|Synthesizing work.request_scheduler.request_scheduler.
+@N: CD231 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":75:25:75:26|Using onehot encoding for type scheduler_states. For example, enumeration idle is mapped to "100000".
+@N: CD604 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":337:20:337:33|OTHERS clause is not synthesized.
 Post processing for work.request_scheduler.request_scheduler
 Running optimization stage 1 on request_scheduler .......
-Finished optimization stage 1 on request_scheduler (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
+Finished optimization stage 1 on request_scheduler (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
 @N: Setting default value for generic g_addr_width to 32;
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd":26:7:26:14|Synthesizing work.read_mux.read_mux.
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_mux.vhd":26:7:26:14|Synthesizing work.read_mux.read_mux.
 Post processing for work.read_mux.read_mux
 Running optimization stage 1 on work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH .......
-Finished optimization stage 1 on work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
-@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd":26:7:26:16|Synthesizing work.read_demux.read_demux.
+Finished optimization stage 1 on work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
+@N: CD630 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/read_demux.vhd":26:7:26:16|Synthesizing work.read_demux.read_demux.
 Post processing for work.read_demux.read_demux
 Running optimization stage 1 on read_demux .......
-Finished optimization stage 1 on read_demux (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
+Finished optimization stage 1 on read_demux (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
 Running optimization stage 2 on read_demux .......
-Finished optimization stage 2 on read_demux (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
+Finished optimization stage 2 on read_demux (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
 Running optimization stage 2 on work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH .......
-Finished optimization stage 2 on work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 194MB peak: 210MB)
+Finished optimization stage 2 on work_read_mux_read_mux_32_8_1_g_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 193MB peak: 209MB)
 Running optimization stage 2 on request_scheduler .......
-@N: CL201 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":253:12:253:13|Trying to extract state machine for register s_state.
+@N: CL201 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_AXI4_ARBITER_PF/2.2.0/RTL/request_scheduler.vhd":253:12:253:13|Trying to extract state machine for register s_state.
 Extracted state machine for register s_state
 State machine has 6 reachable states with original encodings of:
    000001
@@ -67,20 +56,18 @@ State machine has 6 reachable states with original encodings of:
    001000
    010000
    100000
-Finished optimization stage 2 on request_scheduler (CPU Time 0h:00m:00s, Memory Used current: 204MB peak: 210MB)
+Finished optimization stage 2 on request_scheduler (CPU Time 0h:00m:00s, Memory Used current: 203MB peak: 209MB)
 Running optimization stage 2 on write_demux .......
-Finished optimization stage 2 on write_demux (CPU Time 0h:00m:00s, Memory Used current: 204MB peak: 210MB)
+Finished optimization stage 2 on write_demux (CPU Time 0h:00m:00s, Memory Used current: 203MB peak: 209MB)
 Running optimization stage 2 on work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH .......
-Finished optimization stage 2 on work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 222MB peak: 222MB)
-Running optimization stage 2 on work_data_packer_data_packer_16_64_1_g_IP_DWg_OP_DW .......
-Finished optimization stage 2 on work_data_packer_data_packer_16_64_1_g_IP_DWg_OP_DW (CPU Time 0h:00m:00s, Memory Used current: 222MB peak: 222MB)
+Finished optimization stage 2 on work_write_mux_write_mux_64_32_8_1_g_DATA_WIDTHg_ADDR_WIDTH (CPU Time 0h:00m:00s, Memory Used current: 221MB peak: 221MB)
 Running optimization stage 2 on ram2PORT_work_video_fifo_video_fifo_0layer1 .......
-Finished optimization stage 2 on ram2PORT_work_video_fifo_video_fifo_0layer1 (CPU Time 0h:00m:00s, Memory Used current: 222MB peak: 222MB)
+Finished optimization stage 2 on ram2PORT_work_video_fifo_video_fifo_0layer1 (CPU Time 0h:00m:00s, Memory Used current: 221MB peak: 221MB)
 Running optimization stage 2 on work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD .......
-Finished optimization stage 2 on work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD (CPU Time 0h:00m:00s, Memory Used current: 222MB peak: 222MB)
+Finished optimization stage 2 on work_video_fifo_video_fifo_12_64_1280_1_g_VIDEO_FIFO_AWIDTHg_INPUT_VIDEO_DATA_BIT_WIDTHg_HALF_EMPTY_THRESHOLD (CPU Time 0h:00m:00s, Memory Used current: 221MB peak: 221MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================
-@L: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/layer1.duruntime
+@L: /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/synwork/layer1.duruntime
 
 

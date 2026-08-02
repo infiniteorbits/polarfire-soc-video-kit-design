@@ -1,0 +1,15 @@
+Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+
+Date      :  Sun Aug  2 14:30:01 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ
+Component :  CORERESET_PF_DDR4
+Family    :  PolarFireSoC
+
+
+HDL source files for all Synthesis and Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4_0/core/corereset_pf.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4.v
+
+Stimulus files for all Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/CORERESET_PF_DDR4/CORERESET_PF_DDR4_0/test/corereset_pf_tb.v
+

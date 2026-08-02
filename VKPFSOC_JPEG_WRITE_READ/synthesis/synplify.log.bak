@@ -22,50 +22,25 @@
 Starting:    /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro/linux_a_64/mbin/synbatch
 Install:     /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
 Hostname:    IO-ALG-LT003
-Date:        Tue Apr 28 15:49:07 2026
+Date:        Sun Aug  2 14:31:19 2026
 Version:     V-2023.09M-5
 
 Arguments:   -product synplify_base -licensetype synplifypro_actel -batch -log synplify.log VKPFSOC_TOP_syn.tcl
-ProductType: synplify_pro
+ProductType: synplify_base
 
-License checkout: synplifypro_actel
-License: synplifypro_actel node-locked 
-Licensed Vendor: actel
-License Option: actel_oem
+Cannot connect to license server system.
+ The license server manager (lmgrd) has not been started yet,
+ the wrong port@host or license file is being used, or the
+ port or hostname in the license file has been changed.
+Feature:       synplifypro_actel
+License path:  /usr/local/flexlm/licenses/license.dat:
+FlexNet Licensing error:-15,234
+
+
+Host ID:  "7cfa80be5b13 a82bdd4cc723"
+Please contact support at https://solvnetplus.synopsys.com/ManageCase?ccf=1
+
 
 Running in Vendor Mode
 
 
-log file: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/VKPFSOC_TOP.srr"
-Running: synthesis in foreground
-
-Running VKPFSOC_TOP_syn|synthesis
-
-Running Flow: compile (Compile) on VKPFSOC_TOP_syn|synthesis
-# Tue Apr 28 15:49:07 2026
-
-Running Flow: compile_flow (Compile Process) on VKPFSOC_TOP_syn|synthesis
-# Tue Apr 28 15:49:07 2026
-
-Running: compiler (Compile Input) on VKPFSOC_TOP_syn|synthesis
-# Tue Apr 28 15:49:07 2026
-Process ID: 336250
-compiler exited with errors
-Job failed on: VKPFSOC_TOP_syn|synthesis
-
-Job: "compiler" terminated with error status: 2
-See log file: "/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITE/VKPFSOC_JPEG_WRITE_READ/synthesis/synlog/VKPFSOC_TOP_compiler.srr"
-# Tue Apr 28 15:49:08 2026
-
-Return Code: 2
-Run Time:00h:00m:01s
-Complete: Compile Process on VKPFSOC_TOP_syn|synthesis
-Complete: Compile on VKPFSOC_TOP_syn|synthesis
-Complete: Logic Synthesis on VKPFSOC_TOP_syn|synthesis
-Error: At line 2 while processing "VKPFSOC_TOP_syn.tcl"
-2
-TCL script complete: "VKPFSOC_TOP_syn.tcl"
-TCL script had errors: "VKPFSOC_TOP_syn.tcl"
-exit status=9
-exit status=9
-License checkin: synplifypro_actel

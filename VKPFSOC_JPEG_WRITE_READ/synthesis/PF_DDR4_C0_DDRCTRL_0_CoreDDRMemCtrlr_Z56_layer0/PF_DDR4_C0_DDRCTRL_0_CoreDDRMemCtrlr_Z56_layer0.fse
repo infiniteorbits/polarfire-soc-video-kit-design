@@ -1,0 +1,360 @@
+
+fsm_encoding {8946504658} onehot
+
+fsm_state_encoding {8946504658} 0000000 {00000000000001}
+
+fsm_state_encoding {8946504658} 0000001 {00000000000010}
+
+fsm_state_encoding {8946504658} 0000010 {00000000000100}
+
+fsm_state_encoding {8946504658} 0000011 {00000000001000}
+
+fsm_state_encoding {8946504658} 0000100 {00000000010000}
+
+fsm_state_encoding {8946504658} 0000101 {00000000100000}
+
+fsm_state_encoding {8946504658} 0000110 {00000001000000}
+
+fsm_state_encoding {8946504658} 0000111 {00000010000000}
+
+fsm_state_encoding {8946504658} 0001000 {00000100000000}
+
+fsm_state_encoding {8946504658} 0001001 {00001000000000}
+
+fsm_state_encoding {8946504658} 0001010 {00010000000000}
+
+fsm_state_encoding {8946504658} 0001011 {00100000000000}
+
+fsm_state_encoding {8946504658} 0001111 {01000000000000}
+
+fsm_state_encoding {8946504658} 0010000 {10000000000000}
+
+fsm_registers {8946504658} {current_state[13]}  {current_state[12]}  {current_state[11]}  {current_state[10]}  {current_state[9]}  {current_state[8]}  {current_state[7]}  {current_state[6]}  {current_state[5]}  {current_state[4]}  {current_state[3]}  {current_state[2]}  {current_state[1]}  {current_state[0]} 
+
+fsm_encoding {11244914496} onehot
+
+fsm_state_encoding {11244914496} 000 {00001}
+
+fsm_state_encoding {11244914496} 001 {00010}
+
+fsm_state_encoding {11244914496} 010 {00100}
+
+fsm_state_encoding {11244914496} 101 {01000}
+
+fsm_state_encoding {11244914496} 110 {10000}
+
+fsm_registers {11244914496} {video_bus_state[4]}  {video_bus_state[3]}  {video_bus_state[2]}  {video_bus_state[1]}  {video_bus_state[0]} 
+
+fsm_encoding {961196401196448} gray
+
+fsm_state_encoding {961196401196448} ST_WAIT_RELEASE_RESET {0000000}
+
+fsm_state_encoding {961196401196448} ST_WAIT_INIT_CAL {0000001}
+
+fsm_state_encoding {961196401196448} ST_WAIT_DELAY1 {0000011}
+
+fsm_state_encoding {961196401196448} ST_DFI_INIT_START {0000010}
+
+fsm_state_encoding {961196401196448} ST_WAIT_DFI_INIT_COMPLETE {0000110}
+
+fsm_state_encoding {961196401196448} ST_WAIT_CTRLR_INIT_DONE {0000111}
+
+fsm_state_encoding {961196401196448} ST_WAIT_TRAIN_COMMAND {0000101}
+
+fsm_state_encoding {961196401196448} ST_CAL_DONE {0000100}
+
+fsm_state_encoding {961196401196448} ST_INIT_PCH_ALL {0001100}
+
+fsm_state_encoding {961196401196448} WL_DISABLE_DYN_ODT {0001101}
+
+fsm_state_encoding {961196401196448} WL_DISABLE_DYN_ODT_NXTR {0001111}
+
+fsm_state_encoding {961196401196448} WL_INIT_QOFF {0001110}
+
+fsm_state_encoding {961196401196448} WL_INIT_QOFF_NXTR {0001010}
+
+fsm_state_encoding {961196401196448} WL_ENTER_MEM_WLVL {0001011}
+
+fsm_state_encoding {961196401196448} WL_ODT_EN_WAIT {0001001}
+
+fsm_state_encoding {961196401196448} WL_ODT_EN {0001000}
+
+fsm_state_encoding {961196401196448} WL_DQS_WAIT {0011000}
+
+fsm_state_encoding {961196401196448} WL_PHY_WLVL {0011001}
+
+fsm_state_encoding {961196401196448} WL_STROBE {0011011}
+
+fsm_state_encoding {961196401196448} WL_DELAY_INC {0011010}
+
+fsm_state_encoding {961196401196448} WL_PHY_NORM {0011110}
+
+fsm_state_encoding {961196401196448} WL_ODT_DIS {0011111}
+
+fsm_state_encoding {961196401196448} WL_EXIT_MEM_WLVL {0011101}
+
+fsm_state_encoding {961196401196448} WL_EXIT_MEM_WLVL_NXTR {0011100}
+
+fsm_state_encoding {961196401196448} WL_ENABLE_DYN_ODT {0010100}
+
+fsm_state_encoding {961196401196448} WL_ENABLE_DYN_ODT_NXTR {0010101}
+
+fsm_state_encoding {961196401196448} WL_WAIT_CTLRL_UPDT_ACK {0010111}
+
+fsm_state_encoding {961196401196448} WL_DELAY_WAIT {0010110}
+
+fsm_state_encoding {961196401196448} GT_START {0010010}
+
+fsm_state_encoding {961196401196448} GT_SET_RDLVL_CS {0010011}
+
+fsm_state_encoding {961196401196448} GT_SET_PC_RANK {0010001}
+
+fsm_state_encoding {961196401196448} GT_ENTER_MPR_OPS {0010000}
+
+fsm_state_encoding {961196401196448} GT_ENTER_PREAMB_TRN_MODE {0110000}
+
+fsm_state_encoding {961196401196448} GT_DELAY_WAIT {0110001}
+
+fsm_state_encoding {961196401196448} GT_SET_GATE_EN {0110011}
+
+fsm_state_encoding {961196401196448} GT_SEND_READ {0110010}
+
+fsm_state_encoding {961196401196448} GT_WAIT_RDDATA_EN_HI {0110110}
+
+fsm_state_encoding {961196401196448} GT_WAIT_RDDATA_EN_LO {0110111}
+
+fsm_state_encoding {961196401196448} GT_WAIT_READ_DONE {0110101}
+
+fsm_state_encoding {961196401196448} GT_CLEAR_GATE_EN {0110100}
+
+fsm_state_encoding {961196401196448} GT_EXIT_PREAMB_TRN_MODE {0111100}
+
+fsm_state_encoding {961196401196448} GT_EXIT_MPR_OPS {0111101}
+
+fsm_state_encoding {961196401196448} GT_NEXT_RANK {0111111}
+
+fsm_state_encoding {961196401196448} EYE_START {0111110}
+
+fsm_state_encoding {961196401196448} EYE_SET_RDLVL_CS {0111010}
+
+fsm_state_encoding {961196401196448} EYE_SET_PC_RANK {0111011}
+
+fsm_state_encoding {961196401196448} EYE_ENTER_MPR_OPS {0111001}
+
+fsm_state_encoding {961196401196448} EYE_DELAY_WAIT {0111000}
+
+fsm_state_encoding {961196401196448} EYE_SET_EN {0101000}
+
+fsm_state_encoding {961196401196448} EYE_SEND_READ {0101001}
+
+fsm_state_encoding {961196401196448} EYE_WAIT_RDDATA_EN_HI {0101011}
+
+fsm_state_encoding {961196401196448} EYE_WAIT_RDDATA_EN_LO {0101010}
+
+fsm_state_encoding {961196401196448} EYE_WAIT_READ_DONE {0101110}
+
+fsm_state_encoding {961196401196448} EYE_CLEAR_EN {0101111}
+
+fsm_state_encoding {961196401196448} EYE_EXIT_MPR_OPS {0101101}
+
+fsm_state_encoding {961196401196448} EYE_NEXT_RANK {0101100}
+
+fsm_state_encoding {961196401196448} CA_START {0100100}
+
+fsm_state_encoding {961196401196448} CA_ENABLE_MR41 {0100101}
+
+fsm_state_encoding {961196401196448} CA_WAIT_CACKEL {0100111}
+
+fsm_state_encoding {961196401196448} CA_CAENT {0100110}
+
+fsm_state_encoding {961196401196448} CA_WAIT_CAENT {0100010}
+
+fsm_state_encoding {961196401196448} CA_SEND_START {0100011}
+
+fsm_state_encoding {961196401196448} CA_SYNC_START {0100001}
+
+fsm_state_encoding {961196401196448} CA_WAIT_COMPLETE {0100000}
+
+fsm_state_encoding {961196401196448} CA_PULSE_CAPTURE {1100000}
+
+fsm_state_encoding {961196401196448} CA_WAIT_RESP {1100001}
+
+fsm_state_encoding {961196401196448} CA_ENABLE_MR48 {1100011}
+
+fsm_state_encoding {961196401196448} CA_CACKEH {1100010}
+
+fsm_state_encoding {961196401196448} CA_WAIT_CACKEH {1100110}
+
+fsm_state_encoding {961196401196448} CA_CAEXT {1100111}
+
+fsm_state_encoding {961196401196448} CA_WAIT_CAEXT {1100101}
+
+fsm_state_encoding {961196401196448} CA_ENABLE_MR42 {1100100}
+
+fsm_state_encoding {961196401196448} CA_NEXT {1101100}
+
+fsm_state_encoding {961196401196448} CA_DONE {1101101}
+
+fsm_state_encoding {961196401196448} ST_SYNC_CAL_SELECT1 {1101111}
+
+fsm_state_encoding {961196401196448} ST_SYNC_CAL_SELECT2 {1101110}
+
+fsm_state_encoding {961196401196448} ST_TRAIN_COMPLETE1 {1101010}
+
+fsm_state_encoding {961196401196448} ST_TRAIN_COMPLETE2 {1101011}
+
+fsm_state_encoding {961196401196448} ST_INIT_PCH_ALL_NXTR {1101001}
+
+fsm_registers {961196401196448} {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 
+
+fsm_encoding {969212509212533} sequential
+
+fsm_state_encoding {969212509212533} 00 {00}
+
+fsm_state_encoding {969212509212533} 01 {01}
+
+fsm_state_encoding {969212509212533} 10 {10}
+
+fsm_registers {969212509212533} {r_wr_addr[1]}  {r_wr_addr[0]} 
+
+fsm_encoding {969214109214132} original
+
+fsm_state_encoding {969214109214132} 00 {00}
+
+fsm_state_encoding {969214109214132} 01 {01}
+
+fsm_state_encoding {969214109214132} 10 {10}
+
+fsm_registers {969214109214132} {rd_addr[1]}  {rd_addr[0]} 
+
+fsm_encoding {966617206617231} sequential
+
+fsm_state_encoding {966617206617231} ST0 {00}
+
+fsm_state_encoding {966617206617231} ST1 {01}
+
+fsm_state_encoding {966617206617231} ST2 {10}
+
+fsm_state_encoding {966617206617231} ST3 {11}
+
+fsm_registers {966617206617231} {state[1]}  {state[0]} 
+
+fsm_encoding {962596802596829} sequential
+
+fsm_state_encoding {962596802596829} 0000000000000000 {00}
+
+fsm_state_encoding {962596802596829} 0000000000000001 {01}
+
+fsm_state_encoding {962596802596829} 0000000000000010 {10}
+
+fsm_state_encoding {962596802596829} 0000000000000100 {11}
+
+fsm_registers {962596802596829} {qm_load_sel[1]}  {qm_load_sel[0]} 
+
+fsm_encoding {961843801843825} gray
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_LD {000000}
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_NO_CKE {000001}
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_CKE {000011}
+
+fsm_state_encoding {961843801843825} I_SM_PRCH1 {000010}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR2 {000110}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR3 {000111}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR1 {000101}
+
+fsm_state_encoding {961843801843825} I_SM_LMR_DR {000100}
+
+fsm_state_encoding {961843801843825} I_SM_PRCH2 {001100}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH1 {001101}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH2 {001111}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH3 {001110}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH4 {001010}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH5 {001011}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH6 {001001}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH7 {001000}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH8 {011000}
+
+fsm_state_encoding {961843801843825} I_SM_LMR {011001}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR_OCD {011011}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR_OCD_EXIT {011010}
+
+fsm_state_encoding {961843801843825} I_SM_DLL_WAIT {011110}
+
+fsm_state_encoding {961843801843825} I_SM_DPWRD {011111}
+
+fsm_state_encoding {961843801843825} I_SM_DPWRD_DELAY_NO_CKE {011101}
+
+fsm_state_encoding {961843801843825} I_SM_RFSH_WAIT {011100}
+
+fsm_state_encoding {961843801843825} 0011110 {010100}
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_NO_CKE_MEM_RST_HIGH_1 {010101}
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_NO_CKE_MEM_RST_HIGH_2 {010111}
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_NO_CKE_MEM_RST_HIGH_3 {010110}
+
+fsm_state_encoding {961843801843825} I_SM_ZQCL {010010}
+
+fsm_state_encoding {961843801843825} I_SM_ZQCL_WAIT {010011}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR11 {010001}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR16 {010000}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR17 {110000}
+
+fsm_state_encoding {961843801843825} I_SM_RST {110001}
+
+fsm_state_encoding {961843801843825} I_SM_RST_WAIT {110011}
+
+fsm_state_encoding {961843801843825} I_SM_ZQINIT {110010}
+
+fsm_state_encoding {961843801843825} I_SM_ZQINIT_WAIT {110110}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR4 {110111}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR5 {110101}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR6 {110100}
+
+fsm_state_encoding {961843801843825} I_SM_NOP {111100}
+
+fsm_state_encoding {961843801843825} I_SM_GEARDOWN {111101}
+
+fsm_state_encoding {961843801843825} I_SM_GEARDOWN_WAIT {111111}
+
+fsm_state_encoding {961843801843825} I_SM_WAIT_INIT_DISABLE_CLEAR {111110}
+
+fsm_state_encoding {961843801843825} I_SM_WAIT_TRAINING_COMPLETE {111010}
+
+fsm_state_encoding {961843801843825} I_SM_RCW_INIT_READY {111011}
+
+fsm_state_encoding {961843801843825} I_SM_RCW_INIT_COMPLETE {111001}
+
+fsm_state_encoding {961843801843825} I_SM_ZQSTART {111000}
+
+fsm_state_encoding {961843801843825} I_SM_ZQLATCH_WAIT {101000}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR13_INIT {101001}
+
+fsm_state_encoding {961843801843825} I_SM_ELMR13_OP {101011}
+
+fsm_state_encoding {961843801843825} I_SM_STARTUP_DELAY_NO_CKE_MEM_RST_HIGH_CHK {101010}
+
+fsm_registers {961843801843825} {init_sm[5]}  {init_sm[4]}  {init_sm[3]}  {init_sm[2]}  {init_sm[1]}  {init_sm[0]} 

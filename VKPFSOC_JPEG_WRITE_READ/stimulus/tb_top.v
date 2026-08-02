@@ -12,8 +12,8 @@ module tb_top_system;
   // Image 5x3 pixels, 8 bits/pixel
   // i_w=511  horz_resl = i_w+1 = 512 (calcul dans apb_wrapper)
   // i_h=511  H rel = i_h+1 = 512
-  parameter IMG_W_REG      = 14'd1023;          // crire dans 0x04
-  parameter IMG_H_REG      = 14'd1023;          // crire dans 0x08
+  parameter IMG_W_REG      = 14'd2027;          // crire dans 0x04
+  parameter IMG_H_REG      = 14'd2027;          // crire dans 0x08
   parameter NEAR_VAL       = 8'd0;           // lossless
   parameter DDR_BASE_ADDR  = 32'h8400_0000;  // image  l'adresse 0 en DDR
                                               // crire dans 0x14
@@ -245,7 +245,7 @@ initial rready = 1;
     //wait(arvalid);
 
    $display("=== MONITOR AXI (multi-burst) ===");
-
+/*
     fork
         begin : monitor_reads
             forever begin
@@ -271,11 +271,18 @@ initial rready = 1;
             $display("=== TIMEOUT MONITOR ===");
         end
     join_any
-    disable fork;
+    disable fork;*/
+    $display("[WAIT] Attente fin compression JPEG...");
+
+    wait(frm_interrupt_o);
+
+    $display("[DONE] Compression JPEG terminee t=%0t ns", $time);
+
+    repeat(20) @(posedge SYSCLK);
     // --------------------------------------------------
     // ATTENTE FIN : frm_interrupt_o ou poll APB 0x10
     // --------------------------------------------------
-    begin : wait_done
+   /* begin : wait_done
       integer timeout;
       timeout=0; status_reg=0;
       $display("[WAIT] Attente frm_interrupt_o...");
@@ -289,7 +296,7 @@ initial rready = 1;
       else
         $display("[TIMEOUT] Jamais termin aprs %0d polls", timeout);
     end
-
+*/
     repeat(50) @(posedge SYSCLK);
 
     // --------------------------------------------------
@@ -297,7 +304,7 @@ initial rready = 1;
     // --------------------------------------------------
     $display("");
     $display("========================================================");
-    $display("  RAPPORT FINAL  Image 15x1 JPEG-LS");
+    $display("  RAPPORT FINAL  Image 1024x1024 JPEG-LS");
     $display("  Config : i_w=%0d  horz_resl=%0d px",
              IMG_W_REG, IMG_W_REG+1);
     $display("           i_h=%0d  H=%0d px",
@@ -364,6 +371,16 @@ module axi4_ram #(
 
 reg[AXI_DATA_WIDTH-1:0] mem_src [0:MEM_DEPTH-1];
 reg [AXI_DATA_WIDTH-1:0] mem_dst [0:MEM_DEPTH-1];
+integer infile;
+integer outfile;
+integer r;
+integer idx;
+integer compressed_size;
+
+reg [16:0] pixel_byte;
+
+reg [2047:0] input_image;
+reg [2047:0] output_file;
  //  reg[7:0] mem_src [0:MEM_DEPTH-1];
 //  reg [7:0] mem_dst [0:MEM_DEPTH-1];
     assign awready = 1;
@@ -386,7 +403,7 @@ reg [AXI_DATA_WIDTH-1:0] mem_dst [0:MEM_DEPTH-1];
         mem_src[1] = {8'h79,8'h7a,8'h75,8'h76,8'h76,8'h7a,8'h85,8'h00};
         $display("[INIT] IMAGE 5x3 chargee");
     end*/
-    initial begin
+    /*initial begin
         integer k;
 
         // reset RAM
@@ -411,8 +428,102 @@ reg [AXI_DATA_WIDTH-1:0] mem_dst [0:MEM_DEPTH-1];
 
         $display("IMAGE 1024x1024 CHARGEE");
 
-    end
+    end*/
+    initial begin
+        integer k;
+        reg [63:0] temp_word;
+        integer byte_pos;
 
+        input_image = "/home/ahlemzenache/Documents/IO_IMAGE_tvac_gmv/1.tiff";
+
+        for(k=0; k<MEM_DEPTH; k=k+1) begin
+            mem_src[k] = 64'h0;
+            mem_dst[k] = 64'h0;
+        end
+
+        infile = $fopen(input_image, "rb");
+
+        if(infile == 0) begin
+            $display("ERROR: cannot open input image");
+            $finish;
+        end
+
+        idx = 0;
+        temp_word = 64'h0;
+        byte_pos = 0;
+
+        while(!$feof(infile)) begin
+
+            r = $fread(pixel_byte, infile);
+
+            temp_word[byte_pos*8 +: 8] = pixel_byte;
+
+            byte_pos = byte_pos + 1;
+
+            if(byte_pos == 8) begin
+                mem_src[idx] = temp_word;
+                idx = idx + 1;
+
+                temp_word = 64'h0;
+                byte_pos = 0;
+            end
+        end
+
+        if(byte_pos != 0)
+            mem_src[idx] = temp_word;
+
+        $fclose(infile);
+
+        $display("=== IMAGE LOADED ===");
+        $display("Words loaded = %0d", idx);
+    end
+    //=============
+    //compressed jpeg    
+    ///==========
+    integer jpeg_fd;
+    integer jpeg_idx;
+
+    initial begin
+        jpeg_fd = 0;
+        jpeg_idx = 0;
+    end
+    always @(posedge sys_clk_i) begin
+
+    if(wvalid && wready) begin
+
+        if(jpeg_fd == 0) begin
+
+            output_file = "/home/ahlemzenache/Documents/IO_IMAGE_tvac_gmv/compressed/output_jpeg.bin";
+
+                  jpeg_fd = $fopen(output_file, "wb");
+
+                  if(jpeg_fd == 0) begin
+                      $display("ERROR opening output file");
+                      $finish;
+                  end
+
+                  $display("=== START SAVING JPEG ===");
+              end
+
+              // write 64-bit AXI word -> 8 bytes file
+              $fwrite(jpeg_fd,"%c%c%c%c%c%c%c%c",
+                  wdata[7:0],
+                  wdata[15:8],
+                  wdata[23:16],
+                  wdata[31:24],
+                  wdata[39:32],
+                  wdata[47:40],
+                  wdata[55:48],
+                  wdata[63:56]
+              );
+
+              jpeg_idx = jpeg_idx + 8;
+
+              if(wlast) begin
+                  $display("LAST AXI WRITE");
+              end
+          end
+      end
     // =================================================
     // WRITE AXI
     // =================================================

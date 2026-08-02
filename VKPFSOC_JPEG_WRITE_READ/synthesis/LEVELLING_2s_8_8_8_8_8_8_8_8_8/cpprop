@@ -1,0 +1,9 @@
+n work LEVELLING_2s_8_8_8_8_8_8_8_8_8 verilog;
+av .compile_point_summary_status "Mapped";
+av .compile_point_summary_reason "No database";
+av .compile_point_update_model 0;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 5.82688;
+av .compile_point_starttime_stamp "Sun Aug  2 14:38:41 2026";
+av .compile_point_endtime_stamp "Sun Aug  2 14:38:50 2026";
+av .compile_point_realtime_used 9.61305;

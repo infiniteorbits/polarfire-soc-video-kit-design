@@ -4,7 +4,6 @@ import_files -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/ddr_wr
 import_files -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/ram2port.vhd
 import_files -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/video_fifo.vhd
 import_files -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/jpeg_top.v
-import_files -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/ram_input.v
 
 create_links -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/apb_wrapper.v
 create_links -library work -hdl_source script_support/hdl/JPEG_WRITE_READ/jpeg_control_fsm.v

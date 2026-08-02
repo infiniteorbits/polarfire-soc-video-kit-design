@@ -1,0 +1,446 @@
+# Sun Aug  2 14:38:54 2026
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-5
+Install: /home/ahlemzenache/microchip/Libero_SoC_2025.1/Libero_SoC/Synplify_Pro
+OS: Ubuntu 24.04.4 LTS
+Hostname: IO-ALG-LT003
+max virtual memory: unlimited (bytes)
+max user processes: 53555
+max stack size: 8388608 (bytes)
+
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309act, Build 395R, Built Apr 29 2025 06:16:31, @6004904
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 502MB peak: 502MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 515MB peak: 517MB)
+
+@W: BN309 |One or more non-fatal issues found in constraints; Please run Constraint Check for analysis
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.C0_axi_if_Z7_layer0(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 571MB peak: 571MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 572MB peak: 572MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 572MB peak: 572MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 572MB peak: 572MB)
+
+
+Begin compile point sub-process log
+
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 572MB peak: 572MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:01s; Memory used current: 575MB peak: 575MB)
+
+Encoding state machine top_ddr_write_read_0.DDR_AXI4_ARBITER_PF_C0_0.DDR_AXI4_ARBITER_PF_C0_0.genblk1\.DDR_AXI4_ARBITER_PF_0.ddr_rw_arbiter_0.video_bus_state[4:0] (in view: work.VKPFSOC_TOP(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   101 -> 01000
+   110 -> 10000
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_46s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_46s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_129s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_129s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_95s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_95s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_145s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_145s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_70s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_70s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_77s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine <encrypted> (in view: work.C0_util_lat1_to_lat0_77s(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+
+Starting factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:01s; Memory used current: 583MB peak: 583MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:02s; Memory used current: 610MB peak: 610MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:03s; Memory used current: 611MB peak: 611MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:04s; Memory used current: 611MB peak: 611MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:05s; Memory used current: 611MB peak: 611MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:05s; Memory used current: 611MB peak: 611MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:06s; Memory used current: 611MB peak: 611MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:07s; Memory used current: 613MB peak: 613MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:07s		     9.77ns		2440 /      3852
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:08s; Memory used current: 614MB peak: 614MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:08s; Memory used current: 616MB peak: 616MB)
+
+
+End compile point sub-process log
+
+@N: MT615 |Found clock REF_CLK_PAD_P with period 6.73ns 
+@N: MT615 |Found clock CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 with period 8.00ns 
+@N: MT615 |Found clock CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 with period 20.00ns 
+@N: MT615 |Found clock PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0 with period 5.00ns 
+@N: MT615 |Found clock PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 with period 20.00ns 
+@N: MT615 |Found clock PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2 with period 5.00ns 
+@N: MT615 |Found clock PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3 with period 5.00ns 
+@W: MT420 |Found inferred clock COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0] with period 10.00ns. Please declare a user-defined clock on net PF_DDR4_C0_0.CCC_0.PHASE_ROTATE_0.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Sun Aug  2 14:39:08 2026
+#
+
+
+Top view:               VKPFSOC_TOP
+Requested Frequency:    2.1 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 11.972
+
+                                                                             Requested     Estimated     Requested     Estimated                Clock                              Clock                
+Starting Clock                                                               Frequency     Frequency     Period        Period        Slack      Type                               Group                
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0             125.0 MHz     NA            8.000         NA            NA         generated (from REF_CLK_PAD_P)     default_clkgroup     
+CLOCKS_AND_RESETS_inst_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1             50.0 MHz      NA            20.000        NA            NA         generated (from REF_CLK_PAD_P)     default_clkgroup     
+COREDDR_TIP_INT_Z60_layer0|VCO_PHSEL_ROTATE_inferred_clock[0]                100.0 MHz     NA            10.000        NA            NA         inferred                           Inferred_clkgroup_0_6
+PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT0                                           200.0 MHz     NA            5.000         NA            NA         generated (from REF_CLK_PAD_P)     default_clkgroup     
+PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1                                           50.0 MHz      124.6 MHz     20.000        8.028         11.972     generated (from REF_CLK_PAD_P)     default_clkgroup     
+PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT2                                           200.0 MHz     NA            5.000         NA            NA         generated (from REF_CLK_PAD_P)     default_clkgroup     
+PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT3                                           200.0 MHz     NA            5.000         NA            NA         generated (from REF_CLK_PAD_P)     default_clkgroup     
+PF_DDR4_C0_DDRPHY_BLK_LANECTRL_ADDR_CMD_0_PF_LANECTRL|N_3_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred                           Inferred_clkgroup_0_5
+PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|N_3_inferred_clock             100.0 MHz     NA            10.000        NA            NA         inferred                           Inferred_clkgroup_0_3
+PF_DDR4_C0_DDRPHY_BLK_LANE_0_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred                           Inferred_clkgroup_0_4
+PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|N_3_inferred_clock             100.0 MHz     NA            10.000        NA            NA         inferred                           Inferred_clkgroup_0_1
+PF_DDR4_C0_DDRPHY_BLK_LANE_1_CTRL_PF_LANECTRL|TX_DQS_270_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred                           Inferred_clkgroup_0_2
+REF_CLK_PAD_P                                                                148.5 MHz     NA            6.734         NA            NA         declared                           default_clkgroup     
+osc_rc2mhz                                                                   2.1 MHz       NA            469.480       NA            NA         declared                           default_clkgroup     
+========================================================================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                  |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                            Ending                              |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1  PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1  |  20.000      11.972  |  No paths    -      |  No paths    -      |  No paths    -    
+===============================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+              Starting                                                                            Arrival           
+Instance      Reference                              Type     Pin     Net                         Time        Slack 
+              Clock                                                                                                 
+--------------------------------------------------------------------------------------------------------------------
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       maxtD0Aa054se               0.218       11.972
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs59EE4q23     0.201       12.737
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs2e32ja23     0.201       12.784
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs59EE4qbJ     0.218       12.866
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs59EE4qDn     0.201       12.882
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs2e32jaDn     0.218       12.920
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs2e32jabJ     0.218       12.922
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs2e32jaxn     0.201       13.056
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs59EE4qxn     0.201       13.093
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      Q       qj7Aiu5Dbuq1xgs2e32jahn     0.218       13.114
+====================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+              Starting                                                                                 Required           
+Instance      Reference                              Type     Pin     Net                              Time         Slack 
+              Clock                                                                                                       
+--------------------------------------------------------------------------------------------------------------------------
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       irmgHD8rnApD7orf                 20.000       11.972
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       i8Lj12iCFjleg4rf                 20.000       12.028
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       qoEfhEC9xz                       20.000       12.089
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       qoEfhHF78j                       20.000       12.089
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       qoEfhEC9xz                       20.000       12.089
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       qoEfhHF78j                       20.000       12.089
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       KvlD                             20.000       12.173
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       bB8wfriydyn1v4bk4C454hDm3        20.000       12.233
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       bbxfvI7r68wri4GCCy9Gisl97om3     20.000       12.276
+encrypted     PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1     SLE      D       bd6dcHrsb4dFCsI2Ayljm2F40BrJ     20.000       12.276
+==========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      20.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         20.000
+
+    - Propagation time:                      8.028
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     11.972
+
+    Number of logic level(s):                14
+    Starting point:                          encrypted / Q
+    Ending point:                            encrypted / D
+    The start point is clocked by            PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+    The end   point is clocked by            PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1 [rising] (rise=0.000 fall=10.000 period=20.000) on pin CLK
+
+Instance / Net                            Pin      Pin               Arrival     No. of    
+Name                             Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+encrypted                        SLE      Q        Out     0.218     0.218 r     -         
+maxtD0Aa054se                    Net      -        -       1.127     -           156       
+encrypted                        CFG3     C        In      -         1.345 r     -         
+encrypted                        CFG3     Y        Out     0.148     1.493 r     -         
+Kg4o7AqqvF3Jmsx23                Net      -        -       0.124     -           2         
+encrypted                        CFG4     B        In      -         1.617 r     -         
+encrypted                        CFG4     Y        Out     0.088     1.705 f     -         
+dbDpB1FKpmDfhqjufnuKgt           Net      -        -       0.579     -           5         
+encrypted                        CFG4     D        In      -         2.284 f     -         
+encrypted                        CFG4     Y        Out     0.192     2.476 f     -         
+bCtAaIKj6h2ys1sbmaEF0Hxba        Net      -        -       0.547     -           3         
+encrypted                        CFG2     A        In      -         3.022 f     -         
+encrypted                        CFG2     Y        Out     0.048     3.070 f     -         
+fgdr4ubDhA3L7spGIH6              Net      -        -       0.594     -           6         
+encrypted                        CFG4     C        In      -         3.664 f     -         
+encrypted                        CFG4     Y        Out     0.145     3.810 f     -         
+cnnjDJhpL4D4                     Net      -        -       0.623     -           8         
+encrypted                        CFG4     D        In      -         4.433 f     -         
+encrypted                        CFG4     Y        Out     0.192     4.625 f     -         
+c0xiuzrtlk9z9qsr0G7uIB           Net      -        -       0.623     -           8         
+encrypted                        CFG3     A        In      -         5.248 f     -         
+encrypted                        CFG3     Y        Out     0.048     5.295 f     -         
+0uh1iziEk1wt8t5HbvJi             Net      -        -       0.609     -           7         
+encrypted                        CFG3     B        In      -         5.904 f     -         
+encrypted                        CFG3     Y        Out     0.088     5.992 f     -         
+bbxfvJ59tw2k4orojuIqsEprzaxn     Net      -        -       0.118     -           1         
+encrypted                        CFG4     D        In      -         6.110 f     -         
+encrypted                        CFG4     Y        Out     0.192     6.302 f     -         
+qdwhakyLq0b5di0pK9fF77c          Net      -        -       0.118     -           1         
+encrypted                        CFG4     C        In      -         6.420 f     -         
+encrypted                        CFG4     Y        Out     0.145     6.565 f     -         
+qdwhakyLq0b5di0pK9fF77e          Net      -        -       0.118     -           1         
+encrypted                        CFG4     B        In      -         6.683 f     -         
+encrypted                        CFG4     Y        Out     0.077     6.761 f     -         
+bbxfvH28ctd6aIoCaFb98dyyHxx1     Net      -        -       0.124     -           2         
+encrypted                        CFG2     A        In      -         6.885 f     -         
+encrypted                        CFG2     Y        Out     0.048     6.932 f     -         
+EijdBIK                          Net      -        -       0.623     -           8         
+encrypted                        CFG4     C        In      -         7.555 f     -         
+encrypted                        CFG4     Y        Out     0.148     7.703 r     -         
+KvlD                             Net      -        -       0.124     -           2         
+encrypted                        CFG4     B        In      -         7.827 r     -         
+encrypted                        CFG4     Y        Out     0.083     7.910 r     -         
+irmgHD8rnApD7orf                 Net      -        -       0.118     -           1         
+encrypted                        SLE      D        In      -         8.028 r     -         
+===========================================================================================
+Total path delay (propagation time + setup) of 8.028 is 1.858(23.1%) logic and 6.170(76.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":15:0:15:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.ARST_N }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":16:0:16:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_*_CTRL.I_LANECTRL.HS_IO_CLK_PAUSE }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":17:0:17:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANECTRL_ADDR_CMD_0.I_LANECTRL*.HS_IO_CLK_PAUSE }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":18:0:18:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.RX_SYNC_RST* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":19:0:19:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.DELAY_LINE_MOVE }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":20:0:20:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_IOD_*.DELAY_LINE_OUT_OF_RANGE }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":21:0:21:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DDR_READ }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":22:0:22:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.RESET }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":23:0:23:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_DIRECTION }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":24:0:24:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_MOVE }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":25:0:25:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_LOAD PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DELAY_LINE_SEL }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":26:0:26:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.SWITCH }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":27:0:27:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.READ_CLK_SEL[2] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":28:0:28:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[0] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":29:0:29:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[1] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":30:0:30:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[2] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":31:0:31:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[3] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":32:0:32:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[4] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":33:0:33:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[5] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":34:0:34:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[6] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":35:0:35:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_0_CTRL.I_LANECTRL.DLL_CODE[7] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":36:0:36:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DDR_READ }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":37:0:37:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.RESET }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":38:0:38:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_DIRECTION }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":39:0:39:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_MOVE }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":40:0:40:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_LOAD PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DELAY_LINE_SEL }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":41:0:41:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.SWITCH }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":42:0:42:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.READ_CLK_SEL[2] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":43:0:43:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[0] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":44:0:44:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[1] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":45:0:45:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[2] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":46:0:46:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[3] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":47:0:47:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[4] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":48:0:48:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[5] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":49:0:49:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[6] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":50:0:50:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.LANE_1_CTRL.I_LANECTRL.DLL_CODE[7] }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":51:0:51:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_*FEEDBACK*.Y }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":52:0:52:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.OB_DIFF_CK0.Y }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":53:0:53:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.OB_A_12.Y }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":54:0:54:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_TRIBUFF_*.D }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":55:0:55:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_TRIBUFF_*.E }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":56:0:56:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_BIBUF*.D }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":57:0:57:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_BIBUF*.E }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":58:0:58:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_BIBUF*.Y }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":59:0:59:0|Timing constraint (through [get_pins { PF_DDR4_C0_0.DDRPHY_BLK_0.*.I_BIBUF_DIFF_DQS_*.YN }]) (false path) was not applied to the design because none of the '-through' objects specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":60:0:60:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.CCC_0.pll_inst_0.PHASE_OUT0_SEL }]) (false path) was not applied to the design because none of the paths specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":61:0:61:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.CCC_0.pll_inst_0.PHASE_OUT2_SEL }]) (false path) was not applied to the design because none of the paths specified by the constraint exist in the design 
+@W: MT447 :"/home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/designer/VKPFSOC_TOP/synthesis.fdc":62:0:62:0|Timing constraint (to [get_pins { PF_DDR4_C0_0.CCC_0.pll_inst_0.PHASE_OUT3_SEL }]) (false path) was not applied to the design because none of the paths specified by the constraint exist in the design 
+None
+Writing compile point status file /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/synthesis/C0_axi_if_Z7_layer0/cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                    Status     Reason     
+----------------------------------------------
+C0_axi_if_Z7_layer0     Mapped     No database
+==============================================
+
+Process took 0h:00m:14s realtime, 0h:00m:09s cputime
+# Sun Aug  2 14:39:08 2026
+
+###########################################################]

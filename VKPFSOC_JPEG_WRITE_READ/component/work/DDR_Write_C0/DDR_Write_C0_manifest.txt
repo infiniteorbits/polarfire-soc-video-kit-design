@@ -1,0 +1,24 @@
+Microchip Technology Inc. - Microchip Libero Software Release 2025.1 (Version 2025.1.0.14)
+
+Date      :  Sun Aug  2 14:05:54 2026
+Project   :  /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ
+Component :  DDR_Write_C0
+Family    :  PolarFireSoC
+
+
+HDL source files for all Synthesis and Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/Arbiter_Initiator_Wr_IF.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/AXI4S_ddr_write_target_IF.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/data_packer.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/DDR_Write.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/DDR_write_controller.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/DDR_Write_Native.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/ram2port_ddr_write.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/video_fifo_ddr_write.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/RTL/synchronizer_circuit_ddr_write.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/work/DDR_Write_C0/DDR_Write_C0.v
+
+Stimulus files for all Simulation tools:
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/Stimulus/ddr_read_write_tb.v
+    /home/ahlemzenache/Documents/polarfire-soc-video-kit-reference-design_READ_WRITECopie/VKPFSOC_JPEG_WRITE_READ/component/Microchip/SolutionCore/DDR_Write/1.3.0/Scripts/ddr_write_read_sd_creation.tcl
+

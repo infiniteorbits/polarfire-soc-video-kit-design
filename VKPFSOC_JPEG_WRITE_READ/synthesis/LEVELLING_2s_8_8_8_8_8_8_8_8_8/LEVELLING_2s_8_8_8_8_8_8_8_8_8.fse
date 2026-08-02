@@ -1,0 +1,216 @@
+
+fsm_encoding {73328032819} onehot
+
+fsm_state_encoding {73328032819} 0000 {00001}
+
+fsm_state_encoding {73328032819} 0001 {00010}
+
+fsm_state_encoding {73328032819} 0010 {00100}
+
+fsm_state_encoding {73328032819} 0011 {01000}
+
+fsm_state_encoding {73328032819} 0100 {10000}
+
+fsm_registers {73328032819} {current_state[4]}  {current_state[3]}  {current_state[2]}  {current_state[1]}  {current_state[0]} 
+
+fsm_encoding {7914033140317} onehot
+
+fsm_state_encoding {7914033140317} BURST_DETECTED_180 {00000000000000000000000000001}
+
+fsm_state_encoding {7914033140317} CHOOSE_ANSWER {00000000000000000000000000010}
+
+fsm_state_encoding {7914033140317} DEC_180 {00000000000000000000000000100}
+
+fsm_state_encoding {7914033140317} DET_ORDER_0 {00000000000000000000000001000}
+
+fsm_state_encoding {7914033140317} DET_ORDER_1 {00000000000000000000000010000}
+
+fsm_state_encoding {7914033140317} DET_ORDER_1_EXTEND {00000000000000000000000100000}
+
+fsm_state_encoding {7914033140317} DET_ORDER_2 {00000000000000000000001000000}
+
+fsm_state_encoding {7914033140317} DET_ORDER_2_EXTEND {00000000000000000000010000000}
+
+fsm_state_encoding {7914033140317} DET_ORDER_3 {00000000000000000000100000000}
+
+fsm_state_encoding {7914033140317} DET_ORDER_3_EXTEND {00000000000000000001000000000}
+
+fsm_state_encoding {7914033140317} INC_180 {00000000000000000010000000000}
+
+fsm_state_encoding {7914033140317} INITIAL {00000000000000000100000000000}
+
+fsm_state_encoding {7914033140317} INITIAL_BURST_ERROR {00000000000000001000000000000}
+
+fsm_state_encoding {7914033140317} LOAD_INIT_TXDLY {00000000000000010000000000000}
+
+fsm_state_encoding {7914033140317} LOAD_TXDLY_STEPS_180 {00000000000000100000000000000}
+
+fsm_state_encoding {7914033140317} NO_BURST_DETECTED {00000000000001000000000000000}
+
+fsm_state_encoding {7914033140317} NO_BURST_ERROR {00000000000010000000000000000}
+
+fsm_state_encoding {7914033140317} OOR_ERROR {00000000000100000000000000000}
+
+fsm_state_encoding {7914033140317} PRE_INC_CLK_SEL {00000000001000000000000000000}
+
+fsm_state_encoding {7914033140317} RESPONSE_HIGH {00000000010000000000000000000}
+
+fsm_state_encoding {7914033140317} SET_OUTPUT_ANSWER {00000000100000000000000000000}
+
+fsm_state_encoding {7914033140317} STORE_VALS {00000001000000000000000000000}
+
+fsm_state_encoding {7914033140317} TXDLY_INC {00000010000000000000000000000}
+
+fsm_state_encoding {7914033140317} TXDLY_NO_BD {00000100000000000000000000000}
+
+fsm_state_encoding {7914033140317} WAIT_PRE_PAUSE_1 {00001000000000000000000000000}
+
+fsm_state_encoding {7914033140317} WAIT_PRE_PAUSE_2 {00010000000000000000000000000}
+
+fsm_state_encoding {7914033140317} WAIT_PRE_PAUSE_3 {00100000000000000000000000000}
+
+fsm_state_encoding {7914033140317} WAIT_READ_1 {01000000000000000000000000000}
+
+fsm_state_encoding {7914033140317} WAIT_READ_2 {10000000000000000000000000000}
+
+fsm_registers {7914033140317} {visual_gate_training_current[28]}  {visual_gate_training_current[27]}  {visual_gate_training_current[26]}  {visual_gate_training_current[25]}  {visual_gate_training_current[24]}  {visual_gate_training_current[23]}  {visual_gate_training_current[22]}  {visual_gate_training_current[21]}  {visual_gate_training_current[20]}  {visual_gate_training_current[19]}  {visual_gate_training_current[18]}  {visual_gate_training_current[17]}  {visual_gate_training_current[16]}  {visual_gate_training_current[15]}  {visual_gate_training_current[14]}  {visual_gate_training_current[13]}  {visual_gate_training_current[12]}  {visual_gate_training_current[11]}  {visual_gate_training_current[10]}  {visual_gate_training_current[9]}  {visual_gate_training_current[8]}  {visual_gate_training_current[7]}  {visual_gate_training_current[6]}  {visual_gate_training_current[5]}  {visual_gate_training_current[4]}  {visual_gate_training_current[3]}  {visual_gate_training_current[2]}  {visual_gate_training_current[1]}  {visual_gate_training_current[0]} 
+
+fsm_encoding {7923743237414} sequential
+
+fsm_state_encoding {7923743237414} SCLK_1_2 {00}
+
+fsm_state_encoding {7923743237414} SCLK_2_2 {01}
+
+fsm_state_encoding {7923743237414} SCLK_3_2 {10}
+
+fsm_registers {7923743237414} {visual_shim_logic_2_current[1]}  {visual_shim_logic_2_current[0]} 
+
+fsm_encoding {7922433224315} sequential
+
+fsm_state_encoding {7922433224315} SCLK_1_1 {00}
+
+fsm_state_encoding {7922433224315} SCLK_2_1 {01}
+
+fsm_state_encoding {7922433224315} SCLK_3_1 {10}
+
+fsm_registers {7922433224315} {visual_shim_logic_1_current[1]}  {visual_shim_logic_1_current[0]} 
+
+fsm_encoding {7921123211216} sequential
+
+fsm_state_encoding {7921123211216} SCLK_1_0 {00}
+
+fsm_state_encoding {7921123211216} SCLK_2_0 {01}
+
+fsm_state_encoding {7921123211216} SCLK_3_0 {10}
+
+fsm_registers {7921123211216} {visual_shim_logic_0_current[1]}  {visual_shim_logic_0_current[0]} 
+
+fsm_encoding {78977397713} onehot
+
+fsm_state_encoding {78977397713} WAIT_CLK_DELAY {00001}
+
+fsm_state_encoding {78977397713} WAIT_FOR_RX_VALID101 {00010}
+
+fsm_state_encoding {78977397713} WAIT_RDDATA_VAL {00100}
+
+fsm_state_encoding {78977397713} WAIT_RDDATA_VAL_0 {01000}
+
+fsm_state_encoding {78977397713} WAIT_RDDATA_VAL_1 {10000}
+
+fsm_registers {78977397713} {visual_rx_valid_current[4]}  {visual_rx_valid_current[3]}  {visual_rx_valid_current[2]}  {visual_rx_valid_current[1]}  {visual_rx_valid_current[0]} 
+
+fsm_encoding {7817013170112} sequential
+
+fsm_state_encoding {7817013170112} INITIAL_LFP {00}
+
+fsm_state_encoding {7817013170112} WAIT_HOLD_CNT {01}
+
+fsm_state_encoding {7817013170112} WAIT_PAUSE {10}
+
+fsm_registers {7817013170112} {visual_Lane_Fifo_Protect_current[1]}  {visual_Lane_Fifo_Protect_current[0]} 
+
+fsm_encoding {78977397713} onehot
+
+fsm_state_encoding {78977397713} WAIT_CLK_DELAY {00001}
+
+fsm_state_encoding {78977397713} WAIT_FOR_RX_VALID101 {00010}
+
+fsm_state_encoding {78977397713} WAIT_RDDATA_VAL {00100}
+
+fsm_state_encoding {78977397713} WAIT_RDDATA_VAL_0 {01000}
+
+fsm_state_encoding {78977397713} WAIT_RDDATA_VAL_1 {10000}
+
+fsm_registers {78977397713} {visual_rx_valid_current[4]}  {visual_rx_valid_current[3]}  {visual_rx_valid_current[2]}  {visual_rx_valid_current[1]}  {visual_rx_valid_current[0]} 
+
+fsm_encoding {7817013170112} sequential
+
+fsm_state_encoding {7817013170112} INITIAL_LFP {00}
+
+fsm_state_encoding {7817013170112} WAIT_HOLD_CNT {01}
+
+fsm_state_encoding {7817013170112} WAIT_PAUSE {10}
+
+fsm_registers {7817013170112} {visual_Lane_Fifo_Protect_current[1]}  {visual_Lane_Fifo_Protect_current[0]} 
+
+fsm_encoding {85114011411} onehot
+
+fsm_state_encoding {85114011411} SM_IDLE {00000000000000001}
+
+fsm_state_encoding {85114011411} SM_STRB {00000000000000010}
+
+fsm_state_encoding {85114011411} SM_INCR {00000000000000100}
+
+fsm_state_encoding {85114011411} SM_WAI1 {00000000000001000}
+
+fsm_state_encoding {85114011411} SM_WAI2 {00000000000010000}
+
+fsm_state_encoding {85114011411} SM_DERR {00000000000100000}
+
+fsm_state_encoding {85114011411} SM_DONE {00000000001000000}
+
+fsm_state_encoding {85114011411} SM_WAI3 {00000000010000000}
+
+fsm_state_encoding {85114011411} SM_WAI4 {00000000100000000}
+
+fsm_state_encoding {85114011411} SM_PAUS {00000001000000000}
+
+fsm_state_encoding {85114011411} SM_OFF1 {00000010000000000}
+
+fsm_state_encoding {85114011411} SM_OFF2 {00000100000000000}
+
+fsm_state_encoding {85114011411} SM_OFF3 {00001000000000000}
+
+fsm_state_encoding {85114011411} SM_PUS1 {00010000000000000}
+
+fsm_state_encoding {85114011411} SM_PUS2 {00100000000000000}
+
+fsm_state_encoding {85114011411} SM_PUL1 {01000000000000000}
+
+fsm_state_encoding {85114011411} SM_PUL2 {10000000000000000}
+
+fsm_registers {85114011411} {current_state[16]}  {current_state[15]}  {current_state[14]}  {current_state[13]}  {current_state[12]}  {current_state[11]}  {current_state[10]}  {current_state[9]}  {current_state[8]}  {current_state[7]}  {current_state[6]}  {current_state[5]}  {current_state[4]}  {current_state[3]}  {current_state[2]}  {current_state[1]}  {current_state[0]} 
+
+fsm_encoding {83236323610} onehot
+
+fsm_state_encoding {83236323610} ASSERT_RDLVL_RESP {0000000001}
+
+fsm_state_encoding {83236323610} ASSERT_RDLVL_RESP_2 {0000000010}
+
+fsm_state_encoding {83236323610} DO_VREF {0000000100}
+
+fsm_state_encoding {83236323610} FINISH {0000001000}
+
+fsm_state_encoding {83236323610} RESPOND_TO_GATE_TRAINING {0000010000}
+
+fsm_state_encoding {83236323610} TRN_INITIAL {0000100000}
+
+fsm_state_encoding {83236323610} WAIT_RDLVL {0001000000}
+
+fsm_state_encoding {83236323610} WAIT_RDLVL_REQ_RANK_1 {0010000000}
+
+fsm_state_encoding {83236323610} WAIT_RDLVL_RESP_RANK_1 {0100000000}
+
+fsm_state_encoding {83236323610} WAIT_RD_LVL_RESP_RANK_0 {1000000000}
+
+fsm_registers {83236323610} {visual_trn_compl_current[9]}  {visual_trn_compl_current[8]}  {visual_trn_compl_current[7]}  {visual_trn_compl_current[6]}  {visual_trn_compl_current[5]}  {visual_trn_compl_current[4]}  {visual_trn_compl_current[3]}  {visual_trn_compl_current[2]}  {visual_trn_compl_current[1]}  {visual_trn_compl_current[0]} 

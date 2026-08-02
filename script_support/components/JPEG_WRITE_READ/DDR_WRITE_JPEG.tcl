@@ -8,10 +8,10 @@ auto_promote_pad_pins -promote_all 0
 # Create top level Scalar Ports
 sd_create_scalar_port -sd_name ${sd_name} -port_name {data_valid_i} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {ddr_clk_i} -port_direction {IN}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {frame_end_i} -port_direction {IN}
-sd_create_scalar_port -sd_name ${sd_name} -port_name {sys_clk_i} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {encoder_en_i} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {frame_end_i} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {reset_i} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {sys_clk_i} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {write_ackn_i} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {write_done_i} -port_direction {IN}
 
@@ -35,15 +35,11 @@ sd_instantiate_macro -sd_name ${sd_name} -macro_name {AND2} -instance_name {AND2
 
 
 # Add data_packer_0 instance
-sd_instantiate_hdl_core -sd_name ${sd_name} -hdl_core_name {data_packer} -instance_name {data_packer_0}
-# Exporting Parameters of instance data_packer_0
-sd_configure_core_instance -sd_name ${sd_name} -instance_name {data_packer_0} -params {\
-"g_IP_DW:16" \
-"g_OP_DW:64" }\
--validate_rules 0
-sd_save_core_instance_config -sd_name ${sd_name} -instance_name {data_packer_0}
-sd_update_instance -sd_name ${sd_name} -instance_name {data_packer_0}
-
+sd_instantiate_hdl_module \
+    -sd_name ${sd_name} \
+    -hdl_module_name {data_packer_jpeg} \
+    -hdl_file {hdl\data_packer_jpeg.v} \
+    -instance_name {data_packer_0}
 
 
 # Add ddr_write_controller_enc_0 instance

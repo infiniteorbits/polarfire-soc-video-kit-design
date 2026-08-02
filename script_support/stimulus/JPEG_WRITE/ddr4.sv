@@ -8,12 +8,9 @@
 
 // Define Libero needed TB Simulation Parameters
 `define MODEL_DEBUG_MEMORY
-//`define FIXED_1600
-//`define DDR4_8G_X16
-//`define DDR4_2G_X8
-//`define SILENT
 `define FIXED_1600
 `define DDR4_2G_X16
+//`define DDR4_2G_X8
 `define SILENT
 
 `include "arch_defines.v"

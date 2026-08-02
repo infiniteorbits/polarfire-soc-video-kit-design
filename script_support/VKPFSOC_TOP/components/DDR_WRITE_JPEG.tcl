@@ -35,14 +35,7 @@ sd_instantiate_macro -sd_name ${sd_name} -macro_name {AND2} -instance_name {AND2
 
 
 # Add data_packer_0 instance
-sd_instantiate_hdl_core -sd_name ${sd_name} -hdl_core_name {data_packer} -instance_name {data_packer_0}
-# Exporting Parameters of instance data_packer_0
-sd_configure_core_instance -sd_name ${sd_name} -instance_name {data_packer_0} -params {\
-"g_IP_DW:16" \
-"g_OP_DW:64" }\
--validate_rules 0
-sd_save_core_instance_config -sd_name ${sd_name} -instance_name {data_packer_0}
-sd_update_instance -sd_name ${sd_name} -instance_name {data_packer_0}
+sd_instantiate_hdl_module -sd_name ${sd_name} -hdl_module_name {data_packer} -hdl_file {hdl\data_packer.vhd} -instance_name {data_packer_0}
 
 
 
@@ -63,10 +56,10 @@ sd_save_core_instance_config -sd_name ${sd_name} -instance_name {video_fifo_0}
 sd_update_instance -sd_name ${sd_name} -instance_name {video_fifo_0}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:wfull_o}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:wafull_o}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:wdata_count_o}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:rempty_o}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:raempty_o}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:rhempty_o}
-sd_mark_pins_unused -sd_name ${sd_name} -pin_names {video_fifo_0:wdata_count_o}
 
 
 

@@ -9,5 +9,5 @@ create_and_configure_core -core_vlnv {Microchip:SolutionCore:DDR_AXI4_ARBITER_PF
 "AXI_ID_WIDTH:4"  \
 "FORMAT:0"  \
 "NO_OF_READ_CHANNELS:1"  \
-"NO_OF_WRITE_CHANNELS:1"   }
+"NO_OF_WRITE_CHANNELS:2"   }
 # Exporting Component Description of DDR_AXI4_ARBITER_PF_C0 to TCL done

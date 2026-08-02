@@ -358,4 +358,3 @@ module jpeg_control_fsm #(
     end
 
 endmodule
-

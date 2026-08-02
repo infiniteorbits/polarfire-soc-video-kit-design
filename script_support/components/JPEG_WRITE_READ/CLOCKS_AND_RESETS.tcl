@@ -6,23 +6,37 @@ create_smartdesign -sd_name ${sd_name}
 auto_promote_pad_pins -promote_all 0
 
 # Create top level Scalar Ports
+sd_create_scalar_port -sd_name ${sd_name} -port_name {CLK_PF_DDR4} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {EXT_RST_N} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {MSS_PLL_LOCKS} -port_direction {IN}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {PLL_LOCK_PF_DDR4} -port_direction {IN}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {REF_CLK_PAD_N} -port_direction {IN} -port_is_pad {1}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {REF_CLK_PAD_P} -port_direction {IN} -port_is_pad {1}
 
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CLK_125MHz} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {CLK_50MHz} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {DDR_RESETN} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {DEVICE_INIT_DONE} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {FABRIC_POR_N} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {I2C_BCLK} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {RESETN_125MHz} -port_direction {OUT}
 sd_create_scalar_port -sd_name ${sd_name} -port_name {RESETN_50MHz} -port_direction {OUT}
+sd_create_scalar_port -sd_name ${sd_name} -port_name {RESETN_PLL} -port_direction {OUT}
 
 
 
 # Add AND2_0 instance
 sd_instantiate_macro -sd_name ${sd_name} -macro_name {AND2} -instance_name {AND2_0}
+
+
+
+# Add AND2_1 instance
+sd_instantiate_macro -sd_name ${sd_name} -macro_name {AND2} -instance_name {AND2_1}
+
+
+
+# Add AND2_2 instance
+sd_instantiate_macro -sd_name ${sd_name} -macro_name {AND2} -instance_name {AND2_2}
 
 
 
@@ -43,6 +57,16 @@ sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_CLK_125MHz
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_CLK_125MHz:SS_BUSY} -value {GND}
 sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_CLK_125MHz:FF_US_RESTORE} -value {GND}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CORERESET_CLK_125MHz:PLL_POWERDOWN_B}
+
+
+
+# Add CORERESET_PF_DDR4_0 instance
+sd_instantiate_component -sd_name ${sd_name} -component_name {CORERESET_PF_DDR4} -instance_name {CORERESET_PF_DDR4_0}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_DDR4_0:BANK_x_VDDI_STATUS} -value {VCC}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_DDR4_0:BANK_y_VDDI_STATUS} -value {VCC}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_DDR4_0:SS_BUSY} -value {GND}
+sd_connect_pins_to_constant -sd_name ${sd_name} -pin_names {CORERESET_PF_DDR4_0:FF_US_RESTORE} -value {GND}
+sd_mark_pins_unused -sd_name ${sd_name} -pin_names {CORERESET_PF_DDR4_0:PLL_POWERDOWN_B}
 
 
 
@@ -85,16 +109,23 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_XCVR_REF_CLK_C0_0:REF_CLK
 
 
 # Add scalar net connections
-sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:A" "PF_CCC_C0_0:PLL_LOCK_0" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:A" "AND2_2:A" "PF_CCC_C0_0:PLL_LOCK_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:B" "MSS_PLL_LOCKS" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_0:Y" "CORERESET_CLK_125MHz:PLL_LOCK" "CORERESET_CLK_50MHz:PLL_LOCK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_1:A" "INIT_MONITOR_0:BANK_0_CALIB_STATUS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_1:B" "INIT_MONITOR_0:BANK_8_CALIB_STATUS" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_1:Y" "AND2_2:B" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"AND2_2:Y" "RESETN_PLL" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLK_125MHz" "CORERESET_CLK_125MHz:CLK" "PF_CCC_C0_0:OUT0_FABCLK_0" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CLK_50MHz" "CORERESET_CLK_50MHz:CLK" "PF_CCC_C0_0:OUT1_FABCLK_0" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:EXT_RST_N" "CORERESET_CLK_50MHz:EXT_RST_N" "EXT_RST_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CLK_PF_DDR4" "CORERESET_PF_DDR4_0:CLK" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:EXT_RST_N" "CORERESET_CLK_50MHz:EXT_RST_N" "CORERESET_PF_DDR4_0:EXT_RST_N" "EXT_RST_N" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:FABRIC_RESET_N" "RESETN_125MHz" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:FPGA_POR_N" "CORERESET_CLK_50MHz:FPGA_POR_N" "FABRIC_POR_N" "INIT_MONITOR_0:FABRIC_POR_N" }
-sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:INIT_DONE" "CORERESET_CLK_50MHz:INIT_DONE" "DEVICE_INIT_DONE" "INIT_MONITOR_0:DEVICE_INIT_DONE" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:FPGA_POR_N" "CORERESET_CLK_50MHz:FPGA_POR_N" "CORERESET_PF_DDR4_0:FPGA_POR_N" "FABRIC_POR_N" "INIT_MONITOR_0:FABRIC_POR_N" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_125MHz:INIT_DONE" "CORERESET_CLK_50MHz:INIT_DONE" "CORERESET_PF_DDR4_0:INIT_DONE" "DEVICE_INIT_DONE" "INIT_MONITOR_0:DEVICE_INIT_DONE" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_CLK_50MHz:FABRIC_RESET_N" "RESETN_50MHz" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_PF_DDR4_0:FABRIC_RESET_N" "DDR_RESETN" }
+sd_connect_pins -sd_name ${sd_name} -pin_names {"CORERESET_PF_DDR4_0:PLL_LOCK" "PLL_LOCK_PF_DDR4" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"I2C_BCLK" "PF_CLK_DIV_C0_0:CLK_OUT" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_CCC_C0_0:REF_CLK_0" "PF_XCVR_REF_CLK_C0_0:FAB_REF_CLK" }
 sd_connect_pins -sd_name ${sd_name} -pin_names {"PF_CLK_DIV_C0_0:CLK_IN" "PF_OSC_C0_0:RCOSC_2MHZ_CLK_DIV" }

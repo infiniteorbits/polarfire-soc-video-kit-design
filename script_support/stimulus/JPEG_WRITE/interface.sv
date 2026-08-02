@@ -1,9 +1,10 @@
 // MICRON TECHNOLOGY, INC. - CONFIDENTIAL AND PROPRIETARY INFORMATION
-interface DDR4_if #(parameter CONFIGURED_DQ_BITS = 8) (
-    DM_n,
-    DQ,
-    DQS_t,
-    DQS_c
+interface DDR4_if #(parameter CONFIGURED_DQ_BITS = 8,
+parameter CONFIGURED_BANKS = 1) (
+    inout [CONFIGURED_BANKS-1:0] DM_n,
+    inout [CONFIGURED_DQ_BITS-1:0] DQ,
+    inout [CONFIGURED_BANKS-1:0] DQS_t,
+    inout [CONFIGURED_BANKS-1:0] DQS_c
     );
     timeunit 1ps;
     timeprecision 1ps;
@@ -27,14 +28,13 @@ interface DDR4_if #(parameter CONFIGURED_DQ_BITS = 8) (
     logic[MAX_BANK_BITS-1:0] BA;
     logic[13:0] ADDR;
     logic ADDR_17;
-    inout wire[CONFIGURED_DM_BITS-1:0] DM_n;
-    inout wire[CONFIGURED_DQ_BITS-1:0] DQ;
-    inout wire[CONFIGURED_DQS_BITS-1:0] DQS_t;
-    inout wire[CONFIGURED_DQS_BITS-1:0] DQS_c;
+    //wire[CONFIGURED_DM_BITS-1:0] DM_n;
+    //wire[CONFIGURED_DQ_BITS-1:0] DQ;
+    //wire[CONFIGURED_DQS_BITS-1:0] DQS_t;
+    //wire[CONFIGURED_DQS_BITS-1:0] DQS_c;
     logic ZQ;
     logic PWR;
     logic VREF_CA;
     logic VREF_DQ;
 endinterface
-
 

@@ -4,7 +4,8 @@
 
 //`timescale <time_units> / <precision>
 module jpeg_top #(
-    parameter ADDR_WIDTH = 3//24 3 8
+    parameter ADDR_WIDTH = 8,//24 3 8
+    parameter LINE_STORAGE_MODE = 1'b0
 )(
     // -------- APB interface --------
     input  wire         pclk,
@@ -21,16 +22,26 @@ module jpeg_top #(
     input  wire         apb_pin,
     // -------- RAM interface --------
     input  wire [7:0]   ram_read_data,
-    output wire [ADDR_WIDTH-1:0] ram_read_addr,
+  //  output wire [ADDR_WIDTH-1:0] ram_read_addr,
+    input   wire                  ram_data_valid,
+
 
     // -------- Output compressed data --------
     output wire [15:0]  o_data_pck,
     output wire         o_e_pck,
 
     // -------- Status --------
-    //output wire         sof_flag,
+    output wire         sof_flag,
     output wire         eof_flag,
     //output wire [31:0]  compressed_size_o,
+    //--------read ip core ------
+    input wire      read_ackn_i,
+    input wire       read_done_i,
+    output wire [15:0]    horz_resl_o,
+    output wire [15:0]    line_gap_o,
+    output wire [7:0]  ddr_base_addr_o,
+    output wire         read_en_i,
+    output wire         frame_start_i,
     output wire         encoder_active_o
 );
 
@@ -51,6 +62,8 @@ module jpeg_top #(
     wire        o_e;
     wire        o_last;
 
+  
+
     // ===============================
     // APB Wrapper
     // ===============================
@@ -70,7 +83,8 @@ module jpeg_top #(
         .i_w       (i_w),
         .i_h       (i_h),
         .near_val      (near),
-        
+        .horz_resl_o      ( horz_resl_o ),
+       .ddr_base_addr_o  ( ddr_base_addr_o ),
         .o_last    (o_last_flag)
     );
 
@@ -99,14 +113,20 @@ module jpeg_top #(
         .o_data_pck        (o_data_pck),
         .o_e_pck           (o_e_pck),
 
-        //.sof_flag          (sof_flag),
+        .sof_flag          (sof_flag),
         .eof_flag          (eof_flag),
 
         .ram_read_data     (ram_read_data),
-        .ram_read_addr     (ram_read_addr),
-
-        .compressed_size_o (compressed_size_o),
+       // .ram_read_addr     (ram_read_addr),
+        .ram_data_valid     (ram_data_valid),
+       // .compressed_size_o (compressed_size_o),
+       .horz_resl_o      ( horz_resl_o ),
+       .line_gap_o          (line_gap_o),
+       .read_en_i           (read_en_i),
+        .frame_start_i       (frame_start_i),
         .o_last_flag       (o_last_flag),
+        .read_ackn_i    (read_ackn_i),
+        .read_done_i    (read_done_i),
         .encoder_active_o   (encoder_active_o)
     );
 

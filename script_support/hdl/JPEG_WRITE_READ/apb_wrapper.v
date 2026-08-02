@@ -65,13 +65,12 @@ module apb_wrapper (
     if (~presetn) begin
       // Reset all registers and control signals
       reg_sof          <= 1'b0;
-        reg_iw <= 14'd1023; // 511
-        reg_ih <= 14'd1023; // 511
+        reg_iw <= 14'd4; // 511
+        reg_ih <= 14'd0; // 511
       reg_near         <= 8'b0;
       prdata           <= 32'b0;
       pready           <= 1'b0;
-      reg_ddr_base_addr <= 7'h0;
-    
+     reg_ddr_base_addr <= 7'h00;    
     end else begin
       // Default values for each cycle
       pready           <= 1'b0;

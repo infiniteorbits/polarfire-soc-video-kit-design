@@ -4,7 +4,7 @@
 
 //`timescale <time_units> / <precision>
 
-module ram8bit_input #(
+module ram_input #(
     parameter ADDR_WIDTH =8  //4  // 2^3 = 8 adresses (modifie selon besoin)
 )(
     input  wire [ADDR_WIDTH-1:0] addr,

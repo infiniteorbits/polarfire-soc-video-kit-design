@@ -149,4 +149,3 @@ module jpeg_top #(
     );
 
 endmodule
-
